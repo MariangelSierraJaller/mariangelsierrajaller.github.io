@@ -73,7 +73,7 @@ export default function ResumeSection() {
         <div className="mt-10 flex justify-center">
           <div
             role="tablist"
-            className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/40 p-1"
+            className="inline-flex items-center gap-1 rounded-full border border-primary/40 bg-secondary/40 p-1 shadow-[0_0_24px_-8px_hsl(var(--primary)/0.6)]"
           >
             {tabs.map((tt) => {
               const active = tab === tt.key;
@@ -85,15 +85,17 @@ export default function ResumeSection() {
                   aria-label={`Ver formato ${tt.label}`}
                   onClick={() => setTab(tt.key)}
                   className={cn(
-                    "relative rounded-full px-5 py-2 text-sm font-medium transition-colors",
-                    active ? "text-primary-foreground" : "text-muted-foreground hover:text-foreground",
+                    "relative rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300",
+                    active
+                      ? "text-primary-foreground"
+                      : "text-muted-foreground hover:text-primary",
                   )}
                 >
                   {active && (
                     <motion.span
                       layoutId="resume-pill"
-                      className="absolute inset-0 -z-10 rounded-full bg-primary santino-glow"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      className="absolute inset-0 -z-10 rounded-full bg-primary santino-glow ring-1 ring-primary/60"
+                      transition={{ type: "spring", stiffness: 400, damping: 32 }}
                     />
                   )}
                   {tt.label}
