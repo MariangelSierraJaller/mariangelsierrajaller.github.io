@@ -105,7 +105,7 @@ export default function HeroSection() {
 
           <div className="mt-10 grid max-w-lg grid-cols-3 gap-4">
             {metrics.map((m) => (
-              <div key={m.label} className="rounded-2xl border border-border bg-card/60 p-4">
+              <div key={m.label} className="rounded-2xl border border-border bg-card/60 p-4 hover-glow">
                 <div className="font-display text-3xl text-primary">{m.value}</div>
                 <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">
                   {m.label}

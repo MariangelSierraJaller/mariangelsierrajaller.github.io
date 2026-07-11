@@ -23,7 +23,7 @@ export default function SkillsSection() {
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {/* Hard skills with progress bars */}
-          <div className="rounded-2xl border border-border bg-card/60 p-6 lg:col-span-2">
+          <div className="rounded-2xl border border-border bg-card/60 p-6 lg:col-span-2 hover-glow">
             <h3 className="font-display text-2xl text-foreground">{t<string>("skills.hardTitle")}</h3>
             <AnimatePresence mode="wait">
               <motion.ul
@@ -79,7 +79,7 @@ export default function SkillsSection() {
           </div>
 
           {/* Soft skills + languages */}
-          <div className="rounded-2xl border border-border bg-card/60 p-6">
+          <div className="rounded-2xl border border-border bg-card/60 p-6 hover-glow">
             <h3 className="font-display text-2xl text-foreground">{t<string>("skills.softTitle")}</h3>
             <ul className="mt-6 flex flex-wrap gap-2">
               {soft.map((s) => (

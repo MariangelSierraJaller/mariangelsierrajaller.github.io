@@ -57,7 +57,7 @@ export default function AboutSection() {
 
           <div className="mt-8 grid grid-cols-3 gap-3">
             {stats.map((s) => (
-              <div key={s.label} className="rounded-2xl border border-border bg-card/60 p-4">
+              <div key={s.label} className="rounded-2xl border border-border bg-card/60 p-4 hover-glow">
                 <div className="font-display text-2xl text-primary">{s.value}</div>
                 <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">
                   {s.label}
@@ -109,7 +109,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="rounded-2xl border border-border bg-card/60 p-6"
+              className="rounded-2xl border border-border bg-card/60 p-6 hover-glow"
             >
               <div className="grid h-10 w-10 place-items-center rounded-full bg-primary/15 text-primary">
                 <Check size={18} />
