@@ -67,7 +67,7 @@ export default function AboutSection() {
   const copy = t<ProfileCopy>(`about.${profile}`);
 
   return (
-    <section id="about" className="mx-auto max-w-6xl scroll-mt-32 px-6 py-24">
+    <section id="about" className="mx-auto max-w-6xl scroll-mt-32 px-6 pt-24 pb-12">
       <SectionHeader kicker={t<string>("about.kicker")} title={t<string>("about.title")} />
 
       {/* Per-profile heading */}
