@@ -96,48 +96,65 @@
   "experience": {
     "title": "Experiencia",
     "kicker": "Trayectoria",
+    "currentLabel": "Actual",
+    "responsibilitiesLabel": "Responsabilidades clave",
+    "showMore": "Ver más",
+    "showLess": "Ver menos",
     "items": [
       {
-        "role": "Auxiliar de Compras y Operaciones Administrativas · Soporte Financiero",
+        "period": "Ene 2023 — Presente",
+        "location": "Medellín, Antioquia, Colombia · Presencial",
         "company": "Asociación para la Enseñanza — ASPAEN",
-        "period": "2023 — Presente",
-        "location": "Medellín, Colombia",
-        "admin": [
-          "Gestión integral de facturación electrónica, órdenes de compra y requisiciones estratégicas del servicio de alimentación.",
-          "Control de inventarios, auditoría de entregas y apoyo logístico de pedidos.",
-          "Control de tesorería, caja menor y ejecución de conciliaciones bancarias corporativas.",
-          "Liderazgo en la optimización de procesos administrativos y contables, reduciendo reprocesos y agilizando decisiones.",
-          "Diseño e implementación de mejoras internas mediante estandarización de tareas y herramientas de gestión.",
-          "Estructuración de flujos para el tratamiento de datos contables del ERP, consolidando reportes y tableros BI para auditoría financiera."
-        ],
-        "tech": [
-          "Creación de flujos ETL con Python para el tratamiento de datos contables extraídos del ERP.",
-          "Limpieza y estructuración de datos con Python (Pandas) para análisis financiero.",
-          "Visualización interactiva y toma de decisiones con Power BI (DAX, Power Query).",
-          "Identificación de oportunidades de mejora vía digitalización y estandarización de tareas.",
-          "Visión estratégica del uso de la tecnología en procesos administrativos y contables.",
-          "Soporte tecnológico y financiero transversal para garantizar continuidad operativa."
-        ],
-        "adminTags": ["NetSuite ERP", "Facturación Electrónica", "Tesorería", "Conciliaciones", "KPIs", "Excel avanzado"],
-        "techTags": ["Python", "Pandas", "Power BI", "DAX", "NetSuite ERP", "ETL", "SQL"]
+        "current": true,
+        "admin": {
+          "role": "Auxiliar de Compras y Operaciones Administrativas · Soporte Financiero",
+          "description": "Responsable de la gestión integral del ciclo de compras, auditoría de inventarios y control de tesorería, enfocada en la estandarización de procesos y la reducción de reprocesos operativos.",
+          "bullets": [
+            "Gestión integral de facturación electrónica, órdenes de compra y requisiciones estratégicas del servicio.",
+            "Control operativo de tesorería, manejo de caja menor y ejecución de conciliaciones bancarias corporativas.",
+            "Liderazgo en la optimización de procesos administrativos y contables, promoviendo la eficiencia operativa.",
+            "Diseño e implementación de mejoras en flujos internos mediante estandarización de tareas e integración de herramientas de gestión.",
+            "Desarrollo y monitoreo de indicadores operativos clave (KPIs) para garantizar la rentabilidad a largo plazo."
+          ],
+          "tags": ["Gestión Compras", "Tesorería", "Auditoría", "Excel Avanzado", "ERP NetSuite", "KPIs", "Control Interno"]
+        },
+        "tech": {
+          "role": "Analista de Datos · Especialista ERP · Soporte Financiero",
+          "description": "Responsable del tratamiento de datos contables y desarrollo de flujos automatizados (ETL), impulsando la transición digital del área financiera mediante herramientas de inteligencia de negocios.",
+          "bullets": [
+            "Creación de flujos automatizados de trabajo (ETL) para procesar datos contables extraídos del ERP.",
+            "Uso de Python para la limpieza estructurada de datos y Power BI para visualización interactiva y toma de decisiones.",
+            "Identificación de oportunidades de mejora mediante la digitalización y estandarización de tareas e integración de procesos.",
+            "Aplicación de pensamiento crítico y capacidades analíticas para brindar soporte tecnológico transversal."
+          ],
+          "tags": ["Python", "Power BI", "ETL", "Oracle NetSuite", "Análisis de Datos", "Automatización", "Dashboards"]
+        }
       },
       {
-        "role": "Practicante · Asistente Contable y Apoyo Tecnológico Administrativo",
+        "period": "Feb 2022 — Ene 2023",
+        "location": "Medellín, Antioquia, Colombia · Presencial",
         "company": "Asociación para la Enseñanza — ASPAEN",
-        "period": "2022 — 2023",
-        "location": "Medellín, Colombia",
-        "admin": [
-          "Administración de facturación electrónica, emisión de órdenes de compra y control estricto de soportes.",
-          "Ejecución de egresos, caja menor, arqueos y tesorería con controles internos de trazabilidad y transparencia.",
-          "Soporte integral a áreas operativas y administrativas (recepción, tienda escolar) para continuidad del servicio."
-        ],
-        "tech": [
-          "Registro preciso y trazabilidad documental en los procesos contables digitalizados.",
-          "Apoyo tecnológico administrativo: adopción y uso de herramientas ofimáticas y de gestión.",
-          "Coordinación logística e integración de información entre áreas."
-        ],
-        "adminTags": ["Facturación", "Caja menor", "Arqueos", "Control documental"],
-        "techTags": ["Ofimática", "Digitalización", "Gestión documental"]
+        "current": false,
+        "admin": {
+          "role": "Practicante · Asistente Contable y Apoyo Administrativo",
+          "description": "Soporte integral a las áreas operativas y contables, garantizando la trazabilidad documental y la transparencia en el manejo de los recursos financieros de la institución.",
+          "bullets": [
+            "Administración de facturación electrónica, emisión de órdenes de compra y control estricto de soportes documentales.",
+            "Ejecución de egresos, arqueos de caja y actividades de tesorería implementando controles internos de confiabilidad.",
+            "Soporte directo a áreas operativas para garantizar la continuidad del servicio y la atención al usuario."
+          ],
+          "tags": ["Facturación", "Contabilidad", "Caja Menor", "Trazabilidad", "Soporte Operativo", "Atención al Usuario"]
+        },
+        "tech": {
+          "role": "Asistente de Apoyo Tecnológico Administrativo e Integración",
+          "description": "Gestión de información financiera y soporte tecnológico para procesos contables, asegurando el cumplimiento de tiempos y el registro preciso de datos operativos.",
+          "bullets": [
+            "Control estricto y trazabilidad documental de los soportes y registros en procesos contables.",
+            "Implementación de controles internos que fortalecieron la transparencia y confiabilidad de la información financiera.",
+            "Soporte tecnológico y operativo integral para la coordinación logística institucional."
+          ],
+          "tags": ["Control de Datos", "ERP", "Digitalización", "Soporte TI", "Trazabilidad", "Logística"]
+        }
       }
     ]
   },
