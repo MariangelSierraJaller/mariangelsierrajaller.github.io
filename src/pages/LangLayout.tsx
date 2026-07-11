@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { useLang } from "@/context/LanguageContext";
+import { useLang } from "@/context/language-core";
 
 export default function LangLayout() {
   const { lang, t } = useLang();

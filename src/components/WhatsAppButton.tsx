@@ -1,5 +1,5 @@
 import { MessageCircle } from "lucide-react";
-import { useLang } from "@/context/LanguageContext";
+import { useLang } from "@/context/language-core";
 
 const PHONE = "573242924705";
 

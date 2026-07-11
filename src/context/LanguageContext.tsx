@@ -1,6 +1,6 @@
 import { useCallback, useMemo, type ReactNode } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { LanguageCtx, type Lang, useLang } from "@/context/language-core";
+import { LanguageCtx, type Lang } from "@/context/language-core";
 import es from "@/i18n/es.json";
 import en from "@/i18n/en.json";
 
@@ -57,4 +57,3 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   return <LanguageCtx.Provider value={value}>{children}</LanguageCtx.Provider>;
 }
 
-export { useLang, type Lang };

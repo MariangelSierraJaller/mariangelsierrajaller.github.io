@@ -8,7 +8,7 @@ import SkillsSection from "@/components/SkillsSection";
 import ResumeSection from "@/components/ResumeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
-import { useProfile } from "@/context/ProfileContext";
+import { useProfile } from "@/context/profile-core";
 
 export default function Home() {
   const { locked } = useProfile();
