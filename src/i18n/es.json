@@ -225,14 +225,15 @@
     }
   },
   "resume": {
-    "title": "Mi Currículum",
+    "title": "Mi Hoja de Vida",
     "kicker": "Descargables",
     "subtitle": "Explora mi experiencia al detalle",
     "viewCta": "Abrir PDF en nueva pestaña",
+    "viewFullCta": "Clic para ver completo",
+    "downloadCta": "Descargar PDF",
     "tabs": {
-      "tech": "Perfil Tech",
-      "admin": "Perfil Admin",
-      "ats": "Formato ATS"
+      "cv": "Curriculum Vitae",
+      "ats": "ATS"
     }
   },
   "contact": {
