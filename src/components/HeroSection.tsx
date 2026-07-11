@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDownRight, Sparkles, FileText } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 import { useProfile } from "@/context/ProfileContext";
-import portrait from "@/assets/portrait-transparent.png";
+import portrait from "@/assets/portrait.jpg";
 
 interface Metric {
   value: string;
