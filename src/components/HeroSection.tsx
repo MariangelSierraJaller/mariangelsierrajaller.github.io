@@ -107,28 +107,57 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Right: portrait */}
+        {/* Right: portrait — framed hexagon composition */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
           className="relative mx-auto w-full max-w-md lg:max-w-none"
         >
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute left-1/2 top-1/2 h-[380px] w-[380px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/40 blur-[90px]" />
+          {/* Ambient aurora glow behind frame */}
+          <div className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/45 blur-[110px]" />
+            <div className="absolute left-1/3 top-2/3 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/25 blur-[80px]" />
           </div>
-          <div className="absolute inset-0 -z-10 rounded-full border border-primary/20" />
-          <img
-            src={portrait}
-            alt={t<string>("hero.name")}
-            className="relative z-10 mx-auto h-auto w-full max-w-[440px] object-contain drop-shadow-[0_30px_60px_rgba(139,30,40,0.35)]"
-          />
-          <motion.div
-            aria-hidden
-            animate={{ rotate: 360 }}
-            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-            className="pointer-events-none absolute inset-6 -z-10 rounded-full border border-dashed border-primary/25"
-          />
+
+          {/* Floating decorative hex marks */}
+          <div aria-hidden className="pointer-events-none absolute -right-2 -top-4 h-6 w-6 rotate-45 border border-primary/50 bg-primary/10 backdrop-blur-sm" />
+          <div aria-hidden className="pointer-events-none absolute -left-2 bottom-8 h-4 w-4 rotate-45 border border-primary/40 bg-primary/10" />
+
+          {/* Hexagon frame */}
+          <div className="relative mx-auto aspect-square w-full max-w-[440px]">
+            <motion.div
+              aria-hidden
+              animate={{ rotate: 360 }}
+              transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 rounded-full border border-dashed border-primary/25"
+            />
+            <div
+              className="absolute inset-3 santino-glow"
+              style={{
+                clipPath:
+                  "polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%)",
+                background:
+                  "linear-gradient(135deg, color-mix(in oklab, var(--color-primary) 60%, transparent), color-mix(in oklab, var(--color-primary) 15%, transparent))",
+              }}
+            />
+            <div
+              className="absolute inset-4 overflow-hidden bg-card"
+              style={{
+                clipPath:
+                  "polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%)",
+              }}
+            >
+              <img
+                src={portrait}
+                alt={t<string>("hero.name")}
+                className="h-full w-full object-cover object-center"
+              />
+              {/* Subtle vignette blending into background */}
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,transparent_55%,rgba(10,10,12,0.55)_100%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
