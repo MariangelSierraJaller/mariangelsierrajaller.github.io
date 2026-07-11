@@ -145,12 +145,18 @@
     "kicker": "Training",
     "inProgress": "In progress",
     "items": [
-      { "degree": "Systems Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech" },
-      { "degree": "Industrial Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin" },
-      { "degree": "Biomedical Engineering", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech" },
-      { "degree": "Accounting & Financial Technician oriented to Systems", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both" },
-      { "degree": "Software Programming Technician", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech" },
-      { "degree": "High School Diploma, Computer Science", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both" }
+      { "degree": "Systems Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech",
+        "badges": { "tech": ["Software Architecture", "Databases", "Integrations"], "admin": ["IT Management", "Business Logic", "Support"] } },
+      { "degree": "Industrial Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin",
+        "badges": { "tech": ["Process Optimization", "Automation", "KPIs"], "admin": ["Supply Chain", "Operations Management", "Logistics"] } },
+      { "degree": "Biomedical Engineering", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech",
+        "badges": { "tech": ["Bioengineering", "Clinical Software"], "admin": ["Hospital Management", "Clinical Procurement"] } },
+      { "degree": "Accounting & Financial Technician oriented to Systems", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both",
+        "badges": { "tech": ["NetSuite ERP", "Financial Analytics"], "admin": ["Accounting", "Treasury", "Reconciliations"] } },
+      { "degree": "Software Programming Technician", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech",
+        "badges": { "tech": ["Programming", "Algorithms"], "admin": ["Systems", "Support"] } },
+      { "degree": "High School Diploma, Computer Science", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both",
+        "badges": { "tech": ["IT Fundamentals", "Office Suite"], "admin": ["Office Suite", "Basic Management"] } }
     ]
   },
   "skills": {
