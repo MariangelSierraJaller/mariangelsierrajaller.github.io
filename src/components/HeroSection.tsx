@@ -19,19 +19,23 @@ export default function HeroSection() {
   const secondaryTitle = profile === "admin" ? t<string>("hero.titleTech") : t<string>("hero.titleAdmin");
 
   return (
-    <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-24">
+    <section className="relative isolate overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-24">
       {/* Ambient background — Rojo Santino waves */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <img
-          src={heroBg}
-          alt=""
-          aria-hidden
-          className="absolute inset-0 h-full w-full object-cover opacity-70 [filter:blur(2px)_saturate(115%)]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
+      <div
+        aria-hidden
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 [filter:saturate(115%)]">
+        <div className="absolute inset-0 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
         <div className="absolute right-[-10%] top-[-10%] h-[700px] w-[700px] rounded-full bg-primary/25 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_100%,rgba(139,30,40,0.18),transparent_60%)]" />
-        <svg className="absolute inset-0 h-full w-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_100%,rgba(139,30,40,0.22),transparent_60%)]" />
+        <svg className="absolute inset-0 h-full w-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
               <path d="M 56 0 L 0 0 0 56" fill="none" stroke="currentColor" strokeWidth="0.5" />
@@ -41,7 +45,8 @@ export default function HeroSection() {
         </svg>
       </div>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1.15fr_0.85fr]">
+
         {/* Left: copy */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
