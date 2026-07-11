@@ -44,7 +44,7 @@ export default function ExperienceSection() {
                     <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                   </span>
 
-                  <div className="rounded-2xl border border-border bg-card/60 p-6 transition-all hover:border-primary/40">
+                  <div className="rounded-2xl border border-border bg-card/60 p-6 transition-all hover:border-primary/40 hover-glow">
                     <p className="font-mono text-xs uppercase tracking-widest text-primary">
                       {item.period}
                     </p>

@@ -129,6 +129,27 @@
     background: var(--color-primary);
     color: var(--color-primary-foreground);
   }
+
+  /* Ambient Rojo Santino glow on any bordered card across the site */
+  .bg-card\/60,
+  .bg-card,
+  [class*="rounded-2xl"][class*="border-border"] {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  }
+  [class*="rounded-2xl"][class*="border-border"]:hover {
+    border-color: color-mix(in oklab, var(--color-primary) 45%, transparent);
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--color-primary) 35%, transparent),
+      0 16px 48px -18px color-mix(in oklab, var(--color-primary) 55%, transparent);
+    transform: translateY(-2px);
+  }
+
+  a, button {
+    transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  }
+  a:active, button:active {
+    transform: translateY(1px) scale(0.99);
+  }
 }
 
 @utility glass {
@@ -152,6 +173,52 @@
     0 0 0 1px color-mix(in oklab, var(--color-primary) 25%, transparent),
     0 20px 60px -20px color-mix(in oklab, var(--color-primary) 55%, transparent),
     0 8px 24px -12px rgb(0 0 0 / 60%);
+}
+
+@utility santino-blur-bg {
+  position: relative;
+  isolation: isolate;
+}
+.santino-blur-bg::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 20% 30%, color-mix(in oklab, var(--color-primary) 55%, transparent), transparent 55%),
+    radial-gradient(circle at 80% 70%, color-mix(in oklab, var(--color-primary) 35%, transparent), transparent 60%);
+  filter: blur(70px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+@utility hover-glow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+.hover-glow:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--color-primary) 55%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--color-primary) 45%, transparent),
+    0 18px 50px -18px color-mix(in oklab, var(--color-primary) 65%, transparent),
+    0 6px 20px -10px rgb(0 0 0 / 60%);
+}
+.hover-glow:active {
+  transform: translateY(-1px) scale(0.99);
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--color-primary) 60%, transparent),
+    0 8px 24px -12px color-mix(in oklab, var(--color-primary) 70%, transparent);
+}
+
+@utility interactive-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.interactive-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px -18px color-mix(in oklab, var(--color-primary) 55%, transparent);
+}
+.interactive-lift:active {
+  transform: translateY(0) scale(0.98);
 }
 
 @utility gradient-text {
