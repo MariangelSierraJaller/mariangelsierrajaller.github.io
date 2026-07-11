@@ -48,9 +48,9 @@
         "My academic and professional experiences have forged a versatile profile, capable of aligning operational efficiency with the strategic goals of the business — ensuring continuity, transparency and continuous growth."
       ],
       "stats": [
-        { "icon": "Briefcase", "label": "Operational Management", "value": "3+ Years" },
-        { "icon": "GraduationCap", "label": "Integral Training", "value": "3 Engineering degrees" },
-        { "icon": "Languages", "label": "Technical English", "value": "B2 Level" }
+        { "icon": "Briefcase", "label": "Operations", "value": "3+ Years" },
+        { "icon": "GraduationCap", "label": "Education", "value": "3 Degrees" },
+        { "icon": "Languages", "label": "English", "value": "B2" }
       ],
       "roles": [
         "Financial Analyst",
@@ -71,9 +71,9 @@
         "This blend of technical capability and functional understanding makes me a professional able to lead digital transformation, bringing operational efficiency and data-driven innovation to any corporate environment."
       ],
       "stats": [
-        { "icon": "BarChart3", "label": "Data Analysis", "value": "Advanced (Power BI)" },
-        { "icon": "Cpu", "label": "Automation", "value": "Python / Pandas (ETL)" },
-        { "icon": "Languages", "label": "Technical English", "value": "B2 Level" }
+        { "icon": "BarChart3", "label": "Data Analysis", "value": "Power BI" },
+        { "icon": "Cpu", "label": "Automation", "value": "Python & Pandas" },
+        { "icon": "Languages", "label": "English", "value": "B2" }
       ],
       "roles": [
         "Data Analyst",
