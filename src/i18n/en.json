@@ -240,13 +240,32 @@
     "title": "Let's work together",
     "kicker": "Contact",
     "lead": "I'm open to opportunities that bring together management, data and technology. Reach out.",
+    "connect": "Let's connect",
+    "description": "Tell me what you're working on. I reply via WhatsApp, email or LinkedIn — whichever works best for you.",
     "email": "marijohansierra@gmail.com",
     "phone": "+57 324 292 4705",
     "location": "Medellín, Colombia",
     "linkedin": "mariangelsierrajaller",
+    "labels": {
+      "location": "Location",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "form": {
+      "fullName": "Full name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send via WhatsApp",
+      "placeholder": {
+        "name": "Your name",
+        "email": "you@example.com",
+        "message": "Tell me about your project or role..."
+      }
+    },
     "emailCta": "Send email",
     "linkedinCta": "View LinkedIn"
   },
+
   "services": {
     "kicker": "What I offer",
     "title": "Services",
@@ -375,8 +394,10 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "built": "Designed and built with care."
+    "built": "Designed and built with care.",
+    "builtWith": "Built with React, TypeScript and Tailwind CSS."
   },
+
   "notFound": {
     "title": "Page not found",
     "lead": "The page you're looking for doesn't exist or has been moved.",
