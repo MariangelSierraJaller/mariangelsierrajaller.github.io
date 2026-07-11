@@ -182,7 +182,7 @@ export default function ProfessionalProfile() {
           <h3 className="text-center font-mono text-xs uppercase tracking-widest text-primary">
             {t<string>("professional.whyTitle")}
           </h3>
-          <div className="mt-6 grid gap-6 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
             {whyList.map((w, i) => (
               <motion.div
                 key={w.title}
@@ -190,14 +190,12 @@ export default function ProfessionalProfile() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="text-center"
+                className="rounded-2xl border border-border bg-card/60 p-6 hover-glow"
               >
-                <div className="mx-auto grid h-11 w-11 place-items-center rounded-full bg-primary/15 text-primary">
-                  <Check size={20} />
+                <div className="grid h-10 w-10 place-items-center rounded-full bg-primary/15 text-primary">
+                  <Check size={18} />
                 </div>
-                <h4 className="mt-4 font-display text-lg font-semibold text-foreground">
-                  {w.title}
-                </h4>
+                <h4 className="mt-4 font-display text-xl text-foreground">{w.title}</h4>
                 <p className="mt-2 text-sm text-muted-foreground">{w.desc}</p>
               </motion.div>
             ))}
