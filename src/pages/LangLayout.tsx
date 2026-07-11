@@ -22,6 +22,7 @@ export default function LangLayout() {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
