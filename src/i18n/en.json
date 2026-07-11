@@ -37,18 +37,53 @@
   "about": {
     "title": "About me",
     "kicker": "Dual profile",
-    "admin": "I am a professional dedicated to efficient management, firmly convinced that what is not measured cannot be controlled. Continuous improvement is a core pillar: I plan, analyze and control administrative processes with initiative and critical thinking. I am motivated to standardize workflows, audit processes and deliver solutions that generate measurable value.",
-    "tech": "I am deeply curious about how things work and how technology transforms processes. Learning is a continuous journey: I research, analyze and self-train to take on challenges with initiative and critical thinking. I am motivated to discover solutions, optimize tasks and contribute ideas that generate real value in every project I join.",
-    "stats": [
-      { "value": "3+", "label": "years in administrative operations" },
-      { "value": "3", "label": "engineering degrees in progress" },
-      { "value": "B2", "label": "English level" }
-    ],
-    "rolesTitle": "Roles I can take on",
-    "roles": {
-      "admin": ["Financial Analyst", "Procurement Manager", "Process Auditor"],
-      "tech": ["Data Analyst", "ERP Specialist (NetSuite)", "Junior Developer"]
+    "admin": {
+      "heading": "The Strategic Vision",
+      "subheading": "Taming complexity, delivering efficiency",
+      "paragraphs": [
+        "I am Mariangel Sierra Jaller, a professional passionate about efficient management and administrative control. I firmly believe that what is not measured cannot be controlled, and I see resource optimization as the foundational pillar of business success.",
+        "My multidisciplinary training in Industrial and Systems Engineering has shaped a deep analytical mindset. I have cultivated research and strategic planning skills that let me tackle complex operational challenges with responsibility, initiative and solid critical thinking.",
+        "Throughout my career in finance and procurement, I have standardized workflows, led audits and efficiently managed the supply chain. I see administration not just as cost or inventory control, but as an active tool to generate measurable, sustainable value.",
+        "My academic and professional experiences have forged a versatile profile, capable of aligning operational efficiency with the strategic goals of the business — ensuring continuity, transparency and continuous growth."
+      ],
+      "stats": [
+        { "icon": "Briefcase", "label": "Operational Management", "value": "3+ Years" },
+        { "icon": "GraduationCap", "label": "Integral Training", "value": "3 Engineering degrees" },
+        { "icon": "Languages", "label": "Technical English", "value": "B2 Level" }
+      ],
+      "roles": [
+        "Financial Analyst",
+        "Procurement & Supply Coordinator",
+        "Process & Internal Control Auditor",
+        "Operations Analyst",
+        "Administrative Logistics Specialist",
+        "Strategic Management Assistant"
+      ]
     },
+    "tech": {
+      "heading": "The Analytical Mindset",
+      "subheading": "Building bridges between data and action",
+      "paragraphs": [
+        "I am Mariangel Sierra Jaller, a Systems and Industrial Engineering student with a deep curiosity for how technology can transform complex processes and make people's lives easier.",
+        "I see learning as a continuous journey. This conviction has driven me to be proactive in mastering data analysis tools, workflow automation (ETL) and complex ERP ecosystems such as NetSuite.",
+        "My technical focus is not limited to databases; I aim to integrate technology with Business Intelligence (BI). I am motivated to design logical solutions, process structured data and build interactive dashboards that tell the real story behind the numbers and remove bottlenecks.",
+        "This blend of technical capability and functional understanding makes me a professional able to lead digital transformation, bringing operational efficiency and data-driven innovation to any corporate environment."
+      ],
+      "stats": [
+        { "icon": "BarChart3", "label": "Data Analysis", "value": "Advanced (Power BI)" },
+        { "icon": "Cpu", "label": "Automation", "value": "Python / Pandas (ETL)" },
+        { "icon": "Languages", "label": "Technical English", "value": "B2 Level" }
+      ],
+      "roles": [
+        "Data Analyst",
+        "Junior Developer (Python / Automation)",
+        "ERP Specialist & Integrator (Oracle NetSuite)",
+        "Junior Business Intelligence (BI) Consultant",
+        "Functional Requirements Analyst",
+        "Junior Data Engineer"
+      ]
+    },
+    "rolesTitle": "Roles I can take on",
     "whyTitle": "Why hire me",
     "why": [
       { "title": "Business vision + technical capability", "desc": "I translate business needs into tangible technological solutions." },
