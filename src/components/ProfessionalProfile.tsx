@@ -18,6 +18,7 @@ import type { LucideIcon } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 import { useProfile } from "@/context/ProfileContext";
 import SectionHeader from "@/components/SectionHeader";
+import Subheading from "@/components/Subheading";
 import portrait from "@/assets/portrait.jpg";
 
 interface ServiceItem {
@@ -156,15 +157,12 @@ export default function ProfessionalProfile() {
         </AnimatePresence>
 
         {/* B. Roles + Typewriter */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-3">
-            <span className="grid h-9 w-9 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary">
-              <Briefcase size={18} />
-            </span>
-            <h3 className="font-display text-2xl text-foreground md:text-3xl">
-              {t<string>("professional.rolesTitle")}
-            </h3>
-          </div>
+        <div className="mt-20 text-center">
+          <Subheading
+            title={t<string>("professional.rolesTitle")}
+            subtitle={t<string>("professional.rolesSubtitle")}
+            icon={<Briefcase size={18} />}
+          />
           <div className="mt-6 min-h-[2.5rem] font-mono text-2xl text-primary md:text-3xl">
             <Typewriter key={profile} words={typewriterWords} />
           </div>
@@ -187,10 +185,11 @@ export default function ProfessionalProfile() {
         </div>
 
         {/* C. Services */}
-        <div className="mt-20">
-          <h3 className="text-center font-mono text-xs uppercase tracking-widest text-primary">
-            {t<string>("professional.servicesTitle")}
-          </h3>
+        <div className="mt-24">
+          <Subheading
+            title={t<string>("professional.servicesTitle")}
+            subtitle={t<string>("professional.servicesSubtitle")}
+          />
           <AnimatePresence mode="wait">
             <motion.div
               key={`svc-${profile}`}
@@ -198,7 +197,7 @@ export default function ProfessionalProfile() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.35 }}
-              className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+              className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
             >
               {services.map((s, i) => {
                 const Icon = icons[i % icons.length];
@@ -227,10 +226,11 @@ export default function ProfessionalProfile() {
         </div>
 
         {/* D. Why hire me */}
-        <div className="mt-20">
-          <h3 className="text-center font-mono text-xs uppercase tracking-widest text-primary">
-            {t<string>("professional.whyTitle")}
-          </h3>
+        <div className="mt-24">
+          <Subheading
+            title={t<string>("professional.whyTitle")}
+            subtitle={t<string>("professional.whySubtitle")}
+          />
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {whyList.map((w, i) => (
               <motion.div
