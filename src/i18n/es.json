@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Mariangel Sierra Jaller — Portafolio",
+    "description": "Ingeniería de Sistemas e Ingeniería Industrial. Perfil dual: administración financiera y tecnología."
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "cta": "Hablemos"
+  },
+  "hero": {
+    "eyebrow": "Portafolio profesional",
+    "name": "Mariangel Sierra Jaller",
+    "titleAdmin": "Ingeniera Industrial",
+    "titleTech": "Ingeniera de Sistemas",
+    "titleJoin": " · ",
+    "tagline": "Puente entre administración financiera y tecnología. Convierto datos y procesos en decisiones medibles.",
+    "ctaPrimary": "Contáctame",
+    "ctaSecondary": "Ver experiencia",
+    "chips": ["Ing. de Sistemas", "Ing. Industrial", "Ing. Biomédica (en curso)"]
+  },
+  "profileSwitch": {
+    "label": "Ver perfil",
+    "admin": "Administrativo / Financiero",
+    "tech": "Tecnológico / Sistemas"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "kicker": "Perfil dual",
+    "admin": "Soy una persona con profunda vocación por la gestión eficiente, convencida de que lo que no se mide no se controla y que la tecnología optimiza recursos. Considero la mejora continua un pilar fundamental: analizo, planifico y controlo procesos administrativos con responsabilidad, iniciativa y pensamiento crítico. Me motiva estandarizar flujos, auditar procesos y aportar soluciones que generen valor medible.",
+    "tech": "Tengo una profunda curiosidad por entender cómo funcionan las cosas y cómo la tecnología transforma procesos. Considero el aprendizaje un camino continuo: investigo, analizo y me autoformo para asumir retos con iniciativa y pensamiento crítico. Me motiva descubrir soluciones, optimizar tareas y aportar ideas que generen valor real en los proyectos en los que participo.",
+    "stats": [
+      { "value": "3+", "label": "años en operaciones administrativas" },
+      { "value": "3", "label": "ingenierías en formación" },
+      { "value": "B2", "label": "nivel de inglés" }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia",
+    "kicker": "Trayectoria",
+    "items": [
+      {
+        "role": "Auxiliar de Compras y Operaciones Administrativas · Soporte Financiero",
+        "company": "Asociación para la Enseñanza — ASPAEN",
+        "period": "2023 — Presente",
+        "location": "Medellín, Colombia",
+        "admin": [
+          "Gestión integral de facturación electrónica, órdenes de compra y requisiciones estratégicas del servicio de alimentación.",
+          "Control de inventarios, auditoría de entregas y apoyo logístico de pedidos.",
+          "Control de tesorería, caja menor y ejecución de conciliaciones bancarias corporativas.",
+          "Liderazgo en la optimización de procesos administrativos y contables, reduciendo reprocesos y agilizando decisiones.",
+          "Diseño e implementación de mejoras internas mediante estandarización de tareas y herramientas de gestión.",
+          "Estructuración de flujos para el tratamiento de datos contables del ERP, consolidando reportes y tableros BI para auditoría financiera."
+        ],
+        "tech": [
+          "Creación de flujos de trabajo automatizados para el tratamiento de datos contables extraídos del ERP.",
+          "Limpieza y estructuración de datos con Python (Pandas) para análisis financiero.",
+          "Visualización interactiva y toma de decisiones con Power BI (DAX, Power Query).",
+          "Identificación de oportunidades de mejora vía digitalización y estandarización de tareas.",
+          "Visión estratégica del uso de la tecnología en procesos administrativos y contables.",
+          "Soporte tecnológico y financiero transversal para garantizar continuidad operativa."
+        ]
+      },
+      {
+        "role": "Practicante · Asistente Contable y Apoyo Tecnológico Administrativo",
+        "company": "Asociación para la Enseñanza — ASPAEN",
+        "period": "2022 — 2023",
+        "location": "Medellín, Colombia",
+        "admin": [
+          "Administración de facturación electrónica, emisión de órdenes de compra y control estricto de soportes.",
+          "Ejecución de egresos, caja menor, arqueos y tesorería con controles internos de trazabilidad y transparencia.",
+          "Soporte integral a áreas operativas y administrativas (recepción, tienda escolar) para continuidad del servicio."
+        ],
+        "tech": [
+          "Registro preciso y trazabilidad documental en los procesos contables digitalizados.",
+          "Apoyo tecnológico administrativo: adopción y uso de herramientas ofimáticas y de gestión.",
+          "Coordinación logística e integración de información entre áreas."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Educación",
+    "kicker": "Formación",
+    "inProgress": "En proceso",
+    "items": [
+      { "degree": "Ingeniería de Sistemas", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech" },
+      { "degree": "Ingeniería Industrial", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin" },
+      { "degree": "Ingeniería Biomédica", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech" },
+      { "degree": "Técnico Contable y Financiero orientado a Sistemas", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both" },
+      { "degree": "Técnico en Programación de Software", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech" },
+      { "degree": "Bachiller Especializado en Informática", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both" }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades",
+    "kicker": "Competencias",
+    "hardTitle": "Habilidades técnicas",
+    "softTitle": "Habilidades personales",
+    "admin": {
+      "hard": [
+        "Facturación electrónica",
+        "Órdenes de compra & requisiciones",
+        "Tesorería & conciliaciones bancarias",
+        "Control de inventarios",
+        "Gestión documental & auditoría",
+        "KPIs y control de metas",
+        "Ofimática avanzada (Excel)",
+        "ERP NetSuite",
+        "Power BI",
+        "Estandarización de procesos"
+      ]
+    },
+    "tech": {
+      "hard": [
+        "Python (Pandas, ETL, EDA)",
+        "Power BI (DAX, Power Query)",
+        "SQL & modelado relacional",
+        "ERP NetSuite (XML, JSON)",
+        "Integraciones (Zapier, APIs)",
+        "Automatización de flujos",
+        "Tableau · Excel avanzado",
+        "CRISP-DM",
+        "Diseño lógico de soluciones",
+        "IA aplicada a Bioingeniería"
+      ]
+    },
+    "soft": [
+      "Comunicación",
+      "Pensamiento crítico",
+      "Trabajo en equipo",
+      "Gestión del cambio",
+      "Autoaprendizaje",
+      "Proactividad",
+      "Atención al usuario"
+    ],
+    "languages": {
+      "title": "Idiomas",
+      "items": [
+        { "name": "Español", "level": "Nativo" },
+        { "name": "Inglés", "level": "B2" }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Trabajemos juntos",
+    "kicker": "Contacto",
+    "lead": "Estoy abierta a oportunidades que unan gestión, datos y tecnología. Escríbeme.",
+    "email": "marijohansierra@gmail.com",
+    "phone": "+57 324 292 4705",
+    "location": "Medellín, Colombia",
+    "linkedin": "mariangelsierrajaller",
+    "emailCta": "Enviar email",
+    "linkedinCta": "Ver LinkedIn"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "built": "Diseñado y desarrollado con detalle."
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "lead": "La página que buscas no existe o fue movida.",
+    "cta": "Volver al inicio"
+  }
+}
