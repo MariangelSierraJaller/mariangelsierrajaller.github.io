@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProfileSwitch from "@/components/ProfileSwitch";
-import ServicesSection from "@/components/ServicesSection";
+import ProfessionalProfile from "@/components/ProfessionalProfile";
 import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
 import SkillsSection from "@/components/SkillsSection";
@@ -15,9 +15,9 @@ export default function Home() {
       <HeroSection />
       <ProfileSwitch />
       <AboutSection />
-      <ServicesSection />
-      <ExperienceSection />
       <EducationSection />
+      <ProfessionalProfile />
+      <ExperienceSection />
       <SkillsSection />
       <ResumeSection />
       <TestimonialsSection />
@@ -25,4 +25,3 @@ export default function Home() {
     </>
   );
 }
-
