@@ -231,7 +231,7 @@ export default function ProfessionalProfile() {
             title={t<string>("professional.whyTitle")}
             subtitle={t<string>("professional.whySubtitle")}
           />
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
             {whyList.map((w, i) => (
               <motion.div
                 key={w.title}
