@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Mariangel Sierra Jaller — Portfolio",
+    "description": "Systems Engineering and Industrial Engineering. Dual profile: financial administration and technology."
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "contact": "Contact",
+    "cta": "Let's talk"
+  },
+  "hero": {
+    "eyebrow": "Professional portfolio",
+    "name": "Mariangel Sierra Jaller",
+    "titleAdmin": "Industrial Engineer",
+    "titleTech": "Systems Engineer",
+    "titleJoin": " · ",
+    "tagline": "Bridging financial administration and technology. Turning data and processes into measurable decisions.",
+    "ctaPrimary": "Get in touch",
+    "ctaSecondary": "See experience",
+    "chips": ["Systems Eng.", "Industrial Eng.", "Biomedical Eng. (in progress)"]
+  },
+  "profileSwitch": {
+    "label": "View profile",
+    "admin": "Administrative / Financial",
+    "tech": "Technology / Systems"
+  },
+  "about": {
+    "title": "About me",
+    "kicker": "Dual profile",
+    "admin": "I am a professional dedicated to efficient management, firmly convinced that what is not measured cannot be controlled. Continuous improvement is a core pillar: I plan, analyze and control administrative processes with initiative and critical thinking. I am motivated to standardize workflows, audit processes and deliver solutions that generate measurable value.",
+    "tech": "I am deeply curious about how things work and how technology transforms processes. Learning is a continuous journey: I research, analyze and self-train to take on challenges with initiative and critical thinking. I am motivated to discover solutions, optimize tasks and contribute ideas that generate real value in every project I join.",
+    "stats": [
+      { "value": "3+", "label": "years in administrative operations" },
+      { "value": "3", "label": "engineering degrees in progress" },
+      { "value": "B2", "label": "English level" }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "kicker": "Track record",
+    "items": [
+      {
+        "role": "Purchasing & Administrative Operations Assistant · Financial Support",
+        "company": "Asociación para la Enseñanza — ASPAEN",
+        "period": "2023 — Present",
+        "location": "Medellín, Colombia",
+        "admin": [
+          "Comprehensive management of electronic invoicing, purchase orders and strategic catering requisitions.",
+          "Inventory control, delivery auditing and logistical support for procurement.",
+          "Treasury management, petty cash oversight and execution of corporate bank reconciliations.",
+          "Led optimization of administrative and accounting processes, reducing rework and streamlining decisions.",
+          "Designed and implemented internal workflow improvements via task standardization and management tools.",
+          "Structured workflows for processing ERP accounting data, consolidating reports and BI dashboards for financial audits."
+        ],
+        "tech": [
+          "Built automated workflows for processing accounting data extracted from the ERP.",
+          "Data cleaning and structuring with Python (Pandas) for financial analysis.",
+          "Interactive visualization and decision-making with Power BI (DAX, Power Query).",
+          "Identified improvement opportunities through digitalization and task standardization.",
+          "Strategic vision for the use of technology in administrative and accounting processes.",
+          "Cross-functional technological and financial support to ensure operational continuity."
+        ]
+      },
+      {
+        "role": "Accounting Assistant & Administrative Technology Support Intern",
+        "company": "Asociación para la Enseñanza — ASPAEN",
+        "period": "2022 — 2023",
+        "location": "Medellín, Colombia",
+        "admin": [
+          "Management of electronic invoicing, purchase-order issuance and strict document control.",
+          "Executed disbursements, petty cash, cash counts and treasury activities with internal controls that improved traceability and transparency.",
+          "Comprehensive support to operational and administrative areas (reception, school store) for service continuity."
+        ],
+        "tech": [
+          "Accurate recording and document traceability in digitalized accounting processes.",
+          "Administrative technology support: adoption and use of office and management tools.",
+          "Logistical coordination and information integration across areas."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "kicker": "Training",
+    "inProgress": "In progress",
+    "items": [
+      { "degree": "Systems Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech" },
+      { "degree": "Industrial Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin" },
+      { "degree": "Biomedical Engineering", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech" },
+      { "degree": "Accounting & Financial Technician oriented to Systems", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both" },
+      { "degree": "Software Programming Technician", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech" },
+      { "degree": "High School Diploma, Computer Science", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both" }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "kicker": "Competencies",
+    "hardTitle": "Technical skills",
+    "softTitle": "Personal skills",
+    "admin": {
+      "hard": [
+        "Electronic invoicing",
+        "Purchase orders & requisitions",
+        "Treasury & bank reconciliations",
+        "Inventory control",
+        "Document management & audit",
+        "KPIs & goal control",
+        "Advanced Office (Excel)",
+        "NetSuite ERP",
+        "Power BI",
+        "Process standardization"
+      ]
+    },
+    "tech": {
+      "hard": [
+        "Python (Pandas, ETL, EDA)",
+        "Power BI (DAX, Power Query)",
+        "SQL & relational modeling",
+        "NetSuite ERP (XML, JSON)",
+        "Integrations (Zapier, APIs)",
+        "Workflow automation",
+        "Tableau · Advanced Excel",
+        "CRISP-DM",
+        "Logical design of solutions",
+        "AI applied to Bioengineering"
+      ]
+    },
+    "soft": [
+      "Communication",
+      "Critical thinking",
+      "Teamwork",
+      "Change management",
+      "Self-learning",
+      "Proactivity",
+      "User support"
+    ],
+    "languages": {
+      "title": "Languages",
+      "items": [
+        { "name": "Spanish", "level": "Native" },
+        { "name": "English", "level": "B2" }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Let's work together",
+    "kicker": "Contact",
+    "lead": "I'm open to opportunities that bring together management, data and technology. Reach out.",
+    "email": "marijohansierra@gmail.com",
+    "phone": "+57 324 292 4705",
+    "location": "Medellín, Colombia",
+    "linkedin": "mariangelsierrajaller",
+    "emailCta": "Send email",
+    "linkedinCta": "View LinkedIn"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built": "Designed and built with care."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "lead": "The page you're looking for doesn't exist or has been moved.",
+    "cta": "Back to home"
+  }
+}
