@@ -240,13 +240,32 @@
     "title": "Trabajemos juntos",
     "kicker": "Contacto",
     "lead": "Estoy abierta a oportunidades que unan gestión, datos y tecnología. Escríbeme.",
+    "connect": "Conectemos",
+    "description": "Cuéntame en qué estás trabajando. Respondo por WhatsApp, correo o LinkedIn — lo que te resulte más cómodo.",
     "email": "marijohansierra@gmail.com",
     "phone": "+57 324 292 4705",
     "location": "Medellín, Colombia",
     "linkedin": "mariangelsierrajaller",
+    "labels": {
+      "location": "Ubicación",
+      "phone": "Teléfono",
+      "email": "Correo"
+    },
+    "form": {
+      "fullName": "Nombre completo",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "send": "Enviar por WhatsApp",
+      "placeholder": {
+        "name": "Tu nombre",
+        "email": "tucorreo@ejemplo.com",
+        "message": "Cuéntame sobre tu proyecto o vacante..."
+      }
+    },
     "emailCta": "Enviar email",
     "linkedinCta": "Ver LinkedIn"
   },
+
   "services": {
     "kicker": "Qué ofrezco",
     "title": "Servicios",
@@ -375,8 +394,10 @@
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
-    "built": "Diseñado y desarrollado con detalle."
+    "built": "Diseñado y desarrollado con detalle.",
+    "builtWith": "Hecho con React, TypeScript y Tailwind CSS."
   },
+
   "notFound": {
     "title": "Página no encontrada",
     "lead": "La página que buscas no existe o fue movida.",
