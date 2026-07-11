@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 export default function SectionHeader({
   kicker,
   title,
+  centered = false,
 }: {
   kicker: string;
   title: string;
+  centered?: boolean;
 }) {
   return (
     <motion.div
@@ -13,10 +15,11 @@ export default function SectionHeader({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.5 }}
+      className={centered ? "text-center" : ""}
     >
       <p className="text-xs uppercase tracking-[0.24em] text-primary">{kicker}</p>
       <h2 className="mt-3 font-display text-4xl text-foreground sm:text-5xl">{title}</h2>
-      <div className="mt-4 h-px w-16 bg-primary" />
+      <div className="mt-4 h-px w-16 bg-primary mx-0" />
     </motion.div>
   );
 }
