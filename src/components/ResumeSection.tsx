@@ -46,6 +46,18 @@ export default function ResumeSection() {
     [tab, lang, profile],
   );
 
+  // Preload all resume images once so tab/lang/profile swaps feel instant.
+  useEffect(() => {
+    const all = [
+      ...Object.values(CV).flatMap((p) => Object.values(p).flatMap((r) => r.images)),
+      ...Object.values(ATS).flatMap((r) => r.images),
+    ];
+    all.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   const tabs: { key: TabKey; label: string }[] = [
     { key: "cv", label: t<string>("resume.tabs.cv") },
     { key: "ats", label: t<string>("resume.tabs.ats") },
