@@ -294,6 +294,24 @@
     }
   },
 
+  "professional": {
+    "kicker": "Value proposition",
+    "title": "Professional Profile",
+    "specialistPrefix": "Specialist in",
+    "rolesTitle": "Roles I can take on",
+    "servicesTitle": "Services",
+    "whyTitle": "Why hire me",
+    "admin": {
+      "paragraph": "Industrial and Systems Engineering student specialized in resource optimization and administrative control. I excel at end-to-end procurement management, document audit and treasury operations. My approach combines financial rigor with operational efficiency to guarantee resource traceability and delivery on corporate goals.",
+      "typewriter": ["Procurement Management", "Internal Audit", "Treasury", "Resource Optimization"],
+      "roles": ["Financial Analyst", "Procurement Manager", "Process Auditor", "Treasury Coordinator", "Operations Analyst"]
+    },
+    "tech": {
+      "paragraph": "Systems and Industrial Engineering student specialized in the convergence of data analytics and workflow automation. I have hands-on experience building ETL pipelines with Python, automating data extraction from ERPs such as NetSuite and designing interactive dashboards in Power BI. My goal is turning raw information into technological solutions that power management decisions.",
+      "typewriter": ["Data Analysis", "Backend Development", "ERP Integration", "ETL Automation"],
+      "roles": ["Data Analyst", "ERP Specialist", "Data Engineer", "BI Consultant", "Python Developer"]
+    }
+  },
   "testimonials": {
     "kicker": "Recommendations",
     "title": "What people say",
