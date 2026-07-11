@@ -140,16 +140,16 @@ export default function AboutSection() {
                 return (
                   <div
                     key={s.label}
-                    className="flex items-center gap-4 rounded-2xl border border-border bg-card/60 p-5 hover-glow"
+                    className="flex flex-col items-center gap-3 rounded-2xl border border-border bg-card/60 p-5 text-center hover-glow min-h-[140px]"
                   >
                     <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary/15 text-primary">
                       <Icon size={20} />
                     </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                    <div className="flex min-w-0 flex-1 flex-col items-center justify-center">
+                      <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground break-words">
                         {s.label}
                       </div>
-                      <div className="mt-1 font-display text-base text-foreground whitespace-normal leading-snug">
+                      <div className="mt-1.5 font-display text-lg text-foreground leading-tight break-words">
                         {s.value}
                       </div>
                     </div>
