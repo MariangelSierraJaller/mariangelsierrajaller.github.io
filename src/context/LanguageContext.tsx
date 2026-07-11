@@ -47,9 +47,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     [lang, location.hash, location.pathname, location.search, navigate],
   );
 
+  const otherLang: Lang = lang === "es" ? "en" : "es";
+
   const value = useMemo(
-    () => ({ lang, dict, t, setLang, otherLang: lang === "es" ? "en" : "es" }),
-    [lang, dict, t, setLang],
+    () => ({ lang, dict, t, setLang, otherLang }),
+    [lang, dict, t, setLang, otherLang],
   );
 
   return <LanguageCtx.Provider value={value}>{children}</LanguageCtx.Provider>;
