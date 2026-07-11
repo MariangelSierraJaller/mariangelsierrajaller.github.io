@@ -96,48 +96,65 @@
   "experience": {
     "title": "Experience",
     "kicker": "Track record",
+    "currentLabel": "Current",
+    "responsibilitiesLabel": "Key responsibilities",
+    "showMore": "Show more",
+    "showLess": "Show less",
     "items": [
       {
-        "role": "Purchasing & Administrative Operations Assistant · Financial Support",
+        "period": "Jan 2023 — Present",
+        "location": "Medellín, Antioquia, Colombia · On-site",
         "company": "Asociación para la Enseñanza — ASPAEN",
-        "period": "2023 — Present",
-        "location": "Medellín, Colombia",
-        "admin": [
-          "Comprehensive management of electronic invoicing, purchase orders and strategic catering requisitions.",
-          "Inventory control, delivery auditing and logistical support for procurement.",
-          "Treasury management, petty cash oversight and execution of corporate bank reconciliations.",
-          "Led optimization of administrative and accounting processes, reducing rework and streamlining decisions.",
-          "Designed and implemented internal workflow improvements via task standardization and management tools.",
-          "Structured workflows for processing ERP accounting data, consolidating reports and BI dashboards for financial audits."
-        ],
-        "tech": [
-          "Built automated ETL workflows with Python for accounting data extracted from the ERP.",
-          "Data cleaning and structuring with Python (Pandas) for financial analysis.",
-          "Interactive visualization and decision-making with Power BI (DAX, Power Query).",
-          "Identified improvement opportunities through digitalization and task standardization.",
-          "Strategic vision for the use of technology in administrative and accounting processes.",
-          "Cross-functional technological and financial support to ensure operational continuity."
-        ],
-        "adminTags": ["NetSuite ERP", "E-invoicing", "Treasury", "Reconciliations", "KPIs", "Advanced Excel"],
-        "techTags": ["Python", "Pandas", "Power BI", "DAX", "NetSuite ERP", "ETL", "SQL"]
+        "current": true,
+        "admin": {
+          "role": "Purchasing & Administrative Operations Assistant · Financial Support",
+          "description": "Responsible for the end-to-end procurement cycle, inventory auditing and treasury control, focused on process standardization and reducing operational rework.",
+          "bullets": [
+            "Comprehensive management of e-invoicing, purchase orders and strategic service requisitions.",
+            "Operational treasury control, petty cash handling and execution of corporate bank reconciliations.",
+            "Leadership in optimizing administrative and accounting processes to drive operational efficiency.",
+            "Designed and implemented internal workflow improvements via task standardization and management tools.",
+            "Development and monitoring of key operational KPIs to secure long-term profitability."
+          ],
+          "tags": ["Procurement", "Treasury", "Auditing", "Advanced Excel", "NetSuite ERP", "KPIs", "Internal Control"]
+        },
+        "tech": {
+          "role": "Data Analyst · ERP Specialist · Financial Support",
+          "description": "Responsible for accounting data processing and building automated (ETL) workflows, driving the digital transition of the financial area through business intelligence tools.",
+          "bullets": [
+            "Built automated ETL workflows to process accounting data extracted from the ERP.",
+            "Python for structured data cleaning and Power BI for interactive visualization and decision-making.",
+            "Identified improvement opportunities through digitalization, task standardization and process integration.",
+            "Applied critical thinking and analytical capabilities to provide cross-functional technology support."
+          ],
+          "tags": ["Python", "Power BI", "ETL", "Oracle NetSuite", "Data Analysis", "Automation", "Dashboards"]
+        }
       },
       {
-        "role": "Accounting Assistant & Administrative Technology Support Intern",
+        "period": "Feb 2022 — Jan 2023",
+        "location": "Medellín, Antioquia, Colombia · On-site",
         "company": "Asociación para la Enseñanza — ASPAEN",
-        "period": "2022 — 2023",
-        "location": "Medellín, Colombia",
-        "admin": [
-          "Management of electronic invoicing, purchase-order issuance and strict document control.",
-          "Executed disbursements, petty cash, cash counts and treasury activities with internal controls that improved traceability and transparency.",
-          "Comprehensive support to operational and administrative areas (reception, school store) for service continuity."
-        ],
-        "tech": [
-          "Accurate recording and document traceability in digitalized accounting processes.",
-          "Administrative technology support: adoption and use of office and management tools.",
-          "Logistical coordination and information integration across areas."
-        ],
-        "adminTags": ["E-invoicing", "Petty cash", "Cash counts", "Document control"],
-        "techTags": ["Office suite", "Digitalization", "Document management"]
+        "current": false,
+        "admin": {
+          "role": "Accounting Assistant & Administrative Support Intern",
+          "description": "Comprehensive support to operational and accounting areas, ensuring document traceability and transparency in the handling of the institution's financial resources.",
+          "bullets": [
+            "Management of e-invoicing, issuing of purchase orders and strict control of supporting documentation.",
+            "Executed disbursements, cash counts and treasury activities with reliable internal controls.",
+            "Direct support to operational areas to ensure service continuity and user attention."
+          ],
+          "tags": ["Invoicing", "Accounting", "Petty Cash", "Traceability", "Operational Support", "User Attention"]
+        },
+        "tech": {
+          "role": "Administrative Technology Support & Integration Assistant",
+          "description": "Financial information management and technology support for accounting processes, ensuring timely delivery and accurate recording of operational data.",
+          "bullets": [
+            "Strict control and document traceability of supports and records in accounting processes.",
+            "Implementation of internal controls that strengthened transparency and reliability of financial information.",
+            "Comprehensive technological and operational support for institutional logistics coordination."
+          ],
+          "tags": ["Data Control", "ERP", "Digitalization", "IT Support", "Traceability", "Logistics"]
+        }
       }
     ]
   },
