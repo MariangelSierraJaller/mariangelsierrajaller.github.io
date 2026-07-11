@@ -133,23 +133,23 @@ export default function AboutSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -6 }}
               transition={{ duration: 0.35 }}
-              className="mt-8 grid gap-4 sm:grid-cols-3"
+              className="mt-8 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
             >
               {copy.stats.map((s) => {
                 const Icon = ICONS[s.icon] ?? Sparkles;
                 return (
                   <div
                     key={s.label}
-                    className="flex items-center gap-3 rounded-2xl border border-border bg-card/60 p-4 hover-glow"
+                    className="flex items-center gap-4 rounded-2xl border border-border bg-card/60 p-5 hover-glow"
                   >
-                    <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/15 text-primary">
-                      <Icon size={18} />
+                    <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary/15 text-primary">
+                      <Icon size={20} />
                     </div>
-                    <div className="min-w-0">
+                    <div className="min-w-0 flex-1">
                       <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                         {s.label}
                       </div>
-                      <div className="mt-1 font-display text-base text-foreground truncate">
+                      <div className="mt-1 font-display text-base text-foreground whitespace-normal leading-snug">
                         {s.value}
                       </div>
                     </div>
