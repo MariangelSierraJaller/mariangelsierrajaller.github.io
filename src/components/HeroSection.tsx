@@ -3,6 +3,7 @@ import { ArrowDownRight, Sparkles, FileText } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 import { useProfile } from "@/context/ProfileContext";
 import portrait from "@/assets/portrait.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 
 interface Metric {
   value: string;
