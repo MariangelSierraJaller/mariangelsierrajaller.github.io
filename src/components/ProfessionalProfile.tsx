@@ -94,14 +94,14 @@ export default function ProfessionalProfile() {
       className="relative scroll-mt-32 border-t border-white/5 bg-card/30"
     >
       <div className="mx-auto max-w-6xl px-6 py-24">
-        <div className="text-center">
+        <div>
           <SectionHeader
             kicker={t<string>("professional.kicker")}
             title={t<string>("professional.title")}
           />
         </div>
 
-        {/* Centered subtitle under title */}
+        {/* Left-aligned subtitle under title */}
         <AnimatePresence mode="wait">
           <motion.p
             key={`sub-${profile}`}
@@ -109,7 +109,7 @@ export default function ProfessionalProfile() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.35 }}
-            className="mx-auto mt-6 max-w-3xl text-center text-sm text-muted-foreground md:text-base"
+            className="mt-6 max-w-3xl text-sm text-muted-foreground md:text-base"
           >
             {typewriterWords.join(" | ")}
           </motion.p>
