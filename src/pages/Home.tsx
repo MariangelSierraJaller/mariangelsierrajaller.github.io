@@ -8,12 +8,14 @@ import SkillsSection from "@/components/SkillsSection";
 import ResumeSection from "@/components/ResumeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
+import { useProfile } from "@/context/ProfileContext";
 
 export default function Home() {
+  const { locked } = useProfile();
   return (
     <>
       <HeroSection />
-      <ProfileSwitch />
+      {!locked && <ProfileSwitch />}
       <AboutSection />
       <EducationSection />
       <ProfessionalProfile />
