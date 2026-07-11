@@ -8,6 +8,7 @@
     "experience": "Experience",
     "education": "Education",
     "skills": "Skills",
+    "resume": "Resume",
     "contact": "Contact",
     "cta": "Let's talk"
   },
@@ -19,8 +20,13 @@
     "titleJoin": " · ",
     "tagline": "Bridging financial administration and technology. Turning data and processes into measurable decisions.",
     "ctaPrimary": "Get in touch",
-    "ctaSecondary": "See experience",
-    "chips": ["Systems Eng.", "Industrial Eng.", "Biomedical Eng. (in progress)"]
+    "ctaSecondary": "View resume",
+    "chips": ["Systems Eng.", "Industrial Eng.", "Biomedical Eng. (in progress)"],
+    "metrics": [
+      { "value": "3+", "label": "Years of experience" },
+      { "value": "3", "label": "Engineering degrees" },
+      { "value": "B2", "label": "English" }
+    ]
   },
   "profileSwitch": {
     "label": "View profile",
@@ -36,6 +42,17 @@
       { "value": "3+", "label": "years in administrative operations" },
       { "value": "3", "label": "engineering degrees in progress" },
       { "value": "B2", "label": "English level" }
+    ],
+    "rolesTitle": "Roles I can take on",
+    "roles": {
+      "admin": ["Financial Analyst", "Procurement Manager", "Process Auditor"],
+      "tech": ["Data Analyst", "ERP Specialist (NetSuite)", "Junior Developer"]
+    },
+    "whyTitle": "Why hire me",
+    "why": [
+      { "title": "Business vision + technical capability", "desc": "I translate business needs into tangible technological solutions." },
+      { "title": "Operational cost reduction", "desc": "I automate workflows and eliminate rework that consumes time and money." },
+      { "title": "Continuous improvement", "desc": "I design KPIs, audits and dashboards for data-driven decisions." }
     ]
   },
   "experience": {
@@ -56,13 +73,15 @@
           "Structured workflows for processing ERP accounting data, consolidating reports and BI dashboards for financial audits."
         ],
         "tech": [
-          "Built automated workflows for processing accounting data extracted from the ERP.",
+          "Built automated ETL workflows with Python for accounting data extracted from the ERP.",
           "Data cleaning and structuring with Python (Pandas) for financial analysis.",
           "Interactive visualization and decision-making with Power BI (DAX, Power Query).",
           "Identified improvement opportunities through digitalization and task standardization.",
           "Strategic vision for the use of technology in administrative and accounting processes.",
           "Cross-functional technological and financial support to ensure operational continuity."
-        ]
+        ],
+        "adminTags": ["NetSuite ERP", "E-invoicing", "Treasury", "Reconciliations", "KPIs", "Advanced Excel"],
+        "techTags": ["Python", "Pandas", "Power BI", "DAX", "NetSuite ERP", "ETL", "SQL"]
       },
       {
         "role": "Accounting Assistant & Administrative Technology Support Intern",
@@ -78,7 +97,9 @@
           "Accurate recording and document traceability in digitalized accounting processes.",
           "Administrative technology support: adoption and use of office and management tools.",
           "Logistical coordination and information integration across areas."
-        ]
+        ],
+        "adminTags": ["E-invoicing", "Petty cash", "Cash counts", "Document control"],
+        "techTags": ["Office suite", "Digitalization", "Document management"]
       }
     ]
   },
@@ -98,35 +119,30 @@
   "skills": {
     "title": "Skills",
     "kicker": "Competencies",
-    "hardTitle": "Technical skills",
-    "softTitle": "Personal skills",
+    "hardTitle": "Hard Skills",
+    "softTitle": "Soft Skills",
+    "toolsTitle": "Tools",
     "admin": {
       "hard": [
-        "Electronic invoicing",
-        "Purchase orders & requisitions",
-        "Treasury & bank reconciliations",
-        "Inventory control",
-        "Document management & audit",
-        "KPIs & goal control",
-        "Advanced Office (Excel)",
-        "NetSuite ERP",
-        "Power BI",
-        "Process standardization"
-      ]
+        { "name": "Electronic invoicing", "level": 95 },
+        { "name": "NetSuite ERP", "level": 85 },
+        { "name": "Treasury & reconciliations", "level": 90 },
+        { "name": "Inventory control", "level": 85 },
+        { "name": "Document management & audit", "level": 88 },
+        { "name": "KPIs & goal control", "level": 80 }
+      ],
+      "tools": ["Advanced Excel", "Power BI", "Oracle NetSuite", "SAP basics", "Google Workspace", "Notion"]
     },
     "tech": {
       "hard": [
-        "Python (Pandas, ETL, EDA)",
-        "Power BI (DAX, Power Query)",
-        "SQL & relational modeling",
-        "NetSuite ERP (XML, JSON)",
-        "Integrations (Zapier, APIs)",
-        "Workflow automation",
-        "Tableau · Advanced Excel",
-        "CRISP-DM",
-        "Logical design of solutions",
-        "AI applied to Bioengineering"
-      ]
+        { "name": "Python (Pandas, ETL, EDA)", "level": 85 },
+        { "name": "Power BI (DAX, Power Query)", "level": 90 },
+        { "name": "SQL & relational modeling", "level": 80 },
+        { "name": "NetSuite ERP (XML, JSON)", "level": 85 },
+        { "name": "Workflow automation", "level": 82 },
+        { "name": "Logical solution design", "level": 80 }
+      ],
+      "tools": ["Python", "Pandas", "Power BI", "SQL", "NetSuite", "Zapier", "APIs", "Tableau", "Git"]
     },
     "soft": [
       "Communication",
@@ -143,6 +159,17 @@
         { "name": "Spanish", "level": "Native" },
         { "name": "English", "level": "B2" }
       ]
+    }
+  },
+  "resume": {
+    "title": "My Resume",
+    "kicker": "Downloads",
+    "subtitle": "Explore my experience in detail",
+    "viewCta": "Open PDF in new tab",
+    "tabs": {
+      "tech": "Tech Profile",
+      "admin": "Admin Profile",
+      "ats": "ATS Format"
     }
   },
   "contact": {

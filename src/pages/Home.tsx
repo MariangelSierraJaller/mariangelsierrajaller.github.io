@@ -4,6 +4,7 @@ import ProfileSwitch from "@/components/ProfileSwitch";
 import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
 import SkillsSection from "@/components/SkillsSection";
+import ResumeSection from "@/components/ResumeSection";
 import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
@@ -15,7 +16,9 @@ export default function Home() {
       <ExperienceSection />
       <EducationSection />
       <SkillsSection />
+      <ResumeSection />
       <ContactSection />
     </>
   );
 }
+
