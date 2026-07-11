@@ -113,29 +113,44 @@ export default function ResumeSection() {
             rel="noreferrer"
             className="group relative block w-full max-w-3xl overflow-hidden rounded-2xl border border-border bg-card shadow-2xl"
           >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={lang + tab + profile}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.35 }}
-                className="flex flex-col gap-2"
-              >
+            <div className="relative">
+              {/* Spacer keeps container height stable during crossfade */}
+              <div className="invisible flex flex-col gap-2" aria-hidden>
                 {resource.images.map((src, i) => (
                   <img
                     key={i}
                     src={src}
-                    alt={`${tab === "cv" ? "CV" : "ATS"} ${profile} ${lang} — página ${i + 1}`}
-                    loading="lazy"
-                    decoding="async"
+                    alt=""
                     width={816}
                     height={1056}
-                    className="h-auto w-full transition-transform duration-500 ease-out group-hover:scale-105"
+                    className="h-auto w-full"
                   />
                 ))}
-              </motion.div>
-            </AnimatePresence>
+              </div>
+              <AnimatePresence initial={false}>
+                <motion.div
+                  key={lang + tab + profile}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.45, ease: "easeInOut" }}
+                  className="absolute inset-0 flex flex-col gap-2"
+                >
+                  {resource.images.map((src, i) => (
+                    <img
+                      key={i}
+                      src={src}
+                      alt={`${tab === "cv" ? "CV" : "ATS"} ${profile} ${lang} — página ${i + 1}`}
+                      loading="eager"
+                      decoding="async"
+                      width={816}
+                      height={1056}
+                      className="h-auto w-full transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
+                  ))}
+                </motion.div>
+              </AnimatePresence>
+            </div>
             <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-background/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
               <span className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground santino-glow">
                 <Eye size={16} />
