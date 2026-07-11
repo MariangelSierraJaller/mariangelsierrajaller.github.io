@@ -1,17 +1,7 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, type ReactNode } from "react";
 import { useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { ProfileCtx, type Profile } from "@/context/profile-core";
 
-export type Profile = "admin" | "tech";
-
-interface ProfileCtx {
-  profile: Profile;
-  setProfile: (p: Profile) => void;
-  toggle: () => void;
-  /** True when `?locked=true` is present in the URL. Hides the switcher UI. */
-  locked: boolean;
-}
-
-const Ctx = createContext<ProfileCtx | null>(null);
 const KEY = "msj.profile";
 
 function storedProfile(): Profile {
@@ -74,11 +64,5 @@ export function ProfileProvider({ children }: { children: ReactNode }) {
     [profile, setProfile, locked],
   );
 
-  return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
-}
-
-export function useProfile() {
-  const ctx = useContext(Ctx);
-  if (!ctx) throw new Error("useProfile must be used within ProfileProvider");
-  return ctx;
+  return <ProfileCtx.Provider value={value}>{children}</ProfileCtx.Provider>;
 }

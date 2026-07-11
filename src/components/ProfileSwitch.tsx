@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Briefcase, Code2 } from "lucide-react";
-import { useProfile } from "@/context/ProfileContext";
-import { useLang } from "@/context/LanguageContext";
+import { useProfile } from "@/context/profile-core";
+import { useLang } from "@/context/language-core";
 import { cn } from "@/lib/utils";
 
 export default function ProfileSwitch() {

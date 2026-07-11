@@ -2,7 +2,7 @@ import { Briefcase, ChevronLeft, ChevronRight, GraduationCap, Quote, Users } fro
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { useLang } from "@/context/LanguageContext";
+import { useLang } from "@/context/language-core";
 import SectionHeader from "@/components/SectionHeader";
 
 interface Testimonial {

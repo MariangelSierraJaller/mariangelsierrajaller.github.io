@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Download, Eye } from "lucide-react";
-import { useLang } from "@/context/LanguageContext";
-import { useProfile } from "@/context/ProfileContext";
+import { useLang } from "@/context/language-core";
+import { useProfile } from "@/context/profile-core";
 import SectionHeader from "@/components/SectionHeader";
 import { cn } from "@/lib/utils";
 
