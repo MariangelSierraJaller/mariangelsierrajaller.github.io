@@ -94,12 +94,11 @@ export default function ProfessionalProfile() {
       className="relative scroll-mt-32 border-t border-white/5 bg-card/30"
     >
       <div className="mx-auto max-w-6xl px-6 py-24">
-        <div className="text-center">
-          <SectionHeader
-            kicker={t<string>("professional.kicker")}
-            title={t<string>("professional.title")}
-          />
-        </div>
+        <SectionHeader
+          kicker={t<string>("professional.kicker")}
+          title={t<string>("professional.title")}
+          centered
+        />
 
         {/* Centered subtitle under title */}
         <AnimatePresence mode="wait">
