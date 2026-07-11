@@ -1,0 +1,209 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import {
+  BarChart3,
+  Boxes,
+  Brain,
+  Check,
+  Database,
+  FileSpreadsheet,
+  Network,
+  ShieldCheck,
+  ShoppingCart,
+  Wallet,
+  Workflow,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { useLang } from "@/context/LanguageContext";
+import { useProfile } from "@/context/ProfileContext";
+import SectionHeader from "@/components/SectionHeader";
+
+interface ServiceItem {
+  title: string;
+  desc: string;
+  tags: string[];
+}
+interface Why {
+  title: string;
+  desc: string;
+}
+
+const iconsByProfile: Record<"admin" | "tech", LucideIcon[]> = {
+  admin: [ShoppingCart, Wallet, ShieldCheck, Workflow, FileSpreadsheet],
+  tech: [Database, BarChart3, Boxes, Network, Brain],
+};
+
+function Typewriter({ words }: { words: string[] }) {
+  const [index, setIndex] = useState(0);
+  const [text, setText] = useState("");
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    setText("");
+    setDeleting(false);
+    setIndex(0);
+  }, [words]);
+
+  useEffect(() => {
+    const current = words[index % words.length] ?? "";
+    let delay = deleting ? 45 : 90;
+    if (!deleting && text === current) delay = 1400;
+    if (deleting && text === "") delay = 300;
+
+    const timer = setTimeout(() => {
+      if (!deleting && text === current) {
+        setDeleting(true);
+      } else if (deleting && text === "") {
+        setDeleting(false);
+        setIndex((i) => (i + 1) % words.length);
+      } else if (deleting) {
+        setText(current.slice(0, text.length - 1));
+      } else {
+        setText(current.slice(0, text.length + 1));
+      }
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [text, deleting, index, words]);
+
+  return (
+    <span className="inline-flex items-baseline text-primary">
+      <span>{text}</span>
+      <span className="ml-0.5 inline-block h-[1em] w-[2px] translate-y-[2px] animate-pulse bg-primary" />
+    </span>
+  );
+}
+
+export default function ProfessionalProfile() {
+  const { t } = useLang();
+  const { profile } = useProfile();
+
+  const paragraph = t<string>(`professional.${profile}.paragraph`);
+  const typewriterWords = t<string[]>(`professional.${profile}.typewriter`);
+  const roles = t<string[]>(`professional.${profile}.roles`);
+  const services = t<ServiceItem[]>(`services.${profile}.items`).slice(0, 4);
+  const whyList = t<Why[]>("about.why");
+  const icons = iconsByProfile[profile];
+
+  return (
+    <section
+      id="professional"
+      className="relative scroll-mt-32 border-t border-white/5 bg-card/30"
+    >
+      <div className="mx-auto max-w-6xl px-6 py-24">
+        <SectionHeader
+          kicker={t<string>("professional.kicker")}
+          title={t<string>("professional.title")}
+        />
+
+        {/* A. Paragraph */}
+        <AnimatePresence mode="wait">
+          <motion.p
+            key={`para-${profile}`}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.4 }}
+            className="mx-auto mt-10 max-w-3xl text-center text-[15px] leading-relaxed text-foreground/85 text-balance md:text-lg"
+          >
+            {paragraph}
+          </motion.p>
+        </AnimatePresence>
+
+        {/* B. Roles + Typewriter */}
+        <div className="mt-16 text-center">
+          <h3 className="font-display text-2xl text-foreground md:text-3xl">
+            {t<string>("professional.specialistPrefix")}{" "}
+            <Typewriter key={profile} words={typewriterWords} />
+          </h3>
+          <p className="mt-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            {t<string>("professional.rolesTitle")}
+          </p>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`roles-${profile}`}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -4 }}
+              transition={{ duration: 0.3 }}
+              className="mt-4 flex flex-wrap justify-center gap-2"
+            >
+              {roles.map((r) => (
+                <span key={r} className="tech-badge">
+                  {r}
+                </span>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* C. Services */}
+        <div className="mt-20">
+          <h3 className="text-center font-mono text-xs uppercase tracking-widest text-primary">
+            {t<string>("professional.servicesTitle")}
+          </h3>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`svc-${profile}`}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.35 }}
+              className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+            >
+              {services.map((s, i) => {
+                const Icon = icons[i % icons.length];
+                return (
+                  <motion.article
+                    key={s.title}
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.35, delay: i * 0.06 }}
+                    className="group relative overflow-hidden rounded-2xl border border-border bg-background/60 p-5 transition-colors hover:border-primary/40 hover-glow"
+                  >
+                    <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary/15 text-primary">
+                      <Icon size={18} />
+                    </span>
+                    <h4 className="mt-4 font-display text-base leading-tight text-foreground">
+                      {s.title}
+                    </h4>
+                    <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
+                      {s.desc}
+                    </p>
+                  </motion.article>
+                );
+              })}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* D. Why hire me */}
+        <div className="mt-20">
+          <h3 className="text-center font-mono text-xs uppercase tracking-widest text-primary">
+            {t<string>("professional.whyTitle")}
+          </h3>
+          <div className="mt-6 grid gap-6 md:grid-cols-3">
+            {whyList.map((w, i) => (
+              <motion.div
+                key={w.title}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                className="text-center"
+              >
+                <div className="mx-auto grid h-11 w-11 place-items-center rounded-full bg-primary/15 text-primary">
+                  <Check size={20} />
+                </div>
+                <h4 className="mt-4 font-display text-lg font-semibold text-foreground">
+                  {w.title}
+                </h4>
+                <p className="mt-2 text-sm text-muted-foreground">{w.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
