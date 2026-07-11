@@ -190,29 +190,68 @@
     "kicker": "What I offer",
     "title": "Services",
     "lead": "I combine financial judgment with technical execution to deliver solutions that streamline processes and decisions.",
-    "items": [
-      {
-        "title": "Administrative & Financial Operations",
-        "desc": "E-invoicing, purchase orders, treasury and reconciliations with internal controls that boost traceability and transparency.",
-        "tags": ["NetSuite", "E-invoicing", "Treasury", "Reconciliations"]
-      },
-      {
-        "title": "Automation & ETL",
-        "desc": "Python (Pandas) pipelines to clean, integrate and transform accounting data from the ERP into reliable reporting.",
-        "tags": ["Python", "Pandas", "ETL", "APIs"]
-      },
-      {
-        "title": "Business Intelligence",
-        "desc": "Interactive Power BI dashboards (DAX, Power Query) for financial audit and data-driven decision-making.",
-        "tags": ["Power BI", "DAX", "SQL", "KPIs"]
-      },
-      {
-        "title": "Process Optimization",
-        "desc": "Diagnosis, standardization and digitalization of administrative workflows to cut rework and free up team time.",
-        "tags": ["Audit", "Standardization", "Digitalization"]
-      }
-    ]
+    "admin": {
+      "label": "Administrative / Financial",
+      "items": [
+        {
+          "title": "End-to-end procurement & vendor management",
+          "desc": "Full purchasing cycle: e-invoicing, purchase orders, requisitions and logistics control of inventories.",
+          "tags": ["Procurement", "E-invoicing", "Vendors", "Inventory"]
+        },
+        {
+          "title": "Treasury & reconciliations",
+          "desc": "Rigorous cash-flow operations: disbursements, petty cash control, cash counts and corporate bank reconciliations.",
+          "tags": ["Treasury", "Petty cash", "Audits", "Banking"]
+        },
+        {
+          "title": "Audit & structured document management",
+          "desc": "Organization and control of accounting and administrative supports to ensure full traceability and audit compliance.",
+          "tags": ["Audit", "Supports", "Traceability", "Compliance"]
+        },
+        {
+          "title": "Process standardization & KPI tracking",
+          "desc": "Redesign of internal flows to cut manual work and rework, with definition and monitoring of key performance indicators.",
+          "tags": ["Processes", "KPIs", "Continuous improvement"]
+        },
+        {
+          "title": "Cross-functional administrative support",
+          "desc": "Advanced Excel for financial consolidation, operational continuity and transversal support across teams.",
+          "tags": ["Excel", "Consolidation", "Support"]
+        }
+      ]
+    },
+    "tech": {
+      "label": "Technology / Systems",
+      "items": [
+        {
+          "title": "ETL pipelines & data processing",
+          "desc": "Automated pipelines with Python and Pandas for extraction, cleansing (EDA) and structuring of large financial and operational datasets.",
+          "tags": ["Python", "Pandas", "ETL", "EDA"]
+        },
+        {
+          "title": "Business Intelligence & visual analytics",
+          "desc": "Relational data modeling (SQL, DAX, Power Query) and interactive dashboards in Power BI and Tableau for managerial decisions.",
+          "tags": ["Power BI", "Tableau", "DAX", "SQL"]
+        },
+        {
+          "title": "ERP administration & integration (Oracle NetSuite)",
+          "desc": "Implementation, master-data quality control and automated extraction (XML, JSON) from the ERP for digital transformation.",
+          "tags": ["NetSuite", "XML", "JSON", "ERP"]
+        },
+        {
+          "title": "Logical solution design & data architecture",
+          "desc": "Functional requirements gathering and system integration design using Zapier, APIs and connectors.",
+          "tags": ["APIs", "Zapier", "Integrations", "Architecture"]
+        },
+        {
+          "title": "Analytical methodologies (CRISP-DM)",
+          "desc": "Structured methodologies applied to data analytics projects so tech solutions solve real operational problems.",
+          "tags": ["CRISP-DM", "Analytics", "Projects"]
+        }
+      ]
+    }
   },
+
   "testimonials": {
     "kicker": "Recommendations",
     "title": "What people say",
