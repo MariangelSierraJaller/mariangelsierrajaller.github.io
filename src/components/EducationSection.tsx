@@ -84,7 +84,7 @@ export default function EducationSection({ embedded = false }: EducationSectionP
   }
 
   return (
-    <section id="education" className="mx-auto max-w-6xl scroll-mt-32 px-6 py-24">
+    <section id="education" className="mx-auto max-w-6xl scroll-mt-32 px-6 pt-12 pb-24">
       {content}
     </section>
   );

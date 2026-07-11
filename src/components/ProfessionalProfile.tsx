@@ -17,6 +17,7 @@ import type { LucideIcon } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 import { useProfile } from "@/context/ProfileContext";
 import SectionHeader from "@/components/SectionHeader";
+import portrait from "@/assets/portrait.jpg";
 
 interface ServiceItem {
   title: string;
@@ -96,18 +97,45 @@ export default function ProfessionalProfile() {
           title={t<string>("professional.title")}
         />
 
-        {/* A. Paragraph */}
+        {/* A. Portrait + paragraph card */}
         <AnimatePresence mode="wait">
-          <motion.p
-            key={`para-${profile}`}
-            initial={{ opacity: 0, y: 12 }}
+          <motion.div
+            key={`card-${profile}`}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.4 }}
-            className="mx-auto mt-10 max-w-3xl text-center text-[15px] leading-relaxed text-foreground/85 text-balance md:text-lg"
+            className="mx-auto mt-12 max-w-5xl"
           >
-            {paragraph}
-          </motion.p>
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-card/70 p-6 backdrop-blur-sm md:p-10 hover-glow">
+              <div className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
+              <div className="relative grid items-center gap-8 md:grid-cols-[auto,1fr] md:gap-10">
+                {/* Round-framed portrait */}
+                <div className="relative mx-auto md:mx-0">
+                  <div className="absolute inset-0 rounded-full bg-primary/30 blur-2xl" />
+                  <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-primary/60 shadow-[0_0_40px_-8px_hsl(var(--primary)/0.6)] md:h-52 md:w-52">
+                    <img
+                      src={portrait}
+                      alt={t<string>("hero.name")}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+                {/* Text */}
+                <div>
+                  <h3 className="font-display text-2xl text-foreground md:text-3xl">
+                    {t<string>("hero.name")}
+                  </h3>
+                  <p className="mt-2 text-sm font-medium text-primary md:text-base">
+                    {t<string>("hero.titleAdmin")} · {t<string>("hero.titleTech")}
+                  </p>
+                  <p className="mt-4 text-[15px] leading-relaxed text-foreground/85 text-balance">
+                    {paragraph}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </AnimatePresence>
 
         {/* B. Roles + Typewriter */}
