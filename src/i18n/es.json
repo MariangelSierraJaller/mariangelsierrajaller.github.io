@@ -145,12 +145,18 @@
     "kicker": "Formación",
     "inProgress": "En curso",
     "items": [
-      { "degree": "Ingeniería de Sistemas", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech" },
-      { "degree": "Ingeniería Industrial", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin" },
-      { "degree": "Ingeniería Biomédica", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech" },
-      { "degree": "Técnico Contable y Financiero orientado a Sistemas", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both" },
-      { "degree": "Técnico en Programación de Software", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech" },
-      { "degree": "Bachiller Especializado en Informática", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both" }
+      { "degree": "Ingeniería de Sistemas", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech",
+        "badges": { "tech": ["Arquitectura de Software", "Bases de Datos", "Integraciones"], "admin": ["Gestión IT", "Lógica de Negocio", "Soporte"] } },
+      { "degree": "Ingeniería Industrial", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin",
+        "badges": { "tech": ["Optimización de Procesos", "Automatización", "KPIs"], "admin": ["Cadena de Suministro", "Gestión de Operaciones", "Logística"] } },
+      { "degree": "Ingeniería Biomédica", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech",
+        "badges": { "tech": ["Bioingeniería", "Software Clínico"], "admin": ["Gestión Hospitalaria", "Compras Clínicas"] } },
+      { "degree": "Técnico Contable y Financiero orientado a Sistemas", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both",
+        "badges": { "tech": ["ERP NetSuite", "Analítica Financiera"], "admin": ["Contabilidad", "Tesorería", "Conciliaciones"] } },
+      { "degree": "Técnico en Programación de Software", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech",
+        "badges": { "tech": ["Programación", "Algoritmos"], "admin": ["Sistemas", "Soporte"] } },
+      { "degree": "Bachiller Especializado en Informática", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both",
+        "badges": { "tech": ["Fundamentos TI", "Ofimática"], "admin": ["Ofimática", "Gestión Básica"] } }
     ]
   },
   "skills": {
