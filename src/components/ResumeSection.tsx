@@ -16,24 +16,24 @@ import enAts from "@/assets/cv/en-ats.webp";
 type TabKey = "cv" | "ats";
 
 interface Resource {
-  image: string;
+  images: string[];
   href: string;
 }
 
 const CV: Record<"es" | "en", Record<"admin" | "tech", Resource>> = {
   es: {
-    tech: { image: esTech, href: "https://drive.google.com/file/d/1OWA93tgQtcabkJYC8LISy9qShLIDgNk8/view" },
-    admin: { image: esAdmin, href: "https://drive.google.com/file/d/1rggK0scQvTxG71sDdzbv2ie9blgrIVgG/view" },
+    tech: { images: [esTech], href: "https://drive.google.com/file/d/1OWA93tgQtcabkJYC8LISy9qShLIDgNk8/view" },
+    admin: { images: [esAdmin], href: "https://drive.google.com/file/d/1rggK0scQvTxG71sDdzbv2ie9blgrIVgG/view" },
   },
   en: {
-    tech: { image: enTech, href: "https://drive.google.com/file/d/1OWA93tgQtcabkJYC8LISy9qShLIDgNk8/view" },
-    admin: { image: enAdmin, href: "https://drive.google.com/file/d/1rggK0scQvTxG71sDdzbv2ie9blgrIVgG/view" },
+    tech: { images: [enTech], href: "https://drive.google.com/file/d/1OWA93tgQtcabkJYC8LISy9qShLIDgNk8/view" },
+    admin: { images: [enAdmin], href: "https://drive.google.com/file/d/1rggK0scQvTxG71sDdzbv2ie9blgrIVgG/view" },
   },
 };
 
 const ATS: Record<"es" | "en", Resource> = {
-  es: { image: esAts, href: "https://drive.google.com/file/d/1bFPpW88swSBc-_rvbQDT7pS0a7f8yMe9/view" },
-  en: { image: enAts, href: "https://drive.google.com/file/d/1bFPpW88swSBc-_rvbQDT7pS0a7f8yMe9/view" },
+  es: { images: [esAts], href: "https://drive.google.com/file/d/1bFPpW88swSBc-_rvbQDT7pS0a7f8yMe9/view" },
+  en: { images: [enAts], href: "https://drive.google.com/file/d/1bFPpW88swSBc-_rvbQDT7pS0a7f8yMe9/view" },
 };
 
 export default function ResumeSection() {
@@ -59,12 +59,18 @@ export default function ResumeSection() {
 
         {/* Tabs — centered */}
         <div className="mt-10 flex justify-center">
-          <div className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/40 p-1">
+          <div
+            role="tablist"
+            className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/40 p-1"
+          >
             {tabs.map((tt) => {
               const active = tab === tt.key;
               return (
                 <button
                   key={tt.key}
+                  role="tab"
+                  aria-selected={active}
+                  aria-label={`Ver formato ${tt.label}`}
                   onClick={() => setTab(tt.key)}
                   className={cn(
                     "relative rounded-full px-5 py-2 text-sm font-medium transition-colors",
@@ -94,18 +100,29 @@ export default function ResumeSection() {
             className="group relative block w-full max-w-3xl overflow-hidden rounded-2xl border border-border bg-card shadow-2xl"
           >
             <AnimatePresence mode="wait">
-              <motion.img
+              <motion.div
                 key={lang + tab + profile}
-                src={resource.image}
-                alt={`${tab === "cv" ? "CV" : "ATS"} ${profile} ${lang}`}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.35 }}
-                className="h-auto w-full transition-transform duration-500 ease-out group-hover:scale-105"
-              />
+                className="flex flex-col gap-2"
+              >
+                {resource.images.map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt={`${tab === "cv" ? "CV" : "ATS"} ${profile} ${lang} — página ${i + 1}`}
+                    loading="lazy"
+                    decoding="async"
+                    width={816}
+                    height={1056}
+                    className="h-auto w-full transition-transform duration-500 ease-out group-hover:scale-105"
+                  />
+                ))}
+              </motion.div>
             </AnimatePresence>
-            <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
+            <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-background/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
               <span className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground santino-glow">
                 <Eye size={16} />
                 {t<string>("resume.viewFullCta")}
