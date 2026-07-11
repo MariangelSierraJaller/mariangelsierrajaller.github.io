@@ -19,10 +19,11 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contact via WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#20BA5C] hover:shadow-xl"
+      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-300 hover:scale-110 hover:bg-primary-hover hover:shadow-xl hover:shadow-primary/30"
     >
       <MessageCircle className="h-7 w-7 fill-current" />
-      <span className="absolute h-full w-full animate-ping rounded-full bg-[#25D366] opacity-30" />
+      <span className="absolute h-full w-full animate-ping rounded-full bg-primary opacity-30" />
+      <span className="absolute -inset-1 rounded-full border border-primary/30 opacity-0 transition-opacity duration-300 hover:opacity-100" />
     </a>
   );
 }
