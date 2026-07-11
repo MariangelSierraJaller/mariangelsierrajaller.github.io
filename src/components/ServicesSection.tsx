@@ -13,8 +13,8 @@ import {
   Network,
   Brain,
 } from "lucide-react";
-import { useLang } from "@/context/LanguageContext";
-import { useProfile } from "@/context/ProfileContext";
+import { useLang } from "@/context/language-core";
+import { useProfile } from "@/context/profile-core";
 import SectionHeader from "@/components/SectionHeader";
 
 interface Item {

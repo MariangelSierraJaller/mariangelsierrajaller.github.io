@@ -4,7 +4,7 @@ import { Mail, MapPin, Phone, Send, Linkedin, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useLang } from "@/context/LanguageContext";
+import { useLang } from "@/context/language-core";
 import SectionHeader from "@/components/SectionHeader";
 
 const PHONE_INTL = "573242924705";
