@@ -337,11 +337,21 @@
   "testimonials": {
     "kicker": "Recomendaciones",
     "title": "Lo que dicen de mí",
+    "subtitle": "recomendaciones que respaldan mi trabajo",
+    "recommendations": "Recomendaciones",
+    "fromSupervisors": "De supervisores",
+    "fromTeammates": "De compañeros",
+    "prev": "Ver testimonios anteriores",
+    "next": "Ver siguientes testimonios",
     "items": [
       {
         "quote": "Mariangel destaca por su capacidad para integrar tecnología en procesos administrativos, contables y operativos, aportando soluciones que optimizan tiempos, reducen reprocesos y fortalecen la toma de decisiones. Su experiencia práctica en automatización, ERP (NetSuite), análisis de datos y digitalización demuestra una valiosa combinación entre criterio técnico y visión estratégica.",
         "name": "Sebastián López Osorno",
-        "role": "Backend & Data · Recomendación LinkedIn"
+        "role": "Backend & Data Engineer",
+        "company": "Recomendación LinkedIn",
+        "relationship": "Mismo equipo",
+        "date": "2025",
+        "highlight": "Visión estratégica"
       }
     ]
   },
