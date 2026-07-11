@@ -1,133 +1,86 @@
+# Validación final del portafolio y acciones a seguir
 
-# Portafolio de Mariangel Sierra Jaller — Vite + React SPA
+## 1. Hallazgos
 
-Cambio de arquitectura confirmado: SPA pura con CSR, `react-router-dom`, sin SSR ni file-based routing. Diseño, paleta, contenido y perfil dual se mantienen exactamente como se aprobó.
+### Estética y consistencia visual
+- **Encabezados de sección**: existe `SectionHeader` (kicker + título + línea Santino), pero no todas las secciones lo usan de forma uniforme (Hero, ProfessionalProfile, Testimonials y Footer llevan su propio patrón). Falta un ritmo visual consistente entre bloques.
+- **Espaciado vertical**: cada sección define su propio `py-*`. Conviene un token único (`section` con `scroll-mt` + padding estándar) para respetar el offset del nav sticky y evitar títulos tapados al navegar por anclas.
+- **Ancho máximo**: mezcla de `max-w-6xl` y `max-w-7xl` entre secciones. Unificar a un solo contenedor.
+- **Glow / hover-glow**: `santino-glow` y `hover-glow` están definidos pero no aplicados de forma pareja (tarjetas de Services vs About vs Testimonials difieren en intensidad de sombra).
 
-## Aviso importante sobre el template
+### Tipografía
+- Stack cargado correctamente: `DM Serif Text` (display), `IBM Plex Sans` (body), `Source Code Pro` (mono).
+- Riesgo: la fuente `DM Serif Text` no tiene bold real; algunos títulos usan `font-semibold`/`font-bold` sobre display, lo que el navegador sintetiza (se ve borroso). Revisar y usar `font-normal` en display.
+- Los kickers/labels en mono a veces usan tamaños <10px con `tracking-widest`, difícil de leer en móviles.
 
-Este proyecto viene **bootstrapped con TanStack Start** (`vite.config.ts` usa `@lovable.dev/vite-tanstack-config`, hay `src/routes/`, `src/router.tsx`, `src/server.ts`, `src/start.ts`, `src/routeTree.gen.ts`). Migrar a Vite + React SPA puro implica:
+### Navegación y flujo
+- `Navigation.tsx` lista `about, education, professional, experience, skills, resume, contact` — falta **testimonials** que sí se renderiza en Home.
+- No hay indicador de sección activa mientras se scrollea.
+- El botón CTA "contactame" no aparece en el menú móvil de forma primaria (solo al final).
 
-- Reescribir `vite.config.ts` para usar `@vitejs/plugin-react` directamente (sin el preset TanStack).
-- Eliminar `src/routes/`, `src/router.tsx`, `src/server.ts`, `src/start.ts`, `src/routeTree.gen.ts`.
-- Añadir `index.html` en la raíz (entry HTML de Vite estándar).
-- Quitar dependencias TanStack Start/Router/Nitro/Cloudflare del `package.json`.
-- Añadir `react-router-dom`, `framer-motion`.
+### SEO (crítico)
+- `index.html`:
+  - `<title>santino porfolio</title>` → minúsculas + typo ("porfolio").
+  - `description` genérica sin nombre ni keywords.
+  - `<html lang="es">` fijo aunque la app es bilingüe.
+  - Falta `<link rel="canonical">`.
+  - `og:image` apunta a una URL R2 de **preview** (`id-preview--…lovable.app`), no al dominio publicado; se romperá si cambia.
+  - Falta JSON-LD (`Person` + `WebSite`).
+- `public/robots.txt` **no existe**.
+- `public/sitemap.xml` **no existe**.
+- No hay `alt` semántico consistente en imágenes decorativas vs informativas (revisar Hero y About).
+- No hay `<h1>` verificable como único (Hero debería ser el único H1; el resto `h2`).
 
-Esto es un rework del andamiaje, no un ajuste menor. Lo hago en la implementación. Tailwind v4 se queda (funciona con Vite puro vía `@tailwindcss/vite`); si algún componente shadcn ya presente reclama, caigo a v3 con `tailwind.config.js` — decisión en el momento, sin cambiar la UX.
+### Contenido y estandarización entre secciones
+- Cada sección debería seguir el patrón: `kicker` (mayúsculas mono) → `title` (display) → `intro` (1 párrafo) → contenido. Hoy About, Skills, Experience y Testimonials difieren en la intro.
+- Los textos i18n mezclan tono "tú" y "usted" en algunas descripciones (revisar `es.json`).
+- Metricas y badges de About ya se estandarizaron; falta hacerlo en Services y Skills (algunos textos superan 3 líneas en tarjetas fijas).
+- CTAs finales heterogéneos: "Contáctame", "Hablemos", "Escríbeme" — unificar a un único CTA por idioma.
 
-## Stack final
+## 2. Acciones propuestas (priorizadas)
 
-- Vite 7 + React 19 + TypeScript
-- `react-router-dom` v6
-- Tailwind CSS v4 con `@tailwindcss/vite` (fallback v3 si necesario)
-- shadcn/ui (componentes ya instalados en `src/components/ui/`)
-- framer-motion
-- lucide-react (ya instalado)
+### P0 — SEO base (impacto alto, esfuerzo bajo)
+1. Reescribir `<title>` y `<meta description>` en `index.html`:
+   - Título: `Mariangel Sierra Jaller — Ingeniera Industrial & Analista de Datos`
+   - Description: bilingüe corta (<160 chars), con roles clave y ubicación.
+2. Agregar `<link rel="canonical" href="https://santino-essence.lovable.app/">`.
+3. Reemplazar `og:image` R2 preview por una imagen generada 1200×630 servida desde `/og-cover.jpg` (dominio publicado) o quitar el tag y dejar que Lovable inyecte el auto-preview.
+4. Añadir JSON-LD `Person` (nombre, jobTitle bilingüe, url, sameAs LinkedIn, image) y `WebSite`.
+5. Crear `public/robots.txt` (allow all + Sitemap) y `public/sitemap.xml` con `/es`, `/en`, `/es/admin`, `/es/tech`, `/en/admin`, `/en/tech`.
+6. Auditar `alt` en `<img>` (Hero portrait, About portrait, Resume previews) y marcar decorativas con `alt=""`.
 
-## Enrutamiento (BrowserRouter)
+### P1 — Consistencia estructural
+7. Actualizar `Navigation.tsx`: agregar `testimonials` en el orden real de Home; añadir scroll-spy simple para resaltar la sección activa.
+8. Definir en `styles.css` una clase utilitaria `.section` (padding vertical + `scroll-mt-24`) y aplicarla a todas las `<section>`.
+9. Unificar contenedor a `max-w-6xl mx-auto px-6` en todas las secciones.
+10. Forzar uso de `SectionHeader` en About, Skills, Experience, Resume, Testimonials, Contact (Hero se mantiene aparte).
 
-`src/App.tsx`:
+### P2 — Tipografía y micro-estética
+11. Auditar todos los usos de `font-display` y quitar `font-bold`/`font-semibold` (DM Serif Text solo tiene regular/italic).
+12. Subir kickers mono a `text-[11px]` mínimo y revisar contraste en móvil.
+13. Estandarizar sombras: definir `--shadow-elegant` y `--shadow-glow` en tokens y usar `hover-glow` uniforme en todas las tarjetas (About, Services, Skills, Testimonials).
 
+### P3 — Contenido y CTA
+14. Revisar `es.json`/`en.json` para unificar tono ("tú" en toda la app en ES; "you" casual en EN).
+15. Unificar CTA a `Contáctame` / `Get in touch` en todos los botones (Hero, Nav, ProfessionalProfile, Contact, Footer).
+16. Añadir una intro corta (1 frase) a cada sección que hoy va directo a contenido (Skills, Experience, Testimonials).
+
+### P4 — Extra recomendado
+17. Ejecutar un scan SEO oficial (`seo_chat--trigger_scan`) al terminar P0/P1 para validar.
+18. Añadir `prefers-reduced-motion` guard en Framer Motion global.
+19. Añadir `<meta name="theme-color" content="#0A0A0C">` para navegadores móviles.
+
+## 3. Detalles técnicos
+
+- **Head bilingüe**: como el sitio es SPA estática, el `<title>` que ven los crawlers es el de `index.html`. Podemos añadir `react-helmet-async` para actualizar `<title>`/`description`/`lang` al vuelo por ruta `/es` vs `/en` (para el usuario y para Googlebot que sí ejecuta JS). Los previews sociales (LinkedIn/WhatsApp) seguirán viendo el `og:*` estático — dejamos el ES como fallback.
+- **JSON-LD**: inyectar en `index.html` como bloque estático (`Person` + `WebSite`), no depende de i18n.
+- **Sitemap**: 6 URLs (2 idiomas × {home, admin, tech}) con `hreflang` cruzado si añadimos `react-helmet-async`.
+- **Scroll-spy**: `IntersectionObserver` en `Navigation.tsx`, marcar `aria-current="true"` sobre el link activo.
+
+## 4. Orden sugerido de implementación
+
+```text
+P0 (SEO base) → P1 (estructura) → P2 (tipografía) → P3 (contenido) → P4 (scan + polish)
 ```
-<BrowserRouter>
-  <LanguageProvider>
-    <ProfileProvider>
-      <Routes>
-        <Route path="/" element={<Navigate to="/es" replace />} />
-        <Route path="/:lang" element={<LangLayout />}>
-          <Route index element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </ProfileProvider>
-  </LanguageProvider>
-</BrowserRouter>
-```
 
-`LangLayout` valida `lang ∈ {es,en}`, sincroniza el contexto con el param y renderiza `<Navigation /> <Outlet /> <Footer />`.
-
-## Estructura de carpetas
-
-```
-index.html
-src/
-  main.tsx                     entry: ReactDOM.createRoot + <App/>
-  App.tsx                      BrowserRouter + Providers + Routes
-  index.css                    (renombrado desde styles.css) tokens + fuentes
-  pages/
-    Home.tsx                   compone Hero + About + ProfileSwitch + Experience + Education + Skills + Contact
-    NotFound.tsx
-  components/
-    Navigation.tsx
-    HeroSection.tsx
-    AboutSection.tsx
-    ProfileSwitch.tsx
-    ExperienceSection.tsx
-    EducationSection.tsx
-    SkillsSection.tsx
-    ContactSection.tsx
-    Footer.tsx
-    LanguageSwitcher.tsx
-    ui/                        (shadcn existentes)
-  context/
-    LanguageContext.tsx        lee/escribe param de ruta; expone { lang, t, setLang(navigate) }
-    ProfileContext.tsx         localStorage-init directo, sin guards SSR
-  i18n/
-    es.json
-    en.json
-    useTranslation.ts          helper t(key) con dot-paths
-  lib/utils.ts                 (se conserva `cn`)
-  hooks/use-mobile.tsx         (se conserva)
-```
-
-Se eliminan: `src/routes/`, `src/router.tsx`, `src/server.ts`, `src/start.ts`, `src/routeTree.gen.ts`, `src/lib/lovable-error-reporting.ts` (opcional, si depende de TanStack), `src/lib/error-*.ts` si no aplican.
-
-## Diseño visual (sin cambios respecto al plan aprobado)
-
-Tokens oklch en `src/index.css`:
-
-- `--background` `#0A0A0C` · `--card` `#16161A`
-- `--primary` `#8B1E28` (Rojo Santino) · hover `#A72834`
-- `--foreground` `#F8F9FA` · `--muted-foreground` `#A1A1AA`
-- Bordes hairline blanco/8%, radios suaves
-
-Fuentes **Fraunces** (display serif) + **Inter** (body) vía `<link>` en `index.html`.
-
-Animaciones framer-motion: fade/slide-up on scroll (viewport once), crossfade de perfil con `AnimatePresence mode="wait"`.
-
-## Contextos
-
-- **LanguageContext**: `lang` deriva del param de ruta; `setLang(next)` hace `navigate('/'+next + rest)`; expone `t(key)` que resuelve dot-paths sobre `es.json` / `en.json`.
-- **ProfileContext**: `useState(() => (localStorage.getItem('profile') as 'admin'|'tech') ?? 'tech')`, `useEffect` persiste. Sin SSR, sin mismatches.
-
-## Perfil dual
-
-`ProfileSwitch` — toggle segmentado grande con indicador animado en Rojo Santino, sticky bajo el Hero. Experience/Skills/About filtran por `profile` con crossfade. Hero muestra ambos títulos siempre.
-
-## Contenido (extraído de los PDFs)
-
-Cargado en `es.json` / `en.json`:
-
-- Contacto: Medellín · +57 324 292 4705 · marijohansierra@gmail.com · @mariangelsierrajaller
-- Educación (6): Bachiller Informática IE Inem 2019-21, SENA Programación 2020-21, ITM Contable/Financiero 2022-23, San José Sistemas 2023-26 (En Proceso), San José Industrial 2023-26 (En Proceso), ITM Biomédica 2023-28 (En Proceso)
-- Experiencia: ASPAEN Auxiliar de Compras 2023-Presente + ASPAEN Practicante 2022-23, cada rol con bullets `admin[]` y `tech[]`
-- Idiomas: Español nativo · Inglés B2
-- Skills hard/soft tagueadas por `admin | tech | both`
-
-## SEO
-
-`index.html` con `<title>` / meta base bilingüe genérico. `Home.tsx` actualiza `document.title` según `lang` con un `useEffect` simple.
-
-## Pasos de implementación
-
-1. `bun remove` de paquetes TanStack Start/Router/Nitro/Cloudflare relacionados.
-2. `bun add react-router-dom framer-motion`.
-3. Reescribir `vite.config.ts` (React plugin + Tailwind v4 plugin + alias `@`).
-4. Crear `index.html` raíz.
-5. Borrar scaffolding TanStack (`src/routes/`, `src/router.tsx`, `src/server.ts`, `src/start.ts`, `src/routeTree.gen.ts`).
-6. Renombrar `src/styles.css` → `src/index.css` con la nueva paleta y fuentes.
-7. Crear `main.tsx`, `App.tsx`, contextos, i18n, páginas y componentes.
-8. Verificar build.
-
-Procedo.
+Cada bloque es independiente; podemos hacer commits separados. ¿Aplicamos todo el bloque P0+P1 en una primera iteración y dejamos P2–P4 para una segunda?
