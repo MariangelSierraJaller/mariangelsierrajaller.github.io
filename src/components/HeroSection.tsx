@@ -20,22 +20,23 @@ export default function HeroSection() {
 
   return (
     <section className="relative isolate overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-24">
-      {/* Ambient background — Rojo Santino waves */}
-      <div
-        aria-hidden
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 [filter:saturate(115%)]">
-        <div className="absolute inset-0 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
-        <div className="absolute right-[-10%] top-[-10%] h-[700px] w-[700px] rounded-full bg-primary/25 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_100%,rgba(139,30,40,0.22),transparent_60%)]" />
-        <svg className="absolute inset-0 h-full w-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+      {/* Ambient background — heavily blurred Rojo Santino waves, very subtle */}
+      <div aria-hidden className="absolute inset-0 z-0 overflow-hidden">
+        <div
+          className="absolute inset-0 scale-110 blur-[72px] saturate-[0.8]"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: 0.35,
+          }}
+        />
+      </div>
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_30%,rgba(139,30,40,0.15),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_100%,rgba(139,30,40,0.18),transparent_60%)]" />
+        <svg className="absolute inset-0 h-full w-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
               <path d="M 56 0 L 0 0 0 56" fill="none" stroke="currentColor" strokeWidth="0.5" />
