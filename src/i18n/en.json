@@ -229,10 +229,11 @@
     "kicker": "Downloads",
     "subtitle": "Explore my experience in detail",
     "viewCta": "Open PDF in new tab",
+    "viewFullCta": "Click to view full",
+    "downloadCta": "Download PDF",
     "tabs": {
-      "tech": "Tech Profile",
-      "admin": "Admin Profile",
-      "ats": "ATS Format"
+      "cv": "Curriculum Vitae",
+      "ats": "ATS"
     }
   },
   "contact": {
