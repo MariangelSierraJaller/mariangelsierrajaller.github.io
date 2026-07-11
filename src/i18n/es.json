@@ -8,6 +8,7 @@
     "experience": "Experiencia",
     "education": "Educación",
     "skills": "Habilidades",
+    "services": "Servicios",
     "resume": "Currículum",
     "contact": "Contacto",
     "cta": "Hablemos"
@@ -157,7 +158,9 @@
       "title": "Idiomas",
       "items": [
         { "name": "Español", "level": "Nativo" },
-        { "name": "Inglés", "level": "B2" }
+        { "name": "Inglés", "level": "B2" },
+        { "name": "Francés", "level": "Básico" },
+        { "name": "Coreano", "level": "Básico" }
       ]
     }
   },
@@ -182,6 +185,44 @@
     "linkedin": "mariangelsierrajaller",
     "emailCta": "Enviar email",
     "linkedinCta": "Ver LinkedIn"
+  },
+  "services": {
+    "kicker": "Qué ofrezco",
+    "title": "Servicios",
+    "lead": "Uno el criterio financiero con la capacidad técnica para entregar soluciones que optimizan procesos y decisiones.",
+    "items": [
+      {
+        "title": "Operación administrativa & financiera",
+        "desc": "Facturación electrónica, órdenes de compra, tesorería y conciliaciones con controles internos que aumentan trazabilidad y transparencia.",
+        "tags": ["NetSuite", "Facturación", "Tesorería", "Conciliaciones"]
+      },
+      {
+        "title": "Automatización & ETL",
+        "desc": "Flujos con Python (Pandas) para limpiar, integrar y transformar datos contables del ERP hacia reportes confiables.",
+        "tags": ["Python", "Pandas", "ETL", "APIs"]
+      },
+      {
+        "title": "Business Intelligence",
+        "desc": "Tableros interactivos en Power BI (DAX, Power Query) para auditoría financiera y toma de decisiones basada en datos.",
+        "tags": ["Power BI", "DAX", "SQL", "KPIs"]
+      },
+      {
+        "title": "Optimización de procesos",
+        "desc": "Diagnóstico, estandarización y digitalización de flujos administrativos para reducir reprocesos y liberar tiempo del equipo.",
+        "tags": ["Auditoría", "Estandarización", "Digitalización"]
+      }
+    ]
+  },
+  "testimonials": {
+    "kicker": "Recomendaciones",
+    "title": "Lo que dicen de mí",
+    "items": [
+      {
+        "quote": "Mariangel destaca por su capacidad para integrar tecnología en procesos administrativos, contables y operativos, aportando soluciones que optimizan tiempos, reducen reprocesos y fortalecen la toma de decisiones. Su experiencia práctica en automatización, ERP (NetSuite), análisis de datos y digitalización demuestra una valiosa combinación entre criterio técnico y visión estratégica.",
+        "name": "Sebastián López Osorno",
+        "role": "Backend & Data · Recomendación LinkedIn"
+      }
+    ]
   },
   "footer": {
     "rights": "Todos los derechos reservados.",

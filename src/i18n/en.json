@@ -8,6 +8,7 @@
     "experience": "Experience",
     "education": "Education",
     "skills": "Skills",
+    "services": "Services",
     "resume": "Resume",
     "contact": "Contact",
     "cta": "Let's talk"
@@ -157,7 +158,9 @@
       "title": "Languages",
       "items": [
         { "name": "Spanish", "level": "Native" },
-        { "name": "English", "level": "B2" }
+        { "name": "English", "level": "B2" },
+        { "name": "French", "level": "Basic" },
+        { "name": "Korean", "level": "Basic" }
       ]
     }
   },
@@ -182,6 +185,44 @@
     "linkedin": "mariangelsierrajaller",
     "emailCta": "Send email",
     "linkedinCta": "View LinkedIn"
+  },
+  "services": {
+    "kicker": "What I offer",
+    "title": "Services",
+    "lead": "I combine financial judgment with technical execution to deliver solutions that streamline processes and decisions.",
+    "items": [
+      {
+        "title": "Administrative & Financial Operations",
+        "desc": "E-invoicing, purchase orders, treasury and reconciliations with internal controls that boost traceability and transparency.",
+        "tags": ["NetSuite", "E-invoicing", "Treasury", "Reconciliations"]
+      },
+      {
+        "title": "Automation & ETL",
+        "desc": "Python (Pandas) pipelines to clean, integrate and transform accounting data from the ERP into reliable reporting.",
+        "tags": ["Python", "Pandas", "ETL", "APIs"]
+      },
+      {
+        "title": "Business Intelligence",
+        "desc": "Interactive Power BI dashboards (DAX, Power Query) for financial audit and data-driven decision-making.",
+        "tags": ["Power BI", "DAX", "SQL", "KPIs"]
+      },
+      {
+        "title": "Process Optimization",
+        "desc": "Diagnosis, standardization and digitalization of administrative workflows to cut rework and free up team time.",
+        "tags": ["Audit", "Standardization", "Digitalization"]
+      }
+    ]
+  },
+  "testimonials": {
+    "kicker": "Recommendations",
+    "title": "What people say",
+    "items": [
+      {
+        "quote": "Mariangel stands out for her ability to integrate technology into administrative, accounting and operational processes, delivering solutions that save time, reduce rework and strengthen decision-making. Her hands-on experience in automation, ERP (NetSuite), data analysis and digitalization shows a valuable blend of technical judgment and strategic vision.",
+        "name": "Sebastián López Osorno",
+        "role": "Backend & Data · LinkedIn recommendation"
+      }
+    ]
   },
   "footer": {
     "rights": "All rights reserved.",
