@@ -9,6 +9,7 @@
     "education": "Education",
     "skills": "Skills",
     "services": "Services",
+    "professional": "Profile",
     "resume": "Resume",
     "contact": "Contact",
     "cta": "Let's talk"
@@ -145,12 +146,18 @@
     "kicker": "Training",
     "inProgress": "In progress",
     "items": [
-      { "degree": "Systems Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech" },
-      { "degree": "Industrial Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin" },
-      { "degree": "Biomedical Engineering", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech" },
-      { "degree": "Accounting & Financial Technician oriented to Systems", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both" },
-      { "degree": "Software Programming Technician", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech" },
-      { "degree": "High School Diploma, Computer Science", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both" }
+      { "degree": "Systems Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech",
+        "badges": { "tech": ["Software Architecture", "Databases", "Integrations"], "admin": ["IT Management", "Business Logic", "Support"] } },
+      { "degree": "Industrial Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin",
+        "badges": { "tech": ["Process Optimization", "Automation", "KPIs"], "admin": ["Supply Chain", "Operations Management", "Logistics"] } },
+      { "degree": "Biomedical Engineering", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech",
+        "badges": { "tech": ["Bioengineering", "Clinical Software"], "admin": ["Hospital Management", "Clinical Procurement"] } },
+      { "degree": "Accounting & Financial Technician oriented to Systems", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both",
+        "badges": { "tech": ["NetSuite ERP", "Financial Analytics"], "admin": ["Accounting", "Treasury", "Reconciliations"] } },
+      { "degree": "Software Programming Technician", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech",
+        "badges": { "tech": ["Programming", "Algorithms"], "admin": ["Systems", "Support"] } },
+      { "degree": "High School Diploma, Computer Science", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both",
+        "badges": { "tech": ["IT Fundamentals", "Office Suite"], "admin": ["Office Suite", "Basic Management"] } }
     ]
   },
   "skills": {
@@ -288,6 +295,24 @@
     }
   },
 
+  "professional": {
+    "kicker": "Value proposition",
+    "title": "Professional Profile",
+    "specialistPrefix": "Specialist in",
+    "rolesTitle": "Roles I can take on",
+    "servicesTitle": "Services",
+    "whyTitle": "Why hire me",
+    "admin": {
+      "paragraph": "Industrial and Systems Engineering student specialized in resource optimization and administrative control. I excel at end-to-end procurement management, document audit and treasury operations. My approach combines financial rigor with operational efficiency to guarantee resource traceability and delivery on corporate goals.",
+      "typewriter": ["Procurement Management", "Internal Audit", "Treasury", "Resource Optimization"],
+      "roles": ["Financial Analyst", "Procurement Manager", "Process Auditor", "Treasury Coordinator", "Operations Analyst"]
+    },
+    "tech": {
+      "paragraph": "Systems and Industrial Engineering student specialized in the convergence of data analytics and workflow automation. I have hands-on experience building ETL pipelines with Python, automating data extraction from ERPs such as NetSuite and designing interactive dashboards in Power BI. My goal is turning raw information into technological solutions that power management decisions.",
+      "typewriter": ["Data Analysis", "Backend Development", "ERP Integration", "ETL Automation"],
+      "roles": ["Data Analyst", "ERP Specialist", "Data Engineer", "BI Consultant", "Python Developer"]
+    }
+  },
   "testimonials": {
     "kicker": "Recommendations",
     "title": "What people say",

@@ -9,6 +9,7 @@
     "education": "Educación",
     "skills": "Habilidades",
     "services": "Servicios",
+    "professional": "Perfil",
     "resume": "Currículum",
     "contact": "Contacto",
     "cta": "Hablemos"
@@ -145,12 +146,18 @@
     "kicker": "Formación",
     "inProgress": "En curso",
     "items": [
-      { "degree": "Ingeniería de Sistemas", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech" },
-      { "degree": "Ingeniería Industrial", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin" },
-      { "degree": "Ingeniería Biomédica", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech" },
-      { "degree": "Técnico Contable y Financiero orientado a Sistemas", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both" },
-      { "degree": "Técnico en Programación de Software", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech" },
-      { "degree": "Bachiller Especializado en Informática", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both" }
+      { "degree": "Ingeniería de Sistemas", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech",
+        "badges": { "tech": ["Arquitectura de Software", "Bases de Datos", "Integraciones"], "admin": ["Gestión IT", "Lógica de Negocio", "Soporte"] } },
+      { "degree": "Ingeniería Industrial", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin",
+        "badges": { "tech": ["Optimización de Procesos", "Automatización", "KPIs"], "admin": ["Cadena de Suministro", "Gestión de Operaciones", "Logística"] } },
+      { "degree": "Ingeniería Biomédica", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech",
+        "badges": { "tech": ["Bioingeniería", "Software Clínico"], "admin": ["Gestión Hospitalaria", "Compras Clínicas"] } },
+      { "degree": "Técnico Contable y Financiero orientado a Sistemas", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both",
+        "badges": { "tech": ["ERP NetSuite", "Analítica Financiera"], "admin": ["Contabilidad", "Tesorería", "Conciliaciones"] } },
+      { "degree": "Técnico en Programación de Software", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech",
+        "badges": { "tech": ["Programación", "Algoritmos"], "admin": ["Sistemas", "Soporte"] } },
+      { "degree": "Bachiller Especializado en Informática", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both",
+        "badges": { "tech": ["Fundamentos TI", "Ofimática"], "admin": ["Ofimática", "Gestión Básica"] } }
     ]
   },
   "skills": {
@@ -288,6 +295,24 @@
     }
   },
 
+  "professional": {
+    "kicker": "Propuesta de valor",
+    "title": "Perfil Profesional",
+    "specialistPrefix": "Especialista en",
+    "rolesTitle": "Roles que puedo desempeñar",
+    "servicesTitle": "Servicios",
+    "whyTitle": "Por qué contratarme",
+    "admin": {
+      "paragraph": "Profesional en formación en Ingeniería Industrial y de Sistemas, especializada en la optimización de recursos y el control administrativo. Destaco en la gestión integral del ciclo de compras, auditoría documental y el manejo operativo de tesorería. Mi enfoque combina el rigor financiero con la eficiencia operativa para garantizar la trazabilidad de los recursos y el cumplimiento de las metas corporativas.",
+      "typewriter": ["Gestión de Compras", "Auditoría Interna", "Tesorería", "Optimización de Recursos"],
+      "roles": ["Analista Financiera", "Gestora de Compras", "Auditora de Procesos", "Coordinadora de Tesorería", "Analista de Operaciones"]
+    },
+    "tech": {
+      "paragraph": "Profesional en formación en Ingeniería de Sistemas e Industrial, especializada en la convergencia entre la analítica de datos y la automatización de flujos de trabajo. Cuento con experiencia en la creación de pipelines ETL con Python, la extracción automatizada de datos desde ERPs como NetSuite y el diseño de tableros interactivos en Power BI. Mi objetivo es transformar información cruda en soluciones tecnológicas que potencien la toma de decisiones gerenciales.",
+      "typewriter": ["Análisis de Datos", "Desarrollo Backend", "Integración ERP", "Automatización ETL"],
+      "roles": ["Data Analyst", "Especialista ERP", "Ingeniera de Datos", "Consultora BI", "Desarrolladora Python"]
+    }
+  },
   "testimonials": {
     "kicker": "Recomendaciones",
     "title": "Lo que dicen de mí",
