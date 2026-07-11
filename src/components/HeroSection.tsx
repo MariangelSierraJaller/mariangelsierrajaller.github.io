@@ -20,10 +20,17 @@ export default function HeroSection() {
 
   return (
     <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-24">
-      {/* Ambient background */}
+      {/* Ambient background — Rojo Santino waves */}
       <div className="pointer-events-none absolute inset-0 -z-10">
+        <img
+          src={heroBg}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 h-full w-full object-cover opacity-70 [filter:blur(2px)_saturate(115%)]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
         <div className="absolute right-[-10%] top-[-10%] h-[700px] w-[700px] rounded-full bg-primary/25 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_100%,rgba(139,30,40,0.15),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_100%,rgba(139,30,40,0.18),transparent_60%)]" />
         <svg className="absolute inset-0 h-full w-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
