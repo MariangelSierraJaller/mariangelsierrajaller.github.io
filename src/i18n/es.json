@@ -190,29 +190,68 @@
     "kicker": "Qué ofrezco",
     "title": "Servicios",
     "lead": "Uno el criterio financiero con la capacidad técnica para entregar soluciones que optimizan procesos y decisiones.",
-    "items": [
-      {
-        "title": "Operación administrativa & financiera",
-        "desc": "Facturación electrónica, órdenes de compra, tesorería y conciliaciones con controles internos que aumentan trazabilidad y transparencia.",
-        "tags": ["NetSuite", "Facturación", "Tesorería", "Conciliaciones"]
-      },
-      {
-        "title": "Automatización & ETL",
-        "desc": "Flujos con Python (Pandas) para limpiar, integrar y transformar datos contables del ERP hacia reportes confiables.",
-        "tags": ["Python", "Pandas", "ETL", "APIs"]
-      },
-      {
-        "title": "Business Intelligence",
-        "desc": "Tableros interactivos en Power BI (DAX, Power Query) para auditoría financiera y toma de decisiones basada en datos.",
-        "tags": ["Power BI", "DAX", "SQL", "KPIs"]
-      },
-      {
-        "title": "Optimización de procesos",
-        "desc": "Diagnóstico, estandarización y digitalización de flujos administrativos para reducir reprocesos y liberar tiempo del equipo.",
-        "tags": ["Auditoría", "Estandarización", "Digitalización"]
-      }
-    ]
+    "admin": {
+      "label": "Administrativo / Financiero",
+      "items": [
+        {
+          "title": "Gestión integral de compras y proveedores",
+          "desc": "Administración completa del ciclo de adquisiciones: facturación electrónica, órdenes de compra, requisiciones y control logístico de inventarios.",
+          "tags": ["Compras", "Facturación", "Proveedores", "Inventarios"]
+        },
+        {
+          "title": "Tesorería y conciliaciones",
+          "desc": "Manejo riguroso de flujos de caja: ejecución de egresos, control de caja menor, arqueos y conciliaciones bancarias corporativas.",
+          "tags": ["Tesorería", "Caja menor", "Arqueos", "Bancos"]
+        },
+        {
+          "title": "Auditoría y gestión documental",
+          "desc": "Organización y control de soportes contables y administrativos para garantizar trazabilidad total y cumplimiento normativo en auditorías.",
+          "tags": ["Auditoría", "Soportes", "Trazabilidad", "Cumplimiento"]
+        },
+        {
+          "title": "Estandarización de procesos y KPIs",
+          "desc": "Diseño de mejoras en flujos internos que reducen operatividad manual y reprocesos, con definición y monitoreo de indicadores clave.",
+          "tags": ["Procesos", "KPIs", "Mejora continua"]
+        },
+        {
+          "title": "Soporte administrativo transversal",
+          "desc": "Ofimática avanzada (Excel) para consolidación financiera, continuidad operativa y soporte transversal a distintas áreas de la organización.",
+          "tags": ["Excel", "Consolidación", "Soporte"]
+        }
+      ]
+    },
+    "tech": {
+      "label": "Tecnológico / Sistemas",
+      "items": [
+        {
+          "title": "Flujos ETL y procesamiento de datos",
+          "desc": "Pipelines automatizados con Python y Pandas para extracción, limpieza (EDA) y estructuración de grandes volúmenes de datos financieros y operativos.",
+          "tags": ["Python", "Pandas", "ETL", "EDA"]
+        },
+        {
+          "title": "Business Intelligence y analítica visual",
+          "desc": "Modelado relacional (SQL, DAX, Power Query) y tableros interactivos en Power BI y Tableau para la toma de decisiones gerenciales.",
+          "tags": ["Power BI", "Tableau", "DAX", "SQL"]
+        },
+        {
+          "title": "Administración e integración de ERP (Oracle NetSuite)",
+          "desc": "Implementación, control de calidad de datos maestros y extracción automatizada de información (XML, JSON) desde el ERP para la transformación digital.",
+          "tags": ["NetSuite", "XML", "JSON", "ERP"]
+        },
+        {
+          "title": "Diseño lógico de soluciones y arquitectura de datos",
+          "desc": "Levantamiento de requerimientos funcionales y diseño de integraciones entre sistemas con Zapier, APIs y conectores.",
+          "tags": ["APIs", "Zapier", "Integraciones", "Arquitectura"]
+        },
+        {
+          "title": "Metodologías analíticas (CRISP-DM)",
+          "desc": "Integración de metodologías estructuradas en proyectos de analítica de datos para que las soluciones resuelvan problemas operativos reales.",
+          "tags": ["CRISP-DM", "Analítica", "Proyectos"]
+        }
+      ]
+    }
   },
+
   "testimonials": {
     "kicker": "Recomendaciones",
     "title": "Lo que dicen de mí",
