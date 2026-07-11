@@ -49,8 +49,8 @@
       ],
       "stats": [
         { "icon": "Briefcase", "label": "Gestión Operativa", "value": "3+ Años" },
-        { "icon": "GraduationCap", "label": "Formación Integral", "value": "3 Ingenierías en curso" },
-        { "icon": "Languages", "label": "Inglés Técnico", "value": "Nivel B2" }
+        { "icon": "GraduationCap", "label": "Formación", "value": "3 Ingenierías" },
+        { "icon": "Languages", "label": "Inglés", "value": "B2" }
       ],
       "roles": [
         "Analista Financiera",
@@ -71,9 +71,9 @@
         "Esta combinación de capacidad técnica y entendimiento funcional me convierte en una profesional capaz de liderar la transformación digital, aportando eficiencia operativa e innovación basada en datos a cualquier entorno corporativo."
       ],
       "stats": [
-        { "icon": "BarChart3", "label": "Análisis de Datos", "value": "Avanzado (Power BI)" },
-        { "icon": "Cpu", "label": "Automatización", "value": "Python / Pandas (ETL)" },
-        { "icon": "Languages", "label": "Inglés Técnico", "value": "Nivel B2" }
+        { "icon": "BarChart3", "label": "Análisis de Datos", "value": "Power BI" },
+        { "icon": "Cpu", "label": "Automatización", "value": "Python & Pandas" },
+        { "icon": "Languages", "label": "Inglés", "value": "B2" }
       ],
       "roles": [
         "Analista de Datos (Data Analyst)",
