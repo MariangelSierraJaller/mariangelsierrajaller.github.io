@@ -4,6 +4,7 @@ import {
   BarChart3,
   Boxes,
   Brain,
+  Briefcase,
   Check,
   Database,
   FileSpreadsheet,
