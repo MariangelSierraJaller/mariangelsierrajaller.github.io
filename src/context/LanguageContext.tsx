@@ -52,9 +52,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     (next: Lang) => {
       if (next === lang) return;
       const rest = location.pathname.replace(/^\/(es|en)/, "");
-      navigate(`/${next}${rest}${location.hash}`, { replace: false });
+      navigate(`/${next}${rest}${location.search}${location.hash}`, { replace: false });
     },
-    [lang, location.hash, location.pathname, navigate],
+    [lang, location.hash, location.pathname, location.search, navigate],
   );
 
   const value = useMemo<LanguageCtx>(
