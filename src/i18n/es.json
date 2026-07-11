@@ -37,18 +37,53 @@
   "about": {
     "title": "Sobre mí",
     "kicker": "Perfil dual",
-    "admin": "Soy una persona con profunda vocación por la gestión eficiente, convencida de que lo que no se mide no se controla y que la tecnología optimiza recursos. Considero la mejora continua un pilar fundamental: analizo, planifico y controlo procesos administrativos con responsabilidad, iniciativa y pensamiento crítico. Me motiva estandarizar flujos, auditar procesos y aportar soluciones que generen valor medible.",
-    "tech": "Tengo una profunda curiosidad por entender cómo funcionan las cosas y cómo la tecnología transforma procesos. Considero el aprendizaje un camino continuo: investigo, analizo y me autoformo para asumir retos con iniciativa y pensamiento crítico. Me motiva descubrir soluciones, optimizar tareas y aportar ideas que generen valor real en los proyectos en los que participo.",
-    "stats": [
-      { "value": "3+", "label": "años en operaciones administrativas" },
-      { "value": "3", "label": "ingenierías en formación" },
-      { "value": "B2", "label": "nivel de inglés" }
-    ],
-    "rolesTitle": "Roles que puedo desempeñar",
-    "roles": {
-      "admin": ["Analista Financiera", "Gestora de Compras", "Auditora de Procesos"],
-      "tech": ["Analista de Datos", "Especialista ERP (NetSuite)", "Desarrolladora Junior"]
+    "admin": {
+      "heading": "La Visión Estratégica",
+      "subheading": "Optimizando la complejidad, entregando eficiencia",
+      "paragraphs": [
+        "Soy Mariangel Sierra Jaller, una profesional apasionada por la gestión eficiente y el control administrativo. Estoy convencida de que lo que no se mide no se puede controlar, y veo en la optimización de recursos el pilar fundamental para el éxito empresarial.",
+        "Mi formación multidisciplinaria en Ingeniería Industrial y de Sistemas me ha permitido desarrollar una mentalidad analítica profunda. He cultivado habilidades de investigación y planeación estratégica que me permiten abordar retos operativos complejos con responsabilidad, iniciativa y un sólido pensamiento crítico.",
+        "A lo largo de mi trayectoria en el área financiera y de compras, he estandarizado flujos de trabajo, liderado auditorías y gestionado eficientemente la cadena de suministro. Veo la administración no solo como un control de gastos o inventarios, sino como una herramienta activa para generar valor medible y sostenible.",
+        "Mis experiencias académicas y profesionales me han forjado como un perfil versátil, capaz de alinear la eficiencia operativa con los objetivos estratégicos del negocio, garantizando la continuidad, la transparencia y el crecimiento continuo."
+      ],
+      "stats": [
+        { "icon": "Briefcase", "label": "Gestión Operativa", "value": "3+ Años" },
+        { "icon": "GraduationCap", "label": "Formación Integral", "value": "3 Ingenierías en curso" },
+        { "icon": "Languages", "label": "Inglés Técnico", "value": "Nivel B2" }
+      ],
+      "roles": [
+        "Analista Financiera",
+        "Coordinadora de Compras y Suministros",
+        "Auditora de Procesos y Control Interno",
+        "Analista de Operaciones",
+        "Especialista en Logística Administrativa",
+        "Asistente de Gerencia Estratégica"
+      ]
     },
+    "tech": {
+      "heading": "La Mentalidad Analítica",
+      "subheading": "Construyendo puentes entre los datos y la acción",
+      "paragraphs": [
+        "Soy Mariangel Sierra Jaller, estudiante de Ingeniería de Sistemas e Industrial, con una profunda curiosidad por entender cómo la tecnología puede transformar procesos complejos y facilitar la vida de las personas.",
+        "Considero el aprendizaje como un viaje continuo. Esta convicción me ha impulsado a ser proactiva en el manejo de herramientas de análisis de datos, la automatización de flujos de trabajo (ETL) y el dominio de ecosistemas ERP complejos como NetSuite.",
+        "Mi enfoque técnico no se limita a las bases de datos; busco integrar la tecnología con la Inteligencia de Negocios (BI). Me motiva diseñar soluciones lógicas, procesar datos estructurados y crear tableros interactivos que cuenten la historia real detrás de los números y eliminen cuellos de botella.",
+        "Esta combinación de capacidad técnica y entendimiento funcional me convierte en una profesional capaz de liderar la transformación digital, aportando eficiencia operativa e innovación basada en datos a cualquier entorno corporativo."
+      ],
+      "stats": [
+        { "icon": "BarChart3", "label": "Análisis de Datos", "value": "Avanzado (Power BI)" },
+        { "icon": "Cpu", "label": "Automatización", "value": "Python / Pandas (ETL)" },
+        { "icon": "Languages", "label": "Inglés Técnico", "value": "Nivel B2" }
+      ],
+      "roles": [
+        "Analista de Datos (Data Analyst)",
+        "Desarrolladora Junior (Python / Automatización)",
+        "Especialista e Integradora ERP (Oracle NetSuite)",
+        "Consultora Junior de Inteligencia de Negocios (BI)",
+        "Analista Funcional de Requerimientos",
+        "Ingeniera de Datos Junior"
+      ]
+    },
+    "rolesTitle": "Roles que puedo desempeñar",
     "whyTitle": "Por qué contratarme",
     "why": [
       { "title": "Visión de negocio + capacidad técnica", "desc": "Traduzco necesidades del negocio en soluciones tecnológicas tangibles." },
