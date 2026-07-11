@@ -7,34 +7,39 @@ import NotFound from "@/pages/NotFound";
 import { type ReactNode } from "react";
 
 function LangGuard({ children }: { children: ReactNode }) {
-  const { lang } = useParams();
+  const { lang, profile } = useParams();
   if (lang !== "es" && lang !== "en") return <Navigate to="/es" replace />;
+  if (profile !== undefined && profile !== "admin" && profile !== "tech") {
+    return <Navigate to={`/${lang}`} replace />;
+  }
   return <>{children}</>;
+}
+
+function LangRoutes() {
+  return (
+    <LangGuard>
+      <LanguageProvider>
+        <ProfileProvider>
+          <LangLayout />
+        </ProfileProvider>
+      </LanguageProvider>
+    </LangGuard>
+  );
 }
 
 export default function App() {
   return (
     <div className="dark">
       <BrowserRouter>
-        <ProfileProvider>
-          <Routes>
-            <Route path="/" element={<Navigate to="/es" replace />} />
-            <Route
-              path="/:lang"
-              element={
-                <LangGuard>
-                  <LanguageProvider>
-                    <LangLayout />
-                  </LanguageProvider>
-                </LangGuard>
-              }
-            >
-              <Route index element={<Home />} />
-              <Route path="*" element={<NotFound />} />
-            </Route>
+        <Routes>
+          <Route path="/" element={<Navigate to="/es" replace />} />
+          <Route path="/:lang" element={<LangRoutes />}>
+            <Route index element={<Home />} />
+            <Route path=":profile" element={<Home />} />
             <Route path="*" element={<NotFound />} />
-          </Routes>
-        </ProfileProvider>
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
