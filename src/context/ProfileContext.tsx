@@ -1,5 +1,5 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { createContext, useCallback, useContext, useEffect, useMemo, type ReactNode } from "react";
+import { useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 export type Profile = "admin" | "tech";
 
@@ -7,51 +7,61 @@ interface ProfileCtx {
   profile: Profile;
   setProfile: (p: Profile) => void;
   toggle: () => void;
-  /** True when the profile is fixed via URL (`/:lang/:profile`). Switcher UI should be hidden. */
+  /** True when `?locked=true` is present in the URL. Hides the switcher UI. */
   locked: boolean;
 }
 
 const Ctx = createContext<ProfileCtx | null>(null);
 const KEY = "msj.profile";
 
-function stored(): Profile {
+function storedProfile(): Profile {
   if (typeof window === "undefined") return "tech";
   const v = window.localStorage.getItem(KEY);
   return v === "admin" || v === "tech" ? v : "tech";
+}
+
+function isProfile(v: unknown): v is Profile {
+  return v === "admin" || v === "tech";
 }
 
 export function ProfileProvider({ children }: { children: ReactNode }) {
   const { lang, profile: profileParam } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
+  const [searchParams] = useSearchParams();
 
-  const urlProfile: Profile | null =
-    profileParam === "admin" || profileParam === "tech" ? profileParam : null;
-  const locked = urlProfile !== null;
+  const langSeg = lang === "en" ? "en" : "es";
+  const profile: Profile = isProfile(profileParam) ? profileParam : storedProfile();
+  const locked = searchParams.get("locked") === "true";
 
-  const [freeProfile, setFreeProfile] = useState<Profile>(stored);
-  const profile: Profile = urlProfile ?? freeProfile;
-
+  // Canonicalize URL: always include the profile segment so the route is shareable.
   useEffect(() => {
-    if (!locked) {
-      try {
-        window.localStorage.setItem(KEY, freeProfile);
-      } catch {
-        /* ignore */
-      }
+    if (!isProfile(profileParam)) {
+      navigate(
+        `/${langSeg}/${profile}${location.search}${location.hash}`,
+        { replace: true },
+      );
     }
-  }, [freeProfile, locked]);
+  }, [profileParam, profile, langSeg, location.search, location.hash, navigate]);
+
+  // Persist the last chosen profile so `/lang` alone can default to it.
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(KEY, profile);
+    } catch {
+      /* ignore */
+    }
+  }, [profile]);
 
   const setProfile = useCallback(
     (next: Profile) => {
-      if (locked) {
-        // Navigate to the equivalent locked route for the new profile.
-        navigate(`/${lang ?? "es"}/${next}${location.hash}`, { replace: true });
-        return;
-      }
-      setFreeProfile(next);
+      if (next === profile && isProfile(profileParam)) return;
+      navigate(
+        `/${langSeg}/${next}${location.search}${location.hash}`,
+        { replace: false },
+      );
     },
-    [lang, locked, location.hash, navigate],
+    [profile, profileParam, langSeg, location.search, location.hash, navigate],
   );
 
   const value = useMemo<ProfileCtx>(
