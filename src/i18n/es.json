@@ -390,6 +390,33 @@
         "relationship": "Compañero de equipo",
         "date": "2024",
         "highlight": "Ejemplo estético"
+      },
+      {
+        "quote": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.",
+        "name": "Laura Restrepo",
+        "role": "Gerente de Operaciones",
+        "company": "Ejemplo Logístico",
+        "relationship": "Supervisora directa",
+        "date": "2023",
+        "highlight": "Ejemplo estético"
+      },
+      {
+        "quote": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum.",
+        "name": "Daniel Ospina",
+        "role": "Coordinador de TI",
+        "company": "Ejemplo Digital",
+        "relationship": "Compañero de equipo",
+        "date": "2023",
+        "highlight": "Ejemplo estético"
+      },
+      {
+        "quote": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+        "name": "Valentina Mora",
+        "role": "Analista Senior",
+        "company": "Ejemplo Consultora",
+        "relationship": "Compañera de equipo",
+        "date": "2022",
+        "highlight": "Ejemplo estético"
       }
     ]
   },
