@@ -300,8 +300,11 @@
     "title": "Professional Profile",
     "specialistPrefix": "Specialist in",
     "rolesTitle": "Roles I can take on",
-    "servicesTitle": "Services",
-    "whyTitle": "Why hire me",
+    "rolesSubtitle": "Given my versatility and full-stack experience, I fit perfectly into these roles",
+    "servicesTitle": "Services I Offer",
+    "servicesSubtitle": "Packaged solutions to move your business forward",
+    "whyTitle": "Why Hire Me?",
+    "whySubtitle": "My value proposition for your company",
     "admin": {
       "paragraph": "Industrial and Systems Engineering student specialized in resource optimization and administrative control. I excel at end-to-end procurement management, document audit and treasury operations. My approach combines financial rigor with operational efficiency to guarantee resource traceability and delivery on corporate goals.",
       "typewriter": ["Procurement Management", "Internal Audit", "Treasury", "Resource Optimization"],

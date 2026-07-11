@@ -300,8 +300,11 @@
     "title": "Perfil Profesional",
     "specialistPrefix": "Especialista en",
     "rolesTitle": "Roles que puedo desempeñar",
-    "servicesTitle": "Servicios",
-    "whyTitle": "Por qué contratarme",
+    "rolesSubtitle": "Dada mi versatilidad y experiencia integral, encajo perfectamente en estos roles",
+    "servicesTitle": "Servicios que Ofrezco",
+    "servicesSubtitle": "Soluciones empaquetadas para impulsar tu negocio",
+    "whyTitle": "¿Por Qué Contratarme?",
+    "whySubtitle": "Mi propuesta de valor para tu empresa",
     "admin": {
       "paragraph": "Profesional en formación en Ingeniería Industrial y de Sistemas, especializada en la optimización de recursos y el control administrativo. Destaco en la gestión integral del ciclo de compras, auditoría documental y el manejo operativo de tesorería. Mi enfoque combina el rigor financiero con la eficiencia operativa para garantizar la trazabilidad de los recursos y el cumplimiento de las metas corporativas.",
       "typewriter": ["Gestión de Compras", "Auditoría Interna", "Tesorería", "Optimización de Recursos"],
