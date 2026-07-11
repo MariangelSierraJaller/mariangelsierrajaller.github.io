@@ -4,6 +4,7 @@ import {
   BarChart3,
   Boxes,
   Brain,
+  Briefcase,
   Check,
   Database,
   FileSpreadsheet,
@@ -140,13 +141,17 @@ export default function ProfessionalProfile() {
 
         {/* B. Roles + Typewriter */}
         <div className="mt-16 text-center">
-          <h3 className="font-display text-2xl text-foreground md:text-3xl">
-            {t<string>("professional.specialistPrefix")}{" "}
+          <div className="inline-flex items-center gap-3">
+            <span className="grid h-9 w-9 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+              <Briefcase size={18} />
+            </span>
+            <h3 className="font-display text-2xl text-foreground md:text-3xl">
+              {t<string>("professional.rolesTitle")}
+            </h3>
+          </div>
+          <div className="mt-6 min-h-[2.5rem] font-mono text-2xl text-primary md:text-3xl">
             <Typewriter key={profile} words={typewriterWords} />
-          </h3>
-          <p className="mt-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-            {t<string>("professional.rolesTitle")}
-          </p>
+          </div>
           <AnimatePresence mode="wait">
             <motion.div
               key={`roles-${profile}`}
@@ -154,7 +159,7 @@ export default function ProfessionalProfile() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -4 }}
               transition={{ duration: 0.3 }}
-              className="mt-4 flex flex-wrap justify-center gap-2"
+              className="mt-6 flex flex-wrap justify-center gap-2"
             >
               {roles.map((r) => (
                 <span key={r} className="tech-badge">
