@@ -5,7 +5,7 @@ import { useLang } from "@/context/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { cn } from "@/lib/utils";
 
-const sections = ["about", "experience", "education", "skills", "contact"] as const;
+const sections = ["about", "experience", "education", "skills", "resume", "contact"] as const;
 
 export default function Navigation() {
   const { lang, t } = useLang();
