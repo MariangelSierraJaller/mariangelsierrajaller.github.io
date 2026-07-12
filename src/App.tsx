@@ -8,12 +8,12 @@ import { type ReactNode } from "react";
 
 function LangGuard({ children }: { children: ReactNode }) {
   const { lang, profile } = useParams();
-  
+
   if (lang !== "es" && lang !== "en") return <Navigate to="/es" replace />;
   if (profile !== undefined && profile !== "admin" && profile !== "tech") {
     return <Navigate to={`/${lang}`} replace />;
   }
-  
+
   return <>{children}</>;
 }
 
