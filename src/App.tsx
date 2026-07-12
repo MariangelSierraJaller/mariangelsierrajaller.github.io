@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes, useParams } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes, useParams } from "react-router-dom";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ProfileProvider } from "@/context/ProfileContext";
 import LangLayout from "@/pages/LangLayout";
@@ -8,10 +8,12 @@ import { type ReactNode } from "react";
 
 function LangGuard({ children }: { children: ReactNode }) {
   const { lang, profile } = useParams();
+  
   if (lang !== "es" && lang !== "en") return <Navigate to="/es" replace />;
   if (profile !== undefined && profile !== "admin" && profile !== "tech") {
     return <Navigate to={`/${lang}`} replace />;
   }
+  
   return <>{children}</>;
 }
 
@@ -30,7 +32,7 @@ function LangRoutes() {
 export default function App() {
   return (
     <div className="dark">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Navigate to="/es" replace />} />
           <Route path="/:lang" element={<LangRoutes />}>
@@ -40,7 +42,7 @@ export default function App() {
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
