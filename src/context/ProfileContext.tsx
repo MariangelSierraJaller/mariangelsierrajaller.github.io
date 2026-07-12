@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useMemo, type ReactNode } from "react";
+import { type ReactNode, useCallback, useEffect, useMemo } from "react";
 import { useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { ProfileCtx, type Profile } from "@/context/profile-core";
+import { type Profile, ProfileCtx } from "@/context/profile-core";
 
 const KEY = "msj.profile";
 

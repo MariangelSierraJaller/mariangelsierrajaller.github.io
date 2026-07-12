@@ -23,10 +23,10 @@ interface Item {
 }
 
 function TimelineCard({
-  item,
-  side,
-  idx,
-}: {
+                        item,
+                        side,
+                        idx,
+                      }: {
   item: Item;
   side: "left" | "right";
   idx: number;
@@ -57,14 +57,17 @@ function TimelineCard({
         )}
       />
       {/* Mobile rail dot */}
-      <span className="absolute left-[-26px] top-6 h-3 w-3 rounded-full border-2 border-primary bg-background md:hidden" />
+      <span
+        className="absolute left-[-26px] top-6 h-3 w-3 rounded-full border-2 border-primary bg-background md:hidden" />
 
-      <div className="rounded-2xl border border-border bg-card/70 p-6 backdrop-blur-sm transition-all hover:border-primary/50 hover-glow">
+      <div
+        className="rounded-2xl border border-border bg-card/70 p-6 backdrop-blur-sm transition-all hover:border-primary/50 hover-glow">
         <div className="flex flex-wrap items-center gap-2 font-mono text-xs uppercase tracking-widest text-primary">
           <Briefcase size={12} />
           <span>{item.period}</span>
           {item.current && (
-            <span className="rounded-full border border-primary/40 bg-primary/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary">
+            <span
+              className="rounded-full border border-primary/40 bg-primary/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary">
               {t<string>("experience.currentLabel")}
             </span>
           )}
@@ -165,9 +168,11 @@ export default function ExperienceSection() {
 
         <div className="relative mt-16">
           {/* Central rail (desktop) */}
-          <div className="absolute left-1/2 top-0 bottom-0 hidden w-px -translate-x-1/2 bg-gradient-to-b from-primary/60 via-border to-transparent md:block" />
+          <div
+            className="absolute left-1/2 top-0 bottom-0 hidden w-px -translate-x-1/2 bg-gradient-to-b from-primary/60 via-border to-transparent md:block" />
           {/* Left rail (mobile) */}
-          <div className="absolute left-[-14px] top-0 bottom-0 w-px bg-gradient-to-b from-primary/60 via-border to-transparent md:hidden" />
+          <div
+            className="absolute left-[-14px] top-0 bottom-0 w-px bg-gradient-to-b from-primary/60 via-border to-transparent md:hidden" />
 
           <div className="flex flex-col gap-12 pl-4 md:gap-16 md:pl-0">
             {items.map((item, idx) => (

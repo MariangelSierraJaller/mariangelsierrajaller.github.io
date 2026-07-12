@@ -40,11 +40,13 @@ export default function EducationSection({ embedded = false }: EducationSectionP
               className="group relative overflow-hidden rounded-2xl border border-border bg-card/60 p-6 transition-colors hover:border-primary/40"
             >
               <div className="flex items-start justify-between gap-3">
-                <span className="grid h-9 w-9 place-items-center rounded-full border border-border bg-secondary/60 text-primary">
+                <span
+                  className="grid h-9 w-9 place-items-center rounded-full border border-border bg-secondary/60 text-primary">
                   <GraduationCap size={16} />
                 </span>
                 {item.inProgress && (
-                  <span className="rounded-full border border-primary/40 bg-primary/10 px-2 py-0.5 text-[10px] uppercase tracking-widest text-primary">
+                  <span
+                    className="rounded-full border border-primary/40 bg-primary/10 px-2 py-0.5 text-[10px] uppercase tracking-widest text-primary">
                     {inProgressLabel}
                   </span>
                 )}

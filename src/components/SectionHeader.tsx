@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 export default function SectionHeader({
-  kicker,
-  title,
-}: {
+                                        kicker,
+                                        title,
+                                      }: {
   kicker: string;
   title: string;
 }) {

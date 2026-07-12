@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { BarChart3, Briefcase, Cpu, GraduationCap, Languages, Sparkles } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { BarChart3, Briefcase, Cpu, GraduationCap, Languages, Sparkles } from "lucide-react";
 import { useLang } from "@/context/language-core";
 import { useProfile } from "@/context/profile-core";
 import SectionHeader from "@/components/SectionHeader";
@@ -10,6 +10,7 @@ interface Stat {
   label: string;
   value: string;
 }
+
 interface ProfileCopy {
   heading: string;
   subheading: string;
@@ -93,9 +94,12 @@ export default function AboutSection() {
       <div className="mt-12 grid gap-12 lg:grid-cols-2">
         {/* Left: ASCII art */}
         <div className="relative">
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 blur-3xl" />
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-background/80 p-6 backdrop-blur-sm">
-            <pre className="font-mono text-[10px] sm:text-xs md:text-[13px] text-primary overflow-x-auto whitespace-pre leading-tight">
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 blur-3xl" />
+          <div
+            className="relative overflow-hidden rounded-3xl border border-border bg-background/80 p-6 backdrop-blur-sm">
+            <pre
+              className="font-mono text-[10px] sm:text-xs md:text-[13px] text-primary overflow-x-auto whitespace-pre leading-tight">
               {asciiArt}
             </pre>
             <p className="mt-4 text-center text-xs italic text-muted-foreground">
@@ -146,7 +150,8 @@ export default function AboutSection() {
                       <Icon size={20} />
                     </div>
                     <div className="flex min-w-0 flex-1 flex-col items-center justify-center">
-                      <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground break-words">
+                      <div
+                        className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground break-words">
                         {s.label}
                       </div>
                       <div className="mt-1.5 font-display text-lg text-foreground leading-tight break-words">

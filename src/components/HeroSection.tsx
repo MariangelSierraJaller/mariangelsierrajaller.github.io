@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDownRight, Sparkles, FileText } from "lucide-react";
+import { ArrowDownRight, FileText, Sparkles } from "lucide-react";
 import { useLang } from "@/context/language-core";
 import { useProfile } from "@/context/profile-core";
 import portrait from "@/assets/portrait.jpg";
@@ -34,8 +34,10 @@ export default function HeroSection() {
       </div>
       <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_30%,rgba(139,30,40,0.15),transparent_55%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_100%,rgba(139,30,40,0.18),transparent_60%)]" />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(circle_at_80%_30%,rgba(139,30,40,0.15),transparent_55%)]" />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_100%,rgba(139,30,40,0.18),transparent_60%)]" />
         <svg className="absolute inset-0 h-full w-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
@@ -46,7 +48,8 @@ export default function HeroSection() {
         </svg>
       </div>
 
-      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1.15fr_0.85fr]">
+      <div
+        className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1.15fr_0.85fr]">
 
         {/* Left: copy */}
         <motion.div
@@ -54,7 +57,8 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-3 py-1 text-xs uppercase tracking-widest text-muted-foreground">
+          <span
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-3 py-1 text-xs uppercase tracking-widest text-muted-foreground">
             <Sparkles size={12} className="text-primary" />
             {t<string>("hero.eyebrow")}
           </span>
@@ -130,13 +134,17 @@ export default function HeroSection() {
         >
           {/* Ambient aurora glow behind frame */}
           <div className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/45 blur-[110px]" />
-            <div className="absolute left-1/3 top-2/3 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/25 blur-[80px]" />
+            <div
+              className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/45 blur-[110px]" />
+            <div
+              className="absolute left-1/3 top-2/3 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/25 blur-[80px]" />
           </div>
 
           {/* Floating decorative hex marks */}
-          <div aria-hidden className="pointer-events-none absolute -right-2 -top-4 h-6 w-6 rotate-45 border border-primary/50 bg-primary/10 backdrop-blur-sm" />
-          <div aria-hidden className="pointer-events-none absolute -left-2 bottom-8 h-4 w-4 rotate-45 border border-primary/40 bg-primary/10" />
+          <div aria-hidden
+               className="pointer-events-none absolute -right-2 -top-4 h-6 w-6 rotate-45 border border-primary/50 bg-primary/10 backdrop-blur-sm" />
+          <div aria-hidden
+               className="pointer-events-none absolute -left-2 bottom-8 h-4 w-4 rotate-45 border border-primary/40 bg-primary/10" />
 
           {/* Hexagon frame */}
           <div className="relative mx-auto aspect-square w-full max-w-[440px]">
@@ -168,8 +176,10 @@ export default function HeroSection() {
                 className="h-full w-full object-cover object-center"
               />
               {/* Subtle vignette blending into background */}
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,transparent_55%,rgba(10,10,12,0.55)_100%)]" />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+              <div
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,transparent_55%,rgba(10,10,12,0.55)_100%)]" />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
             </div>
           </div>
         </motion.div>

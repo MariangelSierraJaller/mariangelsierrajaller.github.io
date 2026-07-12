@@ -1,17 +1,17 @@
 import { AnimatePresence, motion } from "framer-motion";
 import {
+  BarChart3,
+  Boxes,
+  Brain,
   Briefcase,
   Cog,
-  BarChart3,
-  Workflow,
+  Database,
+  FileSpreadsheet,
+  Network,
+  ShieldCheck,
   ShoppingCart,
   Wallet,
-  ShieldCheck,
-  FileSpreadsheet,
-  Database,
-  Boxes,
-  Network,
-  Brain,
+  Workflow,
 } from "lucide-react";
 import { useLang } from "@/context/language-core";
 import { useProfile } from "@/context/profile-core";
@@ -43,7 +43,8 @@ export default function ServicesSection() {
           {t<string>("services.lead")}
         </p>
 
-        <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+        <div
+          className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           <span className="h-1.5 w-1.5 rounded-full bg-primary" />
           {label}
         </div>
@@ -67,8 +68,10 @@ export default function ServicesSection() {
                   transition={{ duration: 0.4, delay: i * 0.05 }}
                   className="group relative overflow-hidden rounded-2xl border border-border bg-card/60 p-6 transition-colors hover:border-primary/40"
                 >
-                  <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/10 blur-3xl transition-opacity group-hover:bg-primary/20" />
-                  <span className="grid h-11 w-11 place-items-center rounded-2xl border border-border bg-secondary/60 text-primary">
+                  <div
+                    className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/10 blur-3xl transition-opacity group-hover:bg-primary/20" />
+                  <span
+                    className="grid h-11 w-11 place-items-center rounded-2xl border border-border bg-secondary/60 text-primary">
                     <Icon size={18} />
                   </span>
                   <h3 className="mt-5 font-display text-xl text-foreground">{it.title}</h3>

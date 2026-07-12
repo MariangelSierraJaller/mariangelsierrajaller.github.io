@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { type ReactNode } from "react";
 
 export default function Subheading({
-  title,
-  subtitle,
-  icon,
-  align = "center",
-}: {
+                                     title,
+                                     subtitle,
+                                     icon,
+                                     align = "center",
+                                   }: {
   title: string;
   subtitle?: string;
   icon?: ReactNode;
@@ -23,7 +23,8 @@ export default function Subheading({
     >
       <div className={`inline-flex items-center gap-3 ${align === "center" ? "justify-center" : ""}`}>
         {icon ? (
-          <span className="grid h-9 w-9 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+          <span
+            className="grid h-9 w-9 place-items-center rounded-full border border-primary/40 bg-primary/10 text-primary">
             {icon}
           </span>
         ) : null}

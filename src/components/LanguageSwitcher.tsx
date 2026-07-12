@@ -1,4 +1,4 @@
-import { useLang, type Lang } from "@/context/language-core";
+import { type Lang, useLang } from "@/context/language-core";
 import { cn } from "@/lib/utils";
 
 export default function LanguageSwitcher() {

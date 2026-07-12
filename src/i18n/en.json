@@ -24,11 +24,24 @@
     "tagline": "Bridging financial administration and technology. Turning data and processes into measurable decisions.",
     "ctaPrimary": "Get in touch",
     "ctaSecondary": "View resume",
-    "chips": ["Systems Eng.", "Industrial Eng.", "Biomedical Eng. (in progress)"],
+    "chips": [
+      "Systems Eng.",
+      "Industrial Eng.",
+      "Biomedical Eng. (in progress)"
+    ],
     "metrics": [
-      { "value": "3+", "label": "Years of experience" },
-      { "value": "3", "label": "Engineering degrees" },
-      { "value": "B2", "label": "English" }
+      {
+        "value": "3+",
+        "label": "Years of experience"
+      },
+      {
+        "value": "3",
+        "label": "Engineering degrees"
+      },
+      {
+        "value": "B2",
+        "label": "English"
+      }
     ]
   },
   "profileSwitch": {
@@ -49,9 +62,21 @@
         "My academic and professional experiences have forged a versatile profile, capable of aligning operational efficiency with the strategic goals of the business — ensuring continuity, transparency and continuous growth."
       ],
       "stats": [
-        { "icon": "Briefcase", "label": "Operations", "value": "3+ Years" },
-        { "icon": "GraduationCap", "label": "Education", "value": "3 Degrees" },
-        { "icon": "Languages", "label": "English", "value": "B2" }
+        {
+          "icon": "Briefcase",
+          "label": "Operations",
+          "value": "3+ Years"
+        },
+        {
+          "icon": "GraduationCap",
+          "label": "Education",
+          "value": "3 Degrees"
+        },
+        {
+          "icon": "Languages",
+          "label": "English",
+          "value": "B2"
+        }
       ],
       "roles": [
         "Financial Analyst",
@@ -72,9 +97,21 @@
         "This blend of technical capability and functional understanding makes me a professional able to lead digital transformation, bringing operational efficiency and data-driven innovation to any corporate environment."
       ],
       "stats": [
-        { "icon": "BarChart3", "label": "Data Analysis", "value": "Power BI" },
-        { "icon": "Cpu", "label": "Automation", "value": "Python & Pandas" },
-        { "icon": "Languages", "label": "English", "value": "B2" }
+        {
+          "icon": "BarChart3",
+          "label": "Data Analysis",
+          "value": "Power BI"
+        },
+        {
+          "icon": "Cpu",
+          "label": "Automation",
+          "value": "Python & Pandas"
+        },
+        {
+          "icon": "Languages",
+          "label": "English",
+          "value": "B2"
+        }
       ],
       "roles": [
         "Data Analyst",
@@ -89,9 +126,18 @@
     "asciiCaption": "Turning data into operational decisions",
     "whyTitle": "Why hire me",
     "why": [
-      { "title": "Business vision + technical capability", "desc": "I translate business needs into tangible technological solutions." },
-      { "title": "Operational cost reduction", "desc": "I automate workflows and eliminate rework that consumes time and money." },
-      { "title": "Continuous improvement", "desc": "I design KPIs, audits and dashboards for data-driven decisions." }
+      {
+        "title": "Business vision + technical capability",
+        "desc": "I translate business needs into tangible technological solutions."
+      },
+      {
+        "title": "Operational cost reduction",
+        "desc": "I automate workflows and eliminate rework that consumes time and money."
+      },
+      {
+        "title": "Continuous improvement",
+        "desc": "I design KPIs, audits and dashboards for data-driven decisions."
+      }
     ]
   },
   "experience": {
@@ -117,7 +163,15 @@
             "Designed and implemented internal workflow improvements via task standardization and management tools.",
             "Development and monitoring of key operational KPIs to secure long-term profitability."
           ],
-          "tags": ["Procurement", "Treasury", "Auditing", "Advanced Excel", "NetSuite ERP", "KPIs", "Internal Control"]
+          "tags": [
+            "Procurement",
+            "Treasury",
+            "Auditing",
+            "Advanced Excel",
+            "NetSuite ERP",
+            "KPIs",
+            "Internal Control"
+          ]
         },
         "tech": {
           "role": "Data Analyst · ERP Specialist · Financial Support",
@@ -128,7 +182,15 @@
             "Identified improvement opportunities through digitalization, task standardization and process integration.",
             "Applied critical thinking and analytical capabilities to provide cross-functional technology support."
           ],
-          "tags": ["Python", "Power BI", "ETL", "Oracle NetSuite", "Data Analysis", "Automation", "Dashboards"]
+          "tags": [
+            "Python",
+            "Power BI",
+            "ETL",
+            "Oracle NetSuite",
+            "Data Analysis",
+            "Automation",
+            "Dashboards"
+          ]
         }
       },
       {
@@ -144,7 +206,14 @@
             "Executed disbursements, cash counts and treasury activities with reliable internal controls.",
             "Direct support to operational areas to ensure service continuity and user attention."
           ],
-          "tags": ["Invoicing", "Accounting", "Petty Cash", "Traceability", "Operational Support", "User Attention"]
+          "tags": [
+            "Invoicing",
+            "Accounting",
+            "Petty Cash",
+            "Traceability",
+            "Operational Support",
+            "User Attention"
+          ]
         },
         "tech": {
           "role": "Administrative Technology Support & Integration Assistant",
@@ -154,7 +223,14 @@
             "Implementation of internal controls that strengthened transparency and reliability of financial information.",
             "Comprehensive technological and operational support for institutional logistics coordination."
           ],
-          "tags": ["Data Control", "ERP", "Digitalization", "IT Support", "Traceability", "Logistics"]
+          "tags": [
+            "Data Control",
+            "ERP",
+            "Digitalization",
+            "IT Support",
+            "Traceability",
+            "Logistics"
+          ]
         }
       }
     ]
@@ -164,18 +240,113 @@
     "kicker": "Training",
     "inProgress": "In progress",
     "items": [
-      { "degree": "Systems Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech",
-        "badges": { "tech": ["Software Architecture", "Databases", "Integrations"], "admin": ["IT Management", "Business Logic", "Support"] } },
-      { "degree": "Industrial Engineering", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin",
-        "badges": { "tech": ["Process Optimization", "Automation", "KPIs"], "admin": ["Supply Chain", "Operations Management", "Logistics"] } },
-      { "degree": "Biomedical Engineering", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech",
-        "badges": { "tech": ["Bioengineering", "Clinical Software"], "admin": ["Hospital Management", "Clinical Procurement"] } },
-      { "degree": "Accounting & Financial Technician oriented to Systems", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both",
-        "badges": { "tech": ["NetSuite ERP", "Financial Analytics"], "admin": ["Accounting", "Treasury", "Reconciliations"] } },
-      { "degree": "Software Programming Technician", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech",
-        "badges": { "tech": ["Programming", "Algorithms"], "admin": ["Systems", "Support"] } },
-      { "degree": "High School Diploma, Computer Science", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both",
-        "badges": { "tech": ["IT Fundamentals", "Office Suite"], "admin": ["Office Suite", "Basic Management"] } }
+      {
+        "degree": "Systems Engineering",
+        "institution": "Fundación Universidad San José",
+        "period": "2023 — 2026",
+        "inProgress": true,
+        "profile": "tech",
+        "badges": {
+          "tech": [
+            "Software Architecture",
+            "Databases",
+            "Integrations"
+          ],
+          "admin": [
+            "IT Management",
+            "Business Logic",
+            "Support"
+          ]
+        }
+      },
+      {
+        "degree": "Industrial Engineering",
+        "institution": "Fundación Universidad San José",
+        "period": "2023 — 2026",
+        "inProgress": true,
+        "profile": "admin",
+        "badges": {
+          "tech": [
+            "Process Optimization",
+            "Automation",
+            "KPIs"
+          ],
+          "admin": [
+            "Supply Chain",
+            "Operations Management",
+            "Logistics"
+          ]
+        }
+      },
+      {
+        "degree": "Biomedical Engineering",
+        "institution": "Institución Universitaria ITM",
+        "period": "2023 — 2028",
+        "inProgress": true,
+        "profile": "tech",
+        "badges": {
+          "tech": [
+            "Bioengineering",
+            "Clinical Software"
+          ],
+          "admin": [
+            "Hospital Management",
+            "Clinical Procurement"
+          ]
+        }
+      },
+      {
+        "degree": "Accounting & Financial Technician oriented to Systems",
+        "institution": "Instituto Metropolitano Educación (ITM)",
+        "period": "2022 — 2023",
+        "inProgress": false,
+        "profile": "both",
+        "badges": {
+          "tech": [
+            "NetSuite ERP",
+            "Financial Analytics"
+          ],
+          "admin": [
+            "Accounting",
+            "Treasury",
+            "Reconciliations"
+          ]
+        }
+      },
+      {
+        "degree": "Software Programming Technician",
+        "institution": "SENA — Servicio Nacional de Aprendizaje",
+        "period": "2020 — 2021",
+        "inProgress": false,
+        "profile": "tech",
+        "badges": {
+          "tech": [
+            "Programming",
+            "Algorithms"
+          ],
+          "admin": [
+            "Systems",
+            "Support"
+          ]
+        }
+      },
+      {
+        "degree": "High School Diploma, Computer Science",
+        "institution": "I.E. Inem José Félix de Restrepo",
+        "period": "2019 — 2021",
+        "inProgress": false,
+        "profile": "both",
+        "badges": {
+          "tech": [
+            "IT Fundamentals",
+            "Office Suite"
+          ],
+          "admin": [
+            "Office Suite",
+            "Basic Management"
+          ]
+        }
+      }
     ]
   },
   "skills": {
@@ -186,25 +357,78 @@
     "toolsTitle": "Tools",
     "admin": {
       "hard": [
-        { "name": "Electronic invoicing", "level": 95 },
-        { "name": "NetSuite ERP", "level": 85 },
-        { "name": "Treasury & reconciliations", "level": 90 },
-        { "name": "Inventory control", "level": 85 },
-        { "name": "Document management & audit", "level": 88 },
-        { "name": "KPIs & goal control", "level": 80 }
+        {
+          "name": "Electronic invoicing",
+          "level": 95
+        },
+        {
+          "name": "NetSuite ERP",
+          "level": 85
+        },
+        {
+          "name": "Treasury & reconciliations",
+          "level": 90
+        },
+        {
+          "name": "Inventory control",
+          "level": 85
+        },
+        {
+          "name": "Document management & audit",
+          "level": 88
+        },
+        {
+          "name": "KPIs & goal control",
+          "level": 80
+        }
       ],
-      "tools": ["Advanced Excel", "Power BI", "Oracle NetSuite", "SAP basics", "Google Workspace", "Notion"]
+      "tools": [
+        "Advanced Excel",
+        "Power BI",
+        "Oracle NetSuite",
+        "SAP basics",
+        "Google Workspace",
+        "Notion"
+      ]
     },
     "tech": {
       "hard": [
-        { "name": "Python (Pandas, ETL, EDA)", "level": 85 },
-        { "name": "Power BI (DAX, Power Query)", "level": 90 },
-        { "name": "SQL & relational modeling", "level": 80 },
-        { "name": "NetSuite ERP (XML, JSON)", "level": 85 },
-        { "name": "Workflow automation", "level": 82 },
-        { "name": "Logical solution design", "level": 80 }
+        {
+          "name": "Python (Pandas, ETL, EDA)",
+          "level": 85
+        },
+        {
+          "name": "Power BI (DAX, Power Query)",
+          "level": 90
+        },
+        {
+          "name": "SQL & relational modeling",
+          "level": 80
+        },
+        {
+          "name": "NetSuite ERP (XML, JSON)",
+          "level": 85
+        },
+        {
+          "name": "Workflow automation",
+          "level": 82
+        },
+        {
+          "name": "Logical solution design",
+          "level": 80
+        }
       ],
-      "tools": ["Python", "Pandas", "Power BI", "SQL", "NetSuite", "Zapier", "APIs", "Tableau", "Git"]
+      "tools": [
+        "Python",
+        "Pandas",
+        "Power BI",
+        "SQL",
+        "NetSuite",
+        "Zapier",
+        "APIs",
+        "Tableau",
+        "Git"
+      ]
     },
     "soft": [
       "Communication",
@@ -218,10 +442,22 @@
     "languages": {
       "title": "Languages",
       "items": [
-        { "name": "Spanish", "level": "Native" },
-        { "name": "English", "level": "B2" },
-        { "name": "French", "level": "Basic" },
-        { "name": "Korean", "level": "Basic" }
+        {
+          "name": "Spanish",
+          "level": "Native"
+        },
+        {
+          "name": "English",
+          "level": "B2"
+        },
+        {
+          "name": "French",
+          "level": "Basic"
+        },
+        {
+          "name": "Korean",
+          "level": "Basic"
+        }
       ]
     }
   },
@@ -266,7 +502,6 @@
     "emailCta": "Send email",
     "linkedinCta": "View LinkedIn"
   },
-
   "services": {
     "kicker": "What I offer",
     "title": "Services",
@@ -277,27 +512,50 @@
         {
           "title": "End-to-end procurement & vendor management",
           "desc": "Full purchasing cycle: e-invoicing, purchase orders, requisitions and logistics control of inventories.",
-          "tags": ["Procurement", "E-invoicing", "Vendors", "Inventory"]
+          "tags": [
+            "Procurement",
+            "E-invoicing",
+            "Vendors",
+            "Inventory"
+          ]
         },
         {
           "title": "Treasury & reconciliations",
           "desc": "Rigorous cash-flow operations: disbursements, petty cash control, cash counts and corporate bank reconciliations.",
-          "tags": ["Treasury", "Petty cash", "Audits", "Banking"]
+          "tags": [
+            "Treasury",
+            "Petty cash",
+            "Audits",
+            "Banking"
+          ]
         },
         {
           "title": "Audit & structured document management",
           "desc": "Organization and control of accounting and administrative supports to ensure full traceability and audit compliance.",
-          "tags": ["Audit", "Supports", "Traceability", "Compliance"]
+          "tags": [
+            "Audit",
+            "Supports",
+            "Traceability",
+            "Compliance"
+          ]
         },
         {
           "title": "Process standardization & KPI tracking",
           "desc": "Redesign of internal flows to cut manual work and rework, with definition and monitoring of key performance indicators.",
-          "tags": ["Processes", "KPIs", "Continuous improvement"]
+          "tags": [
+            "Processes",
+            "KPIs",
+            "Continuous improvement"
+          ]
         },
         {
           "title": "Cross-functional administrative support",
           "desc": "Advanced Excel for financial consolidation, operational continuity and transversal support across teams.",
-          "tags": ["Excel", "Consolidation", "Support"]
+          "tags": [
+            "Excel",
+            "Consolidation",
+            "Support"
+          ]
         }
       ]
     },
@@ -307,32 +565,55 @@
         {
           "title": "ETL pipelines & data processing",
           "desc": "Automated pipelines with Python and Pandas for extraction, cleansing (EDA) and structuring of large financial and operational datasets.",
-          "tags": ["Python", "Pandas", "ETL", "EDA"]
+          "tags": [
+            "Python",
+            "Pandas",
+            "ETL",
+            "EDA"
+          ]
         },
         {
           "title": "Business Intelligence & visual analytics",
           "desc": "Relational data modeling (SQL, DAX, Power Query) and interactive dashboards in Power BI and Tableau for managerial decisions.",
-          "tags": ["Power BI", "Tableau", "DAX", "SQL"]
+          "tags": [
+            "Power BI",
+            "Tableau",
+            "DAX",
+            "SQL"
+          ]
         },
         {
           "title": "ERP administration & integration (Oracle NetSuite)",
           "desc": "Implementation, master-data quality control and automated extraction (XML, JSON) from the ERP for digital transformation.",
-          "tags": ["NetSuite", "XML", "JSON", "ERP"]
+          "tags": [
+            "NetSuite",
+            "XML",
+            "JSON",
+            "ERP"
+          ]
         },
         {
           "title": "Logical solution design & data architecture",
           "desc": "Functional requirements gathering and system integration design using Zapier, APIs and connectors.",
-          "tags": ["APIs", "Zapier", "Integrations", "Architecture"]
+          "tags": [
+            "APIs",
+            "Zapier",
+            "Integrations",
+            "Architecture"
+          ]
         },
         {
           "title": "Analytical methodologies (CRISP-DM)",
           "desc": "Structured methodologies applied to data analytics projects so tech solutions solve real operational problems.",
-          "tags": ["CRISP-DM", "Analytics", "Projects"]
+          "tags": [
+            "CRISP-DM",
+            "Analytics",
+            "Projects"
+          ]
         }
       ]
     }
   },
-
   "professional": {
     "kicker": "Value proposition",
     "title": "Professional Profile",
@@ -345,13 +626,35 @@
     "whySubtitle": "My value proposition for your company",
     "admin": {
       "paragraph": "Industrial and Systems Engineering student specialized in resource optimization and administrative control. I excel at end-to-end procurement management, document audit and treasury operations. My approach combines financial rigor with operational efficiency to guarantee resource traceability and delivery on corporate goals.",
-      "typewriter": ["Procurement Management", "Internal Audit", "Treasury", "Resource Optimization"],
-      "roles": ["Financial Analyst", "Procurement Manager", "Process Auditor", "Treasury Coordinator", "Operations Analyst"]
+      "typewriter": [
+        "Procurement Management",
+        "Internal Audit",
+        "Treasury",
+        "Resource Optimization"
+      ],
+      "roles": [
+        "Financial Analyst",
+        "Procurement Manager",
+        "Process Auditor",
+        "Treasury Coordinator",
+        "Operations Analyst"
+      ]
     },
     "tech": {
       "paragraph": "Systems and Industrial Engineering student specialized in the convergence of data analytics and workflow automation. I have hands-on experience building ETL pipelines with Python, automating data extraction from ERPs such as NetSuite and designing interactive dashboards in Power BI. My goal is turning raw information into technological solutions that power management decisions.",
-      "typewriter": ["Data Analysis", "Backend Development", "ERP Integration", "ETL Automation"],
-      "roles": ["Data Analyst", "ERP Specialist", "Data Engineer", "BI Consultant", "Python Developer"]
+      "typewriter": [
+        "Data Analysis",
+        "Backend Development",
+        "ERP Integration",
+        "ETL Automation"
+      ],
+      "roles": [
+        "Data Analyst",
+        "ERP Specialist",
+        "Data Engineer",
+        "BI Consultant",
+        "Python Developer"
+      ]
     }
   },
   "testimonials": {
@@ -425,7 +728,6 @@
     "built": "Designed and built with care.",
     "builtWith": "built with passion"
   },
-
   "notFound": {
     "title": "Page not found",
     "lead": "The page you're looking for doesn't exist or has been moved.",

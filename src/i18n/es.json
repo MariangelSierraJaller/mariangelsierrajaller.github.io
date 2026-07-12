@@ -24,11 +24,24 @@
     "tagline": "Puente entre administración financiera y tecnología. Convierto datos y procesos en decisiones medibles.",
     "ctaPrimary": "Contáctame",
     "ctaSecondary": "Ver CV",
-    "chips": ["Ing. de Sistemas", "Ing. Industrial", "Ing. Biomédica (en curso)"],
+    "chips": [
+      "Ing. de Sistemas",
+      "Ing. Industrial",
+      "Ing. Biomédica (en curso)"
+    ],
     "metrics": [
-      { "value": "3+", "label": "Años de experiencia" },
-      { "value": "3", "label": "Ingenierías en formación" },
-      { "value": "B2", "label": "Inglés" }
+      {
+        "value": "3+",
+        "label": "Años de experiencia"
+      },
+      {
+        "value": "3",
+        "label": "Ingenierías en formación"
+      },
+      {
+        "value": "B2",
+        "label": "Inglés"
+      }
     ]
   },
   "profileSwitch": {
@@ -49,9 +62,21 @@
         "Mis experiencias académicas y profesionales me han forjado como un perfil versátil, capaz de alinear la eficiencia operativa con los objetivos estratégicos del negocio, garantizando la continuidad, la transparencia y el crecimiento continuo."
       ],
       "stats": [
-        { "icon": "Briefcase", "label": "Gestión Operativa", "value": "3+ Años" },
-        { "icon": "GraduationCap", "label": "Formación", "value": "3 Ingenierías" },
-        { "icon": "Languages", "label": "Inglés", "value": "B2" }
+        {
+          "icon": "Briefcase",
+          "label": "Gestión Operativa",
+          "value": "3+ Años"
+        },
+        {
+          "icon": "GraduationCap",
+          "label": "Formación",
+          "value": "3 Ingenierías"
+        },
+        {
+          "icon": "Languages",
+          "label": "Inglés",
+          "value": "B2"
+        }
       ],
       "roles": [
         "Analista Financiera",
@@ -72,9 +97,21 @@
         "Esta combinación de capacidad técnica y entendimiento funcional me convierte en una profesional capaz de liderar la transformación digital, aportando eficiencia operativa e innovación basada en datos a cualquier entorno corporativo."
       ],
       "stats": [
-        { "icon": "BarChart3", "label": "Análisis de Datos", "value": "Power BI" },
-        { "icon": "Cpu", "label": "Automatización", "value": "Python & Pandas" },
-        { "icon": "Languages", "label": "Inglés", "value": "B2" }
+        {
+          "icon": "BarChart3",
+          "label": "Análisis de Datos",
+          "value": "Power BI"
+        },
+        {
+          "icon": "Cpu",
+          "label": "Automatización",
+          "value": "Python & Pandas"
+        },
+        {
+          "icon": "Languages",
+          "label": "Inglés",
+          "value": "B2"
+        }
       ],
       "roles": [
         "Analista de Datos (Data Analyst)",
@@ -89,9 +126,18 @@
     "asciiCaption": "Transformando datos en decisiones operativas",
     "whyTitle": "Por qué contratarme",
     "why": [
-      { "title": "Visión de negocio + capacidad técnica", "desc": "Traduzco necesidades del negocio en soluciones tecnológicas tangibles." },
-      { "title": "Reducción de costos operativos", "desc": "Automatizo flujos y elimino reprocesos que consumen tiempo y dinero." },
-      { "title": "Mejora continua", "desc": "Diseño KPIs, auditorías y tableros para decisiones basadas en datos." }
+      {
+        "title": "Visión de negocio + capacidad técnica",
+        "desc": "Traduzco necesidades del negocio en soluciones tecnológicas tangibles."
+      },
+      {
+        "title": "Reducción de costos operativos",
+        "desc": "Automatizo flujos y elimino reprocesos que consumen tiempo y dinero."
+      },
+      {
+        "title": "Mejora continua",
+        "desc": "Diseño KPIs, auditorías y tableros para decisiones basadas en datos."
+      }
     ]
   },
   "experience": {
@@ -117,7 +163,15 @@
             "Diseño e implementación de mejoras en flujos internos mediante estandarización de tareas e integración de herramientas de gestión.",
             "Desarrollo y monitoreo de indicadores operativos clave (KPIs) para garantizar la rentabilidad a largo plazo."
           ],
-          "tags": ["Gestión Compras", "Tesorería", "Auditoría", "Excel Avanzado", "ERP NetSuite", "KPIs", "Control Interno"]
+          "tags": [
+            "Gestión Compras",
+            "Tesorería",
+            "Auditoría",
+            "Excel Avanzado",
+            "ERP NetSuite",
+            "KPIs",
+            "Control Interno"
+          ]
         },
         "tech": {
           "role": "Analista de Datos · Especialista ERP · Soporte Financiero",
@@ -128,7 +182,15 @@
             "Identificación de oportunidades de mejora mediante la digitalización y estandarización de tareas e integración de procesos.",
             "Aplicación de pensamiento crítico y capacidades analíticas para brindar soporte tecnológico transversal."
           ],
-          "tags": ["Python", "Power BI", "ETL", "Oracle NetSuite", "Análisis de Datos", "Automatización", "Dashboards"]
+          "tags": [
+            "Python",
+            "Power BI",
+            "ETL",
+            "Oracle NetSuite",
+            "Análisis de Datos",
+            "Automatización",
+            "Dashboards"
+          ]
         }
       },
       {
@@ -144,7 +206,14 @@
             "Ejecución de egresos, arqueos de caja y actividades de tesorería implementando controles internos de confiabilidad.",
             "Soporte directo a áreas operativas para garantizar la continuidad del servicio y la atención al usuario."
           ],
-          "tags": ["Facturación", "Contabilidad", "Caja Menor", "Trazabilidad", "Soporte Operativo", "Atención al Usuario"]
+          "tags": [
+            "Facturación",
+            "Contabilidad",
+            "Caja Menor",
+            "Trazabilidad",
+            "Soporte Operativo",
+            "Atención al Usuario"
+          ]
         },
         "tech": {
           "role": "Asistente de Apoyo Tecnológico Administrativo e Integración",
@@ -154,7 +223,14 @@
             "Implementación de controles internos que fortalecieron la transparencia y confiabilidad de la información financiera.",
             "Soporte tecnológico y operativo integral para la coordinación logística institucional."
           ],
-          "tags": ["Control de Datos", "ERP", "Digitalización", "Soporte TI", "Trazabilidad", "Logística"]
+          "tags": [
+            "Control de Datos",
+            "ERP",
+            "Digitalización",
+            "Soporte TI",
+            "Trazabilidad",
+            "Logística"
+          ]
         }
       }
     ]
@@ -164,18 +240,113 @@
     "kicker": "Formación",
     "inProgress": "En curso",
     "items": [
-      { "degree": "Ingeniería de Sistemas", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "tech",
-        "badges": { "tech": ["Arquitectura de Software", "Bases de Datos", "Integraciones"], "admin": ["Gestión IT", "Lógica de Negocio", "Soporte"] } },
-      { "degree": "Ingeniería Industrial", "institution": "Fundación Universidad San José", "period": "2023 — 2026", "inProgress": true, "profile": "admin",
-        "badges": { "tech": ["Optimización de Procesos", "Automatización", "KPIs"], "admin": ["Cadena de Suministro", "Gestión de Operaciones", "Logística"] } },
-      { "degree": "Ingeniería Biomédica", "institution": "Institución Universitaria ITM", "period": "2023 — 2028", "inProgress": true, "profile": "tech",
-        "badges": { "tech": ["Bioingeniería", "Software Clínico"], "admin": ["Gestión Hospitalaria", "Compras Clínicas"] } },
-      { "degree": "Técnico Contable y Financiero orientado a Sistemas", "institution": "Instituto Metropolitano Educación (ITM)", "period": "2022 — 2023", "inProgress": false, "profile": "both",
-        "badges": { "tech": ["ERP NetSuite", "Analítica Financiera"], "admin": ["Contabilidad", "Tesorería", "Conciliaciones"] } },
-      { "degree": "Técnico en Programación de Software", "institution": "SENA — Servicio Nacional de Aprendizaje", "period": "2020 — 2021", "inProgress": false, "profile": "tech",
-        "badges": { "tech": ["Programación", "Algoritmos"], "admin": ["Sistemas", "Soporte"] } },
-      { "degree": "Bachiller Especializado en Informática", "institution": "I.E. Inem José Félix de Restrepo", "period": "2019 — 2021", "inProgress": false, "profile": "both",
-        "badges": { "tech": ["Fundamentos TI", "Ofimática"], "admin": ["Ofimática", "Gestión Básica"] } }
+      {
+        "degree": "Ingeniería de Sistemas",
+        "institution": "Fundación Universidad San José",
+        "period": "2023 — 2026",
+        "inProgress": true,
+        "profile": "tech",
+        "badges": {
+          "tech": [
+            "Arquitectura de Software",
+            "Bases de Datos",
+            "Integraciones"
+          ],
+          "admin": [
+            "Gestión IT",
+            "Lógica de Negocio",
+            "Soporte"
+          ]
+        }
+      },
+      {
+        "degree": "Ingeniería Industrial",
+        "institution": "Fundación Universidad San José",
+        "period": "2023 — 2026",
+        "inProgress": true,
+        "profile": "admin",
+        "badges": {
+          "tech": [
+            "Optimización de Procesos",
+            "Automatización",
+            "KPIs"
+          ],
+          "admin": [
+            "Cadena de Suministro",
+            "Gestión de Operaciones",
+            "Logística"
+          ]
+        }
+      },
+      {
+        "degree": "Ingeniería Biomédica",
+        "institution": "Institución Universitaria ITM",
+        "period": "2023 — 2028",
+        "inProgress": true,
+        "profile": "tech",
+        "badges": {
+          "tech": [
+            "Bioingeniería",
+            "Software Clínico"
+          ],
+          "admin": [
+            "Gestión Hospitalaria",
+            "Compras Clínicas"
+          ]
+        }
+      },
+      {
+        "degree": "Técnico Contable y Financiero orientado a Sistemas",
+        "institution": "Instituto Metropolitano Educación (ITM)",
+        "period": "2022 — 2023",
+        "inProgress": false,
+        "profile": "both",
+        "badges": {
+          "tech": [
+            "ERP NetSuite",
+            "Analítica Financiera"
+          ],
+          "admin": [
+            "Contabilidad",
+            "Tesorería",
+            "Conciliaciones"
+          ]
+        }
+      },
+      {
+        "degree": "Técnico en Programación de Software",
+        "institution": "SENA — Servicio Nacional de Aprendizaje",
+        "period": "2020 — 2021",
+        "inProgress": false,
+        "profile": "tech",
+        "badges": {
+          "tech": [
+            "Programación",
+            "Algoritmos"
+          ],
+          "admin": [
+            "Sistemas",
+            "Soporte"
+          ]
+        }
+      },
+      {
+        "degree": "Bachiller Especializado en Informática",
+        "institution": "I.E. Inem José Félix de Restrepo",
+        "period": "2019 — 2021",
+        "inProgress": false,
+        "profile": "both",
+        "badges": {
+          "tech": [
+            "Fundamentos TI",
+            "Ofimática"
+          ],
+          "admin": [
+            "Ofimática",
+            "Gestión Básica"
+          ]
+        }
+      }
     ]
   },
   "skills": {
@@ -186,25 +357,78 @@
     "toolsTitle": "Herramientas",
     "admin": {
       "hard": [
-        { "name": "Facturación electrónica", "level": 95 },
-        { "name": "ERP NetSuite", "level": 85 },
-        { "name": "Tesorería & conciliaciones", "level": 90 },
-        { "name": "Control de inventarios", "level": 85 },
-        { "name": "Gestión documental & auditoría", "level": 88 },
-        { "name": "KPIs y control de metas", "level": 80 }
+        {
+          "name": "Facturación electrónica",
+          "level": 95
+        },
+        {
+          "name": "ERP NetSuite",
+          "level": 85
+        },
+        {
+          "name": "Tesorería & conciliaciones",
+          "level": 90
+        },
+        {
+          "name": "Control de inventarios",
+          "level": 85
+        },
+        {
+          "name": "Gestión documental & auditoría",
+          "level": 88
+        },
+        {
+          "name": "KPIs y control de metas",
+          "level": 80
+        }
       ],
-      "tools": ["Excel avanzado", "Power BI", "Oracle NetSuite", "SAP básico", "Google Workspace", "Notion"]
+      "tools": [
+        "Excel avanzado",
+        "Power BI",
+        "Oracle NetSuite",
+        "SAP básico",
+        "Google Workspace",
+        "Notion"
+      ]
     },
     "tech": {
       "hard": [
-        { "name": "Python (Pandas, ETL, EDA)", "level": 85 },
-        { "name": "Power BI (DAX, Power Query)", "level": 90 },
-        { "name": "SQL & modelado relacional", "level": 80 },
-        { "name": "ERP NetSuite (XML, JSON)", "level": 85 },
-        { "name": "Automatización de flujos", "level": 82 },
-        { "name": "Diseño lógico de soluciones", "level": 80 }
+        {
+          "name": "Python (Pandas, ETL, EDA)",
+          "level": 85
+        },
+        {
+          "name": "Power BI (DAX, Power Query)",
+          "level": 90
+        },
+        {
+          "name": "SQL & modelado relacional",
+          "level": 80
+        },
+        {
+          "name": "ERP NetSuite (XML, JSON)",
+          "level": 85
+        },
+        {
+          "name": "Automatización de flujos",
+          "level": 82
+        },
+        {
+          "name": "Diseño lógico de soluciones",
+          "level": 80
+        }
       ],
-      "tools": ["Python", "Pandas", "Power BI", "SQL", "NetSuite", "Zapier", "APIs", "Tableau", "Git"]
+      "tools": [
+        "Python",
+        "Pandas",
+        "Power BI",
+        "SQL",
+        "NetSuite",
+        "Zapier",
+        "APIs",
+        "Tableau",
+        "Git"
+      ]
     },
     "soft": [
       "Comunicación",
@@ -218,10 +442,22 @@
     "languages": {
       "title": "Idiomas",
       "items": [
-        { "name": "Español", "level": "Nativo" },
-        { "name": "Inglés", "level": "B2" },
-        { "name": "Francés", "level": "Básico" },
-        { "name": "Coreano", "level": "Básico" }
+        {
+          "name": "Español",
+          "level": "Nativo"
+        },
+        {
+          "name": "Inglés",
+          "level": "B2"
+        },
+        {
+          "name": "Francés",
+          "level": "Básico"
+        },
+        {
+          "name": "Coreano",
+          "level": "Básico"
+        }
       ]
     }
   },
@@ -266,7 +502,6 @@
     "emailCta": "Enviar email",
     "linkedinCta": "Ver LinkedIn"
   },
-
   "services": {
     "kicker": "Qué ofrezco",
     "title": "Servicios",
@@ -277,27 +512,50 @@
         {
           "title": "Gestión integral de compras y proveedores",
           "desc": "Administración completa del ciclo de adquisiciones: facturación electrónica, órdenes de compra, requisiciones y control logístico de inventarios.",
-          "tags": ["Compras", "Facturación", "Proveedores", "Inventarios"]
+          "tags": [
+            "Compras",
+            "Facturación",
+            "Proveedores",
+            "Inventarios"
+          ]
         },
         {
           "title": "Tesorería y conciliaciones",
           "desc": "Manejo riguroso de flujos de caja: ejecución de egresos, control de caja menor, arqueos y conciliaciones bancarias corporativas.",
-          "tags": ["Tesorería", "Caja menor", "Arqueos", "Bancos"]
+          "tags": [
+            "Tesorería",
+            "Caja menor",
+            "Arqueos",
+            "Bancos"
+          ]
         },
         {
           "title": "Auditoría y gestión documental",
           "desc": "Organización y control de soportes contables y administrativos para garantizar trazabilidad total y cumplimiento normativo en auditorías.",
-          "tags": ["Auditoría", "Soportes", "Trazabilidad", "Cumplimiento"]
+          "tags": [
+            "Auditoría",
+            "Soportes",
+            "Trazabilidad",
+            "Cumplimiento"
+          ]
         },
         {
           "title": "Estandarización de procesos y KPIs",
           "desc": "Diseño de mejoras en flujos internos que reducen operatividad manual y reprocesos, con definición y monitoreo de indicadores clave.",
-          "tags": ["Procesos", "KPIs", "Mejora continua"]
+          "tags": [
+            "Procesos",
+            "KPIs",
+            "Mejora continua"
+          ]
         },
         {
           "title": "Soporte administrativo transversal",
           "desc": "Ofimática avanzada (Excel) para consolidación financiera, continuidad operativa y soporte transversal a distintas áreas de la organización.",
-          "tags": ["Excel", "Consolidación", "Soporte"]
+          "tags": [
+            "Excel",
+            "Consolidación",
+            "Soporte"
+          ]
         }
       ]
     },
@@ -307,32 +565,55 @@
         {
           "title": "Flujos ETL y procesamiento de datos",
           "desc": "Pipelines automatizados con Python y Pandas para extracción, limpieza (EDA) y estructuración de grandes volúmenes de datos financieros y operativos.",
-          "tags": ["Python", "Pandas", "ETL", "EDA"]
+          "tags": [
+            "Python",
+            "Pandas",
+            "ETL",
+            "EDA"
+          ]
         },
         {
           "title": "Business Intelligence y analítica visual",
           "desc": "Modelado relacional (SQL, DAX, Power Query) y tableros interactivos en Power BI y Tableau para la toma de decisiones gerenciales.",
-          "tags": ["Power BI", "Tableau", "DAX", "SQL"]
+          "tags": [
+            "Power BI",
+            "Tableau",
+            "DAX",
+            "SQL"
+          ]
         },
         {
           "title": "Administración e integración de ERP (Oracle NetSuite)",
           "desc": "Implementación, control de calidad de datos maestros y extracción automatizada de información (XML, JSON) desde el ERP para la transformación digital.",
-          "tags": ["NetSuite", "XML", "JSON", "ERP"]
+          "tags": [
+            "NetSuite",
+            "XML",
+            "JSON",
+            "ERP"
+          ]
         },
         {
           "title": "Diseño lógico de soluciones y arquitectura de datos",
           "desc": "Levantamiento de requerimientos funcionales y diseño de integraciones entre sistemas con Zapier, APIs y conectores.",
-          "tags": ["APIs", "Zapier", "Integraciones", "Arquitectura"]
+          "tags": [
+            "APIs",
+            "Zapier",
+            "Integraciones",
+            "Arquitectura"
+          ]
         },
         {
           "title": "Metodologías analíticas (CRISP-DM)",
           "desc": "Integración de metodologías estructuradas en proyectos de analítica de datos para que las soluciones resuelvan problemas operativos reales.",
-          "tags": ["CRISP-DM", "Analítica", "Proyectos"]
+          "tags": [
+            "CRISP-DM",
+            "Analítica",
+            "Proyectos"
+          ]
         }
       ]
     }
   },
-
   "professional": {
     "kicker": "Propuesta de valor",
     "title": "Perfil Profesional",
@@ -345,13 +626,35 @@
     "whySubtitle": "Mi propuesta de valor para tu empresa",
     "admin": {
       "paragraph": "Profesional en formación en Ingeniería Industrial y de Sistemas, especializada en la optimización de recursos y el control administrativo. Destaco en la gestión integral del ciclo de compras, auditoría documental y el manejo operativo de tesorería. Mi enfoque combina el rigor financiero con la eficiencia operativa para garantizar la trazabilidad de los recursos y el cumplimiento de las metas corporativas.",
-      "typewriter": ["Gestión de Compras", "Auditoría Interna", "Tesorería", "Optimización de Recursos"],
-      "roles": ["Analista Financiera", "Gestora de Compras", "Auditora de Procesos", "Coordinadora de Tesorería", "Analista de Operaciones"]
+      "typewriter": [
+        "Gestión de Compras",
+        "Auditoría Interna",
+        "Tesorería",
+        "Optimización de Recursos"
+      ],
+      "roles": [
+        "Analista Financiera",
+        "Gestora de Compras",
+        "Auditora de Procesos",
+        "Coordinadora de Tesorería",
+        "Analista de Operaciones"
+      ]
     },
     "tech": {
       "paragraph": "Profesional en formación en Ingeniería de Sistemas e Industrial, especializada en la convergencia entre la analítica de datos y la automatización de flujos de trabajo. Cuento con experiencia en la creación de pipelines ETL con Python, la extracción automatizada de datos desde ERPs como NetSuite y el diseño de tableros interactivos en Power BI. Mi objetivo es transformar información cruda en soluciones tecnológicas que potencien la toma de decisiones gerenciales.",
-      "typewriter": ["Análisis de Datos", "Desarrollo Backend", "Integración ERP", "Automatización ETL"],
-      "roles": ["Data Analyst", "Especialista ERP", "Ingeniera de Datos", "Consultora BI", "Desarrolladora Python"]
+      "typewriter": [
+        "Análisis de Datos",
+        "Desarrollo Backend",
+        "Integración ERP",
+        "Automatización ETL"
+      ],
+      "roles": [
+        "Data Analyst",
+        "Especialista ERP",
+        "Ingeniera de Datos",
+        "Consultora BI",
+        "Desarrolladora Python"
+      ]
     }
   },
   "testimonials": {
@@ -425,7 +728,6 @@
     "built": "Diseñado y desarrollado con detalle.",
     "builtWith": "built with passion"
   },
-
   "notFound": {
     "title": "Página no encontrada",
     "lead": "La página que buscas no existe o fue movida.",

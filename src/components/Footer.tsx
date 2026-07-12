@@ -1,4 +1,4 @@
-import { Code, Mail, Phone, Linkedin } from "lucide-react";
+import { Code, Linkedin, Mail, Phone } from "lucide-react";
 import { useLang } from "@/context/language-core";
 
 const PHONE_INTL = "573242924705";

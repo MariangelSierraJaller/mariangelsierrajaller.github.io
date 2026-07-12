@@ -23,7 +23,8 @@ export default function WhatsAppButton() {
     >
       <MessageCircle className="h-7 w-7 fill-current" />
       <span className="absolute h-full w-full animate-ping rounded-full bg-primary opacity-30" />
-      <span className="absolute -inset-1 rounded-full border border-primary/30 opacity-0 transition-opacity duration-300 hover:opacity-100" />
+      <span
+        className="absolute -inset-1 rounded-full border border-primary/30 opacity-0 transition-opacity duration-300 hover:opacity-100" />
     </a>
   );
 }

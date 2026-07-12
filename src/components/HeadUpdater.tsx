@@ -62,12 +62,12 @@ export default function HeadUpdater() {
     document.documentElement.setAttribute("lang", lang);
     document.title = c.title;
 
-    setMeta('meta[name="description"]', "content", c.desc);
-    setMeta('meta[property="og:title"]', "content", c.title);
-    setMeta('meta[property="og:description"]', "content", c.desc);
-    setMeta('meta[property="og:url"]', "content", url);
-    setMeta('meta[name="twitter:title"]', "content", c.title);
-    setMeta('meta[name="twitter:description"]', "content", c.desc);
+    setMeta("meta[name=\"description\"]", "content", c.desc);
+    setMeta("meta[property=\"og:title\"]", "content", c.title);
+    setMeta("meta[property=\"og:description\"]", "content", c.desc);
+    setMeta("meta[property=\"og:url\"]", "content", url);
+    setMeta("meta[name=\"twitter:title\"]", "content", c.title);
+    setMeta("meta[name=\"twitter:description\"]", "content", c.desc);
 
     setLink("canonical", url);
   }, [lang, profile]);

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Send, Linkedin, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -24,7 +24,8 @@ function ContactCard({ icon: Icon, label, value, href, ariaLabel }: ContactCardP
       aria-label={ariaLabel}
       className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-border/60 bg-card/40 p-4 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:bg-card/60 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5"
     >
-      <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground transition-transform duration-300 group-hover:scale-105">
+      <div
+        className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground transition-transform duration-300 group-hover:scale-105">
         <Icon className="h-5 w-5" />
       </div>
 
@@ -37,8 +38,10 @@ function ContactCard({ icon: Icon, label, value, href, ariaLabel }: ContactCardP
         </p>
       </div>
 
-      <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border/60 text-muted-foreground transition-all duration-300 group-hover:border-primary/40 group-hover:text-primary group-hover:bg-primary/10">
-        <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+      <div
+        className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border/60 text-muted-foreground transition-all duration-300 group-hover:border-primary/40 group-hover:text-primary group-hover:bg-primary/10">
+        <ArrowUpRight
+          className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
       </div>
     </a>
   );

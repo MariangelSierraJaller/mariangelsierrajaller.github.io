@@ -13,10 +13,10 @@ const ResizablePanelGroup = ({ className, ...props }: React.ComponentProps<typeo
 const ResizablePanel = Panel;
 
 const ResizableHandle = ({
-  withHandle,
-  className,
-  ...props
-}: React.ComponentProps<typeof Separator> & {
+                           withHandle,
+                           className,
+                           ...props
+                         }: React.ComponentProps<typeof Separator> & {
   withHandle?: boolean;
 }) => (
   <Separator

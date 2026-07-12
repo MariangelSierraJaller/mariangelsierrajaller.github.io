@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import type { LucideIcon } from "lucide-react";
 import {
   BarChart3,
   Boxes,
@@ -14,7 +15,6 @@ import {
   Wallet,
   Workflow,
 } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
 import { useLang } from "@/context/language-core";
 import { useProfile } from "@/context/profile-core";
 import SectionHeader from "@/components/SectionHeader";
@@ -26,6 +26,7 @@ interface ServiceItem {
   desc: string;
   tags: string[];
 }
+
 interface Why {
   title: string;
   desc: string;
@@ -125,13 +126,16 @@ export default function ProfessionalProfile() {
             transition={{ duration: 0.4 }}
             className="mx-auto mt-10 max-w-5xl"
           >
-            <div className="relative overflow-hidden rounded-3xl border border-border bg-card/70 p-6 backdrop-blur-sm md:p-8 hover-glow">
-              <div className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
+            <div
+              className="relative overflow-hidden rounded-3xl border border-border bg-card/70 p-6 backdrop-blur-sm md:p-8 hover-glow">
+              <div
+                className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
               <div className="relative flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-10">
                 {/* Round-framed portrait */}
                 <div className="relative shrink-0 self-center">
                   <div className="absolute inset-0 rounded-full bg-primary/30 blur-2xl" />
-                  <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-primary/60 shadow-[0_0_40px_-8px_hsl(var(--primary)/0.6)] md:h-44 md:w-44">
+                  <div
+                    className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-primary/60 shadow-[0_0_40px_-8px_hsl(var(--primary)/0.6)] md:h-44 md:w-44">
                     <img
                       src={portrait}
                       alt={t<string>("hero.name")}

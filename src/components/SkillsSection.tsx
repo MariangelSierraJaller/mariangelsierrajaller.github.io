@@ -100,7 +100,8 @@ export default function SkillsSection() {
                 {langs.map((l) => (
                   <li key={l.name} className="flex items-center justify-between border-b border-border/60 pb-2 text-sm">
                     <span className="text-foreground/90">{l.name}</span>
-                    <span className="rounded-full border border-primary/40 bg-primary/10 px-2 py-0.5 text-xs text-foreground">
+                    <span
+                      className="rounded-full border border-primary/40 bg-primary/10 px-2 py-0.5 text-xs text-foreground">
                       {l.level}
                     </span>
                   </li>

@@ -1,6 +1,6 @@
-import { useCallback, useMemo, type ReactNode } from "react";
+import { type ReactNode, useCallback, useMemo } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { LanguageCtx, type Lang } from "@/context/language-core";
+import { type Lang, LanguageCtx } from "@/context/language-core";
 import es from "@/i18n/es.json";
 import en from "@/i18n/en.json";
 
@@ -26,7 +26,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const dict = DICTS[lang];
 
   const t = useCallback(
-    <T,>(path: string) => {
+    <T, >(path: string) => {
       const value = resolve<T>(dict, path);
       if (value === undefined) {
         // eslint-disable-next-line no-console

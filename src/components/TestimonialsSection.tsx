@@ -1,6 +1,6 @@
 import { Briefcase, ChevronLeft, ChevronRight, GraduationCap, Quote, Users } from "lucide-react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/context/language-core";
 import SectionHeader from "@/components/SectionHeader";
@@ -102,12 +102,14 @@ export default function TestimonialsSection() {
                   transition={{ duration: 0.4, delay: i * 0.08 }}
                   className="relative flex flex-col rounded-2xl border border-border bg-background/70 p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.5)]"
                 >
-                  <div className="absolute -top-3 left-6 rounded-full bg-primary/20 p-2 text-primary ring-1 ring-primary/30">
+                  <div
+                    className="absolute -top-3 left-6 rounded-full bg-primary/20 p-2 text-primary ring-1 ring-primary/30">
                     <Quote className="h-4 w-4" />
                   </div>
 
                   <div className="mb-3 flex items-center justify-between pt-3">
-                    <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-2 py-1 font-mono text-xs font-semibold text-primary">
+                    <span
+                      className="inline-block rounded-full border border-primary/30 bg-primary/10 px-2 py-1 font-mono text-xs font-semibold text-primary">
                       {it.highlight}
                     </span>
                     <span className="font-mono text-xs text-muted-foreground">{it.date}</span>

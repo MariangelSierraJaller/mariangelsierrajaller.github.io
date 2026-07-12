@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Download, Eye } from "lucide-react";
 import { useLang } from "@/context/language-core";
 import { useProfile } from "@/context/profile-core";
@@ -144,8 +144,10 @@ export default function ResumeSection() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-background/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
-              <span className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground santino-glow">
+            <div
+              className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-background/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
+              <span
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground santino-glow">
                 <Eye size={16} />
                 {t<string>("resume.viewFullCta")}
               </span>

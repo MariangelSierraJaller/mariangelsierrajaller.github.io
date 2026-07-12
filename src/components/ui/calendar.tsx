@@ -8,15 +8,15 @@ import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 
 function Calendar({
-  className,
-  classNames,
-  showOutsideDays = true,
-  captionLayout = "label",
-  buttonVariant = "ghost",
-  formatters,
-  components,
-  ...props
-}: React.ComponentProps<typeof DayPicker> & {
+                    className,
+                    classNames,
+                    showOutsideDays = true,
+                    captionLayout = "label",
+                    buttonVariant = "ghost",
+                    formatters,
+                    components,
+                    ...props
+                  }: React.ComponentProps<typeof DayPicker> & {
   buttonVariant?: React.ComponentProps<typeof Button>["variant"];
 }) {
   const defaultClassNames = getDefaultClassNames();
@@ -137,11 +137,11 @@ function Calendar({
 }
 
 function CalendarDayButton({
-  className,
-  day,
-  modifiers,
-  ...props
-}: React.ComponentProps<typeof DayButton>) {
+                             className,
+                             day,
+                             modifiers,
+                             ...props
+                           }: React.ComponentProps<typeof DayButton>) {
   const defaultClassNames = getDefaultClassNames();
 
   const ref = React.useRef<HTMLButtonElement>(null);
