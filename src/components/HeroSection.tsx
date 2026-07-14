@@ -37,13 +37,13 @@ export default function HeroSection() {
         <div
           className="absolute inset-0"
           style={{
-            background: "radial-gradient(circle at 80% 30%, color-mix(in oklab, var(--color-primary) 15%, transparent), transparent 55%)"
+            background: "radial-gradient(circle at 80% 30%, color-mix(in oklab, var(--color-primary) 15%, transparent), transparent 55%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
-            background: "radial-gradient(circle at 20% 100%, color-mix(in oklab, var(--color-primary) 18%, transparent), transparent 60%)"
+            background: "radial-gradient(circle at 20% 100%, color-mix(in oklab, var(--color-primary) 18%, transparent), transparent 60%)",
           }}
         />
         <svg className="absolute inset-0 h-full w-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
