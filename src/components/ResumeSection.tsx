@@ -147,7 +147,7 @@ export default function ResumeSection() {
             <div
               className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-background/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
               <span
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground santino-glow">
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground blue-glow">
                 <Eye size={16} />
                 {t<string>("resume.viewFullCta")}
               </span>
@@ -158,7 +158,7 @@ export default function ResumeSection() {
             href={resource.href}
             target="_blank"
             rel="noreferrer"
-            className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-[var(--color-primary-hover)] santino-glow"
+            className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-[var(--color-primary-hover)] blue-glow"
           >
             <Download size={16} />
             {t<string>("resume.downloadCta")}

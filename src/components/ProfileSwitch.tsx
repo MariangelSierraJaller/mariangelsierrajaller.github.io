@@ -31,7 +31,7 @@ export default function ProfileSwitch() {
                 {active && (
                   <motion.span
                     layoutId="profile-pill"
-                    className="absolute inset-0 -z-10 rounded-full bg-primary santino-glow"
+                    className="absolute inset-0 -z-10 rounded-full bg-primary blue-glow"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}

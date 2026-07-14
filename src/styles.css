@@ -38,64 +38,67 @@
 :root {
     --radius: 0.75rem;
 
-    /* #0A0A0C */
-    --background: oklch(0.145 0.005 285);
-    /* #F8F9FA */
-    --foreground: oklch(0.978 0.002 285);
+    /* Fondo principal: Una versión ultra profunda del Charcoal Blue para lograr el "dark mode" sin negro */
+    --background: #191B26;
+    /* Texto principal: Icy Blue para máximo contraste y legibilidad */
+    --foreground: #AED5F5;
 
-    /* #16161A */
-    --card: oklch(0.19 0.005 285);
-    --card-foreground: oklch(0.978 0.002 285);
+    /* Tarjetas: El Charcoal Blue exacto de tu paleta */
+    --card: #353A4C;
+    --card-foreground: #AED5F5;
 
-    --popover: oklch(0.19 0.005 285);
-    --popover-foreground: oklch(0.978 0.002 285);
+    --popover: #353A4C;
+    --popover-foreground: #AED5F5;
 
-    /* Rojo Santino #8B1E28 */
-    --primary: oklch(0.42 0.145 22);
-    --primary-foreground: oklch(0.98 0.005 285);
-    /* Hover #A72834 */
-    --primary-hover: oklch(0.48 0.16 22);
+    /* Primario: Azure Blue para botones y acentos */
+    --primary: #367ADF;
+    --primary-foreground: #FFFFFF;
 
-    --secondary: oklch(0.24 0.006 285);
-    --secondary-foreground: oklch(0.978 0.002 285);
+    /* Hover y brillos: Fresh Sky para dar un toque neón/eléctrico */
+    --primary-hover: #4FACE5;
 
-    --muted: oklch(0.22 0.005 285);
-    /* #A1A1AA */
-    --muted-foreground: oklch(0.7 0.008 285);
+    /* Secundario: French Blue para fondos alternativos */
+    --secondary: #394988;
+    --secondary-foreground: #AED5F5;
 
-    --accent: oklch(0.24 0.006 285);
-    --accent-foreground: oklch(0.978 0.002 285);
+    --muted: #394988;
+    /* Texto secundario: Icy Blue con opacidad */
+    --muted-foreground: color-mix(in srgb, #AED5F5 65%, transparent);
 
+    --accent: #367ADF;
+    --accent-foreground: #FFFFFF;
+
+    /* Acciones destructivas: Se mantiene el rojo por convención universal de UI */
     --destructive: oklch(0.62 0.22 25);
-    --destructive-foreground: oklch(0.98 0.005 285);
+    --destructive-foreground: #FFFFFF;
 
-    --border: oklch(1 0 0 / 8%);
-    --input: oklch(1 0 0 / 12%);
-    --ring: oklch(0.48 0.16 22);
+    /* Bordes sutiles basados en Fresh Sky */
+    --border: color-mix(in srgb, #4FACE5 25%, transparent);
+    --input: color-mix(in srgb, #4FACE5 30%, transparent);
+    --ring: #4FACE5;
 }
 
 .dark {
-    /* Same tokens; the site is dark by default. */
-    --background: oklch(0.145 0.005 285);
-    --foreground: oklch(0.978 0.002 285);
-    --card: oklch(0.19 0.005 285);
-    --card-foreground: oklch(0.978 0.002 285);
-    --popover: oklch(0.19 0.005 285);
-    --popover-foreground: oklch(0.978 0.002 285);
-    --primary: oklch(0.42 0.145 22);
-    --primary-foreground: oklch(0.98 0.005 285);
-    --primary-hover: oklch(0.48 0.16 22);
-    --secondary: oklch(0.24 0.006 285);
-    --secondary-foreground: oklch(0.978 0.002 285);
-    --muted: oklch(0.22 0.005 285);
-    --muted-foreground: oklch(0.7 0.008 285);
-    --accent: oklch(0.24 0.006 285);
-    --accent-foreground: oklch(0.978 0.002 285);
+    --background: #191B26;
+    --foreground: #AED5F5;
+    --card: #353A4C;
+    --card-foreground: #AED5F5;
+    --popover: #353A4C;
+    --popover-foreground: #AED5F5;
+    --primary: #367ADF;
+    --primary-foreground: #FFFFFF;
+    --primary-hover: #4FACE5;
+    --secondary: #394988;
+    --secondary-foreground: #AED5F5;
+    --muted: #394988;
+    --muted-foreground: color-mix(in srgb, #AED5F5 65%, transparent);
+    --accent: #367ADF;
+    --accent-foreground: #FFFFFF;
     --destructive: oklch(0.62 0.22 25);
-    --destructive-foreground: oklch(0.98 0.005 285);
-    --border: oklch(1 0 0 / 8%);
-    --input: oklch(1 0 0 / 12%);
-    --ring: oklch(0.48 0.16 22);
+    --destructive-foreground: #FFFFFF;
+    --border: color-mix(in srgb, #4FACE5 25%, transparent);
+    --input: color-mix(in srgb, #4FACE5 30%, transparent);
+    --ring: #4FACE5;
 }
 
 @layer base {
@@ -159,7 +162,7 @@
     text-wrap: balance;
 }
 
-@utility santino-glow {
+@utility blue-glow {
     box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-primary) 30%, transparent),
     0 12px 40px -12px color-mix(in oklab, var(--color-primary) 50%, transparent);
 }

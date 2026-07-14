@@ -91,7 +91,7 @@ export default function HeroSection() {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-[var(--color-primary-hover)] santino-glow"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-[var(--color-primary-hover)] blue-glow"
             >
               {t<string>("hero.ctaPrimary")}
               <ArrowDownRight size={16} />
@@ -155,7 +155,7 @@ export default function HeroSection() {
               className="absolute inset-0 rounded-full border border-dashed border-primary/25"
             />
             <div
-              className="absolute inset-3 santino-glow"
+              className="absolute inset-3 blue-glow"
               style={{
                 clipPath:
                   "polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%)",

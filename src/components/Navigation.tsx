@@ -32,7 +32,7 @@ export default function Navigation() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link to={`/${lang}`} className="group flex items-center gap-2">
           <span
-            className="grid h-9 w-9 place-items-center rounded-full bg-primary font-display text-sm text-primary-foreground santino-glow">
+            className="grid h-9 w-9 place-items-center rounded-full bg-primary font-display text-sm text-primary-foreground blue-glow">
             MS
           </span>
           <span className="hidden font-display text-sm tracking-tight text-foreground sm:block">

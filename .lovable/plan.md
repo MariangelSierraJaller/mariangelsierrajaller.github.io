@@ -10,7 +10,7 @@
 - **Espaciado vertical**: cada sección define su propio `py-*`. Conviene un token único (`section` con `scroll-mt` +
   padding estándar) para respetar el offset del nav sticky y evitar títulos tapados al navegar por anclas.
 - **Ancho máximo**: mezcla de `max-w-6xl` y `max-w-7xl` entre secciones. Unificar a un solo contenedor.
-- **Glow / hover-glow**: `santino-glow` y `hover-glow` están definidos pero no aplicados de forma pareja (tarjetas de
+- **Glow / hover-glow**: `blue-glow` y `hover-glow` están definidos pero no aplicados de forma pareja (tarjetas de
   Services vs About vs Testimonials difieren en intensidad de sombra).
 
 ### Tipografía
