@@ -173,11 +173,11 @@
     0 8px 24px -12px rgb(0 0 0 / 60%);
 }
 
-@utility santino-blur-bg {
+@utility blue-blur-bg {
     position: relative;
     isolation: isolate;
 }
-.santino-blur-bg::before {
+.blue-blur-bg::before {
     content: "";
     position: absolute;
     inset: -20%;

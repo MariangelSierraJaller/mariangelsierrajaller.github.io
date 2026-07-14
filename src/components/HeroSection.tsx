@@ -23,21 +23,29 @@ export default function HeroSection() {
       {/* Ambient background — heavily blurred Rojo Santino waves, very subtle */}
       <div aria-hidden className="absolute inset-0 z-0 overflow-hidden">
         <div
-          className="absolute inset-0 scale-110 blur-[72px] saturate-[0.8]"
+          className="absolute inset-0 scale-110 blur-[10px] saturate-[0.8] "
           style={{
             backgroundImage: `url(${heroBg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            opacity: 0.35,
+            opacity: 0.80,
           }}
         />
       </div>
       <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         <div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_80%_30%,rgba(139,30,40,0.15),transparent_55%)]" />
+          className="absolute inset-0"
+          style={{
+            background: "radial-gradient(circle at 80% 30%, color-mix(in oklab, var(--color-primary) 15%, transparent), transparent 55%)"
+          }}
+        />
         <div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_100%,rgba(139,30,40,0.18),transparent_60%)]" />
+          className="absolute inset-0"
+          style={{
+            background: "radial-gradient(circle at 20% 100%, color-mix(in oklab, var(--color-primary) 18%, transparent), transparent 60%)"
+          }}
+        />
         <svg className="absolute inset-0 h-full w-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
