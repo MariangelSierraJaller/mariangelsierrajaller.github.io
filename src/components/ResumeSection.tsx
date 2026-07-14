@@ -104,7 +104,7 @@ export default function ResumeSection() {
             href={resource.href}
             target="_blank"
             rel="noreferrer"
-            className="group relative block w-full max-w-3xl overflow-hidden rounded-2xl border border-border bg-card shadow-2xl"
+            className="group relative block w-full max-w-3xl overflow-hidden rounded-2xl border border-border bg-card hover-glow transition-all duration-300"
           >
             <div className="relative">
               {/* Spacer keeps container height stable during crossfade */}
@@ -138,14 +138,14 @@ export default function ResumeSection() {
                       decoding="async"
                       width={816}
                       height={1056}
-                      className="h-auto w-full transition-transform duration-500 ease-out group-hover:scale-105"
+                      className="h-auto w-full transition-transform duration-500 ease-out group-hover:scale-101"
                     />
                   ))}
                 </motion.div>
               </AnimatePresence>
             </div>
             <div
-              className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-background/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
+              className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-background/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <span
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground blue-glow">
                 <Eye size={16} />
