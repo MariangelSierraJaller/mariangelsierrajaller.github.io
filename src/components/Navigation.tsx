@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { type MouseEvent, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useLang } from "@/context/language-core";
@@ -19,8 +19,16 @@ export default function Navigation() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
   useEffect(() => setOpen(false), [pathname, hash]);
+
+  const handleScrollToSection = (e: MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setOpen(false);
+  };
 
   return (
     <header
@@ -45,6 +53,7 @@ export default function Navigation() {
             <a
               key={s}
               href={`#${s}`}
+              onClick={(e) => handleScrollToSection(e, s)}
               className="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
             >
               {t<string>(`nav.${s}`)}
@@ -56,6 +65,7 @@ export default function Navigation() {
           <LanguageSwitcher />
           <a
             href="#contact"
+            onClick={(e) => handleScrollToSection(e, "contact")}
             className="hidden rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-[var(--color-primary-hover)] md:inline-flex"
           >
             {t<string>("nav.cta")}
@@ -77,6 +87,7 @@ export default function Navigation() {
               <a
                 key={s}
                 href={`#${s}`}
+                onClick={(e) => handleScrollToSection(e, s)}
                 className="py-2 text-sm text-foreground/90"
               >
                 {t<string>(`nav.${s}`)}
@@ -84,6 +95,7 @@ export default function Navigation() {
             ))}
             <a
               href="#contact"
+              onClick={(e) => handleScrollToSection(e, "contact")}
               className="mt-3 inline-flex justify-center rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
             >
               {t<string>("nav.cta")}
