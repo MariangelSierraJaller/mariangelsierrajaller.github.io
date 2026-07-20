@@ -26,8 +26,8 @@ const CV: Record<"es" | "en", Record<"admin" | "tech", Resource>> = {
     admin: { images: [esAdmin], href: "https://drive.google.com/file/d/1rggK0scQvTxG71sDdzbv2ie9blgrIVgG/view" },
   },
   en: {
-    tech: { images: [enTech], href: "https://drive.google.com/file/d/1OWA93tgQtcabkJYC8LISy9qShLIDgNk8/view" },
-    admin: { images: [enAdmin], href: "https://drive.google.com/file/d/1rggK0scQvTxG71sDdzbv2ie9blgrIVgG/view" },
+    tech: { images: [enTech], href: "https://drive.google.com/file/d/1CRGbx5PLlylBZ4iRKHlGb05ZCu6g-6Um/view" },
+    admin: { images: [enAdmin], href: "https://drive.google.com/file/d/1qNzMq0GRtqNNOV--PGlnUBZ2hgbjerwh/view" },
   },
 };
 
