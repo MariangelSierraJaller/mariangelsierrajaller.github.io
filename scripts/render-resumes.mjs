@@ -33,8 +33,9 @@ const RESUME_CONTENT = {
     languagesLine: "Idiomas: Español (Nativo), Inglés (B2), Francés (Básico), Coreano (Básico)",
     educationTitle: "FORMACIÓN ACADÉMICA",
     education: [
-      "Ingeniería de Sistemas (En curso, 2023–2026) — Fundación Universidad San José",
-      "Ingeniería Industrial (En curso, 2023–2026) — Fundación Universidad San José",
+      "Ingeniería de Sistemas (Titulada Jul 2026) — Fundación Universidad San José",
+      "Ingeniería Industrial (Titulada Jul 2026) — Fundación Universidad San José",
+      "Tecnología en Sistemas (Titulada Jul 2026) — Fundación Universidad San José",
       "Ingeniería Biomédica (En curso, 2023–2028) — Institución Universitaria ITM",
       "Técnico Contable y Financiero orientado a Sistemas (2022–2023) — ITM",
       "Técnico en Programación de Software (2020–2021) — SENA",
@@ -72,9 +73,9 @@ const RESUME_CONTENT = {
           "Facturación Electrónica · Oracle NetSuite ERP · Tesorería y Conciliaciones · Control de Inventarios · Gestión Documental y Auditoría · KPIs · Excel Avanzado · Power BI",
       },
       tech: {
-        roleHeading: "ANALISTA DE DATOS · ESPECIALISTA ERP NETSUITE · AUTOMATIZACIÓN ETL & BI",
+        roleHeading: "INGENIERA DE SISTEMAS · ANALISTA DE DATOS · ESPECIALISTA ERP NETSUITE & BI",
         summary:
-          "Estudiante avanzada de Ingeniería de Sistemas, Ingeniería Industrial e Ingeniería Biomédica con experiencia práctica en Asociación para la Enseñanza — ASPAEN integrando datos financieros desde Oracle NetSuite (XML/JSON), automatizando flujos ETL con Python/Pandas y SQL, y diseñando tableros gerenciales en Power BI (DAX y Power Query).",
+          "Ingeniera de Sistemas, Ingeniera Industrial y Tecnóloga en Sistemas (graduada jul 2026) con trayectoria desde febrero de 2022 en ASPAEN extrayendo datos financieros de Oracle NetSuite (XML/JSON), automatizando flujos ETL con Python/Pandas y SQL, y diseñando tableros gerenciales en Power BI (DAX y Power Query).",
         experienceTitle: "EXPERIENCIA PROFESIONAL",
         experience: [
           {
@@ -136,8 +137,9 @@ const RESUME_CONTENT = {
     languagesLine: "Languages: Spanish (Native), English (B2), French (Basic), Korean (Basic)",
     educationTitle: "EDUCATION",
     education: [
-      "B.S. Systems Engineering (In progress, 2023–2026) — Fundacion Universidad San Jose",
-      "B.S. Industrial Engineering (In progress, 2023–2026) — Fundacion Universidad San Jose",
+      "B.S. Systems Engineering (Graduated Jul 2026) — Fundacion Universidad San Jose",
+      "B.S. Industrial Engineering (Graduated Jul 2026) — Fundacion Universidad San Jose",
+      "Technologist in Systems (Graduated Jul 2026) — Fundacion Universidad San Jose",
       "B.S. Biomedical Engineering (In progress, 2023–2028) — Institucion Universitaria ITM",
       "Accounting & Financial Technician oriented to Systems (2022–2023) — ITM",
       "Software Programming Technician (2020–2021) — SENA",
@@ -173,9 +175,9 @@ const RESUME_CONTENT = {
           "Electronic Invoicing · Oracle NetSuite ERP · Treasury & Reconciliations · Inventory Control · Document Audit · Operational KPIs · Advanced Excel · Power BI",
       },
       tech: {
-        roleHeading: "DATA ANALYST · ORACLE NETSUITE ERP SPECIALIST · ETL AUTOMATION & BI",
+        roleHeading: "SYSTEMS & INDUSTRIAL ENGINEER · DATA ANALYST · NETSUITE ERP & BI",
         summary:
-          "Systems, Industrial, and Biomedical Engineering student with hands-on production impact at Asociacion para la Ensenanza — ASPAEN extracting ERP financial data from Oracle NetSuite (XML/JSON), building automated Python/Pandas and SQL ETL pipelines, and delivering executive Power BI (DAX, Power Query) dashboards.",
+          "Graduated Systems & Industrial Engineer and Systems Technologist (Jul 2026), concurrently advancing toward a third degree in Biomedical Engineering (ITM), with production impact at ASPAEN building Python/Pandas and SQL ETL pipelines over Oracle NetSuite (XML/JSON) and Power BI (DAX) executive dashboards.",
         experienceTitle: "PROFESSIONAL EXPERIENCE",
         experience: [
           {
