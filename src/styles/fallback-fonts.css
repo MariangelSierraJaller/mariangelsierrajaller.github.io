@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "DM Serif Text Fallback";
+  src: local("Georgia"), local("Times New Roman");
+  size-adjust: 103%;
+  ascent-override: 96%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Fallback";
+  src: local("Segoe UI"), local("Arial"), local("Helvetica Neue");
+  size-adjust: 101%;
+  ascent-override: 98%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Source Code Pro Fallback";
+  src: local("Consolas"), local("Courier New");
+  size-adjust: 97%;
+  ascent-override: 98%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
