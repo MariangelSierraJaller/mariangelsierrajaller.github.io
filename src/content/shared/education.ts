@@ -1,0 +1,73 @@
+import type { EducationId, EducationShared } from "@/types/content";
+
+export const EDUCATION_ORDER: readonly EducationId[] = [
+  "sanJoseSystems",
+  "sanJoseIndustrial",
+  "itmBiomedical",
+  "itmAccountingTech",
+  "senaSoftware",
+  "inemComputerScience",
+];
+
+export const EDUCATION_SHARED: Record<EducationId, EducationShared> = {
+  sanJoseSystems: {
+    id: "sanJoseSystems",
+    slug: "ingenieria-sistemas-san-jose",
+    institution: "Fundación Universidad San José",
+    period: "2023 — 2026",
+    startYear: 2023,
+    endYear: 2026,
+    inProgress: true,
+    focus: "tech",
+  },
+  sanJoseIndustrial: {
+    id: "sanJoseIndustrial",
+    slug: "ingenieria-industrial-san-jose",
+    institution: "Fundación Universidad San José",
+    period: "2023 — 2026",
+    startYear: 2023,
+    endYear: 2026,
+    inProgress: true,
+    focus: "admin",
+  },
+  itmBiomedical: {
+    id: "itmBiomedical",
+    slug: "ingenieria-biomedica-itm",
+    institution: "Institución Universitaria ITM",
+    period: "2023 — 2028",
+    startYear: 2023,
+    endYear: 2028,
+    inProgress: true,
+    focus: "tech",
+  },
+  itmAccountingTech: {
+    id: "itmAccountingTech",
+    slug: "tecnico-contable-financiero-itm",
+    institution: "Instituto Metropolitano de Educación (ITM)",
+    period: "2022 — 2023",
+    startYear: 2022,
+    endYear: 2023,
+    inProgress: false,
+    focus: "both",
+  },
+  senaSoftware: {
+    id: "senaSoftware",
+    slug: "tecnico-programacion-software-sena",
+    institution: "SENA — Servicio Nacional de Aprendizaje",
+    period: "2020 — 2021",
+    startYear: 2020,
+    endYear: 2021,
+    inProgress: false,
+    focus: "tech",
+  },
+  inemComputerScience: {
+    id: "inemComputerScience",
+    slug: "bachiller-informatica-inem",
+    institution: "I.E. Inem José Félix de Restrepo",
+    period: "2019 — 2021",
+    startYear: 2019,
+    endYear: 2021,
+    inProgress: false,
+    focus: "both",
+  },
+};
