@@ -1,0 +1,24 @@
+---
+import { DEFAULT_LANG, DEFAULT_ROLE } from "@/types/content";
+import { buildHomeHead } from "@/lib/seo";
+import { PageIsland } from "@/islands/PageIsland";
+import Page from "@/layouts/Page.astro";
+
+const head = buildHomeHead(DEFAULT_LANG, DEFAULT_ROLE);
+---
+
+<Page
+  lang={DEFAULT_LANG}
+  role={DEFAULT_ROLE}
+  pathname="/404"
+  head={{ ...head, title: "404 — Mariangel Sierra Jaller" }}
+  noindex={true}
+>
+  <PageIsland
+    client:settled
+    part="notFound"
+    lang={DEFAULT_LANG}
+    role={DEFAULT_ROLE}
+    pathname="/404"
+  />
+</Page>

@@ -1,0 +1,12 @@
+export { SITE_URL, BUILD_DATE, APP_VERSION } from "./lib/base";
+export { prerenderRoutes, parseRoute, buildHomePath, switchLangPath } from "./lib/paths";
+export { buildSitemapXml, buildRobotsTxt } from "./lib/sitemap";
+export { buildHomeHead } from "./lib/seo";
+export { getLanguageCopy } from "./content";
+export { getProjectSummary, getProjectCopy } from "./content/project-copy";
+export { PROJECT_ORDER, PROJECTS_SHARED } from "./content/shared/projects";
+export { EXPERIENCE_ORDER, EXPERIENCE_SHARED } from "./content/shared/experience";
+export { EDUCATION_ORDER, EDUCATION_SHARED } from "./content/shared/education";
+export { CERTIFICATION_ORDER, CERTIFICATIONS_SHARED } from "./content/shared/certifications";
+export { PROFILE } from "./content/shared/profile";
+export { SITE } from "./content/shared/site";

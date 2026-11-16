@@ -1,0 +1,106 @@
+---
+import type { ProjectId } from "@/types/content";
+import { orderedSectionsForRole } from "@/lib/role-view";
+import { parseRoute, prerenderRoutes } from "@/lib/paths";
+import { resolveHeadForRoute } from "@/islands/head";
+import { PageIsland } from "@/islands/PageIsland";
+import Page from "@/layouts/Page.astro";
+
+export function getStaticPaths() {
+  return prerenderRoutes().map((route) => ({
+    params: { path: route },
+  }));
+}
+
+const rawParam = Astro.params.path ?? "";
+const pathname = rawParam ? `/${rawParam}` : "/es";
+const route = parseRoute(pathname);
+const head = resolveHeadForRoute(route);
+
+const sectionOrder =
+  route.kind === "home" ? orderedSectionsForRole(route.role) : [];
+---
+
+<Page lang={route.lang} role={route.role} pathname={pathname} head={head}>
+  {route.kind === "home" && (
+    <>
+      <PageIsland
+        client:settled
+        part="hero"
+        lang={route.lang}
+        role={route.role}
+        pathname={pathname}
+      />
+      <PageIsland
+        client:settled
+        part="highlights"
+        lang={route.lang}
+        role={route.role}
+        pathname={pathname}
+      />
+      {sectionOrder.map((secId, idx) => (
+        <PageIsland
+          client:settled={idx < 2 ? true : { rootMargin: "600px" }}
+          part={`section:${secId}`}
+          lang={route.lang}
+          role={route.role}
+          pathname={pathname}
+        />
+      ))}
+    </>
+  )}
+
+  {route.kind === "projectsIndex" && (
+    <PageIsland
+      client:settled
+      part="projectsIndex"
+      lang={route.lang}
+      role={route.role}
+      pathname={pathname}
+    />
+  )}
+
+  {route.kind === "projectDetail" && (
+    <PageIsland
+      client:settled
+      part="projectDetail"
+      lang={route.lang}
+      role={route.role}
+      pathname={pathname}
+      projectId={route.projectId as ProjectId}
+    />
+  )}
+
+  {route.kind === "detailIndex" && (
+    <PageIsland
+      client:settled
+      part="detailIndex"
+      lang={route.lang}
+      role={route.role}
+      pathname={pathname}
+      collection={route.collection}
+    />
+  )}
+
+  {route.kind === "detailItem" && (
+    <PageIsland
+      client:settled
+      part="detailItem"
+      lang={route.lang}
+      role={route.role}
+      pathname={pathname}
+      collection={route.collection}
+      slug={route.slug}
+    />
+  )}
+
+  {route.kind === "notFound" && (
+    <PageIsland
+      client:settled
+      part="notFound"
+      lang={route.lang}
+      role={route.role}
+      pathname={pathname}
+    />
+  )}
+</Page>

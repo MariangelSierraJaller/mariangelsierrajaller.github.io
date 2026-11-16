@@ -1,0 +1,123 @@
+---
+import "@fontsource/dm-serif-text/400.css";
+import "@fontsource/dm-serif-text/400-italic.css";
+import "@fontsource/ibm-plex-sans/400.css";
+import "@fontsource/ibm-plex-sans/500.css";
+import "@fontsource/ibm-plex-sans/600.css";
+import "@fontsource/source-code-pro/400.css";
+import "@fontsource/source-code-pro/500.css";
+import "../styles/globals.css";
+
+import type { Lang, RoleId } from "@/types/content";
+import type { HeadMeta } from "@/lib/seo-graph";
+import { withBase } from "@/lib/base";
+import { LOCK_SCRIPT } from "@/lib/lock";
+import { PageIsland } from "@/islands/PageIsland";
+
+export interface Props {
+  lang: Lang;
+  role: RoleId;
+  pathname: string;
+  head: HeadMeta;
+  noindex?: boolean;
+}
+
+const { lang, role, pathname, head, noindex = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang={head.htmlLang} data-role={role}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#131622" />
+    <meta name="author" content="Mariangel Johanna Sierra Jaller" />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
+    <link rel="icon" type="image/x-icon" href={withBase("/favicon.ico")} />
+
+    <title data-head="title">{head.title}</title>
+    <meta data-head="description" name="description" content={head.description} />
+    <meta name="keywords" content={head.keywords} />
+    <link data-head="canonical" rel="canonical" href={head.canonical} />
+
+    <link rel="alternate" hreflang="es-CO" href={head.alternates.es} />
+    <link rel="alternate" hreflang="en-US" href={head.alternates.en} />
+    <link rel="alternate" hreflang="x-default" href={head.alternates.xDefault} />
+
+    <meta property="og:type" content={head.ogType} />
+    <meta property="og:site_name" content="Mariangel Sierra Jaller" />
+    <meta property="og:url" content={head.canonical} />
+    <meta property="og:title" content={head.ogTitle} />
+    <meta property="og:description" content={head.ogDescription} />
+    <meta property="og:image" content={head.ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content={head.ogLocale} />
+    <meta property="og:locale:alternate" content={head.ogLocaleAlternate} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={head.ogTitle} />
+    <meta name="twitter:description" content={head.ogDescription} />
+    <meta name="twitter:image" content={head.ogImage} />
+
+    <script is:inline set:html={LOCK_SCRIPT} />
+    <script data-head="jsonld" type="application/ld+json" set:html={head.jsonLd} />
+    <script
+      is:inline
+      type="speculationrules"
+      set:html={JSON.stringify({
+        prefetch: [
+          {
+            source: "document",
+            where: {
+              and: [
+                { href_matches: "/*" },
+                { not: { selector_matches: "[download], [target='_blank']" } },
+              ],
+            },
+            eagerness: "moderate",
+          },
+        ],
+      })}
+    />
+
+    <noscript>
+      <style>
+        .requires-js { display: none !important; }
+      </style>
+    </noscript>
+  </head>
+  <body class="bg-[var(--color-bg)] text-[var(--color-fg)]">
+    <PageIsland client:settled part="boot" lang={lang} role={role} pathname={pathname} />
+    <PageIsland client:settled part="skip" lang={lang} role={role} pathname={pathname} />
+    <PageIsland client:settled part="header" lang={lang} role={role} pathname={pathname} />
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <PageIsland
+      client:settled={{ rootMargin: "600px" }}
+      part="footer"
+      lang={lang}
+      role={role}
+      pathname={pathname}
+    />
+    <PageIsland
+      client:settled={{ rootMargin: "600px" }}
+      part="whatsapp"
+      lang={lang}
+      role={role}
+      pathname={pathname}
+    />
+    <div class="requires-js">
+      <PageIsland
+        client:settled={{ rootMargin: "600px" }}
+        part="assistant"
+        lang={lang}
+        role={role}
+        pathname={pathname}
+      />
+    </div>
+  </body>
+</html>
