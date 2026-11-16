@@ -7,9 +7,9 @@ const rootDir = path.resolve(__dirname, "../..");
 const distDir = path.resolve(rootDir, "dist");
 
 describe("dist production build artifacts", () => {
-  it("contains all 54 prerendered route HTML files plus root and 404", () => {
+  it("contains all 56 prerendered route HTML files plus root and 404", () => {
     const routes = prerenderRoutes();
-    expect(routes.length).toBe(54);
+    expect(routes.length).toBe(56);
 
     expect(fs.existsSync(path.resolve(distDir, "index.html"))).toBe(true);
     expect(fs.existsSync(path.resolve(distDir, "404.html"))).toBe(true);

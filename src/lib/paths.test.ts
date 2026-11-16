@@ -11,10 +11,10 @@ import {
 } from "./paths";
 
 describe("route parsing and URL helpers", () => {
-  it("generates all 54 static prerender routes", () => {
+  it("generates all 56 static prerender routes", () => {
     const routes = prerenderRoutes();
-    expect(routes.length).toBe(54);
-    expect(new Set(routes).size).toBe(54);
+    expect(routes.length).toBe(56);
+    expect(new Set(routes).size).toBe(56);
     expect(routes).toContain("es");
     expect(routes).toContain("en");
     expect(routes).toContain("es/admin");
@@ -23,6 +23,7 @@ describe("route parsing and URL helpers", () => {
     expect(routes).toContain("en/projects/pipeline-etl-oracle-netsuite-bi");
     expect(routes).toContain("es/experience/aspaen-operaciones-analitica");
     expect(routes).toContain("en/education/ingenieria-biomedica-itm");
+    expect(routes).toContain("es/education/tecnologia-sistemas-san-jose");
     expect(routes).toContain("es/certifications/analitica-datos-crisp-dm");
   });
 

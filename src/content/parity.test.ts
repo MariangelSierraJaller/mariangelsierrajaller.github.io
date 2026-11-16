@@ -77,7 +77,7 @@ describe("content bilingual parity and authenticity", () => {
 
   it("provides bilingual detail collections matching expected counts", () => {
     expect(EXPERIENCE_ORDER.length).toBe(2);
-    expect(EDUCATION_ORDER.length).toBe(6);
+    expect(EDUCATION_ORDER.length).toBe(7);
     expect(CERTIFICATION_ORDER.length).toBe(6);
 
     for (const collection of DETAIL_COLLECTIONS) {
