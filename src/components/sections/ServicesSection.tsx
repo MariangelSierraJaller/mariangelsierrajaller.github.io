@@ -23,19 +23,51 @@ export const ServicesSection: Component = () => {
   const { lang, copy } = useLanguage();
   const svcCopy = () => copy().services;
 
-  const workflowSteps = () =>
+  const workflowPillars = () =>
     lang() === "es"
       ? [
-          { step: "01", title: "Diagnóstico & Auditoría", detail: "Mapeo de flujos ERP, compras y control documental." },
-          { step: "02", title: "Estandarización NetSuite", detail: "Catálogos maestros, trazabilidad y conciliaciones." },
-          { step: "03", title: "Automatización ETL", detail: "Limpieza XML/JSON con Python, Pandas y SQL." },
-          { step: "04", title: "Tableros Power BI", detail: "Modelo estrella DAX y KPIs financieros en tiempo real." },
+          {
+            tag: "Auditoría ERP",
+            title: "Diagnóstico & Trazabilidad",
+            detail: "Mapeo de flujos ERP, compras y control documental.",
+          },
+          {
+            tag: "NetSuite",
+            title: "Estandarización Operativa",
+            detail: "Catálogos maestros, controles y conciliaciones.",
+          },
+          {
+            tag: "Python & SQL",
+            title: "Automatización ETL",
+            detail: "Limpieza XML/JSON y modelado relacional reproducible.",
+          },
+          {
+            tag: "Power BI",
+            title: "Inteligencia Financiera",
+            detail: "Modelo estrella DAX y KPIs ejecutivos en tiempo real.",
+          },
         ]
       : [
-          { step: "01", title: "Discovery & Audit", detail: "Mapping ERP workflows, procurement and document controls." },
-          { step: "02", title: "NetSuite Standardization", detail: "Master catalogs, audit trail and reconciliations." },
-          { step: "03", title: "ETL Automation", detail: "XML/JSON cleansing with Python, Pandas and SQL." },
-          { step: "04", title: "Power BI Dashboards", detail: "DAX star schema and executive KPIs." },
+          {
+            tag: "ERP Audit",
+            title: "Discovery & Traceability",
+            detail: "Mapping ERP workflows, procurement and document controls.",
+          },
+          {
+            tag: "NetSuite",
+            title: "Operational Standardization",
+            detail: "Master catalogs, audit trail and reconciliations.",
+          },
+          {
+            tag: "Python & SQL",
+            title: "ETL Automation",
+            detail: "XML/JSON cleansing and reproducible relational schemas.",
+          },
+          {
+            tag: "Power BI",
+            title: "Financial Intelligence",
+            detail: "DAX star schema and executive KPIs in real time.",
+          },
         ];
 
   return (
@@ -47,11 +79,11 @@ export const ServicesSection: Component = () => {
       surface="alt"
     >
       <div class="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <For each={workflowSteps()}>
+        <For each={workflowPillars()}>
           {(wf) => (
             <div class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
               <span class="font-mono text-xs font-semibold text-[var(--color-primary)]">
-                {wf.step}
+                {wf.tag}
               </span>
               <h3 class="mt-1 font-display text-lg text-[var(--color-fg)]">{wf.title}</h3>
               <p class="mt-1 text-xs leading-relaxed text-[var(--color-fg-muted)]">{wf.detail}</p>

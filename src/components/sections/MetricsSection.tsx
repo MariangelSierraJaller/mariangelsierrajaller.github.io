@@ -34,7 +34,7 @@ export const MetricsSection: Component = () => {
               : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg-muted)] hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
           }`}
         >
-          {lang() === "es" ? "Todos los indicadores (4)" : "All Indicators (4)"}
+          {lang() === "es" ? "Todos los indicadores" : "All Indicators"}
         </button>
 
         <For each={METRIC_GROUP_IDS}>

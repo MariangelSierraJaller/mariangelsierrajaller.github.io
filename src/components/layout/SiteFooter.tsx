@@ -1,5 +1,5 @@
 import { For, type Component } from "solid-js";
-import { DETAIL_COLLECTIONS, ROLE_IDS } from "@/types/content";
+import { DETAIL_COLLECTIONS, type SectionId } from "@/types/content";
 import { useLanguage } from "@/context/language";
 import { useRole } from "@/context/role";
 import { PROFILE } from "@/content/shared/profile";
@@ -18,6 +18,15 @@ import {
   PhoneBrandIcon,
 } from "./BrandIcons";
 import { ArrowUpIcon } from "@/components/ui/icons";
+
+const FOOTER_SECTIONS: readonly SectionId[] = [
+  "about",
+  "experience",
+  "projects",
+  "skills",
+  "resume",
+  "contact",
+];
 
 export const SiteFooter: Component = () => {
   const { lang, copy } = useLanguage();
@@ -85,19 +94,23 @@ export const SiteFooter: Component = () => {
             </div>
           </div>
 
-          <div class="space-y-3" data-role-switcher>
+          <div class="space-y-3">
             <h3 class="font-mono text-xs uppercase tracking-wider text-[var(--color-accent)]">
-              {copy().ui.footer.rolesTitle}
+              {copy().ui.footer.navigationTitle}
             </h3>
             <ul class="space-y-2 text-sm">
-              <For each={ROLE_IDS}>
-                {(targetRole) => (
+              <For each={FOOTER_SECTIONS}>
+                {(secId) => (
                   <li>
                     <a
-                      href={withRoleQuery(buildHomePath(lang(), targetRole), undefined, locked())}
+                      href={withRoleQuery(
+                        buildHomePath(lang(), role(), secId),
+                        undefined,
+                        locked(),
+                      )}
                       class="text-[var(--color-fg-muted)] transition hover:text-[var(--color-primary)]"
                     >
-                      {copy().ui.roleLabels[targetRole].full}
+                      {copy().ui.navItems[secId]}
                     </a>
                   </li>
                 )}

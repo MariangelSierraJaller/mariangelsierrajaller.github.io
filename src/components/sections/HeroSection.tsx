@@ -1,10 +1,8 @@
-import { For, type Component } from "solid-js";
-import { ROLE_IDS } from "@/types/content";
+import { type Component } from "solid-js";
 import { useLanguage } from "@/context/language";
 import { useRole } from "@/context/role";
 import { PROFILE } from "@/content/shared/profile";
 import { withBase } from "@/lib/base";
-import { buildHomePath, withRoleQuery } from "@/lib/paths";
 import {
   ArrowRightIcon,
   FileTextIcon,
@@ -14,7 +12,7 @@ import { TechList } from "@/components/ui/TechList";
 
 export const HeroSection: Component = () => {
   const { lang, copy } = useLanguage();
-  const { role, config, locked } = useRole();
+  const { role, config } = useRole();
 
   const hero = () => copy().hero[role()];
 
@@ -87,32 +85,7 @@ export const HeroSection: Component = () => {
             </a>
           </div>
 
-          {/* Quick Role Focus Cards (hidden when ?locked=true) */}
-          <div data-role-switcher class="mt-8 grid max-w-xl grid-cols-3 gap-2">
-            <For each={ROLE_IDS}>
-              {(r) => {
-                const active = () => role() === r;
-                return (
-                  <a
-                    href={withRoleQuery(buildHomePath(lang(), r), undefined, locked())}
-                    aria-current={active() ? "page" : undefined}
-                    class={`rounded-xl border px-3 py-2 text-left transition ${
-                      active()
-                        ? "border-[var(--color-primary)] bg-[var(--color-surface-raised)] text-[var(--color-fg)]"
-                        : "border-[var(--color-border)] bg-[var(--color-surface)]/70 text-[var(--color-fg-muted)] hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
-                    }`}
-                  >
-                    <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-accent)]">
-                      {copy().ui.roleLabels[r].short}
-                    </p>
-                    <p class="mt-0.5 line-clamp-1 text-xs">{copy().ui.roleLabels[r].full}</p>
-                  </a>
-                );
-              }}
-            </For>
-          </div>
-
-          <div class="mt-7">
+          <div class="mt-8">
             <TechList items={config().topStack} />
           </div>
         </div>

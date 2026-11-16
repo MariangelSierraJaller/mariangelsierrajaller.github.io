@@ -44,7 +44,7 @@ export const SkillsSection: Component = () => {
               : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg-muted)] hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
           }`}
         >
-          {lang() === "es" ? "Todas las áreas (6)" : "All Domains (6)"}
+          {lang() === "es" ? "Todas las áreas" : "All Domains"}
         </button>
 
         <For each={groupOrder()}>

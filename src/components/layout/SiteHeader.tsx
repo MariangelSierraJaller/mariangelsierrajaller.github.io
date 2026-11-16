@@ -6,7 +6,6 @@ import { orderedSectionsForRole } from "@/lib/role-view";
 import { buildHomePath, withRoleQuery } from "@/lib/paths";
 import { BotIcon, CloseIcon, MenuIcon } from "@/components/ui/icons";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { RoleSwitcher } from "./RoleSwitcher";
 
 export const SiteHeader: Component = () => {
   const { lang, copy } = useLanguage();
@@ -92,14 +91,15 @@ export const SiteHeader: Component = () => {
         </nav>
 
         <div class="flex items-center gap-2">
-          <div class="hidden md:block">
-            <RoleSwitcher />
-          </div>
           <LanguageSwitcher />
           <button
             type="button"
             onClick={openAssistant}
-            title={lang() === "es" ? "Asistente del portafolio (Ctrl+K)" : "Portfolio assistant (Ctrl+K)"}
+            title={
+              lang() === "es"
+                ? "Asistente del portafolio (Ctrl+K)"
+                : "Portfolio assistant (Ctrl+K)"
+            }
             aria-label={lang() === "es" ? "Abrir asistente (Ctrl+K)" : "Open assistant (Ctrl+K)"}
             class="requires-js hidden items-center gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-1.5 text-xs text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] sm:inline-flex"
           >
@@ -120,7 +120,7 @@ export const SiteHeader: Component = () => {
             onClick={() => setMenuOpen((v) => !v)}
             aria-expanded={menuOpen()}
             aria-label={menuOpen() ? copy().ui.mobileMenuClose : copy().ui.mobileMenuOpen}
-            class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg)] lg:hidden"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg)] lg:hidden"
           >
             <Show when={menuOpen()} fallback={<MenuIcon size={18} />}>
               <CloseIcon size={18} />
@@ -131,8 +131,7 @@ export const SiteHeader: Component = () => {
 
       <Show when={menuOpen()}>
         <div class="border-t border-[var(--color-border)] bg-[var(--color-bg)] px-5 py-4 lg:hidden">
-          <div class="mb-4 flex flex-wrap items-center justify-between gap-2 md:hidden">
-            <RoleSwitcher />
+          <div class="mb-4 flex flex-wrap items-center justify-end gap-2">
             <button
               type="button"
               onClick={openAssistant}
@@ -151,7 +150,7 @@ export const SiteHeader: Component = () => {
                     href={sectionHref(secId)}
                     onClick={() => setMenuOpen(false)}
                     aria-current={isActive() ? "location" : undefined}
-                    class={`rounded-xl border px-3 py-2 text-sm transition ${
+                    class={`rounded-xl border px-3 py-2.5 text-sm transition ${
                       isActive()
                         ? "border-[var(--color-primary)] bg-[var(--color-surface-raised)] text-[var(--color-fg)]"
                         : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg-muted)] hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"

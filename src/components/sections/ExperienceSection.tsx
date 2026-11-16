@@ -1,5 +1,4 @@
-import { createEffect, createSignal, For, Show, type Component } from "solid-js";
-import { ROLE_IDS, type RoleId } from "@/types/content";
+import { createSignal, For, Show, type Component } from "solid-js";
 import { useLanguage } from "@/context/language";
 import { useRole } from "@/context/role";
 import { EXPERIENCE_ORDER, EXPERIENCE_SHARED } from "@/content/shared/experience";
@@ -12,11 +11,6 @@ import { ArrowRightIcon, BriefcaseIcon, ChevronDownIcon } from "@/components/ui/
 export const ExperienceSection: Component = () => {
   const { lang, copy } = useLanguage();
   const { role, locked } = useRole();
-  const [lensRole, setLensRole] = createSignal<RoleId>(role());
-
-  createEffect(() => {
-    setLensRole(role());
-  });
 
   const expCopy = () => copy().experience;
 
@@ -28,30 +22,7 @@ export const ExperienceSection: Component = () => {
       subtitle={expCopy().subtitle}
       surface="alt"
     >
-      <div class="mb-8 flex flex-wrap items-center justify-between gap-4">
-        <div
-          role="group"
-          aria-label={lang() === "es" ? "Enfoque de responsabilidades" : "Role perspective"}
-          class="inline-flex flex-wrap gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] p-1 text-xs"
-        >
-          <For each={ROLE_IDS}>
-            {(r) => (
-              <button
-                type="button"
-                aria-pressed={lensRole() === r}
-                onClick={() => setLensRole(r)}
-                class={`rounded-full px-3 py-1 font-medium transition ${
-                  lensRole() === r
-                    ? "bg-[var(--color-primary)] text-[var(--color-on-primary)]"
-                    : "text-[var(--color-fg-muted)] hover:text-[var(--color-fg)]"
-                }`}
-              >
-                {copy().ui.roleLabels[r].short}
-              </button>
-            )}
-          </For>
-        </div>
-
+      <div class="mb-8 flex justify-end">
         <a
           href={buildDetailIndexPath(lang(), "experience", role(), locked())}
           class="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
@@ -66,7 +37,7 @@ export const ExperienceSection: Component = () => {
           {(expId) => {
             const shared = EXPERIENCE_SHARED[expId];
             const item = () => expCopy().items[expId];
-            const roleView = () => item().byRole[lensRole()];
+            const roleView = () => item().byRole[role()];
             const [expanded, setExpanded] = createSignal(shared.current);
 
             return (

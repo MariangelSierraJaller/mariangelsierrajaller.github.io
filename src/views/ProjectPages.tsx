@@ -303,12 +303,12 @@ const CaseStudyDetail: Component<{ data: CaseStudyCopy }> = (props) => {
         class="flex flex-wrap gap-2 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-3"
       >
         <For each={props.data.sections}>
-          {(sec, idx) => (
+          {(sec) => (
             <a
               href={`#section-${sec.id}`}
               class="rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-1 font-mono text-xs text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
             >
-              0{idx() + 1} · {sec.eyebrow}
+              {sec.eyebrow}
             </a>
           )}
         </For>
