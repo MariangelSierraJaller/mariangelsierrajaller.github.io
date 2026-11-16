@@ -85,6 +85,12 @@ export const JourneySection: Component = () => {
       })
       .join(" ");
 
+  let mapScrollerRef: HTMLDivElement | undefined;
+  let draggingMap = false;
+  let dragStartX = 0;
+  let dragStartScroll = 0;
+  let movedDistance = 0;
+
   return (
     <Section
       id="journey"
@@ -169,8 +175,30 @@ export const JourneySection: Component = () => {
             </For>
           </div>
 
-          {/* Interactive SVG Metro Diagram */}
-          <div class="overflow-x-auto pb-2">
+          {/* Interactive SVG Metro Diagram (drag-to-scroll & large touch hit targets) */}
+          <div
+            ref={mapScrollerRef}
+            class="touch-pan-x cursor-grab overflow-x-auto pb-2 select-none active:cursor-grabbing"
+            onPointerDown={(e) => {
+              if (!mapScrollerRef || e.pointerType === "touch") return;
+              draggingMap = true;
+              movedDistance = 0;
+              dragStartX = e.clientX;
+              dragStartScroll = mapScrollerRef.scrollLeft;
+            }}
+            onPointerMove={(e) => {
+              if (!draggingMap || !mapScrollerRef) return;
+              const dx = e.clientX - dragStartX;
+              movedDistance = Math.max(movedDistance, Math.abs(dx));
+              mapScrollerRef.scrollLeft = dragStartScroll - dx;
+            }}
+            onPointerUp={() => {
+              draggingMap = false;
+            }}
+            onPointerLeave={() => {
+              draggingMap = false;
+            }}
+          >
             <svg
               viewBox="0 0 920 260"
               role="img"
@@ -216,8 +244,12 @@ export const JourneySection: Component = () => {
                     <g
                       class="cursor-pointer transition-opacity"
                       style={{ opacity: isHighlighted() ? "1" : "0.22" }}
-                      onClick={() => setSelectedNodeId(node.id)}
+                      onClick={() => {
+                        if (movedDistance > 6) return;
+                        setSelectedNodeId(node.id);
+                      }}
                     >
+                      <circle cx={x} cy={y} r="22" fill="transparent" />
                       <Show when={isSelected()}>
                         <circle
                           cx={x}
@@ -291,17 +323,17 @@ export const JourneySection: Component = () => {
                           type="button"
                           onClick={() => stepNode(-1)}
                           aria-label={lang() === "es" ? "Hito anterior" : "Previous milestone"}
-                          class="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+                          class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
                         >
-                          <ChevronLeftIcon size={14} />
+                          <ChevronLeftIcon size={15} />
                         </button>
                         <button
                           type="button"
                           onClick={() => stepNode(1)}
                           aria-label={lang() === "es" ? "Siguiente hito" : "Next milestone"}
-                          class="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+                          class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
                         >
-                          <ChevronRightIcon size={14} />
+                          <ChevronRightIcon size={15} />
                         </button>
                       </div>
                     </div>

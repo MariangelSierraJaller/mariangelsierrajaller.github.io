@@ -23,15 +23,38 @@ export function Carousel<T>(props: CarouselProps<T>) {
   const prev = () => setPage((p) => (p - 1 + totalPages()) % totalPages());
   const next = () => setPage((p) => (p + 1) % totalPages());
 
+  let touchStartX = 0;
+  let touchStartY = 0;
+
   return (
-    <div aria-label={props.ariaLabel} class="space-y-8">
+    <div
+      aria-label={props.ariaLabel}
+      class="touch-pan-y space-y-8"
+      onTouchStart={(e) => {
+        const t = e.touches[0];
+        if (t) {
+          touchStartX = t.clientX;
+          touchStartY = t.clientY;
+        }
+      }}
+      onTouchEnd={(e) => {
+        const t = e.changedTouches[0];
+        if (!t) return;
+        const dx = t.clientX - touchStartX;
+        const dy = t.clientY - touchStartY;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+          if (dx < 0) next();
+          else prev();
+        }
+      }}
+    >
       <Show when={totalPages() > 1}>
         <div class="flex items-center justify-center gap-4">
           <button
             type="button"
             onClick={prev}
             aria-label={props.prevLabel}
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] text-[var(--color-fg)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] text-[var(--color-fg)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
           >
             <ChevronLeftIcon size={18} />
           </button>
@@ -59,7 +82,7 @@ export function Carousel<T>(props: CarouselProps<T>) {
             type="button"
             onClick={next}
             aria-label={props.nextLabel}
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] text-[var(--color-fg)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] text-[var(--color-fg)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
           >
             <ChevronRightIcon size={18} />
           </button>
