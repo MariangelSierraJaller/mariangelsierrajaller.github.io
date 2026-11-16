@@ -19,7 +19,7 @@ export const ES_RESUME: ResumeSectionCopy = {
         "4+ años continuos en ASPAEN liderando compras, facturación electrónica y conciliaciones",
         "Dominio avanzado de Oracle NetSuite para inventarios, cuentas por pagar y órdenes de compra",
         "Control riguroso de fondos de caja menor y preparación de expedientes para auditoría",
-        "Doble titulación profesional: Ingeniera Industrial e Ingeniera de Sistemas (Jul 2026)",
+        "Doble titulación profesional: Ingeniera Industrial e Ingeniera de Sistemas (10 Sep 2026)",
       ],
       previewAlt:
         "Vista previa del currículum vitae administrativo y financiero de Mariangel Sierra Jaller",

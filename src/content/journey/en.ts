@@ -4,7 +4,7 @@ export const EN_JOURNEY: JourneyCopy = {
   eyebrow: "Evolutionary Roadmap & Methodology",
   title: "Career Trajectory & Convergence Map",
   subtitle:
-    "From SENA software programming and accounting operations at ASPAEN to graduating in Systems Engineering, Industrial Engineering & Systems Tech (Jul 2026), advancing toward Biomedical Engineering.",
+    "From SENA software programming and accounting operations at ASPAEN to graduating in Systems Engineering, Industrial Engineering & Systems Tech (Sep 10, 2026), advancing toward Biomedical Engineering.",
   tabs: {
     map: {
       label: "Transit Lines",
@@ -321,10 +321,10 @@ export const EN_JOURNEY: JourneyCopy = {
       id: "node-grad-sanjose-2026",
       year: 2026,
       line: "education",
-      station: "July 2026 Graduation — San José",
+      station: "September 10, 2026 Graduation — San José",
       label: "Systems + Industrial Eng. + Systems Tech",
       detail:
-        "Completed graduation in July 2026 at Fundación Universidad San José with dual B.S. Engineering degrees and a Technologist in Systems diploma.",
+        "Completed graduation on September 10, 2026 at Fundación Universidad San José with dual B.S. Engineering degrees and a Technologist in Systems diploma.",
       link: {
         kind: "detail",
         collection: "education",
@@ -507,7 +507,7 @@ export const EN_JOURNEY: JourneyCopy = {
       title: "Data Lakehouse Ecosystem & Treasury Forecasting",
       focus: "tech",
       description:
-        "Expansion of Oracle NetSuite data pipelines into a decoupled analytical store with time-series treasury forecasting following July 2026 graduation.",
+        "Expansion of Oracle NetSuite data pipelines into a decoupled analytical store with time-series treasury forecasting following September 2026 graduation.",
       outcomes: [
         "End-to-end ingestion pipeline from NetSuite REST/SOAP APIs to PostgreSQL/DuckDB storage",
         "Budget variance and cash-flow forecasting models with >95% statistical confidence",

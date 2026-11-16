@@ -232,13 +232,13 @@ export const ES_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     slug: "ingenieria-sistemas-san-jose",
     id: "sanJoseSystems",
     lang: "es",
-    eyebrow: "Educación Superior · 2023 — Jul 2026",
+    eyebrow: "Educación Superior · 2023 — 10 Sep 2026",
     title: "Ingeniería de Sistemas",
     subtitle:
-      "Titulada en julio de 2026. Formación integral en arquitectura de software, bases de datos relacionales, ingeniería de datos, cloud y modelado computacional.",
+      "Titulada el 10 de septiembre de 2026. Formación integral en arquitectura de software, bases de datos relacionales, ingeniería de datos, cloud y modelado computacional.",
     meta: [
       { label: "Institución", value: "Fundación Universidad San José" },
-      { label: "Periodo", value: "2023 — Jul 2026 (Titulada)" },
+      { label: "Periodo", value: "2023 — 10 Sep 2026 (Titulada)" },
       { label: "Modalidad", value: "Pregrado Profesional" },
       { label: "Enfoque", value: "Tecnología, Software & Datos" },
     ],
@@ -258,7 +258,7 @@ export const ES_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     outcomesTitle: "Aplicación Práctica y Proyección",
     outcomes: [
       { metric: "100%", label: "Aplicabilidad directa al desarrollo de pipelines analíticos y scripts ERP" },
-      { metric: "Jul 2026", label: "Titulación profesional completada en Fundación Universidad San José" },
+      { metric: "10 Sep 2026", label: "Titulación profesional completada en Fundación Universidad San José" },
       { metric: "Doble Titulación", label: "Graduación simultánea junto a Ingeniería Industrial y Tecnología en Sistemas" },
     ],
     tools: [
@@ -292,13 +292,13 @@ export const ES_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     slug: "ingenieria-industrial-san-jose",
     id: "sanJoseIndustrial",
     lang: "es",
-    eyebrow: "Educación Superior · 2023 — Jul 2026",
+    eyebrow: "Educación Superior · 2023 — 10 Sep 2026",
     title: "Ingeniería Industrial",
     subtitle:
-      "Titulada en julio de 2026. Optimización de operaciones, gestión de la cadena de suministro, control de calidad, investigación de operaciones y productividad.",
+      "Titulada el 10 de septiembre de 2026. Optimización de operaciones, gestión de la cadena de suministro, control de calidad, investigación de operaciones y productividad.",
     meta: [
       { label: "Institución", value: "Fundación Universidad San José" },
-      { label: "Periodo", value: "2023 — Jul 2026 (Titulada)" },
+      { label: "Periodo", value: "2023 — 10 Sep 2026 (Titulada)" },
       { label: "Modalidad", value: "Pregrado Profesional" },
       { label: "Enfoque", value: "Operaciones, Procesos & Cadena de Suministro" },
     ],
@@ -318,7 +318,7 @@ export const ES_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     outcomesTitle: "Aplicación Práctica y Proyección",
     outcomes: [
       { metric: "Directa", label: "Aplicación en gestión de compras y stocks en ASPAEN" },
-      { metric: "Jul 2026", label: "Titulación profesional completada en Fundación Universidad San José" },
+      { metric: "10 Sep 2026", label: "Titulación profesional completada en Fundación Universidad San José" },
       { metric: "Sinergia", label: "Integración de ingeniería de procesos con ingeniería de software" },
     ],
     tools: [
@@ -334,7 +334,7 @@ export const ES_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     seo: {
       title: "Ingeniería Industrial | Fundación Universidad San José | Mariangel Sierra",
       description:
-        "Titulación en Ingeniería Industrial de Mariangel Sierra Jaller (julio 2026): optimización operativa, cadena de suministro y control de procesos.",
+        "Titulación en Ingeniería Industrial de Mariangel Sierra Jaller (10 de septiembre de 2026): optimización operativa, cadena de suministro y control de procesos.",
       keywords: [
         "Ingeniería Industrial",
         "Fundación Universidad San José",
@@ -350,18 +350,18 @@ export const ES_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     slug: "tecnologia-sistemas-san-jose",
     id: "sanJoseSystemsTech",
     lang: "es",
-    eyebrow: "Educación Superior Tecnológica · 2023 — Jul 2026",
+    eyebrow: "Educación Superior Tecnológica · 2023 — 10 Sep 2026",
     title: "Tecnología en Sistemas",
     subtitle:
-      "Titulada como Tecnóloga en Sistemas en julio de 2026, orientada a implementación de software empresarial, administración de bases de datos y soporte tecnológico.",
+      "Titulada como Tecnóloga en Sistemas el 10 de septiembre de 2026, orientada a implementación de software empresarial, administración de bases de datos y soporte tecnológico.",
     meta: [
       { label: "Institución", value: "Fundación Universidad San José" },
-      { label: "Periodo", value: "2023 — Jul 2026 (Titulada)" },
+      { label: "Periodo", value: "2023 — 10 Sep 2026 (Titulada)" },
       { label: "Modalidad", value: "Pregrado Tecnológico" },
       { label: "Enfoque", value: "Infraestructura TI, Redes & Bases de Datos" },
     ],
     overview: [
-      "Como parte de su ciclo propedéutico en la Fundación Universidad San José, Mariangel obtuvo el título de Tecnóloga en Sistemas en julio de 2026 de manera simultánea a sus títulos profesionales.",
+      "Como parte de su ciclo propedéutico en la Fundación Universidad San José, Mariangel obtuvo el título de Tecnóloga en Sistemas el 10 de septiembre de 2026 de manera simultánea a sus títulos profesionales.",
       "El programa consolida competencias prácticas en administración de bases de datos, configuración de infraestructura corporativa, desarrollo web e integración de sistemas administrativos.",
       "Su enfoque aplicado complementa directamente la operación de Oracle NetSuite y los flujos automatizados de reportería financiera en ASPAEN.",
     ],
@@ -374,7 +374,7 @@ export const ES_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     ],
     outcomesTitle: "Aplicación Práctica y Logros",
     outcomes: [
-      { metric: "Jul 2026", label: "Título tecnológico obtenido en Fundación Universidad San José" },
+      { metric: "10 Sep 2026", label: "Título tecnológico obtenido en Fundación Universidad San José" },
       { metric: "100%", label: "Articulación directa con pipelines de datos y gestión ERP" },
       { metric: "Propedéutico", label: "Base tecnológica articulada con Ingeniería de Sistemas" },
     ],
@@ -390,7 +390,7 @@ export const ES_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     seo: {
       title: "Tecnología en Sistemas | Fundación Universidad San José | Mariangel Sierra",
       description:
-        "Título en Tecnología en Sistemas obtenido por Mariangel Sierra Jaller en la Fundación Universidad San José en julio de 2026.",
+        "Título en Tecnología en Sistemas obtenido por Mariangel Sierra Jaller en la Fundación Universidad San José el 10 de septiembre de 2026.",
       keywords: [
         "Tecnología en Sistemas",
         "Tecnóloga en Sistemas",

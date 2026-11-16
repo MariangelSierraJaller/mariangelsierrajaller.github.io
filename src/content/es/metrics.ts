@@ -95,7 +95,7 @@ export const ES_METRICS: MetricsSectionCopy = {
         {
           label: "Ingenierías y Tecnología",
           value: "2 + 1",
-          detail: "Titulada en Sistemas, Industrial y Tec. Sistemas (Jul 2026) + Biomédica ITM",
+          detail: "Titulada en Sistemas, Industrial y Tec. Sistemas (10 Sep 2026) + Biomédica ITM",
         },
         {
           label: "Años continuos de experiencia práctica",

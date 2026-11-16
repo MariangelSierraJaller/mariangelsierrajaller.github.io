@@ -48,7 +48,7 @@ export const ES_HIGHLIGHTS: Record<RoleId, readonly HighlightCard[]> = {
       id: "engineerings",
       value: "2 + 1",
       label: "Ingenierías y Tecnología",
-      hint: "Ing. de Sistemas e Industrial (Jul 2026) + Biomédica ITM en curso",
+      hint: "Ing. de Sistemas e Industrial (Sep 2026) + Biomédica ITM en curso",
     },
     {
       id: "erp-analytics",
@@ -85,7 +85,7 @@ export const ES_HIGHLIGHTS: Record<RoleId, readonly HighlightCard[]> = {
     {
       id: "industrial-eng",
       value: "Ing. Industrial",
-      label: "Titulación Jul 2026",
+      label: "Titulación 10 Sep 2026",
       hint: "Optimización de procesos y cadena de suministro",
     },
   ],

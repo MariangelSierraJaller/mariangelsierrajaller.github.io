@@ -4,7 +4,7 @@ export const ES_JOURNEY: JourneyCopy = {
   eyebrow: "Ruta de Evolución & Metodología",
   title: "Mapa de Trayectoria & Convergencia",
   subtitle:
-    "De la lógica de programación SENA y la gestión contable-operativa en ASPAEN a la titulación en Ingeniería de Sistemas, Industrial y Tecnología (Jul 2026), proyectada hacia Ingeniería Biomédica.",
+    "De la lógica de programación SENA y la gestión contable-operativa en ASPAEN a la titulación en Ingeniería de Sistemas, Industrial y Tecnología (10 Sep 2026), proyectada hacia Ingeniería Biomédica.",
   tabs: {
     map: {
       label: "Líneas de Tránsito",
@@ -321,10 +321,10 @@ export const ES_JOURNEY: JourneyCopy = {
       id: "node-grad-sanjose-2026",
       year: 2026,
       line: "education",
-      station: "Graduación Julio 2026 — San José",
+      station: "Graduación 10 de Septiembre 2026 — San José",
       label: "Ing. Sistemas + Industrial + Tec. Sistemas",
       detail:
-        "Titulación completada en julio de 2026 en Fundación Universidad San José con doble grado profesional en Ingeniería y título tecnológico en Sistemas.",
+        "Titulación completada el 10 de septiembre de 2026 en Fundación Universidad San José con doble grado profesional en Ingeniería y título tecnológico en Sistemas.",
       link: {
         kind: "detail",
         collection: "education",
@@ -507,7 +507,7 @@ export const ES_JOURNEY: JourneyCopy = {
       title: "Consolidación Data Lakehouse & Forecast Financiero",
       focus: "tech",
       description:
-        "Ampliación del pipeline de datos desde Oracle NetSuite hacia almacenamiento analítico desacoplado con series de tiempo tras la titulación de julio 2026.",
+        "Ampliación del pipeline de datos desde Oracle NetSuite hacia almacenamiento analítico desacoplado con series de tiempo tras la titulación de septiembre de 2026.",
       outcomes: [
         "Automatización integral de ingesta desde NetSuite REST/SOAP APIs a PostgreSQL/DuckDB",
         "Modelos de pronóstico presupuestal y de tesorería con validación estadística continua",

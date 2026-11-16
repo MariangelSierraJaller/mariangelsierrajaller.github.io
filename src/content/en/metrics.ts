@@ -99,7 +99,7 @@ export const EN_METRICS: MetricsSectionCopy = {
         {
           label: "Engineering & Tech Degrees",
           value: "2 + 1",
-          detail: "Graduated Systems, Industrial & Systems Tech (Jul 2026) + Biomedical at ITM",
+          detail: "Graduated Systems, Industrial & Systems Tech (Sep 10, 2026) + Biomedical at ITM",
         },
         {
           label: "Academic Credentials",

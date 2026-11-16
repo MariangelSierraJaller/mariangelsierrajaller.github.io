@@ -16,7 +16,7 @@ export const EN_ABOUT: AboutCopy = {
       subheading: "Strategic operations fueled by technical precision",
       paragraphs: [
         "I am Mariangel Sierra Jaller, an engineering professional driven by a conviction: what is measured can be optimized, and what is automated frees human intellect for strategic value.",
-        "Graduated in July 2026 with dual B.S. degrees in Systems Engineering and Industrial Engineering plus a Technology degree in Systems from Fundación Universidad San José—alongside active studies toward my third engineering degree in Biomedical Engineering at ITM—I bridge operational governance and software engineering.",
+        "Graduated on September 10, 2026 with dual B.S. degrees in Systems Engineering and Industrial Engineering plus a Technology degree in Systems from Fundación Universidad San José—alongside active studies toward my third engineering degree in Biomedical Engineering at ITM—I bridge operational governance and software engineering.",
         "Over four years at Asociación para la Enseñanza (ASPAEN), I have led procurement workflows, financial reconciliations, and internal audits while engineering Python ETL pipelines and Power BI intelligence suites that eliminated manual reporting overhead.",
         "Whether standardizing multi-entity supply chains or deploying automated data ingestion pipelines, my objective remains constant: delivering resilience, audit-grade accuracy, and sustainable growth.",
       ],
@@ -106,7 +106,7 @@ export const EN_ABOUT: AboutCopy = {
   ],
   educationTitle: "Academic Trajectory",
   educationSubtitle:
-    "Seven complementary credentials spanning Systems & Industrial Engineering (graduated Jul 2026), Systems Technology, accounting, software programming, and Biomedical Engineering.",
+    "Seven complementary credentials spanning Systems & Industrial Engineering (graduated Sep 2026), Systems Technology, accounting, software programming, and Biomedical Engineering.",
   inProgressLabel: "In Progress",
   viewDetailsLabel: "View Program Details",
   viewAllEducationLabel: "View Full Academic History",
@@ -117,22 +117,22 @@ export const EN_EDUCATION: Record<EducationId, EducationCopyItem> = {
     id: "sanJoseSystems",
     degree: "B.S. in Systems Engineering",
     summary:
-      "Graduated in July 2026 with strong focus on software architecture, data engineering, relational databases, and enterprise application integration.",
-    badges: ["Graduated Jul 2026", "Software Engineering", "Databases", "Distributed Systems"],
+      "Graduated on September 10, 2026 with strong focus on software architecture, data engineering, relational databases, and enterprise application integration.",
+    badges: ["Graduated Sep 2026", "Software Engineering", "Databases", "Distributed Systems"],
   },
   sanJoseIndustrial: {
     id: "sanJoseIndustrial",
     degree: "B.S. in Industrial Engineering",
     summary:
-      "Graduated in July 2026 focusing on operations research, supply chain optimization, continuous improvement, and quality management systems.",
-    badges: ["Graduated Jul 2026", "Operations Research", "Supply Chain", "Quality Systems"],
+      "Graduated on September 10, 2026 focusing on operations research, supply chain optimization, continuous improvement, and quality management systems.",
+    badges: ["Graduated Sep 2026", "Operations Research", "Supply Chain", "Quality Systems"],
   },
   sanJoseSystemsTech: {
     id: "sanJoseSystemsTech",
     degree: "Technologist in Systems",
     summary:
-      "Technology degree awarded in July 2026 covering systems administration, software implementation, networking, and enterprise database management.",
-    badges: ["Graduated Jul 2026", "Information Systems", "Application Logic", "Databases"],
+      "Technology degree awarded on September 10, 2026 covering systems administration, software implementation, networking, and enterprise database management.",
+    badges: ["Graduated Sep 2026", "Information Systems", "Application Logic", "Databases"],
   },
   itmBiomedical: {
     id: "itmBiomedical",

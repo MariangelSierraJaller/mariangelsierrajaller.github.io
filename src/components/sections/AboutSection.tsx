@@ -232,8 +232,8 @@ export const AboutSection: Component = () => {
                           <span class="rounded-full border border-[var(--color-success)]/40 bg-[var(--color-bg)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--color-success)]">
                             {shared.endYear === 2026
                               ? lang() === "es"
-                                ? "Titulada Jul 2026"
-                                : "Graduated Jul 2026"
+                                ? "Titulada Sep 2026"
+                                : "Graduated Sep 2026"
                               : lang() === "es"
                                 ? "Completado"
                                 : "Completed"}

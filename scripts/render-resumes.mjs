@@ -33,9 +33,9 @@ const RESUME_CONTENT = {
     languagesLine: "Idiomas: Español (Nativo), Inglés (B2), Francés (Básico), Coreano (Básico)",
     educationTitle: "FORMACIÓN ACADÉMICA",
     education: [
-      "Ingeniería de Sistemas (Titulada Jul 2026) — Fundación Universidad San José",
-      "Ingeniería Industrial (Titulada Jul 2026) — Fundación Universidad San José",
-      "Tecnología en Sistemas (Titulada Jul 2026) — Fundación Universidad San José",
+      "Ingeniería de Sistemas (Titulada 10 Sep 2026) — Fundación Universidad San José",
+      "Ingeniería Industrial (Titulada 10 Sep 2026) — Fundación Universidad San José",
+      "Tecnología en Sistemas (Titulada 10 Sep 2026) — Fundación Universidad San José",
       "Ingeniería Biomédica (En curso, 2023–2028) — Institución Universitaria ITM",
       "Técnico Contable y Financiero orientado a Sistemas (2022–2023) — ITM",
       "Técnico en Programación de Software (2020–2021) — SENA",
@@ -75,7 +75,7 @@ const RESUME_CONTENT = {
       tech: {
         roleHeading: "INGENIERA DE SISTEMAS · ANALISTA DE DATOS · ESPECIALISTA ERP NETSUITE & BI",
         summary:
-          "Ingeniera de Sistemas, Ingeniera Industrial y Tecnóloga en Sistemas (graduada jul 2026) con trayectoria desde febrero de 2022 en ASPAEN extrayendo datos financieros de Oracle NetSuite (XML/JSON), automatizando flujos ETL con Python/Pandas y SQL, y diseñando tableros gerenciales en Power BI (DAX y Power Query).",
+          "Ingeniera de Sistemas, Ingeniera Industrial y Tecnóloga en Sistemas (graduada el 10 de septiembre de 2026) con trayectoria desde febrero de 2022 en ASPAEN extrayendo datos financieros de Oracle NetSuite (XML/JSON), automatizando flujos ETL con Python/Pandas y SQL, y diseñando tableros gerenciales en Power BI (DAX y Power Query).",
         experienceTitle: "EXPERIENCIA PROFESIONAL",
         experience: [
           {
@@ -137,9 +137,9 @@ const RESUME_CONTENT = {
     languagesLine: "Languages: Spanish (Native), English (B2), French (Basic), Korean (Basic)",
     educationTitle: "EDUCATION",
     education: [
-      "B.S. Systems Engineering (Graduated Jul 2026) — Fundacion Universidad San Jose",
-      "B.S. Industrial Engineering (Graduated Jul 2026) — Fundacion Universidad San Jose",
-      "Technologist in Systems (Graduated Jul 2026) — Fundacion Universidad San Jose",
+      "B.S. Systems Engineering (Graduated Sep 10, 2026) — Fundacion Universidad San Jose",
+      "B.S. Industrial Engineering (Graduated Sep 10, 2026) — Fundacion Universidad San Jose",
+      "Technologist in Systems (Graduated Sep 10, 2026) — Fundacion Universidad San Jose",
       "B.S. Biomedical Engineering (In progress, 2023–2028) — Institucion Universitaria ITM",
       "Accounting & Financial Technician oriented to Systems (2022–2023) — ITM",
       "Software Programming Technician (2020–2021) — SENA",
@@ -177,7 +177,7 @@ const RESUME_CONTENT = {
       tech: {
         roleHeading: "SYSTEMS & INDUSTRIAL ENGINEER · DATA ANALYST · NETSUITE ERP & BI",
         summary:
-          "Graduated Systems & Industrial Engineer and Systems Technologist (Jul 2026), concurrently advancing toward a third degree in Biomedical Engineering (ITM), with production impact at ASPAEN building Python/Pandas and SQL ETL pipelines over Oracle NetSuite (XML/JSON) and Power BI (DAX) executive dashboards.",
+          "Graduated Systems & Industrial Engineer and Systems Technologist (Sep 10, 2026), concurrently advancing toward a third degree in Biomedical Engineering (ITM), with production impact at ASPAEN building Python/Pandas and SQL ETL pipelines over Oracle NetSuite (XML/JSON) and Power BI (DAX) executive dashboards.",
         experienceTitle: "PROFESSIONAL EXPERIENCE",
         experience: [
           {
