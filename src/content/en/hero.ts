@@ -46,9 +46,9 @@ export const EN_HIGHLIGHTS: Record<RoleId, readonly HighlightCard[]> = {
     },
     {
       id: "academic",
-      value: "3 Programs",
-      label: "Engineering Disciplines",
-      hint: "Systems, Industrial & Biomedical",
+      value: "2 + 1",
+      label: "Engineering Degrees",
+      hint: "Systems & Industrial Eng. (Jul 2026) + Biomedical at ITM",
     },
     {
       id: "tech-stack",

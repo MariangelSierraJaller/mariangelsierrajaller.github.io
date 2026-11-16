@@ -47,7 +47,7 @@ export const ES_UI: UiCopy = {
     educationIndexLabel: "Formación Académica",
     certificationsIndexLabel: "Certificaciones y Logros",
     rights: "Todos los derechos reservados.",
-    builtWith: "Diseñado y desarrollado con Astro, React, Tailwind CSS y TypeScript.",
+    builtWith: "Diseñado y desarrollado con Astro, SolidJS y Tailwind CSS.",
     updatedLabel: "Actualizado en 2026",
   },
   whatsappFloatLabel: "Conversar por WhatsApp",
@@ -58,9 +58,9 @@ export const ES_UI: UiCopy = {
 
 export const ES_SEO: SeoCopy = {
   personJobTitle: [
+    "Ingeniera de Sistemas",
+    "Ingeniera Industrial",
     "Especialista en Operaciones ERP y Analítica de Datos",
-    "Ingeniera de Sistemas en formación",
-    "Ingeniera Industrial en formación",
   ],
   personDescription:
     "Mariangel Sierra Jaller — Profesional en gestión operativa, control financiero y analítica de datos en Medellín, Colombia. Especialista en Oracle NetSuite, Python, Power BI y optimización de procesos empresariales.",

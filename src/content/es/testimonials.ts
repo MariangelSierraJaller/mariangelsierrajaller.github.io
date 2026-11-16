@@ -47,7 +47,7 @@ export const ES_TESTIMONIALS: TestimonialsSectionCopy = {
       relationship: "Evaluación docente en Ingeniería de Sistemas e Industrial",
       highlight: "Doble competencia y disciplina analítica",
       quote:
-        "Mariangel sobresale por su notable disciplina para cursar en paralelo Ingeniería de Sistemas e Ingeniería Industrial. Aplica con naturalidad la optimización de procesos y el desarrollo de software a problemas de negocio reales, destacando siempre por su capacidad crítica y enfoque cuantitativo.",
+        "Mariangel sobresale por su notable disciplina al haberse graduado en doble titulación de Ingeniería de Sistemas e Ingeniería Industrial. Aplica con naturalidad la optimización de procesos y el desarrollo de software a problemas de negocio reales, destacando siempre por su capacidad crítica y enfoque cuantitativo.",
     },
     itmBioengineering: {
       id: "itmBioengineering",

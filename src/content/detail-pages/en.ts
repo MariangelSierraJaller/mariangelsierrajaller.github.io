@@ -232,13 +232,13 @@ export const EN_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     slug: "ingenieria-sistemas-san-jose",
     id: "sanJoseSystems",
     lang: "en",
-    eyebrow: "Higher Education · 2023 — 2026",
+    eyebrow: "Higher Education · 2023 — Jul 2026",
     title: "B.S. in Systems Engineering",
     subtitle:
-      "Comprehensive curriculum in software architecture, relational database management, data engineering, cloud systems, and algorithmic computation.",
+      "Graduated in July 2026. Comprehensive program in software architecture, relational database management, data engineering, cloud systems, and algorithmic computation.",
     meta: [
       { label: "Institution", value: "Fundación Universidad San José" },
-      { label: "Period", value: "2023 — 2026 (In progress)" },
+      { label: "Period", value: "2023 — Jul 2026 (Graduated)" },
       { label: "Degree Level", value: "Bachelor of Science" },
       { label: "Focus", value: "Technology, Software & Data Engineering" },
     ],
@@ -258,8 +258,8 @@ export const EN_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     outcomesTitle: "Practical Application & Outlook",
     outcomes: [
       { metric: "100%", label: "Direct applicability to real-world analytical pipelines and ERP integrations" },
-      { metric: "2026", label: "Projected year of professional graduation" },
-      { metric: "Dual Degree", label: "Simultaneous curricular articulation with Industrial Engineering" },
+      { metric: "Jul 2026", label: "Completed professional graduation at Fundación Universidad San José" },
+      { metric: "Dual Degree", label: "Graduated concurrently with Industrial Engineering and Systems Technology" },
     ],
     tools: [
       "Python",
@@ -292,13 +292,13 @@ export const EN_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     slug: "ingenieria-industrial-san-jose",
     id: "sanJoseIndustrial",
     lang: "en",
-    eyebrow: "Higher Education · 2023 — 2026",
+    eyebrow: "Higher Education · 2023 — Jul 2026",
     title: "B.S. in Industrial Engineering",
     subtitle:
-      "Operations optimization, supply chain management, quality assurance, operations research, and enterprise productivity modeling.",
+      "Graduated in July 2026. Operations optimization, supply chain management, quality assurance, operations research, and enterprise productivity modeling.",
     meta: [
       { label: "Institution", value: "Fundación Universidad San José" },
-      { label: "Period", value: "2023 — 2026 (In progress)" },
+      { label: "Period", value: "2023 — Jul 2026 (Graduated)" },
       { label: "Degree Level", value: "Bachelor of Science" },
       { label: "Focus", value: "Operations, Process Engineering & Supply Chain" },
     ],
@@ -318,7 +318,7 @@ export const EN_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     outcomesTitle: "Practical Application & Outlook",
     outcomes: [
       { metric: "Direct", label: "Immediate application to ASPAEN purchasing and inventory workflows" },
-      { metric: "2026", label: "Projected year of professional graduation" },
+      { metric: "Jul 2026", label: "Completed professional graduation at Fundación Universidad San José" },
       { metric: "Synergy", label: "Integration of process optimization with data-driven software tooling" },
     ],
     tools: [
@@ -334,7 +334,7 @@ export const EN_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     seo: {
       title: "Industrial Engineering | Fundación Universidad San José | Mariangel Sierra",
       description:
-        "Industrial Engineering degree pursued by Mariangel Sierra Jaller: supply chain, operations research, and continuous improvement.",
+        "Industrial Engineering degree earned by Mariangel Sierra Jaller (July 2026): supply chain, operations research, and continuous improvement.",
       keywords: [
         "Industrial Engineering",
         "San Jose University",
@@ -345,19 +345,75 @@ export const EN_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     },
   },
 
+  "tecnologia-sistemas-san-jose": {
+    collection: "education",
+    slug: "tecnologia-sistemas-san-jose",
+    id: "sanJoseSystemsTech",
+    lang: "en",
+    eyebrow: "Technology Degree · 2023 — Jul 2026",
+    title: "Technologist in Systems",
+    subtitle:
+      "Awarded in July 2026. Applied foundation in enterprise information systems, database management, networking, and operational software support.",
+    meta: [
+      { label: "Institution", value: "Fundación Universidad San José" },
+      { label: "Period", value: "2023 — Jul 2026 (Graduated)" },
+      { label: "Degree Level", value: "Higher Technology Degree" },
+      { label: "Focus", value: "IT Infrastructure, Networking & Databases" },
+    ],
+    overview: [
+      "As part of her tiered academic track at Fundación Universidad San José, Mariangel earned the Technologist in Systems credential in July 2026 concurrently with her Bachelor degrees.",
+      "The program solidifies practical mastery in relational database administration, corporate IT operations, application integration, and technical support.",
+      "This applied background directly anchors her daily administration of Oracle NetSuite and Python-based reporting pipelines at ASPAEN.",
+    ],
+    keyPointsTitle: "Core Subjects & Competencies",
+    keyPoints: [
+      "Relational database integrity management, indexing, and operational SQL querying.",
+      "Enterprise IT infrastructure support, operating systems, and organizational networking.",
+      "Business software integration and structured data interchange via XML and JSON.",
+      "Technical requirements documentation and quality assurance for enterprise workflows.",
+    ],
+    outcomesTitle: "Practical Application & Achievements",
+    outcomes: [
+      { metric: "Jul 2026", label: "Technology degree conferred by Fundación Universidad San José" },
+      { metric: "100%", label: "Direct articulation with ERP automation and ETL reporting workflows" },
+      { metric: "Tiered Track", label: "Applied foundation integrated directly with Systems Engineering" },
+    ],
+    tools: [
+      "SQL & Databases",
+      "Information Systems",
+      "XML / JSON",
+      "Python",
+      "IT Support",
+      "Git",
+    ],
+    relatedProjects: ["netsuiteEtlPipeline", "academicEngineeringSuite"],
+    seo: {
+      title: "Technologist in Systems | Fundación Universidad San José | Mariangel Sierra",
+      description:
+        "Technologist in Systems degree conferred to Mariangel Sierra Jaller by Fundación Universidad San José in July 2026.",
+      keywords: [
+        "Technologist in Systems",
+        "Systems Technology",
+        "San Jose University",
+        "Mariangel Sierra Jaller",
+        "SQL",
+      ],
+    },
+  },
+
   "ingenieria-biomedica-itm": {
     collection: "education",
     slug: "ingenieria-biomedica-itm",
     id: "itmBiomedical",
     lang: "en",
-    eyebrow: "Higher Education · 2023 — 2028",
+    eyebrow: "Third Engineering (In Progress) · 2023 — 2028",
     title: "B.S. in Biomedical Engineering",
     subtitle:
-      "Intersection of engineering sciences, medical instrumentation, biosignal processing, clinical technology management, and bioinformatics.",
+      "Advancing toward her third engineering credential: intersection of medical instrumentation, biosignal processing, clinical technology management, and bioinformatics.",
     meta: [
       { label: "Institution", value: "Institución Universitaria ITM" },
       { label: "Period", value: "2023 — 2028 (In progress)" },
-      { label: "Degree Level", value: "Bachelor of Science" },
+      { label: "Degree Level", value: "Bachelor of Science (3rd Engineering)" },
       { label: "Focus", value: "Biomedical Instrumentation & Clinical Systems" },
     ],
     overview: [

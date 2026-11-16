@@ -16,20 +16,20 @@ export const EN_ABOUT: AboutCopy = {
       subheading: "Strategic operations fueled by technical precision",
       paragraphs: [
         "I am Mariangel Sierra Jaller, an engineering professional driven by a conviction: what is measured can be optimized, and what is automated frees human intellect for strategic value.",
-        "With a dual foundation in Systems and Industrial Engineering—complemented by active studies in Biomedical Engineering—I bring a distinct cross-disciplinary approach. I bridge the gap between operational reality and software engineering, translating complex organizational requirements into scalable technical workflows.",
-        "Over three years at Asociación para la Enseñanza (ASPAEN), I have led procurement workflows, financial reconciliations, and internal audits while engineering Python ETL pipelines and Power BI intelligence suites that eliminated manual reporting overhead.",
+        "Graduated in July 2026 with dual B.S. degrees in Systems Engineering and Industrial Engineering plus a Technology degree in Systems from Fundación Universidad San José—alongside active studies toward my third engineering degree in Biomedical Engineering at ITM—I bridge operational governance and software engineering.",
+        "Over four years at Asociación para la Enseñanza (ASPAEN), I have led procurement workflows, financial reconciliations, and internal audits while engineering Python ETL pipelines and Power BI intelligence suites that eliminated manual reporting overhead.",
         "Whether standardizing multi-entity supply chains or deploying automated data ingestion pipelines, my objective remains constant: delivering resilience, audit-grade accuracy, and sustainable growth.",
       ],
       targetRoles: [
-        "Operations & Systems Engineer",
+        "Systems & Operations Engineer",
         "Operations Analytics Specialist",
         "ERP Technical Consultant",
         "Continuous Improvement Lead",
         "Business Process Engineer",
       ],
       stats: [
-        { label: "Experience", value: "3+ Years" },
-        { label: "Engineering Disciplines", value: "3 Programs" },
+        { label: "Experience", value: "4+ Years" },
+        { label: "San José Degrees", value: "Systems & Industrial" },
         { label: "ERP Ecosystems", value: "Oracle NetSuite" },
         { label: "Languages", value: "Spanish (Native) · English (B2)" },
       ],
@@ -106,7 +106,7 @@ export const EN_ABOUT: AboutCopy = {
   ],
   educationTitle: "Academic Trajectory",
   educationSubtitle:
-    "Six complementary programs combining software engineering, industrial management, financial accounting, and clinical systems.",
+    "Seven complementary credentials spanning Systems & Industrial Engineering (graduated Jul 2026), Systems Technology, accounting, software programming, and Biomedical Engineering.",
   inProgressLabel: "In Progress",
   viewDetailsLabel: "View Program Details",
   viewAllEducationLabel: "View Full Academic History",
@@ -115,23 +115,30 @@ export const EN_ABOUT: AboutCopy = {
 export const EN_EDUCATION: Record<EducationId, EducationCopyItem> = {
   sanJoseSystems: {
     id: "sanJoseSystems",
-    degree: "Bachelor of Science in Systems Engineering",
+    degree: "B.S. in Systems Engineering",
     summary:
-      "Comprehensive program focused on software architecture, data engineering, database management, and enterprise application integration.",
-    badges: ["In Progress", "Software Engineering", "Databases", "Distributed Systems"],
+      "Graduated in July 2026 with strong focus on software architecture, data engineering, relational databases, and enterprise application integration.",
+    badges: ["Graduated Jul 2026", "Software Engineering", "Databases", "Distributed Systems"],
   },
   sanJoseIndustrial: {
     id: "sanJoseIndustrial",
-    degree: "Bachelor of Science in Industrial Engineering",
+    degree: "B.S. in Industrial Engineering",
     summary:
-      "Comprehensive focus on operations research, supply chain optimization, continuous improvement, and quality management systems.",
-    badges: ["In Progress", "Operations Research", "Supply Chain", "Quality Systems"],
+      "Graduated in July 2026 focusing on operations research, supply chain optimization, continuous improvement, and quality management systems.",
+    badges: ["Graduated Jul 2026", "Operations Research", "Supply Chain", "Quality Systems"],
+  },
+  sanJoseSystemsTech: {
+    id: "sanJoseSystemsTech",
+    degree: "Technologist in Systems",
+    summary:
+      "Technology degree awarded in July 2026 covering systems administration, software implementation, networking, and enterprise database management.",
+    badges: ["Graduated Jul 2026", "Information Systems", "Application Logic", "Databases"],
   },
   itmBiomedical: {
     id: "itmBiomedical",
-    degree: "Bachelor of Science in Biomedical Engineering",
+    degree: "B.S. in Biomedical Engineering (3rd Engineering)",
     summary:
-      "Specializing in clinical engineering, health tech systems, bioinstrumentation, and hospital equipment management.",
+      "Active studies toward a third engineering degree, specializing in clinical engineering, health tech systems, bioinstrumentation, and hospital equipment management.",
     badges: ["In Progress", "Clinical Systems", "Medical Devices", "Bioinformatics"],
   },
   itmAccountingTech: {

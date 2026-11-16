@@ -4,7 +4,7 @@ export const EN_JOURNEY: JourneyCopy = {
   eyebrow: "Evolutionary Roadmap & Methodology",
   title: "Career Trajectory & Convergence Map",
   subtitle:
-    "From software development logic and operational-accounting leadership at ASPAEN to a triple degree across Systems, Industrial, and Biomedical Engineering.",
+    "From SENA software programming and accounting operations at ASPAEN to graduating in Systems Engineering, Industrial Engineering & Systems Tech (Jul 2026), advancing toward Biomedical Engineering.",
   tabs: {
     map: {
       label: "Transit Lines",
@@ -321,10 +321,10 @@ export const EN_JOURNEY: JourneyCopy = {
       id: "node-grad-sanjose-2026",
       year: 2026,
       line: "education",
-      station: "Professional Graduation",
-      label: "B.S. in Systems + Industrial Engineering",
+      station: "July 2026 Graduation — San José",
+      label: "Systems + Industrial Eng. + Systems Tech",
       detail:
-        "Graduation from Fundación Universidad San José with recognized capstone projects in ERP process optimization and automated financial reconciliations.",
+        "Completed graduation in July 2026 at Fundación Universidad San José with dual B.S. Engineering degrees and a Technologist in Systems diploma.",
       link: {
         kind: "detail",
         collection: "education",
@@ -503,51 +503,50 @@ export const EN_JOURNEY: JourneyCopy = {
   ],
   horizonMilestones: [
     {
-      period: "2026-Q2",
-      title: "Dual B.S. Graduation in Systems & Industrial Engineering",
-      focus: "hybrid",
-      description:
-        "Official degree conferral from Fundación Universidad San José, verifying advanced skills in operations research, systems architecture, and ERP optimization.",
-      outcomes: [
-        "Presentation of capstone research in ERP workflow optimization and automated bank reconciliations",
-        "Formal credential accreditation with professional engineering regulatory bodies",
-        "Systematic rollout of CRISP-DM methodology for continuous educational analytics",
-      ],
-    },
-    {
       period: "2026-Q4",
-      title: "Data Lakehouse Ecosystem & Continuous Budget Forecasting",
+      title: "Data Lakehouse Ecosystem & Treasury Forecasting",
       focus: "tech",
       description:
-        "Expansion of data ingestion pipelines into a decoupled analytical lakehouse, coupling automated NetSuite extraction with predictive treasury forecasting models.",
+        "Expansion of Oracle NetSuite data pipelines into a decoupled analytical store with time-series treasury forecasting following July 2026 graduation.",
       outcomes: [
         "End-to-end ingestion pipeline from NetSuite REST/SOAP APIs to PostgreSQL/DuckDB storage",
-        "Time-series models for school tuition collections forecasting with >95% confidence intervals",
+        "Budget variance and cash-flow forecasting models with >95% statistical confidence",
         "Zero manual discrepancies between billing subledgers and external bank statements",
       ],
     },
     {
-      period: "2027-Q3",
+      period: "2027-Q2",
       title: "Clinical Engineering & Hospital Asset Metrology Architecture",
       focus: "tech",
       description:
-        "Architecting a comprehensive clinical equipment lifecycle framework bridging health regulations (INVIMA/FDA) with inventory management and ERP fixed asset tracking.",
+        "Architecting a clinical equipment lifecycle framework bridging health regulations (INVIMA/FDA) with ERP fixed asset and inventory tracking.",
       outcomes: [
         "Digital metrology traceability matrix for high-risk critical care medical devices",
-        "Prototype biosignal analysis software for clinical equipment telemonitoring",
-        "Standardized technovigilance feedback loops integrated into hospital supply chains",
+        "Prototype Python biosignal processing utilities for clinical equipment telemonitoring",
+        "Standardized technovigilance feedback loops integrated into clinical supply chains",
+      ],
+    },
+    {
+      period: "2027-Q4",
+      title: "Healthcare Interoperability & Operations Analytics",
+      focus: "hybrid",
+      description:
+        "Applying combined Systems, Industrial, and Biomedical foundations to optimize specialized procurement and health-tech information flows.",
+      outcomes: [
+        "Standardized critical hospital inventory replenishment policies",
+        "Operational reliability dashboards bridging clinical assets and ERP financials",
       ],
     },
     {
       period: "2028-Q4",
-      title: "B.S. in Biomedical Engineering & Healthcare Leadership",
+      title: "Third Engineering Degree: B.S. in Biomedical Engineering (ITM)",
       focus: "hybrid",
       description:
-        "Conferral of Biomedical Engineering degree from ITM University Institution, completing the strategic triple-engineering convergence across systems, processes, and healthcare.",
+        "Conferral of Biomedical Engineering at ITM, completing her third engineering degree across Systems, Industrial, and Biomedical disciplines.",
       outcomes: [
-        "Capstone project completion in clinical engineering interoperability and hospital intelligence",
-        "Executive readiness for digital transformation leadership in hospital networks and medtech enterprises",
-        "Unique cross-disciplinary profile uniting ERP systems, advanced analytics, and bioengineering",
+        "Capstone completion in clinical engineering interoperability and hospital intelligence",
+        "Leadership readiness for digital transformation in healthcare networks and enterprise tech",
+        "Triple engineering credential uniting ERP systems, advanced analytics, and bioengineering",
       ],
     },
   ],

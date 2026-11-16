@@ -37,10 +37,10 @@ export const EN_ASSISTANT_KB: AssistantKnowledgeBase = {
         "about",
       ],
       answer:
-        "Mariangel Johanna Sierra Jaller is a Medellín-based professional with 3+ years of experience bridging operational governance, corporate procurement, and treasury management with modern data analytics and software engineering. She currently oversees procurement, bank reconciliations, and ERP automation at ASPAEN using Oracle NetSuite. Concurrently, she is pursuing triple engineering credentials in Systems Engineering, Industrial Engineering (San José), and Biomedical Engineering (ITM).",
+        "Mariangel Johanna Sierra Jaller is a Medellín-based Systems Engineer, Industrial Engineer, and Systems Technologist (graduated July 2026 at Fundación Universidad San José), currently advancing toward her third engineering degree in Biomedical Engineering (ITM). With 4+ years of experience at ASPAEN, she oversees procurement, bank reconciliations, and ERP automation using Oracle NetSuite, Python, and Power BI.",
       highlights: [
         "Leads procurement, treasury, and operational analytics at ASPAEN (Medellín).",
-        "Triple engineering background: Systems, Industrial (San José), and Biomedical (ITM).",
+        "Graduated in Systems Eng., Industrial Eng. & Systems Tech (San José, Jul 2026) + Biomedical at ITM.",
         "Specialist in Oracle NetSuite, Python (Pandas), Power BI (DAX), and financial automation.",
       ],
       links: [
@@ -279,10 +279,10 @@ export const EN_ASSISTANT_KB: AssistantKnowledgeBase = {
         "accounting technician",
       ],
       answer:
-        "Mariangel possesses a rigorous, interdisciplinary educational profile: she is enrolled in a dual degree in Systems Engineering & Industrial Engineering at Fundación Universidad San José (2023–2026) and concurrently pursues a B.S. in Biomedical Engineering at ITM (2023–2028). Additionally, she holds vocational technical degrees in Accounting & Financial Assistance (ITM, 2022–2023) and Software Programming (SENA, 2020–2021), preceded by an Informatics high school diploma (INEM, 2019–2021).",
+        "Mariangel holds a rigorous multidisciplinary education: she graduated in July 2026 with dual B.S. degrees in Systems Engineering and Industrial Engineering plus a Technology degree in Systems at Fundación Universidad San José (2023–Jul 2026), and is pursuing her third engineering degree in Biomedical Engineering at ITM (2023–2028). She also holds technical degrees in Accounting & Financial Assistance (ITM, 2022–2023), Software Programming (SENA, 2020–2021), and Computer Science (INEM, 2019–2021).",
       highlights: [
-        "B.S. in Systems Engineering & Industrial Engineering (San José, 2023–2026).",
-        "B.S. in Biomedical Engineering (Institución Universitaria ITM, 2023–2028).",
+        "B.S. Systems Eng., B.S. Industrial Eng. & Systems Tech — San José (Graduated Jul 2026).",
+        "B.S. in Biomedical Engineering (3rd Engineering in progress, ITM 2023–2028).",
         "Vocational degrees in Accounting (ITM) and Software Programming (SENA).",
       ],
       links: [

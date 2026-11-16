@@ -46,9 +46,9 @@ export const ES_HIGHLIGHTS: Record<RoleId, readonly HighlightCard[]> = {
     },
     {
       id: "engineerings",
-      value: "3",
-      label: "Ingenierías en Curso",
-      hint: "Sistemas, Industrial y Biomédica (San José & ITM)",
+      value: "2 + 1",
+      label: "Ingenierías y Tecnología",
+      hint: "Ing. de Sistemas e Industrial (Jul 2026) + Biomédica ITM en curso",
     },
     {
       id: "erp-analytics",
@@ -85,7 +85,7 @@ export const ES_HIGHLIGHTS: Record<RoleId, readonly HighlightCard[]> = {
     {
       id: "industrial-eng",
       value: "Ing. Industrial",
-      label: "Formación en Curso",
+      label: "Titulación Jul 2026",
       hint: "Optimización de procesos y cadena de suministro",
     },
   ],
@@ -104,9 +104,9 @@ export const ES_HIGHLIGHTS: Record<RoleId, readonly HighlightCard[]> = {
     },
     {
       id: "tech-engineerings",
-      value: "2 Ingenierías TI",
+      value: "Ing. + Tec. TI",
       label: "Sistemas & Biomédica",
-      hint: "Fundación Universidad San José e Institución ITM",
+      hint: "Ing. de Sistemas & Tec. San José (2026) + Biomédica ITM",
     },
     {
       id: "crisp-dm",

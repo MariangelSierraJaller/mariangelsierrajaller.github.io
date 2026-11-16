@@ -47,7 +47,7 @@ export const EN_UI: UiCopy = {
     educationIndexLabel: "Academic Trajectory",
     certificationsIndexLabel: "Certifications",
     rights: "All rights reserved.",
-    builtWith: "Engineered with Astro, React & Tailwind CSS",
+    builtWith: "Engineered with Astro, SolidJS & Tailwind CSS",
     updatedLabel: "Updated November 2026",
   },
   whatsappFloatLabel: "Chat on WhatsApp",
@@ -58,10 +58,10 @@ export const EN_UI: UiCopy = {
 
 export const EN_SEO: SeoCopy = {
   personJobTitle: [
+    "Systems Engineer",
+    "Industrial Engineer",
     "Operations & Financial Analyst",
-    "Systems & Industrial Engineer",
     "Business Intelligence Specialist",
-    "Process Automation Specialist",
   ],
   personDescription:
     "Mariangel Sierra Jaller is an operations, financial control, and systems engineering professional based in Medellín, Colombia, specializing in Oracle NetSuite, Python automation, and Power BI analytics.",

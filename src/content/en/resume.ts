@@ -39,7 +39,7 @@ export const EN_RESUME: ResumeSectionCopy = {
     },
     ats: {
       id: "ats" as ResumeVariantId,
-      label: "ATS-Optimized Comprehensive CV",
+      label: "ATS Format",
       badge: "Single-Column Plain Text",
       description:
         "Clean, machine-readable format designed for applicant tracking systems (Workday, Taleo, Greenhouse) without complex layouts.",

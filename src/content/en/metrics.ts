@@ -97,14 +97,14 @@ export const EN_METRICS: MetricsSectionCopy = {
         "Continuous pursuit of high-impact engineering and technological competencies.",
       items: [
         {
-          label: "Engineering Disciplines",
-          value: "3",
-          detail: "Systems Engineering, Industrial Engineering, and Biomedical Engineering",
+          label: "Engineering & Tech Degrees",
+          value: "2 + 1",
+          detail: "Graduated Systems, Industrial & Systems Tech (Jul 2026) + Biomedical at ITM",
         },
         {
-          label: "Higher Education Programs",
-          value: "6",
-          detail: "From foundational computer science to advanced engineering degrees",
+          label: "Academic Credentials",
+          value: "7",
+          detail: "Dual engineering degrees, Systems Tech, accounting & software certificates",
         },
         {
           label: "Spoken Languages",

@@ -50,7 +50,7 @@ export const EN_TESTIMONIALS: TestimonialsSectionCopy = {
       relationship: "Academic Faculty & Mentorship",
       highlight: "Analytical synthesis & systems modeling",
       quote:
-        "Mariangel demonstrates remarkable analytical capacity in both Systems and Industrial Engineering courses. She excels at bridging theoretical process modeling with practical software implementations, showcasing the maturity and discipline required for high-impact engineering leadership.",
+        "Mariangel demonstrated remarkable analytical discipline in earning dual degrees in Systems and Industrial Engineering. She excels at bridging theoretical process modeling with practical software implementations, showcasing the maturity required for high-impact engineering leadership.",
     },
     itmBioengineering: {
       id: "itmBioengineering" as TestimonialId,

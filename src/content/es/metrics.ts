@@ -93,9 +93,9 @@ export const ES_METRICS: MetricsSectionCopy = {
       subtitle: "Compromiso académico riguroso en múltiples ramas de ingeniería y tecnología",
       items: [
         {
-          label: "Ingenierías cursadas en paralelo",
-          value: "3",
-          detail: "Ingeniería de Sistemas, Ingeniería Industrial e Ingeniería Biomédica",
+          label: "Ingenierías y Tecnología",
+          value: "2 + 1",
+          detail: "Titulada en Sistemas, Industrial y Tec. Sistemas (Jul 2026) + Biomédica ITM",
         },
         {
           label: "Años continuos de experiencia práctica",

@@ -12,7 +12,7 @@ export const ES_ABOUT: AboutCopy = {
       subheading: "Uniendo la visión de negocio con la precisión computacional",
       paragraphs: [
         "Soy Mariangel Sierra Jaller. Desde que inicié mi trayectoria profesional en 2022 en ASPAEN, descubrí que la verdadera eficiencia se alcanza cuando los procesos administrativos se entienden a fondo y se potencian mediante herramientas tecnológicas.",
-        "Mi formación simultánea en Ingeniería de Sistemas, Ingeniería Industrial y Bioingeniería me brinda una perspectiva transversal: diagnostico cuellos de botella operativos como ingeniera industrial y construyo pipelines y soluciones automatizadas como ingeniera de sistemas.",
+        "Graduada en julio de 2026 como Ingeniera de Sistemas, Ingeniera Industrial y Tecnóloga en Sistemas en la Fundación Universidad San José —complementada con mi avance hacia la tercera ingeniería en Ingeniería Biomédica en el ITM—, diagnostico cuellos de botella operativos con criterio industrial y construyo pipelines automatizados con rigor de sistemas.",
         "He liderado el ciclo de compras, el control de tesorería y la auditoría interna apoyada en el ERP Oracle NetSuite, mientras desarrollo scripts en Python y tableros interactivos en Power BI que reducen drásticamente la carga manual de trabajo.",
         "Mi meta es continuar conectando personas, procesos y datos para transformar organizaciones hacia modelos de gestión ágiles, auditables y orientados a la toma de decisiones informadas.",
       ],
@@ -20,11 +20,11 @@ export const ES_ABOUT: AboutCopy = {
         "Especialista en Operaciones ERP",
         "Analista de Procesos y Datos",
         "Coordinadora de Compras y Finanzas",
-        "Ingeniera de Datos Junior / BI",
+        "Ingeniera de Datos / BI",
       ],
       stats: [
         { label: "Experiencia Práctica", value: "4+ Años" },
-        { label: "Programas de Ingeniería", value: "3 Carreras" },
+        { label: "Titulación San José", value: "Sistemas e Industrial" },
         { label: "ERP Corporativo", value: "Oracle NetSuite" },
         { label: "Idiomas", value: "EN (B2) · ES (Nativo)" },
       ],
@@ -57,8 +57,8 @@ export const ES_ABOUT: AboutCopy = {
       paragraphs: [
         "Entiendo el software como la herramienta definitiva para resolver problemas de negocio reales. No concibo la analítica como un fin estético, sino como un motor de decisiones fundamentadas en datos fiables y actualizados.",
         "En mi labor técnica, he diseñado y puesto en producción pipelines ETL con Python (Pandas) que extraen miles de registros desde Oracle NetSuite, depurando inconsistencias y cargándolos en modelos dimensionales de Power BI.",
-        "Mi formación técnica en desarrollo de software (SENA) y mi actual formación universitaria en Ingeniería de Sistemas me permiten estructurar bases de datos relacionales con SQL, modelar métricas complejas con DAX y conectar flujos de trabajo mediante formatos abiertos XML y JSON.",
-        "Asimismo, mi avance en Ingeniería Biomédica fortalece mi rigor en estándares clínicos, procesamiento de señales y cumplimiento normativo en entornos de alta exigencia tecnológica.",
+        "Mi titulación como Ingeniera de Sistemas y Tecnóloga en Sistemas (San José, julio de 2026) junto a mi formación técnica en software (SENA) me respaldan para estructurar bases de datos relacionales SQL, modelar métricas DAX e integrar flujos XML y JSON.",
+        "Asimismo, mi avance hacia la tercera ingeniería en Ingeniería Biomédica en el ITM fortalece mi rigor en estándares clínicos, procesamiento de señales y cumplimiento normativo en entornos de alta exigencia tecnológica.",
       ],
       targetRoles: [
         "Analista de Datos / BI Developer",
@@ -84,7 +84,7 @@ export const ES_ABOUT: AboutCopy = {
     {
       title: "Ingeniería y Rigor Metodológico",
       description:
-        "Formación simultánea en Ingeniería de Sistemas, Industrial y Biomédica que aporta disciplina de procesos, modelado de sistemas y pensamiento analítico.",
+        "Doble titulación profesional en Ingeniería de Sistemas e Industrial, Tecnología en Sistemas y avance en Ingeniería Biomédica para modelar sistemas complejos.",
     },
     {
       title: "Automatización y Analítica Práctica",
@@ -110,22 +110,29 @@ export const ES_EDUCATION: Record<EducationId, EducationCopyItem> = {
     id: "sanJoseSystems",
     degree: "Ingeniería de Sistemas",
     summary:
-      "Formación universitaria enfocada en arquitectura de software, bases de datos relacionales, analítica computacional e ingeniería de requerimientos.",
-    badges: ["Arquitectura de Software", "Bases de Datos & SQL", "Analítica Computacional", "En Curso"],
+      "Título profesional obtenido en julio de 2026, enfocado en arquitectura de software, bases de datos relacionales, analítica computacional e ingeniería de requerimientos.",
+    badges: ["Arquitectura de Software", "Bases de Datos & SQL", "Analítica Computacional", "Titulada Jul 2026"],
   },
   sanJoseIndustrial: {
     id: "sanJoseIndustrial",
     degree: "Ingeniería Industrial",
     summary:
-      "Especialización en optimización de procesos productivos, gestión de la cadena de suministro, control de operaciones, logística y cuadros de mando.",
-    badges: ["Optimización de Procesos", "Cadena de Suministro", "Control de Calidad & KPIs", "En Curso"],
+      "Título profesional obtenido en julio de 2026, orientado a la optimización de procesos, gestión de la cadena de suministro, control de operaciones y cuadros de mando.",
+    badges: ["Optimización de Procesos", "Cadena de Suministro", "Control de Calidad & KPIs", "Titulada Jul 2026"],
+  },
+  sanJoseSystemsTech: {
+    id: "sanJoseSystemsTech",
+    degree: "Tecnología en Sistemas",
+    summary:
+      "Titulación tecnológica otorgada en julio de 2026 en gestión de infraestructura, redes, desarrollo de aplicaciones y administración de sistemas de información empresariales.",
+    badges: ["Sistemas de Información", "Desarrollo de Aplicaciones", "Redes & Bases de Datos", "Titulada Jul 2026"],
   },
   itmBiomedical: {
     id: "itmBiomedical",
-    degree: "Ingeniería Biomédica",
+    degree: "Ingeniería Biomédica (Tercera Ingeniería)",
     summary:
-      "Estudio interdisciplinario enfocado en software clínico, procesamiento de bioseñales, tecnovigilancia y gestión de tecnología hospitalaria.",
-    badges: ["Software Clínico", "Gestión Hospitalaria", "Instrumentación Médica", "En Curso"],
+      "Formación interdisciplinaria en curso hacia mi tercer título de ingeniería, enfocada en software clínico, procesamiento de bioseñales, tecnovigilancia y tecnología hospitalaria.",
+    badges: ["Software Clínico", "Gestión Hospitalaria", "Instrumentación Médica", "En curso"],
   },
   itmAccountingTech: {
     id: "itmAccountingTech",

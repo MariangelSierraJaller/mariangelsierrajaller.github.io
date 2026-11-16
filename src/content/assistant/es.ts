@@ -37,10 +37,10 @@ export const ES_ASSISTANT_KB: AssistantKnowledgeBase = {
         "sobre mi",
       ],
       answer:
-        "Mariangel Johanna Sierra Jaller es una profesional basada en Medellín con más de 3 años de trayectoria conectando la gestión operativa, compras y tesorería con analítica moderna de datos e ingeniería de software. Actualmente lidera compras, conciliaciones bancarias y automatización de procesos sobre Oracle NetSuite en ASPAEN. Cursa de forma simultánea carreras en Ingeniería de Sistemas, Ingeniería Industrial (Fundación Universidad San José) e Ingeniería Biomédica (ITM).",
+        "Mariangel Johanna Sierra Jaller es Ingeniera de Sistemas, Ingeniera Industrial y Tecnóloga en Sistemas (titulada en julio de 2026 en la Fundación Universidad San José), además de avanzar hacia su tercera ingeniería en Ingeniería Biomédica (ITM). Con más de 4 años de experiencia en Medellín, lidera compras, conciliaciones bancarias y automatización de procesos sobre Oracle NetSuite en ASPAEN.",
       highlights: [
         "Lidera compras, tesorería y analítica operativa en ASPAEN (Medellín).",
-        "Triple formación en ingeniería: Sistemas, Industrial (San José) y Biomédica (ITM).",
+        "Graduada en Sistemas, Industrial y Tecnología en Sistemas (San José, Jul 2026) + Biomédica ITM en curso.",
         "Especialista en Oracle NetSuite, Python (Pandas), Power BI (DAX) y automatización contable.",
       ],
       links: [
@@ -282,10 +282,10 @@ export const ES_ASSISTANT_KB: AssistantKnowledgeBase = {
         "tecnico contable",
       ],
       answer:
-        "Mariangel cuenta con un perfil educativo riguroso y multifacético: cursa doble titulación en Ingeniería de Sistemas e Ingeniería Industrial en la Fundación Universidad San José (2023–2026) y de forma complementaria cursa Ingeniería Biomédica en el ITM (2023–2028). Además, está graduada como Técnica en Auxiliar Contable y Financiero (ITM, 2022–2023), Técnica en Programación de Software (SENA, 2020–2021) y Bachiller Técnica en Informática (INEM, 2019–2021).",
+        "Mariangel cuenta con una sólida trayectoria académica multidisciplinaria: se graduó en julio de 2026 como Ingeniera de Sistemas, Ingeniera Industrial y Tecnóloga en Sistemas en la Fundación Universidad San José (2023–Jul 2026), y avanza hacia su tercera ingeniería en Ingeniería Biomédica en el ITM (2023–2028). Adicionalmente, es Técnica en Auxiliar Contable y Financiero (ITM, 2022–2023), Técnica en Programación de Software (SENA, 2020–2021) y Bachiller Técnica en Informática (INEM, 2019–2021).",
       highlights: [
-        "Ing. de Sistemas e Ing. Industrial (Fundación Universidad San José, 2023–2026).",
-        "Ingeniería Biomédica (Institución Universitaria ITM, 2023–2028).",
+        "Ing. de Sistemas, Ing. Industrial y Tecnología en Sistemas — San José (Graduada Jul 2026).",
+        "Ingeniería Biomédica (Tercera ingeniería en curso, ITM 2023–2028).",
         "Titulaciones técnicas en Contabilidad (ITM) y Programación de Software (SENA).",
       ],
       links: [

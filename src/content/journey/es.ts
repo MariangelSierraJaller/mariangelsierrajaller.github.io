@@ -4,7 +4,7 @@ export const ES_JOURNEY: JourneyCopy = {
   eyebrow: "Ruta de Evolución & Metodología",
   title: "Mapa de Trayectoria & Convergencia",
   subtitle:
-    "De la lógica de desarrollo de software y la gestión contable-operativa en ASPAEN a la triple formación en Ingeniería de Sistemas, Industrial y Biomédica.",
+    "De la lógica de programación SENA y la gestión contable-operativa en ASPAEN a la titulación en Ingeniería de Sistemas, Industrial y Tecnología (Jul 2026), proyectada hacia Ingeniería Biomédica.",
   tabs: {
     map: {
       label: "Líneas de Tránsito",
@@ -321,10 +321,10 @@ export const ES_JOURNEY: JourneyCopy = {
       id: "node-grad-sanjose-2026",
       year: 2026,
       line: "education",
-      station: "Graduación Profesional",
-      label: "Ing. de Sistemas + Ing. Industrial",
+      station: "Graduación Julio 2026 — San José",
+      label: "Ing. Sistemas + Industrial + Tec. Sistemas",
       detail:
-        "Culminación de la doble ingeniería en Fundación Universidad San José con honores por proyectos de optimización ERP.",
+        "Titulación completada en julio de 2026 en Fundación Universidad San José con doble grado profesional en Ingeniería y título tecnológico en Sistemas.",
       link: {
         kind: "detail",
         collection: "education",
@@ -503,51 +503,50 @@ export const ES_JOURNEY: JourneyCopy = {
   ],
   horizonMilestones: [
     {
-      period: "2026-Q2",
-      title: "Graduación Dual en Ingeniería de Sistemas e Industrial",
-      focus: "hybrid",
-      description:
-        "Titulación profesional en Fundación Universidad San José, consolidando la capacidad formal de optimización de operaciones y diseño de arquitectura informática corporativa.",
-      outcomes: [
-        "Presentación de trabajo de grado en optimización de flujos ERP y conciliación automatizada",
-        "Validación formal de competencias profesionales ante el Colegio Colombiano de Ingenieros",
-        "Implementación del marco CRISP-DM en proyectos de analítica presupuestal continua",
-      ],
-    },
-    {
       period: "2026-Q4",
-      title: "Ecosistema Data Lakehouse & Forecast Presupuestal Continuo",
+      title: "Consolidación Data Lakehouse & Forecast Financiero",
       focus: "tech",
       description:
-        "Ampliación del pipeline de datos hacia un almacenamiento analítico desacoplado con integración de modelos de series de tiempo para predicción de flujos de tesorería.",
+        "Ampliación del pipeline de datos desde Oracle NetSuite hacia almacenamiento analítico desacoplado con series de tiempo tras la titulación de julio 2026.",
       outcomes: [
         "Automatización integral de ingesta desde NetSuite REST/SOAP APIs a PostgreSQL/DuckDB",
-        "Modelos de pronóstico de ingresos escolares con bandas de confianza superiores al 95%",
+        "Modelos de pronóstico presupuestal y de tesorería con validación estadística continua",
         "Reducción a cero de inconsistencias manuales entre módulos de facturación y extractos bancarios",
       ],
     },
     {
-      period: "2027-Q3",
+      period: "2027-Q2",
       title: "Arquitectura de Gestión Tecnológica y Metrología Hospitalaria",
       focus: "tech",
       description:
-        "Desarrollo e implementación de un modelo de ciclo de vida de equipamiento clínico conectando normatividad biomédica (INVIMA) con sistemas de control de compras y activos fijos.",
+        "Diseño e implementación de modelos de ciclo de vida de equipamiento clínico conectando normatividad biomédica (INVIMA) con control de activos ERP.",
       outcomes: [
-        "Diseño de matriz digital de trazabilidad metrológica para equipos de soporte vital",
-        "Prototipo de software de procesamiento digital de señales fisiológicas para monitorización",
-        "Integración de protocolos de tecnovigilancia con la cadena de suministro hospitalaria",
+        "Matriz digital de trazabilidad metrológica para equipos de soporte vital",
+        "Prototipo de software de procesamiento digital de señales fisiológicas en Python",
+        "Integración de protocolos de tecnovigilancia con la cadena de suministro clínico",
+      ],
+    },
+    {
+      period: "2027-Q4",
+      title: "Interoperabilidad Clínica & Analítica Hospitalaria",
+      focus: "hybrid",
+      description:
+        "Integración de capacidades de Ingeniería de Sistemas, Ingeniería Industrial y Bioingeniería para sistemas de información y compras clínicas.",
+      outcomes: [
+        "Estandarización de flujos hospitalarios e inventarios críticos mediante estándares internacionales",
+        "Integración de telemetría clínica e indicadores de confiabilidad operacional",
       ],
     },
     {
       period: "2028-Q4",
-      title: "Graduación en Ingeniería Biomédica & Liderazgo de Transformación",
+      title: "Tercera Ingeniería: Graduación en Ingeniería Biomédica ITM",
       focus: "hybrid",
       description:
-        "Titulación como Ingeniera Biomédica en ITM Institución Universitaria, cerrando la convergencia estratégica entre sistemas de información, eficiencia industrial y salud.",
+        "Culminación de su tercer título de ingeniería en Institución Universitaria ITM, cerrando la convergencia entre Sistemas, Industrial y Biomédica.",
       outcomes: [
         "Grado profesional con proyecto en ingeniería clínica e interoperabilidad hospitalaria",
-        "Capacidad de liderazgo directivo en empresas de salud, aseguradoras y multinacionales tecnológicas",
-        "Perfil multidisciplinario único en Colombia combinando ERP, analítica avanzada y bioingeniería",
+        "Capacidad de liderazgo técnico-directivo en salud, fintech y multinacionales tecnológicas",
+        "Triple titulación en ingeniería combinando ERP, analítica avanzada y bioingeniería",
       ],
     },
   ],

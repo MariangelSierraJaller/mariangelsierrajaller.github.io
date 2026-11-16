@@ -30,6 +30,7 @@ export type ExperienceId = (typeof EXPERIENCE_IDS)[number];
 export const EDUCATION_IDS = [
   "sanJoseSystems",
   "sanJoseIndustrial",
+  "sanJoseSystemsTech",
   "itmBiomedical",
   "itmAccountingTech",
   "senaSoftware",
