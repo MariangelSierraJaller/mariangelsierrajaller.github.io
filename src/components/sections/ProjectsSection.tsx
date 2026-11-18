@@ -125,21 +125,36 @@ export const ProjectsSection: Component = () => {
 
         <a
           href={buildProjectsIndexPath(lang(), role(), locked())}
-          class="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+          class="inline-flex min-h-[36px] shrink-0 items-center gap-1.5 whitespace-nowrap py-1.5 font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
         >
           <span>{projCopy().viewAllLabel}</span>
           <ArrowRightIcon size={14} />
         </a>
       </div>
 
-      {/* 6 Project Cards Grid */}
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {/* Symmetrical Project Cards Grid */}
+      <div
+        class={`grid gap-6 md:grid-cols-2 ${
+          filteredProjects().length === 4
+            ? ""
+            : filteredProjects().length === 5
+              ? "lg:grid-cols-6"
+              : "lg:grid-cols-3"
+        }`}
+      >
         <For each={filteredProjects()}>
-          {(shared) => {
+          {(shared, idx) => {
             const summary = () => getProjectSummary(lang(), shared.id);
             const isFeatured = () => shared.id === featuredId();
+            const spanClass = () => {
+              if (filteredProjects().length !== 5) return "";
+              if (idx() < 2) return "lg:col-span-3";
+              return idx() === 4 ? "md:col-span-2 lg:col-span-2" : "lg:col-span-2";
+            };
             return (
-              <article class="flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover-glow">
+              <article
+                class={`flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover-glow ${spanClass()}`}
+              >
                 <div>
                   <div class="flex items-start justify-between gap-2">
                     <span class="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--color-accent)]">
@@ -172,10 +187,10 @@ export const ProjectsSection: Component = () => {
 
                 <div class="mt-5 space-y-4">
                   <TechList items={summary().tags} limit={4} />
-                  <div class="border-t border-[var(--color-border)] pt-3">
+                  <div class="border-t border-[var(--color-border)] pt-2">
                     <a
                       href={buildProjectPath(lang(), shared.slug, role(), locked())}
-                      class="inline-flex items-center gap-1.5 whitespace-nowrap font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                      class="inline-flex min-h-[36px] items-center gap-1.5 whitespace-nowrap py-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
                     >
                       <span>{projCopy().viewCaseLabel}</span>
                       <ArrowRightIcon size={13} />

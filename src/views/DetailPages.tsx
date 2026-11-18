@@ -32,7 +32,7 @@ export const DetailIndexView: Component<{ collection: DetailCollection }> = (pro
     <div class="mx-auto max-w-6xl px-5 py-14 sm:px-6 sm:py-20">
       <a
         href={withRoleQuery(buildHomePath(lang(), role()), undefined, locked())}
-        class="inline-flex items-center gap-2 font-mono text-xs text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+        class="inline-flex min-h-[36px] items-center gap-2 py-1.5 font-mono text-xs text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
       >
         <ArrowLeftIcon size={14} />
         <span>{ui().backToPortfolio}</span>
@@ -50,36 +50,45 @@ export const DetailIndexView: Component<{ collection: DetailCollection }> = (pro
         </p>
       </header>
 
-      <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <div class={`mt-10 grid gap-6 ${items().length === 7 ? "md:grid-cols-12" : "md:grid-cols-2"}`}>
         <For each={items()}>
-          {(item) => (
-            <article class="flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover-glow">
-              <div>
-                <p class="font-mono text-xs text-[var(--color-accent)]">{item.eyebrow}</p>
-                <h2 class="mt-2 font-display text-2xl text-[var(--color-fg)]">{item.title}</h2>
-                <p class="mt-1 text-sm text-[var(--color-primary)]">{item.subtitle}</p>
-                <p class="mt-3 text-sm leading-relaxed text-[var(--color-fg-muted)]">
-                  {item.overview[0]}
-                </p>
-              </div>
-              <div class="mt-6 space-y-4">
-                <TechList items={item.tools} limit={5} />
-                <a
-                  href={buildDetailItemPath(
-                    lang(),
-                    props.collection,
-                    item.slug,
-                    role(),
-                    locked(),
-                  )}
-                  class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
-                >
-                  <span>{ui().viewEntryLabel}</span>
-                  <ArrowRightIcon size={13} />
-                </a>
-              </div>
-            </article>
-          )}
+          {(item, idx) => {
+            const spanClass = () => {
+              if (items().length !== 7) return "";
+              if (idx() < 4) return "md:col-span-6";
+              return idx() === 6 ? "md:col-span-12 lg:col-span-4" : "md:col-span-6 lg:col-span-4";
+            };
+            return (
+              <article
+                class={`flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover-glow ${spanClass()}`}
+              >
+                <div>
+                  <p class="font-mono text-xs text-[var(--color-accent)]">{item.eyebrow}</p>
+                  <h2 class="mt-2 font-display text-2xl text-[var(--color-fg)]">{item.title}</h2>
+                  <p class="mt-1 text-sm text-[var(--color-primary)]">{item.subtitle}</p>
+                  <p class="mt-3 text-sm leading-relaxed text-[var(--color-fg-muted)]">
+                    {item.overview[0]}
+                  </p>
+                </div>
+                <div class="mt-6 space-y-4">
+                  <TechList items={item.tools} limit={5} />
+                  <a
+                    href={buildDetailItemPath(
+                      lang(),
+                      props.collection,
+                      item.slug,
+                      role(),
+                      locked(),
+                    )}
+                    class="inline-flex min-h-[36px] items-center gap-1.5 py-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                  >
+                    <span>{ui().viewEntryLabel}</span>
+                    <ArrowRightIcon size={13} />
+                  </a>
+                </div>
+              </article>
+            );
+          }}
         </For>
       </div>
     </div>
@@ -112,7 +121,7 @@ export const DetailItemView: Component<{
       <div class="flex flex-wrap items-center gap-3 font-mono text-xs text-[var(--color-primary)]">
         <a
           href={withRoleQuery(buildHomePath(lang(), role()), undefined, locked())}
-          class="inline-flex items-center gap-1.5 hover:text-[var(--color-primary-hover)]"
+          class="inline-flex min-h-[36px] items-center gap-1.5 py-1.5 hover:text-[var(--color-primary-hover)]"
         >
           <ArrowLeftIcon size={14} />
           <span>{ui().backToPortfolio}</span>
@@ -120,7 +129,7 @@ export const DetailItemView: Component<{
         <span class="text-[var(--color-border-strong)]">/</span>
         <a
           href={buildDetailIndexPath(lang(), props.collection, role(), locked())}
-          class="hover:text-[var(--color-primary-hover)]"
+          class="inline-flex min-h-[36px] items-center py-1.5 hover:text-[var(--color-primary-hover)]"
         >
           {ui().backToCollection}
         </a>

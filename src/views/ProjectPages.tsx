@@ -43,8 +43,8 @@ const CodeBlockCard: Component<{ title: string; language: string; snippet: strin
 
   return (
     <div class="overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[#0b0e17]">
-      <div class="flex items-center justify-between gap-2 border-b border-[var(--color-border)] px-4 py-2 font-mono text-xs text-[var(--color-accent)]">
-        <span class="truncate">{props.title}</span>
+      <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[var(--color-border)] px-4 py-2 font-mono text-xs text-[var(--color-accent)]">
+        <span class="min-w-0 flex-1 break-words">{props.title}</span>
         <div class="flex items-center gap-3 shrink-0">
           <span class="text-[var(--color-fg-subtle)]">{props.language}</span>
           <button
@@ -207,7 +207,7 @@ export const ProjectsIndexView: Component = () => {
     <div class="mx-auto max-w-6xl px-5 py-14 sm:px-6 sm:py-20">
       <a
         href={withRoleQuery(buildHomePath(lang(), role()), undefined, locked())}
-        class="inline-flex items-center gap-2 font-mono text-xs text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+        class="inline-flex min-h-[36px] items-center gap-2 py-1.5 font-mono text-xs text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
       >
         <ArrowLeftIcon size={14} />
         <span>{linksCopy().backToPortfolio}</span>
@@ -250,12 +250,27 @@ export const ProjectsIndexView: Component = () => {
         </For>
       </div>
 
-      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        class={`mt-10 grid gap-6 md:grid-cols-2 ${
+          filtered().length === 4
+            ? ""
+            : filtered().length === 5
+              ? "lg:grid-cols-6"
+              : "lg:grid-cols-3"
+        }`}
+      >
         <For each={filtered()}>
-          {(shared) => {
+          {(shared, idx) => {
             const summary = () => getProjectSummary(lang(), shared.id);
+            const spanClass = () => {
+              if (filtered().length !== 5) return "";
+              if (idx() < 2) return "lg:col-span-3";
+              return idx() === 4 ? "md:col-span-2 lg:col-span-2" : "lg:col-span-2";
+            };
             return (
-              <article class="flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover-glow">
+              <article
+                class={`flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover-glow ${spanClass()}`}
+              >
                 <div>
                   <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--color-accent)]">
                     {shared.kind === "case-study"
@@ -274,7 +289,7 @@ export const ProjectsIndexView: Component = () => {
                   <TechList items={summary().tags} limit={5} />
                   <a
                     href={buildProjectPath(lang(), shared.slug, role(), locked())}
-                    class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                    class="inline-flex min-h-[36px] items-center gap-1.5 py-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
                   >
                     <span>{projCopy().viewCaseLabel}</span>
                     <ArrowRightIcon size={13} />
@@ -312,7 +327,7 @@ const CaseStudyDetail: Component<{ data: CaseStudyCopy }> = (props) => {
           {(sec) => (
             <a
               href={`#section-${sec.id}`}
-              class="rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-1 font-mono text-xs text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+              class="inline-flex min-h-[32px] items-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-1 font-mono text-xs text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
             >
               {sec.eyebrow}
             </a>
@@ -411,7 +426,7 @@ export const ProjectDetailView: Component<{ projectId: ProjectId }> = (props) =>
       <div class="flex flex-wrap items-center gap-4 font-mono text-xs text-[var(--color-primary)]">
         <a
           href={withRoleQuery(buildHomePath(lang(), role()), undefined, locked())}
-          class="inline-flex items-center gap-1.5 hover:text-[var(--color-primary-hover)]"
+          class="inline-flex min-h-[36px] items-center gap-1.5 py-1.5 hover:text-[var(--color-primary-hover)]"
         >
           <ArrowLeftIcon size={14} />
           <span>{linksCopy().backToPortfolio}</span>
@@ -419,7 +434,7 @@ export const ProjectDetailView: Component<{ projectId: ProjectId }> = (props) =>
         <span class="text-[var(--color-border-strong)]">/</span>
         <a
           href={buildProjectsIndexPath(lang(), role(), locked())}
-          class="hover:text-[var(--color-primary-hover)]"
+          class="inline-flex min-h-[36px] items-center py-1.5 hover:text-[var(--color-primary-hover)]"
         >
           {linksCopy().backToProjects}
         </a>
