@@ -40,12 +40,12 @@ export const SiteFooter: Component = () => {
   });
 
   return (
-    <footer class="border-t border-[var(--color-border)] bg-[var(--color-surface)]/70 py-14">
+    <footer class="border-t border-[var(--color-border)] bg-[var(--color-surface)]/70 pt-14 pb-24 sm:pb-20">
       <div class="mx-auto max-w-6xl px-5 sm:px-6">
         <div class="grid gap-10 md:grid-cols-4">
           <div class="space-y-4 md:col-span-2">
             <div class="flex items-center gap-3">
-              <span class="grid h-10 w-10 place-items-center hex-frame bg-[var(--color-primary)] font-mono text-xs font-bold text-[var(--color-on-primary)]">
+              <span class="grid h-10 w-10 shrink-0 place-items-center hex-frame bg-[var(--color-primary)] font-mono text-xs font-bold text-[var(--color-on-primary)]">
                 MS
               </span>
               <div>
@@ -64,7 +64,7 @@ export const SiteFooter: Component = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                class="grid h-9 w-9 place-items-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-primary)]"
+                class="grid h-10 w-10 place-items-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-primary)]"
               >
                 <LinkedInBrandIcon size={17} />
               </a>
@@ -73,21 +73,21 @@ export const SiteFooter: Component = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                class="grid h-9 w-9 place-items-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-primary)]"
+                class="grid h-10 w-10 place-items-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-primary)]"
               >
                 <GitHubBrandIcon size={17} />
               </a>
               <a
                 href={`mailto:${SITE.email}`}
                 aria-label="Email"
-                class="grid h-9 w-9 place-items-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-primary)]"
+                class="grid h-10 w-10 place-items-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-primary)]"
               >
                 <MailBrandIcon size={17} />
               </a>
               <a
                 href={`tel:+${SITE.whatsappNumber}`}
                 aria-label="Phone"
-                class="grid h-9 w-9 place-items-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-primary)]"
+                class="grid h-10 w-10 place-items-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-primary)]"
               >
                 <PhoneBrandIcon size={17} />
               </a>
@@ -147,11 +147,11 @@ export const SiteFooter: Component = () => {
           </div>
         </div>
 
-        <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-border)] pt-6 text-xs text-[var(--color-fg-subtle)] sm:flex-row">
+        <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-border)] pt-6 text-center text-xs text-[var(--color-fg-subtle)] sm:flex-row sm:text-left">
           <p>
             © {year} {PROFILE.shortName}. {copy().ui.footer.rights}
           </p>
-          <div class="flex flex-wrap items-center gap-4">
+          <div class="flex flex-wrap items-center justify-center gap-4 sm:justify-end">
             <p class="font-mono">
               {copy().ui.footer.builtWith} · {copy().ui.footer.updatedLabel} {BUILD_DATE}
             </p>
@@ -159,7 +159,7 @@ export const SiteFooter: Component = () => {
               type="button"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               aria-label={copy().ui.backToTopLabel}
-              class="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-1 font-mono text-xs text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+              class="inline-flex min-h-[36px] items-center gap-1.5 whitespace-nowrap rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-3.5 py-1.5 font-mono text-xs text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
             >
               <ArrowUpIcon size={13} />
               <span>{copy().ui.backToTopLabel}</span>

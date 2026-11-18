@@ -1,6 +1,7 @@
 import { type Component } from "solid-js";
 import { useLanguage } from "@/context/language";
 import { useRole } from "@/context/role";
+import { getRoleTopStack } from "@/content/roles";
 import { PROFILE } from "@/content/shared/profile";
 import { withBase } from "@/lib/base";
 import {
@@ -12,14 +13,14 @@ import { TechList } from "@/components/ui/TechList";
 
 export const HeroSection: Component = () => {
   const { lang, copy } = useLanguage();
-  const { role, config } = useRole();
+  const { role } = useRole();
 
   const hero = () => copy().hero[role()];
 
   return (
     <section
       id="hero"
-      class="relative isolate overflow-hidden pt-16 pb-14 sm:pt-24 sm:pb-20"
+      class="relative isolate overflow-hidden pt-10 pb-12 sm:pt-14 sm:pb-16 lg:pt-16"
     >
       {/* Ambient backdrop derived from existing hero-bg.jpg + Charcoal/Azure gradient */}
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
@@ -44,17 +45,17 @@ export const HeroSection: Component = () => {
 
       <div class="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 sm:px-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
-          <div class="inline-flex items-center gap-2 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)]/80 px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider text-[var(--color-accent)]">
-            <SparklesIcon size={14} class="text-[var(--color-primary)]" />
+          <div class="inline-flex max-w-full items-center gap-2 rounded-2xl border border-[var(--color-border-strong)] bg-[var(--color-surface)]/80 px-3.5 py-1.5 font-mono text-xs leading-snug uppercase tracking-wider text-[var(--color-accent)] sm:rounded-full">
+            <SparklesIcon size={14} class="shrink-0 text-[var(--color-primary)]" />
             <span>{hero().badge}</span>
           </div>
 
-          <h1 class="mt-6 font-display text-4xl leading-[1.06] text-[var(--color-fg)] sm:text-5xl lg:text-6xl">
+          <h1 class="mt-5 font-display text-[2rem] leading-[1.14] text-[var(--color-fg)] sm:text-5xl lg:text-[3.1rem]">
             {hero().headline}{" "}
             <span class="text-gradient italic">{hero().accentWord}</span>
           </h1>
 
-          <p class="mt-4 font-display text-xl text-[var(--color-fg-muted)] sm:text-2xl">
+          <p class="mt-4 font-display text-xl leading-snug text-[var(--color-fg-muted)] sm:text-2xl">
             {hero().titleLine}
           </p>
 
@@ -65,33 +66,33 @@ export const HeroSection: Component = () => {
           <div class="mt-8 flex flex-wrap items-center gap-3">
             <a
               href="#projects"
-              class="inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-[var(--color-on-primary)] blue-glow transition hover:bg-[var(--color-primary-hover)]"
+              class="inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-[var(--color-on-primary)] blue-glow transition hover:bg-[var(--color-primary-hover)]"
             >
               <span>{hero().primaryCta}</span>
               <ArrowRightIcon size={16} />
             </a>
             <a
               href="#resume"
-              class="inline-flex items-center gap-2 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] px-5 py-3 text-sm font-medium text-[var(--color-fg)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+              class="inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] px-5 py-3 text-sm font-medium text-[var(--color-fg)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
             >
               <FileTextIcon size={16} />
               <span>{hero().secondaryCta}</span>
             </a>
             <a
               href="#contact"
-              class="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)]/60 px-5 py-3 text-sm font-medium text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
+              class="inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)]/60 px-5 py-3 text-sm font-medium text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
             >
               <span>{hero().tertiaryCta}</span>
             </a>
           </div>
 
           <div class="mt-8">
-            <TechList items={config().topStack} />
+            <TechList items={getRoleTopStack(role(), lang())} />
           </div>
         </div>
 
         {/* Hexagonal Portrait Frame */}
-        <div class="relative mx-auto w-full max-w-[380px] lg:max-w-[420px]">
+        <div class="relative mx-auto w-full max-w-[360px] lg:max-w-[400px]">
           <div
             aria-hidden="true"
             class="pointer-events-none absolute inset-4 rounded-full opacity-35 blur-[80px]"
@@ -114,19 +115,19 @@ export const HeroSection: Component = () => {
               <picture>
                 <source
                   srcset={`${withBase("/images/portrait-400.avif")} 400w, ${withBase("/images/portrait-800.avif")} 800w`}
-                  sizes="(max-width: 640px) 320px, 420px"
+                  sizes="(max-width: 640px) 320px, 400px"
                   type="image/avif"
                 />
                 <source
                   srcset={`${withBase("/images/portrait-400.webp")} 400w, ${withBase("/images/portrait-800.webp")} 800w`}
-                  sizes="(max-width: 640px) 320px, 420px"
+                  sizes="(max-width: 640px) 320px, 400px"
                   type="image/webp"
                 />
                 <img
                   src={withBase("/images/portrait-800.jpg")}
                   alt={PROFILE.fullName}
-                  width={420}
-                  height={420}
+                  width={400}
+                  height={400}
                   loading="eager"
                   decoding="async"
                   fetchpriority="high"
@@ -135,19 +136,19 @@ export const HeroSection: Component = () => {
               </picture>
               <div
                 aria-hidden="true"
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/60 via-transparent to-transparent"
+                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/55 via-transparent to-transparent"
               />
             </div>
+          </div>
 
-            {/* Floating Identity Credential Badges */}
-            <div class="pointer-events-none absolute -top-2 right-0 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)]/95 px-3 py-1 font-mono text-[11px] text-[var(--color-accent)] shadow-lg backdrop-blur">
+          {/* Identity Credential Strip (cleanly positioned below portrait to avoid overlap) */}
+          <div class="mt-5 flex flex-wrap items-center justify-center gap-2">
+            <span class="rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)]/95 px-3 py-1 font-mono text-[11px] text-[var(--color-accent)] shadow-sm">
               ASPAEN · Medellín, CO
-            </div>
-            <div class="pointer-events-none absolute -bottom-2 left-0 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)]/95 px-3 py-1 font-mono text-[11px] text-[var(--color-fg)] shadow-lg backdrop-blur">
-              {lang() === "es"
-                ? "NetSuite · Python · Power BI"
-                : "NetSuite · Python · Power BI"}
-            </div>
+            </span>
+            <span class="rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)]/95 px-3 py-1 font-mono text-[11px] text-[var(--color-fg)] shadow-sm">
+              NetSuite · Python · Power BI
+            </span>
           </div>
         </div>
       </div>

@@ -71,6 +71,17 @@
     outline: 2px solid var(--color-ring);
     outline-offset: 2px;
   }
+
+  a,
+  button,
+  [role="button"],
+  [role="tab"],
+  input,
+  textarea,
+  select {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(92, 163, 255, 0.16);
+  }
 }
 
 .section-shell {

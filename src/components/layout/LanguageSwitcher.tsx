@@ -14,7 +14,7 @@ export const LanguageSwitcher: Component = () => {
     <div
       role="group"
       aria-label={copy().ui.languageSwitcherLabel}
-      class="inline-flex items-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] p-0.5 text-xs font-mono"
+      class="inline-flex shrink-0 items-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] p-0.5 text-xs font-mono"
     >
       <For each={SUPPORTED_LANGS}>
         {(target) => {
@@ -29,7 +29,7 @@ export const LanguageSwitcher: Component = () => {
                   localStorage.setItem("portfolio.lang", target);
                 }
               }}
-              class={`rounded-full px-2.5 py-1 font-medium uppercase transition ${
+              class={`inline-flex min-h-[30px] items-center whitespace-nowrap rounded-full px-2.5 py-1 font-medium uppercase transition ${
                 active()
                   ? "bg-[var(--color-primary)] text-[var(--color-on-primary)]"
                   : "text-[var(--color-fg-muted)] hover:text-[var(--color-fg)]"
