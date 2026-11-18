@@ -13,6 +13,7 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import { CertificationsSection } from "@/components/sections/CertificationsSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ResumeSection } from "@/components/sections/ResumeSection";
+import { MetricsSection } from "@/components/sections/MetricsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { AssistantLauncher } from "@/components/assistant/AssistantLauncher";
 import { ProjectDetailView } from "@/views/ProjectPages";
@@ -113,7 +114,9 @@ describe("UX/UI visual layout, overlap, menu, and language integrity", () => {
 
     const toggle = getByRole("button", { name: /abrir menú/i });
     fireEvent.click(toggle);
-    expect(container.querySelector("#mobile-nav-drawer")).not.toBeNull();
+    const drawer = container.querySelector("#mobile-nav-drawer");
+    expect(drawer).not.toBeNull();
+    expect(drawer?.className).toContain("overflow-y-auto");
 
     fireEvent.keyDown(window, { key: "Escape" });
     expect(container.querySelector("#mobile-nav-drawer")).toBeNull();
@@ -182,11 +185,19 @@ describe("UX/UI visual layout, overlap, menu, and language integrity", () => {
 
       const coords = stationButtons.map((g) => {
         const hitCircle = g.querySelector('circle[fill="transparent"]');
-        const cx = hitCircle?.getAttribute("cx");
-        const cy = hitCircle?.getAttribute("cy");
-        return `${cx},${cy}`;
+        const cx = Number(hitCircle?.getAttribute("cx"));
+        const cy = Number(hitCircle?.getAttribute("cy"));
+        return { cx, cy };
       });
-      expect(new Set(coords).size).toBe(25);
+      expect(new Set(coords.map((c) => `${c.cx},${c.cy}`)).size).toBe(25);
+      // Ensure stations sharing the same horizontal track have >= 24px separation (no selection ring overlap)
+      for (let i = 0; i < coords.length; i++) {
+        for (let j = i + 1; j < coords.length; j++) {
+          if (Math.abs(coords[i].cy - coords[j].cy) < 1) {
+            expect(Math.abs(coords[i].cx - coords[j].cx)).toBeGreaterThanOrEqual(24);
+          }
+        }
+      }
 
       // Only 1 callout pill rect should be rendered in the transit SVG (no 25 overlapping labels)
       const mapSvg = container.querySelector('#journey-panel-map svg');
@@ -257,6 +268,28 @@ describe("UX/UI visual layout, overlap, menu, and language integrity", () => {
     expect(testSection.querySelectorAll("figure").length).toBe(2);
     const carouselGrid = testSection.querySelector("figure")?.parentElement;
     expect(carouselGrid?.className).not.toContain("lg:grid-cols-3");
+
+    // Verify Experience cards both expand cleanly without empty card void
+    const expSection = container.querySelector("#experience")!;
+    const expToggles = expSection.querySelectorAll('button[aria-expanded]');
+    expect(expToggles.length).toBe(2);
+    for (const btn of expToggles) {
+      expect(btn.getAttribute("aria-expanded")).toBe("true");
+    }
+
+    // Verify Projects filter grids adapt symmetrically (4 -> 2-col, 5 -> 6-col, 6 -> 3-col)
+    const projSection = container.querySelector("#projects")!;
+    const adminFilterBtn = Array.from(projSection.querySelectorAll("button")).find((b) =>
+      b.textContent?.includes("Operations"),
+    )!;
+    fireEvent.click(adminFilterBtn);
+    expect(projSection.querySelectorAll("article").length).toBe(5); // 1 featured + 4 filtered cards
+    const projGrid = projSection.querySelectorAll("article")[1].parentElement!;
+    expect(projGrid.className).not.toContain("lg:grid-cols-3");
+
+    // Verify Certifications do not wrap full-sentence competencies in rounded-full tech-badge pills
+    const certSection = container.querySelector("#certifications")!;
+    expect(certSection.querySelectorAll("li.tech-badge").length).toBe(0);
   });
 
   it("resolves Assistant links without double language prefixes and restores focus on Escape", () => {
@@ -293,13 +326,21 @@ describe("UX/UI visual layout, overlap, menu, and language integrity", () => {
     expect(document.activeElement).toBe(launcher);
   });
 
-  it("ensures Contact inputs use >=16px mobile text, visible focus outlines, and Footer reserves bottom clearance", () => {
+  it("ensures Contact inputs use >=16px mobile text, visible focus outlines, Metrics buttons meet 36px, and Footer avoids duplicate dates", () => {
     const { container } = render(() => (
       <IslandShell part="section:contact" lang="en" role="general" pathname="/en">
+        <MetricsSection />
         <ContactSection />
         <SiteFooter />
       </IslandShell>
     ));
+
+    const metricBtns = container.querySelectorAll("#metrics button");
+    expect(metricBtns.length).toBeGreaterThanOrEqual(4);
+    for (const btn of metricBtns) {
+      expect(btn.className).toContain("min-h-[36px]");
+      expect(btn.className).toContain("whitespace-nowrap");
+    }
 
     const inputs = container.querySelectorAll("form input, form textarea");
     expect(inputs.length).toBe(4);
@@ -310,5 +351,6 @@ describe("UX/UI visual layout, overlap, menu, and language integrity", () => {
 
     const footer = container.querySelector("footer");
     expect(footer?.className).toContain("pb-24");
+    expect(footer?.textContent).not.toMatch(/2026\s+2026/);
   });
 });
