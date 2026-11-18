@@ -28,7 +28,7 @@ export const MetricsSection: Component = () => {
           type="button"
           aria-pressed={selectedGroup() === "all"}
           onClick={() => setSelectedGroup("all")}
-          class={`rounded-full border px-3.5 py-1 text-xs font-medium transition ${
+          class={`min-h-[36px] whitespace-nowrap rounded-full border px-3.5 py-1.5 text-xs font-medium transition ${
             selectedGroup() === "all"
               ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-on-primary)]"
               : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg-muted)] hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
@@ -43,7 +43,7 @@ export const MetricsSection: Component = () => {
               type="button"
               aria-pressed={selectedGroup() === groupId}
               onClick={() => setSelectedGroup(groupId)}
-              class={`rounded-full border px-3.5 py-1 text-xs font-medium transition ${
+              class={`min-h-[36px] whitespace-nowrap rounded-full border px-3.5 py-1.5 text-xs font-medium transition ${
                 selectedGroup() === groupId
                   ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-on-primary)]"
                   : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg-muted)] hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"

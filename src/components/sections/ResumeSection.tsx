@@ -149,7 +149,7 @@ export const ResumeSection: Component = () => {
         </div>
       </div>
 
-      <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         {/* Details & CTAs */}
         <div class="space-y-6 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:p-7">
           <div class="flex flex-wrap items-center gap-2">
@@ -185,7 +185,7 @@ export const ResumeSection: Component = () => {
             <a
               href={withBase(activeShared().pdfPath)}
               download={activeShared().fileName}
-              class="inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-[var(--color-on-primary)] blue-glow transition hover:bg-[var(--color-primary-hover)]"
+              class="inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-[var(--color-on-primary)] blue-glow transition hover:bg-[var(--color-primary-hover)]"
             >
               <DownloadIcon size={16} />
               <span>{resumeCopy().downloadLocalCta}</span>
@@ -195,7 +195,7 @@ export const ResumeSection: Component = () => {
               href={activeShared().driveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-bg)] px-5 py-3 text-sm font-medium text-[var(--color-fg)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+              class="inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full border border-[var(--color-border-strong)] bg-[var(--color-bg)] px-5 py-3 text-sm font-medium text-[var(--color-fg)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
             >
               <span>{resumeCopy().viewDriveCta}</span>
               <ArrowUpRightIcon size={16} />
@@ -205,7 +205,7 @@ export const ResumeSection: Component = () => {
 
         {/* Visual Swipeable CV Preview */}
         <div
-          class="touch-pan-y select-none space-y-4"
+          class="mx-auto w-full max-w-[440px] touch-pan-y select-none space-y-4 lg:ml-auto"
           onTouchStart={(e) => {
             const t = e.touches[0];
             if (t) beginGesture(t.clientX, t.clientY);
