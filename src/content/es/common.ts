@@ -48,7 +48,7 @@ export const ES_UI: UiCopy = {
     certificationsIndexLabel: "Certificaciones y Logros",
     rights: "Todos los derechos reservados.",
     builtWith: "Diseñado y desarrollado con Astro, SolidJS y Tailwind CSS.",
-    updatedLabel: "Actualizado en 2026",
+    updatedLabel: "Actualizado",
   },
   whatsappFloatLabel: "Conversar por WhatsApp",
   backToTopLabel: "Volver arriba",

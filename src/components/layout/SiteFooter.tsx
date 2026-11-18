@@ -98,7 +98,7 @@ export const SiteFooter: Component = () => {
             <h3 class="font-mono text-xs uppercase tracking-wider text-[var(--color-accent)]">
               {copy().ui.footer.navigationTitle}
             </h3>
-            <ul class="space-y-2 text-sm">
+            <ul class="space-y-1 text-sm">
               <For each={FOOTER_SECTIONS}>
                 {(secId) => (
                   <li>
@@ -108,7 +108,7 @@ export const SiteFooter: Component = () => {
                         undefined,
                         locked(),
                       )}
-                      class="text-[var(--color-fg-muted)] transition hover:text-[var(--color-primary)]"
+                      class="inline-flex min-h-[30px] items-center py-1 text-[var(--color-fg-muted)] transition hover:text-[var(--color-primary)]"
                     >
                       {copy().ui.navItems[secId]}
                     </a>
@@ -122,11 +122,11 @@ export const SiteFooter: Component = () => {
             <h3 class="font-mono text-xs uppercase tracking-wider text-[var(--color-accent)]">
               {copy().ui.footer.resourcesTitle}
             </h3>
-            <ul class="space-y-2 text-sm">
+            <ul class="space-y-1 text-sm">
               <li>
                 <a
                   href={buildProjectsIndexPath(lang(), role(), locked())}
-                  class="text-[var(--color-fg-muted)] transition hover:text-[var(--color-primary)]"
+                  class="inline-flex min-h-[30px] items-center py-1 text-[var(--color-fg-muted)] transition hover:text-[var(--color-primary)]"
                 >
                   {copy().ui.footer.projectsIndexLabel}
                 </a>
@@ -136,7 +136,7 @@ export const SiteFooter: Component = () => {
                   <li>
                     <a
                       href={buildDetailIndexPath(lang(), collection, role(), locked())}
-                      class="text-[var(--color-fg-muted)] transition hover:text-[var(--color-primary)]"
+                      class="inline-flex min-h-[30px] items-center py-1 text-[var(--color-fg-muted)] transition hover:text-[var(--color-primary)]"
                     >
                       {detailLabels()[collection]}
                     </a>
@@ -147,11 +147,11 @@ export const SiteFooter: Component = () => {
           </div>
         </div>
 
-        <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-border)] pt-6 text-center text-xs text-[var(--color-fg-subtle)] sm:flex-row sm:text-left">
-          <p>
+        <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-border)] pt-6 text-center text-xs text-[var(--color-fg-subtle)] lg:flex-row lg:text-left">
+          <p class="lg:shrink-0">
             © {year} {PROFILE.shortName}. {copy().ui.footer.rights}
           </p>
-          <div class="flex flex-wrap items-center justify-center gap-4 sm:justify-end">
+          <div class="flex flex-wrap items-center justify-center gap-4 lg:justify-end">
             <p class="font-mono">
               {copy().ui.footer.builtWith} · {copy().ui.footer.updatedLabel} {BUILD_DATE}
             </p>

@@ -149,9 +149,12 @@ export const SiteHeader: Component = () => {
       <Show when={menuOpen()}>
         <div
           id="mobile-nav-drawer"
-          class="border-t border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-4 sm:px-5 lg:hidden"
+          class="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-4 sm:px-5 lg:hidden"
         >
-          <div class="mb-3 flex flex-wrap items-center justify-end gap-2">
+          <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+            <span class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-accent)]">
+              {copy().ui.navAriaLabel}
+            </span>
             <button
               type="button"
               onClick={openAssistant}
