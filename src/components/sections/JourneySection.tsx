@@ -97,7 +97,7 @@ export const JourneySection: Component = () => {
       const bucket = buckets.get(`${node.year}:${node.line}`) ?? [node];
       const idxInBucket = bucket.indexOf(node);
       const offsetX =
-        bucket.length > 1 ? (idxInBucket - (bucket.length - 1) / 2) * 20 : 0;
+        bucket.length > 1 ? (idxInBucket - (bucket.length - 1) / 2) * 26 : 0;
       return {
         node,
         x: Math.round((yearToX(node.year) + offsetX) * 10) / 10,
@@ -124,13 +124,28 @@ export const JourneySection: Component = () => {
     return positionedNodes().find((p) => p.node.id === target?.id);
   };
 
+  const selectedIndex = () => {
+    const pool = visibleNodes();
+    const cur = selectedNode();
+    return Math.max(0, pool.findIndex((n) => n.id === cur?.id));
+  };
+
+  const focusNode = (nodeId: string) => {
+    setSelectedNodeId(nodeId);
+    if (!mapScrollerRef || mapScrollerRef.scrollWidth <= mapScrollerRef.clientWidth) return;
+    const pos = positionedNodes().find((p) => p.node.id === nodeId);
+    if (!pos) return;
+    const svgWidth = mapScrollerRef.scrollWidth;
+    const targetCenter = (pos.x / 980) * svgWidth;
+    const nextLeft = Math.max(0, targetCenter - mapScrollerRef.clientWidth / 2);
+    mapScrollerRef.scrollTo({ left: nextLeft, behavior: "smooth" });
+  };
+
   const stepNode = (delta: number) => {
     const pool = visibleNodes();
     if (pool.length === 0) return;
-    const current = selectedNode();
-    const curIdx = pool.findIndex((n) => n.id === current?.id);
-    const nextIdx = (Math.max(0, curIdx) + delta + pool.length) % pool.length;
-    setSelectedNodeId(pool[nextIdx].id);
+    const nextIdx = (selectedIndex() + delta + pool.length) % pool.length;
+    focusNode(pool[nextIdx].id);
   };
 
   const onTabKeyDown = (e: KeyboardEvent, currentTab: JourneyTabId) => {
@@ -465,16 +480,16 @@ export const JourneySection: Component = () => {
           </div>
 
           {/* Station Selector Pills & Detail Card */}
-          <div class="grid gap-4 md:grid-cols-[1fr_1.2fr]">
-            <div class="flex flex-wrap content-start gap-2">
+          <div class="grid gap-5 md:grid-cols-[1.1fr_0.9fr] md:items-start">
+            <div class="order-2 flex min-w-0 flex-nowrap gap-1.5 overflow-x-auto pb-2 md:order-1 md:flex-wrap md:content-start md:overflow-visible md:pb-0">
               <For each={visibleNodes()}>
                 {(node) => {
                   const active = () => selectedNode()?.id === node.id;
                   return (
                     <button
                       type="button"
-                      onClick={() => setSelectedNodeId(node.id)}
-                      class={`min-h-[36px] rounded-xl border px-3 py-1.5 text-left text-xs transition ${
+                      onClick={() => focusNode(node.id)}
+                      class={`min-h-[36px] shrink-0 whitespace-nowrap rounded-xl border px-3 py-1.5 text-left text-xs transition md:shrink md:whitespace-normal ${
                         active()
                           ? "border-[var(--color-primary)] bg-[var(--color-surface-raised)] text-[var(--color-fg)]"
                           : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg-muted)] hover:border-[var(--color-border-strong)]"
@@ -490,13 +505,16 @@ export const JourneySection: Component = () => {
 
             <Show when={selectedNode()}>
               {(node) => (
-                <div class="flex flex-col justify-between rounded-2xl border border-[var(--color-border-strong)] bg-[var(--color-surface)] p-5">
+                <div class="order-1 flex flex-col justify-between rounded-2xl border border-[var(--color-border-strong)] bg-[var(--color-surface)] p-5 md:order-2 md:sticky md:top-24">
                   <div>
                     <div class="flex items-center justify-between gap-2">
                       <span class="font-mono text-xs text-[var(--color-accent)]">
                         {node().year} · {journey().lines[node().line].label}
                       </span>
                       <div class="flex shrink-0 items-center gap-1.5">
+                        <span class="font-mono text-[11px] text-[var(--color-fg-subtle)]">
+                          {selectedIndex() + 1}/{visibleNodes().length}
+                        </span>
                         <button
                           type="button"
                           onClick={() => stepNode(-1)}
@@ -529,7 +547,7 @@ export const JourneySection: Component = () => {
                     {(href) => (
                       <a
                         href={href()}
-                        class="mt-4 inline-flex items-center gap-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                        class="mt-3 inline-flex min-h-[36px] items-center gap-1.5 py-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
                       >
                         <span>
                           {lang() === "es" ? "Explorar ficha completa" : "Open full entry"}
