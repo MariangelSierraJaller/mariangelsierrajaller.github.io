@@ -1,4 +1,4 @@
-import type { ExperienceId, ExperienceShared } from "@/types/content";
+import type { ExperienceId, ExperienceShared, Lang } from "@/types/content";
 
 export const EXPERIENCE_ORDER: readonly ExperienceId[] = ["aspaen", "aspaenInternship"];
 
@@ -24,6 +24,32 @@ export const EXPERIENCE_SHARED: Record<ExperienceId, ExperienceShared> = {
       "Compras e Inventarios",
       "Auditoría",
     ],
+    stackByLang: {
+      es: [
+        "Oracle NetSuite",
+        "Python",
+        "Pandas",
+        "Power BI",
+        "SQL",
+        "Excel Avanzado",
+        "XML / JSON",
+        "Tesorería",
+        "Compras e Inventarios",
+        "Auditoría",
+      ],
+      en: [
+        "Oracle NetSuite",
+        "Python",
+        "Pandas",
+        "Power BI",
+        "SQL",
+        "Advanced Excel",
+        "XML / JSON",
+        "Treasury",
+        "Procurement & Inventory",
+        "Internal Audit",
+      ],
+    },
   },
   aspaenInternship: {
     id: "aspaenInternship",
@@ -44,5 +70,32 @@ export const EXPERIENCE_SHARED: Record<ExperienceId, ExperienceShared> = {
       "Digitalización",
       "Logística",
     ],
+    stackByLang: {
+      es: [
+        "Oracle NetSuite",
+        "Facturación Electrónica",
+        "Contabilidad",
+        "Caja Menor",
+        "Trazabilidad Documental",
+        "Excel",
+        "Digitalización",
+        "Logística",
+      ],
+      en: [
+        "Oracle NetSuite",
+        "Electronic Invoicing",
+        "Accounting",
+        "Petty Cash",
+        "Document Traceability",
+        "Excel",
+        "Digitalization",
+        "Logistics",
+      ],
+    },
   },
 };
+
+export function getExperienceStack(id: ExperienceId, lang: Lang): readonly string[] {
+  const item = EXPERIENCE_SHARED[id];
+  return item.stackByLang?.[lang] ?? item.stack;
+}

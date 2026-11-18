@@ -1,7 +1,7 @@
 import type { Lang, ProjectId } from "@/types/content";
 import { getLanguageCopy } from "@/content";
 import { getProjectCopy, getProjectSummary } from "@/content/project-copy";
-import { PROJECT_ORDER, PROJECTS_SHARED } from "@/content/shared/projects";
+import { getProjectStack, PROJECT_ORDER, PROJECTS_SHARED } from "@/content/shared/projects";
 import { absoluteUrl } from "./base";
 import { buildHomePath, buildProjectPath, buildProjectsIndexPath } from "./paths";
 import {
@@ -105,7 +105,7 @@ export function buildProjectDetailHead(lang: Lang, projectId: ProjectId): HeadMe
       description: entry.seo.description,
       inLanguage: copy.htmlLang,
       dateModified: SCHEMA_DATE_MODIFIED,
-      keywords: [...entry.seo.keywords, ...shared.stack].join(", "),
+      keywords: [...entry.seo.keywords, ...getProjectStack(projectId, lang)].join(", "),
       author: { "@id": `${absoluteUrl("/")}#person` },
       publisher: { "@id": `${absoluteUrl("/")}#person` },
       mainEntityOfPage: canonical,

@@ -108,6 +108,7 @@ export interface RoleConfig {
   sectionOrder: readonly SectionId[];
   skillGroupOrder: readonly SkillGroupId[];
   topStack: readonly string[];
+  topStackByLang?: Record<Lang, readonly string[]>;
   featuredProject: ProjectId;
   focusTech: readonly string[];
 }
@@ -229,6 +230,7 @@ export interface ExperienceShared {
   location: string;
   modality: "on-site" | "hybrid" | "remote";
   stack: readonly string[];
+  stackByLang?: Record<Lang, readonly string[]>;
 }
 
 export interface ExperienceRoleView {
@@ -318,6 +320,7 @@ export interface CertificationShared {
   id: CertificationId;
   slug: string;
   issuer: string;
+  issuerByLang?: Record<Lang, string>;
   year: string;
   focus: "admin" | "tech" | "both";
   credentialId?: string;
@@ -344,6 +347,7 @@ export interface CertificationsSectionCopy {
 export interface TestimonialShared {
   id: TestimonialId;
   name: string;
+  nameByLang?: Record<Lang, string>;
   date: string;
   source: "linkedin" | "collaboration" | "academic";
   kind: "supervisor" | "teammate" | "academic";

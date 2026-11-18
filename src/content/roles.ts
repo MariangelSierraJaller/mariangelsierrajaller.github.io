@@ -1,4 +1,4 @@
-import type { RoleConfig, RoleId } from "@/types/content";
+import type { Lang, RoleConfig, RoleId } from "@/types/content";
 
 export const ROLES: Record<RoleId, RoleConfig> = {
   general: {
@@ -32,6 +32,24 @@ export const ROLES: Record<RoleId, RoleConfig> = {
       "Excel Avanzado",
       "Tesorería y Compras",
     ],
+    topStackByLang: {
+      es: [
+        "Oracle NetSuite",
+        "Power BI",
+        "Python · Pandas",
+        "SQL",
+        "Excel Avanzado",
+        "Tesorería y Compras",
+      ],
+      en: [
+        "Oracle NetSuite",
+        "Power BI",
+        "Python · Pandas",
+        "SQL",
+        "Advanced Excel",
+        "Treasury & Procurement",
+      ],
+    },
     featuredProject: "netsuiteEtlPipeline",
     focusTech: ["Oracle NetSuite", "Python", "Power BI", "SQL", "Excel"],
   },
@@ -66,6 +84,24 @@ export const ROLES: Record<RoleId, RoleConfig> = {
       "Excel Avanzado",
       "Control Interno y Auditoría",
     ],
+    topStackByLang: {
+      es: [
+        "Oracle NetSuite",
+        "Gestión de Compras",
+        "Tesorería y Conciliaciones",
+        "Facturación Electrónica",
+        "Excel Avanzado",
+        "Control Interno y Auditoría",
+      ],
+      en: [
+        "Oracle NetSuite",
+        "Procurement Control",
+        "Treasury & Reconciliations",
+        "Electronic Invoicing",
+        "Advanced Excel",
+        "Internal Audit & Control",
+      ],
+    },
     featuredProject: "procurementInventoryControl",
     focusTech: ["Oracle NetSuite", "Excel Avanzado", "Power BI", "Auditoría", "KPIs"],
   },
@@ -100,6 +136,24 @@ export const ROLES: Record<RoleId, RoleConfig> = {
       "CRISP-DM",
       "APIs & Zapier",
     ],
+    topStackByLang: {
+      es: [
+        "Python (Pandas, ETL, EDA)",
+        "Power BI (DAX, Power Query)",
+        "SQL",
+        "Oracle NetSuite (XML, JSON)",
+        "CRISP-DM",
+        "APIs & Zapier",
+      ],
+      en: [
+        "Python (Pandas, ETL, EDA)",
+        "Power BI (DAX, Power Query)",
+        "SQL",
+        "Oracle NetSuite (XML, JSON)",
+        "CRISP-DM",
+        "APIs & Zapier",
+      ],
+    },
     featuredProject: "netsuiteEtlPipeline",
     focusTech: ["Python", "Power BI", "SQL", "Oracle NetSuite", "ETL"],
   },
@@ -107,4 +161,9 @@ export const ROLES: Record<RoleId, RoleConfig> = {
 
 export function getRoleConfig(role: RoleId): RoleConfig {
   return ROLES[role] ?? ROLES.general;
+}
+
+export function getRoleTopStack(role: RoleId, lang: Lang): readonly string[] {
+  const cfg = getRoleConfig(role);
+  return cfg.topStackByLang?.[lang] ?? cfg.topStack;
 }

@@ -8,9 +8,11 @@ export interface ProjectShared {
   kind: ProjectKind;
   year: string;
   period: string;
+  periodByLang?: Record<Lang, string>;
   featuredIn: readonly RoleId[];
   roleAffinity: "admin" | "tech" | "both";
   stack: readonly string[];
+  stackByLang?: Record<Lang, readonly string[]>;
   ogImage: string;
 }
 
