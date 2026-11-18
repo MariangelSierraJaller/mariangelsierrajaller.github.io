@@ -89,7 +89,7 @@ export const AboutSection: Component = () => {
             <div class="relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/90 p-5 sm:p-6 hover-glow">
               <pre
                 aria-hidden="true"
-                class="overflow-x-auto whitespace-pre font-mono text-[10px] leading-tight text-[var(--color-accent)] sm:text-xs"
+                class="overflow-x-auto whitespace-pre font-mono text-[9px] leading-tight text-[var(--color-accent)] min-[400px]:text-[10px] sm:text-xs"
               >
                 {ASCII_ART}
               </pre>
@@ -109,7 +109,9 @@ export const AboutSection: Component = () => {
                   <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-accent)]">
                     {stat.label}
                   </p>
-                  <p class="mt-1.5 font-display text-xl text-[var(--color-fg)]">{stat.value}</p>
+                  <p class="mt-1.5 font-display text-lg text-[var(--color-fg)] sm:text-xl">
+                    {stat.value}
+                  </p>
                 </div>
               )}
             </For>
@@ -159,7 +161,7 @@ export const AboutSection: Component = () => {
       </div>
 
       {/* Integrated Education Block linking to /[lang]/education/[slug] */}
-      <div id="education" class="mt-16 border-t border-[var(--color-border)] pt-12">
+      <div id="education" class="scroll-mt-24 mt-16 border-t border-[var(--color-border)] pt-12">
         <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <h3 class="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
@@ -169,7 +171,7 @@ export const AboutSection: Component = () => {
           </div>
           <a
             href={buildDetailIndexPath(lang(), "education", role(), locked())}
-            class="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+            class="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
           >
             <span>{about().viewAllEducationLabel}</span>
             <ArrowRightIcon size={14} />
@@ -198,7 +200,7 @@ export const AboutSection: Component = () => {
                 type="button"
                 aria-pressed={eduFilter() === tab.id}
                 onClick={() => setEduFilter(tab.id)}
-                class={`rounded-full border px-3.5 py-1.5 text-xs font-medium transition ${
+                class={`min-h-[36px] whitespace-nowrap rounded-full border px-3.5 py-1.5 text-xs font-medium transition ${
                   eduFilter() === tab.id
                     ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-on-primary)]"
                     : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg-muted)] hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
@@ -210,26 +212,43 @@ export const AboutSection: Component = () => {
           </For>
         </div>
 
-        <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="mt-6 grid gap-5 md:grid-cols-12">
           <For each={filteredEducation()}>
-            {(eduId) => {
+            {(eduId, idx) => {
               const shared = EDUCATION_SHARED[eduId];
               const itemCopy = () => copy().education[eduId];
               const href = () =>
                 buildDetailItemPath(lang(), "education", shared.slug, role(), locked());
               const progressPct = shared.inProgress ? "58%" : "100%";
+              const spanClass = () => {
+                const count = filteredEducation().length;
+                if (count === 7) {
+                  if (idx() < 4) return "md:col-span-6";
+                  return idx() === 6
+                    ? "md:col-span-12 lg:col-span-4"
+                    : "md:col-span-6 lg:col-span-4";
+                }
+                if (count === 3) {
+                  return idx() === 2
+                    ? "md:col-span-12 lg:col-span-4"
+                    : "md:col-span-6 lg:col-span-4";
+                }
+                return "md:col-span-6";
+              };
 
               return (
-                <article class="flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover-glow">
+                <article
+                  class={`flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover-glow ${spanClass()}`}
+                >
                   <div>
                     <div class="flex items-start justify-between gap-3">
-                      <span class="grid h-9 w-9 place-items-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-primary)]">
+                      <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] text-[var(--color-primary)]">
                         <GraduationCapIcon size={17} />
                       </span>
                       <Show
                         when={shared.inProgress}
                         fallback={
-                          <span class="rounded-full border border-[var(--color-success)]/40 bg-[var(--color-bg)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--color-success)]">
+                          <span class="shrink-0 whitespace-nowrap rounded-full border border-[var(--color-success)]/40 bg-[var(--color-bg)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--color-success)]">
                             {shared.endYear === 2026
                               ? lang() === "es"
                                 ? "Titulada Sep 2026"
@@ -240,7 +259,7 @@ export const AboutSection: Component = () => {
                           </span>
                         }
                       >
-                        <span class="rounded-full border border-[var(--color-primary)]/40 bg-[var(--color-primary-soft)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--color-accent)]">
+                        <span class="shrink-0 whitespace-nowrap rounded-full border border-[var(--color-primary)]/40 bg-[var(--color-primary-soft)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--color-accent)]">
                           {about().inProgressLabel}
                         </span>
                       </Show>

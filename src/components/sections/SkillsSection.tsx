@@ -38,7 +38,7 @@ export const SkillsSection: Component = () => {
           type="button"
           aria-pressed={selectedGroup() === "all"}
           onClick={() => setSelectedGroup("all")}
-          class={`rounded-full border px-3.5 py-1 text-xs font-medium transition ${
+          class={`min-h-[36px] whitespace-nowrap rounded-full border px-3.5 py-1.5 text-xs font-medium transition ${
             selectedGroup() === "all"
               ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-on-primary)]"
               : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg-muted)] hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
@@ -53,7 +53,7 @@ export const SkillsSection: Component = () => {
               type="button"
               aria-pressed={selectedGroup() === groupId}
               onClick={() => setSelectedGroup(groupId)}
-              class={`rounded-full border px-3.5 py-1 text-xs font-medium transition ${
+              class={`min-h-[36px] whitespace-nowrap rounded-full border px-3.5 py-1.5 text-xs font-medium transition ${
                 selectedGroup() === groupId
                   ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-on-primary)]"
                   : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg-muted)] hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
@@ -133,7 +133,7 @@ export const SkillsSection: Component = () => {
                   <li class="space-y-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)]/70 px-4 py-3 text-sm">
                     <div class="flex items-center justify-between gap-2">
                       <span class="font-medium text-[var(--color-fg)]">{label().name}</span>
-                      <span class="rounded-full border border-[var(--color-primary)]/40 bg-[var(--color-primary-soft)] px-2.5 py-0.5 font-mono text-xs text-[var(--color-accent)]">
+                      <span class="shrink-0 whitespace-nowrap rounded-full border border-[var(--color-primary)]/40 bg-[var(--color-primary-soft)] px-2.5 py-0.5 font-mono text-xs text-[var(--color-accent)]">
                         {label().level}
                       </span>
                     </div>

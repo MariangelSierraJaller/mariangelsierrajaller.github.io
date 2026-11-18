@@ -1,7 +1,11 @@
 import { createSignal, For, Show, type Component } from "solid-js";
 import { useLanguage } from "@/context/language";
 import { useRole } from "@/context/role";
-import { EXPERIENCE_ORDER, EXPERIENCE_SHARED } from "@/content/shared/experience";
+import {
+  EXPERIENCE_ORDER,
+  EXPERIENCE_SHARED,
+  getExperienceStack,
+} from "@/content/shared/experience";
 import { formatYmRange } from "@/lib/format";
 import { buildDetailIndexPath, buildDetailItemPath } from "@/lib/paths";
 import { Section } from "@/components/layout/Section";
@@ -21,17 +25,16 @@ export const ExperienceSection: Component = () => {
       title={expCopy().title}
       subtitle={expCopy().subtitle}
       surface="alt"
-    >
-      <div class="mb-8 flex justify-end">
+      action={
         <a
           href={buildDetailIndexPath(lang(), "experience", role(), locked())}
-          class="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+          class="inline-flex items-center gap-1.5 whitespace-nowrap font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
         >
           <span>{expCopy().viewAllLabel}</span>
           <ArrowRightIcon size={14} />
         </a>
-      </div>
-
+      }
+    >
       <div class="grid gap-8 md:grid-cols-2">
         <For each={EXPERIENCE_ORDER}>
           {(expId) => {
@@ -45,7 +48,7 @@ export const ExperienceSection: Component = () => {
                 <div>
                   <div class="flex flex-wrap items-center justify-between gap-2">
                     <div class="inline-flex items-center gap-2 font-mono text-xs text-[var(--color-accent)]">
-                      <BriefcaseIcon size={14} />
+                      <BriefcaseIcon size={14} class="shrink-0" />
                       <span>
                         {formatYmRange(
                           shared.start,
@@ -56,7 +59,7 @@ export const ExperienceSection: Component = () => {
                       </span>
                     </div>
                     <Show when={shared.current}>
-                      <span class="rounded-full border border-[var(--color-primary)]/40 bg-[var(--color-primary-soft)] px-2.5 py-0.5 font-mono text-[11px] font-medium text-[var(--color-accent)]">
+                      <span class="shrink-0 whitespace-nowrap rounded-full border border-[var(--color-primary)]/40 bg-[var(--color-primary-soft)] px-2.5 py-0.5 font-mono text-[11px] font-medium text-[var(--color-accent)]">
                         {expCopy().currentBadge}
                       </span>
                     </Show>
@@ -99,14 +102,14 @@ export const ExperienceSection: Component = () => {
                 </div>
 
                 <div class="mt-6 space-y-4">
-                  <TechList items={shared.stack} limit={6} />
+                  <TechList items={getExperienceStack(expId, lang())} limit={6} />
 
                   <div class="flex flex-wrap items-center justify-between gap-3 border-t border-[var(--color-border)] pt-4">
                     <button
                       type="button"
                       onClick={() => setExpanded((v) => !v)}
                       aria-expanded={expanded()}
-                      class="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--color-fg-muted)] transition hover:text-[var(--color-primary)]"
+                      class="inline-flex min-h-[36px] items-center gap-1.5 whitespace-nowrap font-mono text-xs text-[var(--color-fg-muted)] transition hover:text-[var(--color-primary)]"
                     >
                       <span>
                         {expanded() ? expCopy().showLessLabel : expCopy().showMoreLabel}

@@ -94,25 +94,28 @@ export const ServicesSection: Component = () => {
 
       <div class="grid gap-6 md:grid-cols-2">
         <For each={SERVICE_IDS}>
-          {(svcId) => {
+          {(svcId, idx) => {
             const item = () => svcCopy().items[svcId];
             const Icon = SERVICE_ICONS[svcId];
             return (
               <article class="flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)]/90 p-6 hover-glow">
                 <div>
-                  <div class="flex items-start justify-between gap-4">
-                    <span class="grid h-11 w-11 place-items-center rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-primary)]">
+                  <div class="flex items-center justify-between gap-4">
+                    <span class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-primary)]">
                       <Icon size={20} />
                     </span>
-                    <span class="font-mono text-xs text-[var(--color-accent)]">
-                      {item().tagline}
+                    <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--color-accent)]">
+                      0{idx() + 1}
                     </span>
                   </div>
 
                   <h3 class="mt-5 font-display text-2xl text-[var(--color-fg)]">
                     {item().title}
                   </h3>
-                  <p class="mt-2.5 text-sm leading-relaxed text-[var(--color-fg-muted)]">
+                  <p class="mt-1.5 font-mono text-xs leading-relaxed text-[var(--color-accent)]">
+                    {item().tagline}
+                  </p>
+                  <p class="mt-3 text-sm leading-relaxed text-[var(--color-fg-muted)]">
                     {item().description}
                   </p>
 
