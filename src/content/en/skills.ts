@@ -23,15 +23,15 @@ export const EN_SKILLS: SkillsSectionCopy = {
     },
     en: {
       name: "English",
-      level: "B2 · Professional Working",
+      level: "B2 Upper-Int.",
     },
     fr: {
       name: "French",
-      level: "A2 · Basic Elementary",
+      level: "A2 Elementary",
     },
     ko: {
       name: "Korean",
-      level: "A1 · Basic Introductory",
+      level: "A1 Intro",
     },
   },
   groups: {

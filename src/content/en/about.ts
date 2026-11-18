@@ -31,7 +31,7 @@ export const EN_ABOUT: AboutCopy = {
         { label: "Experience", value: "4+ Years" },
         { label: "San José Degrees", value: "Systems & Industrial" },
         { label: "ERP Ecosystems", value: "Oracle NetSuite" },
-        { label: "Languages", value: "Spanish (Native) · English (B2)" },
+        { label: "Languages", value: "ES (Native) · EN (B2)" },
       ],
     },
     admin: {

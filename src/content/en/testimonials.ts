@@ -11,9 +11,9 @@ export const EN_TESTIMONIALS: TestimonialsSectionCopy = {
   prevLabel: "Previous endorsement",
   nextLabel: "Next endorsement",
   statsLabels: {
-    total: "5 Verified Endorsements",
-    collaboration: "3 Professional & Operational",
-    academic: "2 Academic & Engineering",
+    total: "Verified Endorsements",
+    collaboration: "Professional & Operational",
+    academic: "Academic & Engineering",
   },
   items: {
     sebastianLopez: {

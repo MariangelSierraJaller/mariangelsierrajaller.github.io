@@ -18,9 +18,9 @@ export const ES_SKILLS: SkillsSectionCopy = {
   ],
   spokenLanguages: {
     es: { name: "Español", level: "Nativo" },
-    en: { name: "Inglés", level: "B2 (Intermedio Avanzado)" },
-    fr: { name: "Francés", level: "Básico (A2)" },
-    ko: { name: "Coreano", level: "Básico (A1)" },
+    en: { name: "Inglés", level: "B2 Avanzado" },
+    fr: { name: "Francés", level: "A2 Básico" },
+    ko: { name: "Coreano", level: "A1 Básico" },
   },
   groups: {
     management: {

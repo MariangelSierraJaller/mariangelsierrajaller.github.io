@@ -7,7 +7,7 @@ export const EN_HERO: Record<RoleId, HeroRoleCopy> = {
     accentWord: "transformation",
     titleLine: "Bridging financial administration and software engineering.",
     subtitle:
-      "Systems and Industrial Engineer with 3+ years optimizing enterprise workflows at ASPAEN. Combining Oracle NetSuite, Python automation, and Power BI to turn complex corporate data into measurable results.",
+      "Systems and Industrial Engineer with 4+ years optimizing enterprise workflows at ASPAEN. Combining Oracle NetSuite, Python automation, and Power BI to turn complex corporate data into measurable results.",
     primaryCta: "Explore Projects",
     secondaryCta: "Download Resume",
     tertiaryCta: "Get in Touch",
@@ -40,7 +40,7 @@ export const EN_HIGHLIGHTS: Record<RoleId, readonly HighlightCard[]> = {
   general: [
     {
       id: "experience",
-      value: "3+ Years",
+      value: "4+ Years",
       label: "Enterprise Experience",
       hint: "ASPAEN operations & finance",
     },

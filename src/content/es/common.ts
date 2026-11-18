@@ -11,7 +11,7 @@ export const ES_UI: UiCopy = {
     about: "Sobre mí",
     experience: "Experiencia",
     projects: "Proyectos",
-    journey: "Línea de tiempo",
+    journey: "Trayectoria",
     skills: "Habilidades",
     services: "Servicios",
     certifications: "Certificaciones",

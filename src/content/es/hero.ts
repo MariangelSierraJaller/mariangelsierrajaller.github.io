@@ -8,9 +8,9 @@ export const ES_HERO: Record<RoleId, HeroRoleCopy> = {
     titleLine: "Ingeniería de Sistemas · Ingeniería Industrial · Operaciones ERP",
     subtitle:
       "Transformo flujos operativos, compras y tesorería en sistemas auditables y cuadros de mando interactivos con Oracle NetSuite, Python y Power BI.",
-    primaryCta: "Contáctame",
-    secondaryCta: "Ver proyectos",
-    tertiaryCta: "Ver currículum",
+    primaryCta: "Explorar proyectos",
+    secondaryCta: "Ver currículum",
+    tertiaryCta: "Contáctame",
   },
   admin: {
     badge: "Gestión Administrativa, Compras y Tesorería",
@@ -19,9 +19,9 @@ export const ES_HERO: Record<RoleId, HeroRoleCopy> = {
     titleLine: "Especialista en Compras, Tesorería y ERP Oracle NetSuite",
     subtitle:
       "Administración integral del ciclo de abastecimiento, facturación electrónica, tesorería corporativa y cumplimiento de auditorías con cero discrepancias.",
-    primaryCta: "Iniciar conversación",
-    secondaryCta: "Servicios administrativos",
-    tertiaryCta: "Descargar CV Administrativo",
+    primaryCta: "Ver casos operativos",
+    secondaryCta: "Descargar CV Administrativo",
+    tertiaryCta: "Iniciar conversación",
   },
   tech: {
     badge: "Ingeniería de Sistemas y Analítica de Datos",
@@ -31,8 +31,8 @@ export const ES_HERO: Record<RoleId, HeroRoleCopy> = {
     subtitle:
       "Diseño e implemento flujos ETL en Python, modelos relacionales y tableros ejecutivos en Power BI conectados directamente a fuentes ERP.",
     primaryCta: "Explorar proyectos",
-    secondaryCta: "Ver arquitectura técnica",
-    tertiaryCta: "Descargar CV Técnico",
+    secondaryCta: "Descargar CV Técnico",
+    tertiaryCta: "Iniciar conversación",
   },
 };
 
