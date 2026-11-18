@@ -280,10 +280,10 @@ export const ContactSection: Component = () => {
             )}
           </Show>
 
-          <div class="grid gap-3 pt-2 sm:flex sm:flex-wrap">
+          <div class="grid gap-3 pt-2 sm:grid-cols-2">
             <button
               type="submit"
-              class="inline-flex min-h-[44px] items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-whatsapp)] px-5 py-3 text-sm font-semibold text-[var(--color-on-whatsapp)] transition hover:opacity-90 sm:flex-1"
+              class="inline-flex min-h-[44px] items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-whatsapp)] px-5 py-3 text-sm font-semibold text-[var(--color-on-whatsapp)] transition hover:opacity-90"
             >
               <WhatsAppBrandIcon size={16} />
               <span>{contact().form.sendWhatsapp}</span>
@@ -292,7 +292,7 @@ export const ContactSection: Component = () => {
             <button
               type="button"
               onClick={() => handleDispatch("email")}
-              class="inline-flex min-h-[44px] items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-primary)] px-5 py-3 text-sm font-semibold text-[var(--color-on-primary)] transition hover:bg-[var(--color-primary-hover)] sm:flex-1"
+              class="inline-flex min-h-[44px] items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-primary)] px-5 py-3 text-sm font-semibold text-[var(--color-on-primary)] transition hover:bg-[var(--color-primary-hover)]"
             >
               <SendIcon size={15} />
               <span>{contact().form.sendEmail}</span>
@@ -301,7 +301,7 @@ export const ContactSection: Component = () => {
             <button
               type="button"
               onClick={resetForm}
-              class="min-h-[44px] whitespace-nowrap rounded-full border border-[var(--color-border)] px-4 py-3 text-xs font-medium text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
+              class="min-h-[44px] whitespace-nowrap rounded-full border border-[var(--color-border)] px-4 py-2.5 text-xs font-medium text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)] sm:col-span-2 sm:justify-self-end"
             >
               {contact().form.clear}
             </button>

@@ -21,6 +21,7 @@ export const AssistantPanel: Component<AssistantPanelProps> = (props) => {
 
   let panelRef: HTMLElement | undefined;
   let inputRef: HTMLInputElement | undefined;
+  let chatScrollRef: HTMLDivElement | undefined;
 
   const [input, setInput] = createSignal("");
   const [messages, setMessages] = createSignal<AssistantMessage[]>([
@@ -30,6 +31,18 @@ export const AssistantPanel: Component<AssistantPanelProps> = (props) => {
       text: kb().greeting,
     },
   ]);
+
+  const scrollToLatest = () => {
+    if (typeof requestAnimationFrame === "function") {
+      requestAnimationFrame(() => {
+        if (chatScrollRef) {
+          chatScrollRef.scrollTop = chatScrollRef.scrollHeight;
+        }
+      });
+    } else if (chatScrollRef) {
+      chatScrollRef.scrollTop = chatScrollRef.scrollHeight;
+    }
+  };
 
   onMount(() => {
     inputRef?.focus();
@@ -94,6 +107,7 @@ export const AssistantPanel: Component<AssistantPanelProps> = (props) => {
       },
     ]);
     setInput("");
+    scrollToLatest();
   };
 
   const askTopic = (topic: AssistantTopic) => {
@@ -109,6 +123,7 @@ export const AssistantPanel: Component<AssistantPanelProps> = (props) => {
         links: topic.links,
       },
     ]);
+    scrollToLatest();
   };
 
   return (
@@ -125,14 +140,16 @@ export const AssistantPanel: Component<AssistantPanelProps> = (props) => {
         aria-label={kb().title}
         class="fixed right-4 bottom-20 z-50 flex max-h-[min(78vh,calc(100dvh-6.5rem))] w-[min(92vw,420px)] flex-col overflow-hidden rounded-3xl border border-[var(--color-border-strong)] bg-[var(--color-surface)] shadow-2xl"
       >
-        <div class="flex items-center justify-between gap-3 border-b border-[var(--color-border)] bg-[var(--color-bg)] px-5 py-4">
-          <div class="flex min-w-0 items-center gap-3">
+        <div class="flex items-start justify-between gap-3 border-b border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3.5 sm:px-5 sm:py-4">
+          <div class="flex min-w-0 items-start gap-3">
             <span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[var(--color-primary-soft)] text-[var(--color-primary)]">
               <BotIcon size={18} />
             </span>
             <div class="min-w-0">
-              <p class="truncate font-display text-base text-[var(--color-fg)]">{kb().title}</p>
-              <p class="truncate font-mono text-[11px] text-[var(--color-accent)]">
+              <p class="font-display text-sm leading-snug text-[var(--color-fg)] sm:text-base">
+                {kb().title}
+              </p>
+              <p class="mt-0.5 line-clamp-2 font-mono text-[11px] leading-snug text-[var(--color-accent)]">
                 {kb().subtitle}
               </p>
             </div>
@@ -149,17 +166,17 @@ export const AssistantPanel: Component<AssistantPanelProps> = (props) => {
         </div>
 
         {/* Topic Quick Chips */}
-        <div class="border-b border-[var(--color-border)] bg-[var(--color-bg)]/60 px-4 py-3">
+        <div class="border-b border-[var(--color-border)] bg-[var(--color-bg)]/60 px-4 py-2.5 sm:py-3">
           <p class="mb-2 font-mono text-[11px] uppercase tracking-wider text-[var(--color-accent)]">
             {kb().suggestedTitle}
           </p>
-          <div class="flex flex-wrap gap-1.5">
+          <div class="flex gap-1.5 overflow-x-auto pb-1 sm:flex-wrap sm:overflow-visible sm:pb-0">
             <For each={kb().topics.slice(0, 6)}>
               {(topic) => (
                 <button
                   type="button"
                   onClick={() => askTopic(topic)}
-                  class="min-h-[30px] rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-1 text-xs text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+                  class="min-h-[32px] shrink-0 whitespace-nowrap rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-xs text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
                 >
                   {topic.label}
                 </button>
@@ -169,7 +186,7 @@ export const AssistantPanel: Component<AssistantPanelProps> = (props) => {
         </div>
 
         {/* Conversation History */}
-        <div class="flex-1 space-y-3 overflow-y-auto px-4 py-4">
+        <div ref={chatScrollRef} class="flex-1 space-y-3 overflow-y-auto px-4 py-4">
           <For each={messages()}>
             {(msg) => (
               <div
@@ -235,7 +252,7 @@ export const AssistantPanel: Component<AssistantPanelProps> = (props) => {
             onInput={(e) => setInput(e.currentTarget.value)}
             placeholder={kb().inputPlaceholder}
             aria-label={kb().inputPlaceholder}
-            class="min-w-0 flex-1 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-base text-[var(--color-fg)] placeholder:text-[var(--color-fg-subtle)] focus:border-[var(--color-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-ring)] sm:text-sm"
+            class="min-w-0 flex-1 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-base text-[var(--color-fg)] placeholder:text-[var(--color-fg-subtle)] focus-visible:border-[var(--color-ring)] focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-[var(--color-ring)] sm:text-sm"
           />
           <button
             type="submit"
