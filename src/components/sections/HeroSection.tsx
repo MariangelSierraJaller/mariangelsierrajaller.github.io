@@ -20,7 +20,7 @@ export const HeroSection: Component = () => {
   return (
     <section
       id="hero"
-      class="relative isolate overflow-hidden pt-10 pb-12 sm:pt-14 sm:pb-16 lg:pt-16"
+      class="relative isolate overflow-hidden pt-7 pb-10 sm:pt-10 sm:pb-12 lg:pt-10 lg:pb-12"
     >
       {/* Ambient backdrop derived from existing hero-bg.jpg + Charcoal/Azure gradient */}
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
@@ -43,56 +43,56 @@ export const HeroSection: Component = () => {
         />
       </div>
 
-      <div class="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 sm:px-6 lg:grid-cols-[1.15fr_0.85fr]">
+      <div class="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-5 sm:px-6 lg:grid-cols-[1.18fr_0.82fr] lg:gap-10">
         <div>
           <div class="inline-flex max-w-full items-center gap-2 rounded-2xl border border-[var(--color-border-strong)] bg-[var(--color-surface)]/80 px-3.5 py-1.5 font-mono text-xs leading-snug uppercase tracking-wider text-[var(--color-accent)] sm:rounded-full">
             <SparklesIcon size={14} class="shrink-0 text-[var(--color-primary)]" />
             <span>{hero().badge}</span>
           </div>
 
-          <h1 class="mt-5 font-display text-[2rem] leading-[1.14] text-[var(--color-fg)] sm:text-5xl lg:text-[3.1rem]">
+          <h1 class="mt-4 font-display text-[2rem] leading-[1.22] text-[var(--color-fg)] sm:text-[2.85rem] sm:leading-[1.19] lg:text-[3rem]">
             {hero().headline}{" "}
             <span class="text-gradient italic">{hero().accentWord}</span>
           </h1>
 
-          <p class="mt-4 font-display text-xl leading-snug text-[var(--color-fg-muted)] sm:text-2xl">
+          <p class="mt-3.5 font-display text-xl leading-snug text-[var(--color-fg-muted)] sm:text-2xl">
             {hero().titleLine}
           </p>
 
-          <p class="mt-4 max-w-2xl text-base leading-relaxed text-[var(--color-fg-muted)] sm:text-lg">
+          <p class="mt-3.5 max-w-2xl text-base leading-relaxed text-[var(--color-fg-muted)] sm:text-[1.0625rem]">
             {hero().subtitle}
           </p>
 
-          <div class="mt-8 flex flex-wrap items-center gap-3">
+          <div class="mt-6 flex flex-wrap items-center gap-2.5">
             <a
               href="#projects"
-              class="inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-primary)] px-6 py-3 text-sm font-semibold text-[var(--color-on-primary)] blue-glow transition hover:bg-[var(--color-primary-hover)]"
+              class="inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-[var(--color-on-primary)] blue-glow transition hover:bg-[var(--color-primary-hover)]"
             >
               <span>{hero().primaryCta}</span>
               <ArrowRightIcon size={16} />
             </a>
             <a
               href="#resume"
-              class="inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] px-5 py-3 text-sm font-medium text-[var(--color-fg)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+              class="inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] px-4 py-2.5 text-sm font-medium text-[var(--color-fg)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
             >
               <FileTextIcon size={16} />
               <span>{hero().secondaryCta}</span>
             </a>
             <a
               href="#contact"
-              class="inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)]/60 px-5 py-3 text-sm font-medium text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
+              class="inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)]/60 px-4 py-2.5 text-sm font-medium text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
             >
               <span>{hero().tertiaryCta}</span>
             </a>
           </div>
 
-          <div class="mt-8">
+          <div class="mt-6">
             <TechList items={getRoleTopStack(role(), lang())} />
           </div>
         </div>
 
         {/* Hexagonal Portrait Frame */}
-        <div class="relative mx-auto w-full max-w-[360px] lg:max-w-[400px]">
+        <div class="relative mx-auto w-full max-w-[320px] sm:max-w-[350px] lg:max-w-[360px]">
           <div
             aria-hidden="true"
             class="pointer-events-none absolute inset-4 rounded-full opacity-35 blur-[80px]"
@@ -136,13 +136,13 @@ export const HeroSection: Component = () => {
               </picture>
               <div
                 aria-hidden="true"
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/55 via-transparent to-transparent"
+                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/55 via-transparent to-[var(--color-bg)]/15 shadow-[inset_0_0_26px_rgba(19,22,34,0.42)]"
               />
             </div>
           </div>
 
           {/* Identity Credential Strip (cleanly positioned below portrait to avoid overlap) */}
-          <div class="mt-5 flex flex-wrap items-center justify-center gap-2">
+          <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
             <span class="rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)]/95 px-3 py-1 font-mono text-[11px] text-[var(--color-accent)] shadow-sm">
               ASPAEN · Medellín, CO
             </span>

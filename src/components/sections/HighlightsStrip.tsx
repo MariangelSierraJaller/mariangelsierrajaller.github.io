@@ -19,7 +19,9 @@ export const HighlightsStrip: Component = () => {
                   aria-hidden="true"
                   class="mb-3 h-1 w-10 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)]"
                 />
-                <p class="font-display text-3xl text-[var(--color-primary)]">{card.value}</p>
+                <p class="font-display text-2xl leading-snug text-[var(--color-primary)] sm:text-[1.65rem]">
+                  {card.value}
+                </p>
                 <p class="mt-1.5 text-sm font-semibold text-[var(--color-fg)]">{card.label}</p>
                 <p class="mt-1 text-xs leading-relaxed text-[var(--color-fg-muted)]">{card.hint}</p>
               </div>
