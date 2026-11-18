@@ -8,6 +8,12 @@ export const AssistantLauncher: Component = () => {
   const { lang } = useLanguage();
   const [open, setOpen] = createSignal(false);
   const kb = () => getAssistantKb(lang());
+  let launcherRef: HTMLButtonElement | undefined;
+
+  const closeAssistant = () => {
+    setOpen(false);
+    launcherRef?.focus();
+  };
 
   onMount(() => {
     if (typeof window === "undefined") return;
@@ -18,7 +24,7 @@ export const AssistantLauncher: Component = () => {
         e.preventDefault();
         setOpen((v) => !v);
       } else if (e.key === "Escape" && open()) {
-        setOpen(false);
+        closeAssistant();
       }
     };
 
@@ -33,6 +39,7 @@ export const AssistantLauncher: Component = () => {
   return (
     <>
       <button
+        ref={launcherRef}
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open()}
@@ -44,7 +51,7 @@ export const AssistantLauncher: Component = () => {
       </button>
 
       <Show when={open()}>
-        <AssistantPanel onClose={() => setOpen(false)} />
+        <AssistantPanel onClose={closeAssistant} />
       </Show>
     </>
   );

@@ -107,7 +107,7 @@ export const ContactSection: Component = () => {
                   {contact().cards.locationValue}
                 </p>
               </div>
-              <ArrowUpRightIcon size={16} class="text-[var(--color-fg-subtle)]" />
+              <ArrowUpRightIcon size={16} class="shrink-0 text-[var(--color-fg-subtle)]" />
             </a>
 
             <a
@@ -125,7 +125,7 @@ export const ContactSection: Component = () => {
                   {SITE.phoneDisplay}
                 </p>
               </div>
-              <ArrowUpRightIcon size={16} class="text-[var(--color-fg-subtle)]" />
+              <ArrowUpRightIcon size={16} class="shrink-0 text-[var(--color-fg-subtle)]" />
             </a>
 
             <a
@@ -141,7 +141,7 @@ export const ContactSection: Component = () => {
                 </p>
                 <p class="truncate text-sm font-medium text-[var(--color-fg)]">{SITE.email}</p>
               </div>
-              <ArrowUpRightIcon size={16} class="text-[var(--color-fg-subtle)]" />
+              <ArrowUpRightIcon size={16} class="shrink-0 text-[var(--color-fg-subtle)]" />
             </a>
 
             <div class="grid gap-3 sm:grid-cols-2">
@@ -280,10 +280,10 @@ export const ContactSection: Component = () => {
             )}
           </Show>
 
-          <div class="flex flex-wrap gap-3 pt-2">
+          <div class="grid gap-3 pt-2 sm:flex sm:flex-wrap">
             <button
               type="submit"
-              class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[var(--color-whatsapp)] px-5 py-3 text-sm font-semibold text-[var(--color-on-whatsapp)] transition hover:opacity-90"
+              class="inline-flex min-h-[44px] items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-whatsapp)] px-5 py-3 text-sm font-semibold text-[var(--color-on-whatsapp)] transition hover:opacity-90 sm:flex-1"
             >
               <WhatsAppBrandIcon size={16} />
               <span>{contact().form.sendWhatsapp}</span>
@@ -292,7 +292,7 @@ export const ContactSection: Component = () => {
             <button
               type="button"
               onClick={() => handleDispatch("email")}
-              class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-5 py-3 text-sm font-semibold text-[var(--color-on-primary)] transition hover:bg-[var(--color-primary-hover)]"
+              class="inline-flex min-h-[44px] items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-primary)] px-5 py-3 text-sm font-semibold text-[var(--color-on-primary)] transition hover:bg-[var(--color-primary-hover)] sm:flex-1"
             >
               <SendIcon size={15} />
               <span>{contact().form.sendEmail}</span>
@@ -301,7 +301,7 @@ export const ContactSection: Component = () => {
             <button
               type="button"
               onClick={resetForm}
-              class="rounded-full border border-[var(--color-border)] px-4 py-3 text-xs font-medium text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
+              class="min-h-[44px] whitespace-nowrap rounded-full border border-[var(--color-border)] px-4 py-3 text-xs font-medium text-[var(--color-fg-muted)] transition hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
             >
               {contact().form.clear}
             </button>

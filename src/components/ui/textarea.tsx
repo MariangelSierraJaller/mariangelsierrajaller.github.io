@@ -5,7 +5,7 @@ export const Textarea: Component<JSX.TextareaHTMLAttributes<HTMLTextAreaElement>
   return (
     <textarea
       {...rest}
-      class={`w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-fg)] placeholder:text-[var(--color-fg-subtle)] transition focus:border-[var(--color-primary)] focus:outline-none ${local.class ?? ""}`}
+      class={`w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-base text-[var(--color-fg)] placeholder:text-[var(--color-fg-subtle)] transition focus:border-[var(--color-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-ring)] sm:text-sm ${local.class ?? ""}`}
     />
   );
 };
