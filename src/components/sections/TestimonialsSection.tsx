@@ -63,16 +63,19 @@ export const TestimonialsSection: Component = () => {
           return (
             <figure class="relative flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)]/90 p-6 hover-glow">
               <div>
-                <div class="mb-4 flex items-start justify-between gap-2">
+                <div class="mb-3 flex items-center justify-between gap-2">
                   <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[var(--color-primary)]">
                     <QuoteIcon size={15} />
                   </span>
-                  <div class="flex flex-wrap items-center justify-end gap-2 font-mono text-xs">
-                    <span class="rounded-lg border border-[var(--color-primary)]/40 bg-[var(--color-primary-soft)] px-2.5 py-0.5 text-right leading-snug text-[var(--color-accent)]">
-                      {item().highlight}
-                    </span>
-                    <span class="shrink-0 text-[var(--color-fg-subtle)]">{shared.date}</span>
-                  </div>
+                  <span class="shrink-0 font-mono text-xs text-[var(--color-fg-subtle)]">
+                    {shared.date}
+                  </span>
+                </div>
+
+                <div class="mb-4">
+                  <span class="inline-block rounded-lg border border-[var(--color-primary)]/40 bg-[var(--color-primary-soft)] px-2.5 py-1 font-mono text-xs leading-snug text-[var(--color-accent)]">
+                    {item().highlight}
+                  </span>
                 </div>
 
                 <blockquote class="text-sm italic leading-relaxed text-[var(--color-fg-muted)]">

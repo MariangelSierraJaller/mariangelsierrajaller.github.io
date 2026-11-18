@@ -5,6 +5,7 @@ import { useRole } from "@/context/role";
 import { PROFILE } from "@/content/shared/profile";
 import { orderedSkillGroupsForRole } from "@/lib/role-view";
 import { Section } from "@/components/layout/Section";
+import { CheckIcon } from "@/components/ui/icons";
 
 const LANGUAGE_PROFICIENCY: Record<SpokenLanguageFact["id"], number> = {
   es: 100,
@@ -104,16 +105,17 @@ export const SkillsSection: Component = () => {
       </div>
 
       {/* Soft Skills & Spoken Languages */}
-      <div class="mt-10 grid gap-6 lg:grid-cols-2">
+      <div class="mt-10 grid gap-6 lg:grid-cols-2 lg:items-start">
         <div class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover-glow">
           <h3 class="font-display text-xl text-[var(--color-fg)]">
             {skillsCopy().softSkillsTitle}
           </h3>
-          <ul class="mt-4 flex flex-wrap gap-2">
+          <ul class="mt-4 grid gap-2.5 sm:grid-cols-2">
             <For each={skillsCopy().softSkills}>
               {(soft) => (
-                <li class="rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface-raised)] px-3.5 py-1.5 text-xs font-medium text-[var(--color-fg)]">
-                  {soft}
+                <li class="flex items-start gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)]/60 px-3 py-2.5 text-xs leading-snug text-[var(--color-fg)]">
+                  <CheckIcon size={14} class="mt-0.5 shrink-0 text-[var(--color-primary)]" />
+                  <span>{soft}</span>
                 </li>
               )}
             </For>

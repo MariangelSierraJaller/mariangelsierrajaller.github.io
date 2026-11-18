@@ -8,7 +8,7 @@ import {
 } from "@/content/shared/certifications";
 import { buildDetailIndexPath, buildDetailItemPath } from "@/lib/paths";
 import { Section } from "@/components/layout/Section";
-import { ArrowRightIcon, AwardIcon } from "@/components/ui/icons";
+import { ArrowRightIcon, AwardIcon, CheckIcon } from "@/components/ui/icons";
 
 export const CertificationsSection: Component = () => {
   const { lang, copy } = useLanguage();
@@ -25,7 +25,7 @@ export const CertificationsSection: Component = () => {
       action={
         <a
           href={buildDetailIndexPath(lang(), "certifications", role(), locked())}
-          class="inline-flex items-center gap-1.5 whitespace-nowrap font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+          class="inline-flex min-h-[36px] items-center gap-1.5 whitespace-nowrap py-1.5 font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
         >
           <span>{certCopy().viewAllLabel}</span>
           <ArrowRightIcon size={14} />
@@ -59,14 +59,22 @@ export const CertificationsSection: Component = () => {
                     {item().summary}
                   </p>
 
-                  <ul class="mt-4 flex flex-wrap gap-1.5">
+                  <ul class="mt-4 space-y-1.5 text-xs text-[var(--color-fg-muted)]">
                     <For each={item().competencies}>
-                      {(comp) => <li class="tech-badge">{comp}</li>}
+                      {(comp) => (
+                        <li class="flex items-start gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)]/55 px-2.5 py-1.5">
+                          <CheckIcon
+                            size={13}
+                            class="mt-0.5 shrink-0 text-[var(--color-primary)]"
+                          />
+                          <span>{comp}</span>
+                        </li>
+                      )}
                     </For>
                   </ul>
                 </div>
 
-                <div class="mt-5 border-t border-[var(--color-border)] pt-3">
+                <div class="mt-5 border-t border-[var(--color-border)] pt-2">
                   <a
                     href={buildDetailItemPath(
                       lang(),
@@ -75,7 +83,7 @@ export const CertificationsSection: Component = () => {
                       role(),
                       locked(),
                     )}
-                    class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                    class="inline-flex min-h-[36px] items-center gap-1.5 py-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
                   >
                     <span>{certCopy().viewDetailLabel}</span>
                     <ArrowRightIcon size={13} />
