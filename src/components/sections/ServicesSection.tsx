@@ -149,7 +149,7 @@ export const ServicesSection: Component = () => {
                   <TechList items={item().tags} />
                   <a
                     href="#contact"
-                    class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                    class="inline-flex min-h-[36px] items-center gap-1.5 py-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
                   >
                     <span>{svcCopy().ctaLabel}</span>
                     <ArrowRightIcon size={13} />

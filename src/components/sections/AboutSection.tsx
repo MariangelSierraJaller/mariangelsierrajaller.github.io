@@ -171,7 +171,7 @@ export const AboutSection: Component = () => {
           </div>
           <a
             href={buildDetailIndexPath(lang(), "education", role(), locked())}
-            class="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+            class="inline-flex min-h-[36px] shrink-0 items-center gap-1.5 whitespace-nowrap py-1.5 font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
           >
             <span>{about().viewAllEducationLabel}</span>
             <ArrowRightIcon size={14} />
@@ -286,10 +286,10 @@ export const AboutSection: Component = () => {
                       </For>
                     </div>
                   </div>
-                  <div class="mt-5 border-t border-[var(--color-border)] pt-3">
+                  <div class="mt-5 border-t border-[var(--color-border)] pt-2">
                     <a
                       href={href()}
-                      class="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                      class="inline-flex min-h-[36px] items-center gap-1.5 py-1.5 font-mono text-xs text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
                     >
                       <span>{about().viewDetailsLabel}</span>
                       <ArrowRightIcon size={13} />

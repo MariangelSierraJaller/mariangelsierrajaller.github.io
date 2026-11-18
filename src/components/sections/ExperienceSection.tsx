@@ -28,20 +28,20 @@ export const ExperienceSection: Component = () => {
       action={
         <a
           href={buildDetailIndexPath(lang(), "experience", role(), locked())}
-          class="inline-flex items-center gap-1.5 whitespace-nowrap font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+          class="inline-flex min-h-[36px] items-center gap-1.5 whitespace-nowrap py-1.5 font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
         >
           <span>{expCopy().viewAllLabel}</span>
           <ArrowRightIcon size={14} />
         </a>
       }
     >
-      <div class="grid gap-8 md:grid-cols-2">
+      <div class="grid gap-8 md:grid-cols-2 md:items-start">
         <For each={EXPERIENCE_ORDER}>
           {(expId) => {
             const shared = EXPERIENCE_SHARED[expId];
             const item = () => expCopy().items[expId];
             const roleView = () => item().byRole[role()];
-            const [expanded, setExpanded] = createSignal(shared.current);
+            const [expanded, setExpanded] = createSignal(true);
 
             return (
               <article class="flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)]/90 p-6 hover-glow">
@@ -128,7 +128,7 @@ export const ExperienceSection: Component = () => {
                         role(),
                         locked(),
                       )}
-                      class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                      class="inline-flex min-h-[36px] items-center gap-1.5 py-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
                     >
                       <span>{expCopy().viewDetailLabel}</span>
                       <ArrowRightIcon size={13} />
