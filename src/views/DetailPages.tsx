@@ -238,7 +238,7 @@ export const DetailItemView: Component<{
         </a>
         <a
           href={buildDetailItemPath(lang(), props.collection, nextItem().slug, role(), locked())}
-          class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-right hover-glow"
+          class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 sm:text-right hover-glow"
         >
           <p class="font-mono text-xs text-[var(--color-accent)]">{ui().nextLabel}</p>
           <p class="mt-1 font-display text-lg text-[var(--color-fg)]">{nextItem().title}</p>

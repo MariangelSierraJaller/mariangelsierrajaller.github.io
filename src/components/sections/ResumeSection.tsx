@@ -48,6 +48,25 @@ export const ResumeSection: Component = () => {
     setSelected(RESUME_VARIANT_IDS[nextIdx]);
   };
 
+  const onTabKeyDown = (e: KeyboardEvent, currentVariant: ResumeVariantId) => {
+    const idx = RESUME_VARIANT_IDS.indexOf(currentVariant);
+    let nextIdx = -1;
+    if (e.key === "ArrowRight") nextIdx = (idx + 1) % RESUME_VARIANT_IDS.length;
+    else if (e.key === "ArrowLeft")
+      nextIdx = (idx - 1 + RESUME_VARIANT_IDS.length) % RESUME_VARIANT_IDS.length;
+    else if (e.key === "Home") nextIdx = 0;
+    else if (e.key === "End") nextIdx = RESUME_VARIANT_IDS.length - 1;
+
+    if (nextIdx >= 0) {
+      e.preventDefault();
+      const nextId = RESUME_VARIANT_IDS[nextIdx];
+      setSelected(nextId);
+      if (typeof document !== "undefined") {
+        document.getElementById(`resume-tab-${nextId}`)?.focus();
+      }
+    }
+  };
+
   let startX = 0;
   let startY = 0;
   let swipedRecently = false;
@@ -89,9 +108,12 @@ export const ResumeSection: Component = () => {
                 <button
                   type="button"
                   role="tab"
+                  id={`resume-tab-${variantId}`}
                   aria-selected={active()}
+                  tabindex={active() ? 0 : -1}
                   onClick={() => setSelected(variantId)}
-                  class={`rounded-full border px-4 py-2 text-xs font-semibold transition sm:text-sm ${
+                  onKeyDown={(e) => onTabKeyDown(e, variantId)}
+                  class={`min-h-[40px] whitespace-nowrap rounded-full border px-4 py-2 text-xs font-semibold transition sm:text-sm ${
                     active()
                       ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-on-primary)]"
                       : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg-muted)] hover:border-[var(--color-border-strong)] hover:text-[var(--color-fg)]"
@@ -208,21 +230,23 @@ export const ResumeSection: Component = () => {
             }}
             class="group block overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-3 hover-glow"
           >
-            <img
-              src={withBase(activeShared().previewPath)}
-              alt={activeCopy().previewAlt}
-              width={816}
-              height={1056}
-              loading="lazy"
-              decoding="async"
-              draggable={false}
-              class="h-auto w-full rounded-2xl object-cover transition duration-300 group-hover:scale-[1.01]"
-            />
+            <div class="aspect-[816/1056] w-full overflow-hidden rounded-2xl bg-[var(--color-bg)]">
+              <img
+                src={withBase(activeShared().previewPath)}
+                alt={activeCopy().previewAlt}
+                width={816}
+                height={1056}
+                loading="lazy"
+                decoding="async"
+                draggable={false}
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.01]"
+              />
+            </div>
           </a>
 
           {/* Bottom Dots & Swipe Hint */}
           <div class="flex flex-wrap items-center justify-between gap-2 px-1">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-1">
               <For each={RESUME_VARIANT_IDS}>
                 {(variantId) => (
                   <button
@@ -230,12 +254,16 @@ export const ResumeSection: Component = () => {
                     aria-label={resumeCopy().variants[variantId].label}
                     aria-pressed={selected() === variantId}
                     onClick={() => setSelected(variantId)}
-                    class={`h-2.5 rounded-full transition-all ${
-                      selected() === variantId
-                        ? "w-8 bg-[var(--color-primary)]"
-                        : "w-2.5 bg-[var(--color-border-strong)] hover:bg-[var(--color-accent)]"
-                    }`}
-                  />
+                    class="inline-flex h-9 min-w-[28px] items-center justify-center px-1"
+                  >
+                    <span
+                      class={`block h-2.5 rounded-full transition-all ${
+                        selected() === variantId
+                          ? "w-8 bg-[var(--color-primary)]"
+                          : "w-2.5 bg-[var(--color-border-strong)] hover:bg-[var(--color-accent)]"
+                      }`}
+                    />
+                  </button>
                 )}
               </For>
             </div>

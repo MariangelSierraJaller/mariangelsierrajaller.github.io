@@ -3,6 +3,7 @@ import { useLanguage } from "@/context/language";
 import { useRole } from "@/context/role";
 import { getRoleConfig } from "@/content/roles";
 import { getProjectSummary } from "@/content/project-copy";
+import { getProjectPeriod } from "@/content/shared/projects";
 import { orderedProjectsForRole } from "@/lib/role-view";
 import { buildProjectPath, buildProjectsIndexPath } from "@/lib/paths";
 import { Section } from "@/components/layout/Section";
@@ -40,18 +41,18 @@ export const ProjectsSection: Component = () => {
       {/* Featured Case Study Spotlight */}
       <article class="mb-10 rounded-3xl border border-[var(--color-border-strong)] bg-[var(--color-surface)] p-6 sm:p-8 hover-glow">
         <div class="flex flex-wrap items-center justify-between gap-3">
-          <div class="flex items-center gap-2">
-            <span class="rounded-full bg-[var(--color-primary)] px-3 py-1 font-mono text-xs font-semibold text-[var(--color-on-primary)]">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="whitespace-nowrap rounded-full bg-[var(--color-primary)] px-3 py-1 font-mono text-xs font-semibold text-[var(--color-on-primary)]">
               {projCopy().featuredLabel}
             </span>
-            <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-1 font-mono text-xs text-[var(--color-accent)]">
+            <span class="whitespace-nowrap rounded-full border border-[var(--color-border)] bg-[var(--color-surface-raised)] px-3 py-1 font-mono text-xs text-[var(--color-accent)]">
               {featuredShared().kind === "case-study"
                 ? projCopy().caseStudyBadge
                 : projCopy().projectPageBadge}
             </span>
           </div>
           <span class="font-mono text-xs text-[var(--color-fg-subtle)]">
-            {featuredShared().period}
+            {getProjectPeriod(featuredShared().id, lang())}
           </span>
         </div>
 
@@ -67,7 +68,7 @@ export const ProjectsSection: Component = () => {
               {featuredSummary().summary}
             </p>
             <div class="mt-5">
-              <TechList items={featuredShared().stack} />
+              <TechList items={featuredSummary().tags} />
             </div>
           </div>
 
@@ -82,7 +83,7 @@ export const ProjectsSection: Component = () => {
             </div>
             <a
               href={buildProjectPath(lang(), featuredShared().slug, role(), locked())}
-              class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-[var(--color-on-primary)] transition hover:bg-[var(--color-primary-hover)]"
+              class="inline-flex min-h-[44px] items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-[var(--color-on-primary)] transition hover:bg-[var(--color-primary-hover)]"
             >
               <span>{projCopy().viewCaseLabel}</span>
               <ArrowRightIcon size={15} />
@@ -96,7 +97,7 @@ export const ProjectsSection: Component = () => {
         <div
           role="group"
           aria-label="Filter projects"
-          class="inline-flex flex-wrap gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] p-1 text-xs"
+          class="inline-flex flex-wrap gap-1.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-1 text-xs sm:rounded-full"
         >
           <For
             each={[
@@ -110,7 +111,7 @@ export const ProjectsSection: Component = () => {
                 type="button"
                 aria-pressed={filter() === tab.id}
                 onClick={() => setFilter(tab.id)}
-                class={`rounded-full px-3.5 py-1.5 font-medium transition ${
+                class={`min-h-[36px] whitespace-nowrap rounded-full px-3.5 py-1.5 font-medium transition ${
                   filter() === tab.id
                     ? "bg-[var(--color-primary)] text-[var(--color-on-primary)]"
                     : "text-[var(--color-fg-muted)] hover:text-[var(--color-fg)]"
@@ -124,7 +125,7 @@ export const ProjectsSection: Component = () => {
 
         <a
           href={buildProjectsIndexPath(lang(), role(), locked())}
-          class="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+          class="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap font-mono text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
         >
           <span>{projCopy().viewAllLabel}</span>
           <ArrowRightIcon size={14} />
@@ -140,13 +141,13 @@ export const ProjectsSection: Component = () => {
             return (
               <article class="flex flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover-glow">
                 <div>
-                  <div class="flex items-center justify-between gap-2">
+                  <div class="flex items-start justify-between gap-2">
                     <span class="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--color-accent)]">
-                      <LayersIcon size={14} />
+                      <LayersIcon size={14} class="shrink-0" />
                       <span>{summary().category}</span>
                     </span>
                     <Show when={isFeatured()}>
-                      <span class="rounded-full bg-[var(--color-primary-soft)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--color-primary)]">
+                      <span class="shrink-0 whitespace-nowrap rounded-full bg-[var(--color-primary-soft)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--color-primary)]">
                         {projCopy().featuredLabel}
                       </span>
                     </Show>
@@ -159,22 +160,22 @@ export const ProjectsSection: Component = () => {
                     {summary().summary}
                   </p>
 
-                  <div class="mt-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)]/70 px-3.5 py-2.5">
+                  <div class="mt-4 flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)]/70 px-3.5 py-2.5">
                     <span class="font-display text-lg text-[var(--color-accent)]">
                       {summary().impactMetric.value}
                     </span>
-                    <span class="ml-2 text-xs text-[var(--color-fg-muted)]">
+                    <span class="text-xs text-[var(--color-fg-muted)]">
                       {summary().impactMetric.label}
                     </span>
                   </div>
                 </div>
 
                 <div class="mt-5 space-y-4">
-                  <TechList items={shared.stack} limit={4} />
+                  <TechList items={summary().tags} limit={4} />
                   <div class="border-t border-[var(--color-border)] pt-3">
                     <a
                       href={buildProjectPath(lang(), shared.slug, role(), locked())}
-                      class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                      class="inline-flex items-center gap-1.5 whitespace-nowrap font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
                     >
                       <span>{projCopy().viewCaseLabel}</span>
                       <ArrowRightIcon size={13} />

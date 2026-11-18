@@ -3,7 +3,12 @@ import type { ProjectId } from "@/types/content";
 import type { CaseStudyBlock, CaseStudyCopy, ProjectPageCopy } from "@/types/project";
 import { useLanguage } from "@/context/language";
 import { useRole } from "@/context/role";
-import { PROJECT_ORDER, PROJECTS_SHARED } from "@/content/shared/projects";
+import {
+  getProjectPeriod,
+  getProjectStack,
+  PROJECT_ORDER,
+  PROJECTS_SHARED,
+} from "@/content/shared/projects";
 import {
   getProjectCopy,
   getProjectSummary,
@@ -45,7 +50,7 @@ const CodeBlockCard: Component<{ title: string; language: string; snippet: strin
           <button
             type="button"
             onClick={() => void handleCopy()}
-            class="inline-flex items-center gap-1 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-0.5 text-[11px] text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+            class="inline-flex min-h-[30px] items-center gap-1 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-[11px] text-[var(--color-fg-muted)] transition hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
           >
             <Show when={copied()} fallback={<CopyIcon size={12} />}>
               <CheckIcon size={12} class="text-[var(--color-success)]" />
@@ -220,7 +225,7 @@ export const ProjectsIndexView: Component = () => {
         </p>
       </header>
 
-      <div class="mt-8 inline-flex gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] p-1 text-xs">
+      <div class="mt-8 inline-flex flex-wrap gap-1.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-1 text-xs sm:rounded-full">
         <For
           each={[
             { id: "all" as const, label: projCopy().filterAllLabel },
@@ -231,8 +236,9 @@ export const ProjectsIndexView: Component = () => {
           {(tab) => (
             <button
               type="button"
+              aria-pressed={filter() === tab.id}
               onClick={() => setFilter(tab.id)}
-              class={`rounded-full px-3.5 py-1.5 font-medium transition ${
+              class={`min-h-[36px] whitespace-nowrap rounded-full px-3.5 py-1.5 font-medium transition ${
                 filter() === tab.id
                   ? "bg-[var(--color-primary)] text-[var(--color-on-primary)]"
                   : "text-[var(--color-fg-muted)] hover:text-[var(--color-fg)]"
@@ -265,7 +271,7 @@ export const ProjectsIndexView: Component = () => {
                 </div>
 
                 <div class="mt-6 space-y-4">
-                  <TechList items={shared.stack} limit={5} />
+                  <TechList items={summary().tags} limit={5} />
                   <a
                     href={buildProjectPath(lang(), shared.slug, role(), locked())}
                     class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
@@ -427,7 +433,7 @@ export const ProjectDetailView: Component<{ projectId: ProjectId }> = (props) =>
               : linksCopy().projectPageBadge}
           </span>
           <span class="font-mono text-xs text-[var(--color-fg-subtle)]">
-            {linksCopy().periodLabel}: {shared().period}
+            {linksCopy().periodLabel}: {getProjectPeriod(props.projectId, lang())}
           </span>
         </div>
 
@@ -435,7 +441,7 @@ export const ProjectDetailView: Component<{ projectId: ProjectId }> = (props) =>
           {entry().title}
         </h1>
         <p class="text-lg text-[var(--color-fg-muted)]">{entry().subtitle}</p>
-        <TechList items={shared().stack} />
+        <TechList items={getProjectStack(props.projectId, lang())} />
       </header>
 
       <div class="mt-12">
@@ -462,7 +468,7 @@ export const ProjectDetailView: Component<{ projectId: ProjectId }> = (props) =>
         </a>
         <a
           href={buildProjectPath(lang(), PROJECTS_SHARED[nextId()].slug, role(), locked())}
-          class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-right hover-glow"
+          class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 sm:text-right hover-glow"
         >
           <p class="font-mono text-xs text-[var(--color-accent)]">{linksCopy().nextLabel}</p>
           <p class="mt-1 font-display text-lg text-[var(--color-fg)]">

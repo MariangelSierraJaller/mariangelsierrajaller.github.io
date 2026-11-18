@@ -59,7 +59,7 @@ export function Carousel<T>(props: CarouselProps<T>) {
             <ChevronLeftIcon size={18} />
           </button>
 
-          <div class="flex items-center gap-2" role="tablist" aria-label={props.ariaLabel}>
+          <div class="flex items-center gap-1" role="tablist" aria-label={props.ariaLabel}>
             <For each={Array.from({ length: totalPages() })}>
               {(_, idx) => (
                 <button
@@ -68,12 +68,16 @@ export function Carousel<T>(props: CarouselProps<T>) {
                   aria-selected={page() === idx()}
                   aria-label={`${idx() + 1} / ${totalPages()}`}
                   onClick={() => setPage(idx())}
-                  class={`h-2.5 rounded-full transition-all ${
-                    page() === idx()
-                      ? "w-8 bg-[var(--color-primary)]"
-                      : "w-2.5 bg-[var(--color-border-strong)] hover:bg-[var(--color-accent)]"
-                  }`}
-                />
+                  class="inline-flex h-10 min-w-[28px] items-center justify-center px-1"
+                >
+                  <span
+                    class={`block h-2.5 rounded-full transition-all ${
+                      page() === idx()
+                        ? "w-8 bg-[var(--color-primary)]"
+                        : "w-2.5 bg-[var(--color-border-strong)] hover:bg-[var(--color-accent)]"
+                    }`}
+                  />
+                </button>
               )}
             </For>
           </div>
@@ -89,7 +93,11 @@ export function Carousel<T>(props: CarouselProps<T>) {
         </div>
       </Show>
 
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        class={`grid gap-6 md:grid-cols-2 ${
+          visibleItems().length === 2 ? "" : "lg:grid-cols-3"
+        }`}
+      >
         <For each={visibleItems()}>
           {(item) => props.renderItem(item)}
         </For>
