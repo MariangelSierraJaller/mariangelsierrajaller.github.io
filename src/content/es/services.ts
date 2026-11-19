@@ -21,7 +21,7 @@ export const ES_SERVICES: ServicesSectionCopy = {
         "Estandarización y depuración de catálogos de proveedores y artículos",
         "Manuales de procedimiento operativo (SOP) y capacitación a usuarios internos",
       ],
-      impact: "Eliminación de órdenes de compra huérfanas y 99.2% de precisión en inventarios ERP.",
+      impact: "Eliminación de órdenes de compra huérfanas y 99.4% de precisión en inventarios ERP.",
       tags: ["Oracle NetSuite", "Compras", "Inventarios", "Facturación Electrónica", "SOP"],
     },
     financialControl: {
@@ -69,7 +69,7 @@ export const ES_SERVICES: ServicesSectionCopy = {
         "Documentación técnica de arquitectura y mantenimiento de scripts",
       ],
       impact:
-        "Ahorro de más del 80% del tiempo operativo en cierres mensuales y consolidaciones de datos.",
+        "Ahorro de más de 30 horas hombre mensuales (reducción del 92% en reportes semanales de NetSuite).",
       tags: ["Python", "Pandas", "ETL", "Automatización", "XML / JSON", "APIs"],
     },
   },

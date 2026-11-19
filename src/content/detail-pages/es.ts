@@ -115,7 +115,7 @@ export const ES_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     keyPointsTitle: "Responsabilidades y Logros Clave",
     keyPoints: [
       "Administración y parametrización operativa de flujos de compras, órdenes de servicio, proveedores e inventarios en Oracle NetSuite.",
-      "Ejecución y supervisión diaria de conciliaciones bancarias multimillonarias y arqueos de tesorería con cero discrepancias no justificadas.",
+      "Ejecución y supervisión diaria de conciliaciones bancarias multicuenta y arqueos de tesorería con cero discrepancias no justificadas.",
       "Desarrollo de scripts en Python con Pandas para validación cruzada automatizada entre extractos bancarios y registros contables del ERP.",
       "Construcción y mantenimiento de tableros ejecutivos en Power BI con métricas de liquidez, ejecución presupuestal y tiempos de ciclo de compra.",
       "Supervisión del cumplimiento de requisitos fiscales colombianos (facturación electrónica DIAN, retenciones en la fuente) y preparación de soportes para auditoría interna y externa.",

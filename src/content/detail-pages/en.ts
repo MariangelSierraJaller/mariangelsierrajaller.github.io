@@ -115,7 +115,7 @@ export const EN_DETAIL_ITEMS: Record<string, DetailPageCopy> = {
     keyPointsTitle: "Key Responsibilities & Achievements",
     keyPoints: [
       "Operational administration and parameterization of purchasing workflows, service orders, vendors, and inventory records in Oracle NetSuite.",
-      "Daily execution and oversight of multi-million bank reconciliations and treasury audits with zero unresolved variances.",
+      "Daily execution and oversight of multi-account bank reconciliations and treasury audits with zero unresolved variances.",
       "Development of Python scripts with Pandas for automated cross-validation between bank statements and ERP general ledger records.",
       "Creation and continuous maintenance of executive Power BI dashboards tracking liquidity, budget burn rates, and procurement cycle times.",
       "Ensuring strict compliance with Colombian fiscal requirements (DIAN electronic invoicing, withholding taxes) and preparing audit-ready documentation.",

@@ -15,15 +15,15 @@ export const EN_CERTIFICATIONS: CertificationsSectionCopy = {
   items: {
     googleDataAnalytics: {
       id: "googleDataAnalytics" as CertificationId,
-      title: "Google Data Analytics Professional Specialization",
+      title: "Data Analytics & CRISP-DM Methodology",
       summary:
-        "Comprehensive certification covering the end-to-end data lifecycle: data cleaning, analytical problem solving, SQL querying, R programming, and Tableau visualization aligned with CRISP-DM.",
+        "Comprehensive specialization covering the end-to-end data lifecycle: data cleaning, exploratory analysis (EDA), SQL querying, Python automation, and Tableau visualization under CRISP-DM.",
       competencies: [
         "Data Cleaning & Verification",
         "SQL Database Analysis",
         "Tableau & Visualization",
         "CRISP-DM Framework",
-        "Statistical Synthesis",
+        "Exploratory Data Analysis",
       ],
     },
     powerBiAnalytics: {
@@ -69,11 +69,11 @@ export const EN_CERTIFICATIONS: CertificationsSectionCopy = {
       id: "excelFinancialModeling" as CertificationId,
       title: "Advanced Excel Financial Modeling & Corporate Control",
       summary:
-        "Mastery of financial functions, multi-scenario forecasting models, dynamic array formulas, PivotTables, and financial dashboard architecture.",
+        "Financial functions, multi-scenario forecasting models, dynamic array formulas (XLOOKUP), Power Pivot, and financial reconciliation templates.",
       competencies: [
         "Financial Modeling",
         "Scenario Analysis",
-        "Dynamic Arrays & VBA",
+        "Dynamic Arrays & Power Pivot",
         "Automated Reconciliation",
         "Executive Summary Design",
       ],

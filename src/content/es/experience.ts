@@ -25,7 +25,7 @@ export const ES_EXPERIENCE: ExperienceSectionCopy = {
             "Desarrollo e implementación de flujos ETL en Python para la consolidación contable y generación de tableros ejecutivos en Power BI.",
             "Ejecución rigurosa de control de tesorería, arqueos de fondos de caja menor y conciliaciones bancarias multicuenta con 100% de consistencia auditable.",
             "Estandarización de procedimientos operativos interdisciplinarios, uniendo requerimientos contables con rigor ingenieril.",
-            "Diseño de auditorías preventivas que eliminaron discrepancias en existencias de inventarios y tiempos muertos en compras.",
+            "Implementación de controles y matching de 3 vías que alcanzaron 99.4% de exactitud en inventarios y redujeron el ciclo de compras en 65%.",
           ],
         },
         admin: {
@@ -47,7 +47,7 @@ export const ES_EXPERIENCE: ExperienceSectionCopy = {
           highlights: [
             "Diseño y despliegue de pipelines ETL en Python (Pandas) para extraer, depurar y estructurar datos contables desde Oracle NetSuite.",
             "Creación de modelos de datos relacionales y cuadros de mando interactivos en Power BI (DAX, Power Query) para monitoreo financiero.",
-            "Automatización de conciliaciones y auditorías de inventario mediante scripts, reduciendo tiempos de procesamiento en más de un 80%.",
+            "Automatización de conciliaciones bancarias (de 4 días a 4 horas) y reportes ERP semanales (de 12 h a 45 min), ahorrando más de 30 horas hombre mensuales.",
             "Estandarización de estructuras de datos e integración de fuentes dispersas mediante formatos estructurados XML y JSON.",
             "Capacitación de usuarios internos y documentación técnica de flujos analíticos para garantizar la gobernanza del dato.",
           ],

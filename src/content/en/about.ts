@@ -15,10 +15,10 @@ export const EN_ABOUT: AboutCopy = {
       heading: "Bridging Two Crucial Business Dimensions",
       subheading: "Strategic operations fueled by technical precision",
       paragraphs: [
-        "I am Mariangel Sierra Jaller, an engineering professional driven by a conviction: what is measured can be optimized, and what is automated frees human intellect for strategic value.",
-        "Graduated on September 10, 2026 with dual B.S. degrees in Systems Engineering and Industrial Engineering plus a Technology degree in Systems from Fundación Universidad San José—alongside active studies toward my third engineering degree in Biomedical Engineering at ITM—I bridge operational governance and software engineering.",
-        "Over four years at Asociación para la Enseñanza (ASPAEN), I have led procurement workflows, financial reconciliations, and internal audits while engineering Python ETL pipelines and Power BI intelligence suites that eliminated manual reporting overhead.",
-        "Whether standardizing multi-entity supply chains or deploying automated data ingestion pipelines, my objective remains constant: delivering resilience, audit-grade accuracy, and sustainable growth.",
+        "I am Mariangel Sierra Jaller, an engineering professional focused on automating repetitive operational workflows and turning transactional ERP records into reliable decision metrics.",
+        "Graduated on September 10, 2026 with B.S. degrees in Systems Engineering and Industrial Engineering plus a Technology degree in Systems from Fundación Universidad San José, and pursuing my third engineering degree in Biomedical Engineering at ITM, I connect operational governance with software engineering.",
+        "Over four years at Asociación para la Enseñanza (ASPAEN), I have managed full-cycle procurement, bank reconciliations, and internal audits while engineering Python ETL pipelines and Power BI suites that save 30+ hours per month.",
+        "Whether standardizing multi-campus supply chains or automating ERP data ingestion, my focus stays on audit-grade accuracy, traceability, and measurable operational results.",
       ],
       targetRoles: [
         "Systems & Operations Engineer",
@@ -38,10 +38,10 @@ export const EN_ABOUT: AboutCopy = {
       heading: "The Strategic Vision of Administrative Control",
       subheading: "Taming complexity, maximizing resource efficiency",
       paragraphs: [
-        "I am Mariangel Sierra Jaller, an operations and financial specialist dedicated to enterprise discipline, resource traceability, and organizational efficiency.",
-        "My multidisciplinary engineering background provides a rigorous analytical framework. I view financial and administrative operations not merely as cost tracking, but as proactive engines that safeguard cash flow, ensure compliance, and unlock margin improvement.",
-        "At ASPAEN, I have overseen full-cycle procurement, managed supplier relationships, directed bank reconciliations with zero discrepancy tolerance, and institutionalized strict audit procedures across corporate centers.",
-        "I align daily operational execution with long-term financial strategy, ensuring every resource invested is traced, audited, and optimized.",
+        "I am Mariangel Sierra Jaller, an engineering professional focused on enterprise discipline, financial traceability, and operational efficiency.",
+        "My multidisciplinary engineering background gives me a quantitative lens on administration. I run procurement, treasury, and internal controls to protect cash flow, enforce DIAN compliance, and prevent billing discrepancies.",
+        "At ASPAEN, I have managed full-cycle procurement across 80+ suppliers, directed monthly bank reconciliations with zero unresolved variances, and standardized audit procedures across 12 cost centers.",
+        "I pair Industrial Engineering process discipline with ERP and BI tooling to keep daily operations measurable and audit-ready.",
       ],
       targetRoles: [
         "Procurement & Supply Chain Coordinator",
@@ -96,12 +96,12 @@ export const EN_ABOUT: AboutCopy = {
     {
       title: "Continuous Improvement",
       description:
-        "Iterating relentlessly on process bottlenecks, reducing manual effort through Python scripts, smart Excel modeling, and workflow automation.",
+        "Removing process bottlenecks and reducing manual effort through Python scripts, structured Excel modeling, and workflow automation.",
     },
     {
-      title: "Ethical & Audit-Grade Rigor",
+      title: "Audit-Grade Rigor",
       description:
-        "Maintaining zero-compromise standards on data integrity, fiscal compliance, and documentation traceability across all operations.",
+        "Enforcing consistent standards for data integrity, DIAN fiscal compliance, and documentation traceability across operations.",
     },
   ],
   educationTitle: "Academic Trajectory",

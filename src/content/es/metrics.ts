@@ -13,13 +13,13 @@ export const ES_METRICS: MetricsSectionCopy = {
       items: [
         {
           label: "Tiempo de emisión de órdenes de compra",
-          value: "-40%",
-          detail: "Estandarización del flujo de aprobación en Oracle NetSuite",
+          value: "-65%",
+          detail: "Estandarización del flujo Procure-to-Pay y aprobaciones en Oracle NetSuite",
         },
         {
           label: "Exactitud en inventarios físicos vs ERP",
-          value: "99.2%",
-          detail: "Conteos cíclicos y conciliación periódica de almacén",
+          value: "99.4%",
+          detail: "Conteos cíclicos trimestrales y matching de 3 vías en almacén",
         },
         {
           label: "Órdenes de compra y compras tramitadas",
@@ -67,13 +67,13 @@ export const ES_METRICS: MetricsSectionCopy = {
       items: [
         {
           label: "Reducción de tiempo en reportes ETL",
-          value: "85%",
-          detail: "Sustitución de manipulación manual en hojas de cálculo por scripts Python",
+          value: "-92%",
+          detail: "De 12 horas semanales a 45 minutos mediante pipelines en Python",
         },
         {
-          label: "Registros contables procesados por minuto",
-          value: "50.000+",
-          detail: "Pipelines estructurados con Pandas y validaciones automáticas de datos",
+          label: "Errores de digitación manual",
+          value: "0%",
+          detail: "Validación automática de esquemas XML/JSON y partida doble en Pandas",
         },
         {
           label: "Disponibilidad de tableros ejecutivos",
@@ -82,8 +82,8 @@ export const ES_METRICS: MetricsSectionCopy = {
         },
         {
           label: "Horas hombre mensuales ahorradas",
-          value: "60+ hrs",
-          detail: "Automatización de cruces documentales y auditorías rutinarias",
+          value: "30+ hrs",
+          detail: "Automatización de cruces documentales y conciliaciones recurrentes",
         },
       ],
     },

@@ -45,7 +45,7 @@ export const EN_EXPERIENCE: ExperienceSectionCopy = {
           highlights: [
             "Engineered resilient Python ETL scripts (Pandas) to extract, validate, and parse high-volume XML electronic invoices and NetSuite records.",
             "Designed star-schema relational models and complex DAX measures in Power BI, powering real-time executive financial reporting.",
-            "Automated repetitive spreadsheet reconciliation tasks, saving 20+ hours per month of manual accounting effort.",
+            "Automated repetitive spreadsheet reconciliation tasks, saving 30+ hours per month of manual accounting effort.",
             "Integrated structured data exports with internal databases using SQL queries and automated validation constraints.",
           ],
         },

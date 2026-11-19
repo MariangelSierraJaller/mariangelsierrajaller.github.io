@@ -654,7 +654,7 @@ WHERE COALESCE(b.qty_billed, 0) > COALESCE(r.qty_received, 0)
     seo: {
       title: "Control de Compras e Inventarios en Oracle NetSuite | Mariangel Sierra",
       description:
-        "Reingeniería del ciclo Procure-to-Pay, matching de 3 vías y control de inventarios hospitalarios y corporativos con exactitud del 99.4%.",
+        "Reingeniería del ciclo Procure-to-Pay, matching de 3 vías y control de inventarios institucionales y corporativos con exactitud del 99.4%.",
       keywords: [
         "Oracle NetSuite Compras",
         "Inventarios ERP NetSuite",

@@ -38,7 +38,7 @@ export const EN_SERVICES: ServicesSectionCopy = {
         "Monthly expenditure variance reports & forecasting models",
         "Withholding tax & statutory reporting packages",
       ],
-      impact: "Eliminates reconciliation errors and cuts monthly closing cycles by 3 business days.",
+      impact: "Eliminates reconciliation variances and cuts monthly closing cycles from 4 days to 4 hours.",
       tags: ["Treasury", "Reconciliation", "Financial Modeling", "DIAN", "Internal Control"],
     },
     biDashboards: {
@@ -70,7 +70,7 @@ export const EN_SERVICES: ServicesSectionCopy = {
         "Automated discrepancy alerts & reconciliation routines",
         "Scheduled task runners and automated email reporting",
       ],
-      impact: "Saves 20+ hours per month of manual data entry while achieving zero human-entry error.",
+      impact: "Saves 30+ hours per month of manual data entry while achieving zero human-entry error.",
       tags: ["Python", "Pandas", "ETL", "XML/JSON", "Workflow Automation"],
     },
   },

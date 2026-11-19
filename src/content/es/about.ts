@@ -4,17 +4,17 @@ export const ES_ABOUT: AboutCopy = {
   eyebrow: "Trayectoria y Formación",
   title: "Sobre mí",
   subtitle:
-    "Ingeniería de Sistemas e Ingeniería Industrial unidas por la pasión de transformar datos y procesos en resultados operativos tangibles.",
+    "Ingeniería de Sistemas e Ingeniería Industrial aplicadas para transformar datos y procesos en resultados operativos medibles.",
   terminalCaption: "mariangel@sierra-jaller:~$ cat profile.json",
   roleNarratives: {
     general: {
       heading: "La Convergencia de Dos Mundos",
       subheading: "Uniendo la visión de negocio con la precisión computacional",
       paragraphs: [
-        "Soy Mariangel Sierra Jaller. Desde que inicié mi trayectoria profesional en 2022 en ASPAEN, descubrí que la verdadera eficiencia se alcanza cuando los procesos administrativos se entienden a fondo y se potencian mediante herramientas tecnológicas.",
-        "Graduada el 10 de septiembre de 2026 como Ingeniera de Sistemas, Ingeniera Industrial y Tecnóloga en Sistemas en la Fundación Universidad San José —complementada con mi avance hacia la tercera ingeniería en Ingeniería Biomédica en el ITM—, diagnostico cuellos de botella operativos con criterio industrial y construyo pipelines automatizados con rigor de sistemas.",
-        "He liderado el ciclo de compras, el control de tesorería y la auditoría interna apoyada en el ERP Oracle NetSuite, mientras desarrollo scripts en Python y tableros interactivos en Power BI que reducen drásticamente la carga manual de trabajo.",
-        "Mi meta es continuar conectando personas, procesos y datos para transformar organizaciones hacia modelos de gestión ágiles, auditables y orientados a la toma de decisiones informadas.",
+        "Soy Mariangel Sierra Jaller. Desde 2022 en ASPAEN he comprobado que la eficiencia operativa surge al entender a fondo los procesos administrativos y respaldarlos con automatización e ingeniería de datos.",
+        "Graduada el 10 de septiembre de 2026 como Ingeniera de Sistemas, Ingeniera Industrial y Tecnóloga en Sistemas en la Fundación Universidad San José, y estudiante de Ingeniería Biomédica en el ITM, diagnostico cuellos de botella con criterio industrial y construyo pipelines automatizados con rigor de sistemas.",
+        "He administrado el ciclo completo de compras, el control de tesorería y auditorías internas en Oracle NetSuite, mientras programo scripts en Python y tableros en Power BI que ahorran más de 30 horas hombre mensuales.",
+        "Mi objetivo es conectar operación, finanzas y datos para sostener modelos de gestión ágiles, trazables y verificables.",
       ],
       targetRoles: [
         "Especialista en Operaciones ERP",
@@ -33,10 +33,10 @@ export const ES_ABOUT: AboutCopy = {
       heading: "La Visión Estratégica y Operativa",
       subheading: "Optimizando la complejidad, entregando certidumbre y control financiero",
       paragraphs: [
-        "Creo firmemente en la premisa de que lo que no se mide no se puede controlar, y lo que no se controla no se puede optimizar. La gestión administrativa contemporánea exige rigor metódico, trazabilidad probatoria y un control financiero estricto.",
-        "A lo largo de más de cuatro años en ASPAEN, he administrado el ciclo integral de adquisiciones, desde la recepción de requisiciones y órdenes de compra hasta la validación de facturación electrónica DIAN y la auditoría de almacén.",
-        "En tesorería, he mantenido conciliaciones bancarias multicuenta con cero discrepancias mensuales, administrando fondos de caja menor con apego absoluto a las políticas institucionales y preparando los soportes requeridos en auditorías internas y fiscales.",
-        "Combino la visión estratégica de la Ingeniería Industrial para erradicar reprocesos con el dominio de sistemas de información que garantizan la continuidad y solidez operativa del negocio.",
+        "La gestión administrativa contemporánea exige método, trazabilidad probatoria y control financiero verificable en cada etapa del proceso.",
+        "Durante más de cuatro años en ASPAEN he administrado el ciclo integral de adquisiciones, desde la recepción de requisiciones y órdenes de compra hasta la validación de facturación electrónica DIAN (XML/CUFE) y la auditoría de almacén.",
+        "En tesorería he ejecutado conciliaciones bancarias multicuenta con cero discrepancias mensuales y administrado fondos de caja menor conforme a políticas internas, cerrando auditorías internas y fiscales sin observaciones.",
+        "Combino el enfoque de la Ingeniería Industrial para eliminar reprocesos con el dominio de ERP y sistemas de información que sostienen la continuidad operativa.",
       ],
       targetRoles: [
         "Coordinadora de Compras y Suministros",

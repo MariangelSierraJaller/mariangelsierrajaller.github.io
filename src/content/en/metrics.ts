@@ -13,14 +13,14 @@ export const EN_METRICS: MetricsSectionCopy = {
         "Measurable discipline in supply chain, vendor management, and internal auditing.",
       items: [
         {
-          label: "Procurement Traceability",
-          value: "100%",
-          detail: "All purchase requisitions logged and audited via Oracle NetSuite",
+          label: "Physical Inventory Accuracy",
+          value: "99.4%",
+          detail: "Verified across quarterly cycle counts and 3-way matching in NetSuite",
         },
         {
-          label: "Audit Cycle Reduction",
-          value: "-60%",
-          detail: "Time saved in document audits following standardized protocols",
+          label: "PO Cycle Turnaround",
+          value: "-65%",
+          detail: "Streamlined Procure-to-Pay approvals and standardized requisitions",
         },
         {
           label: "Vendor Portfolio",
@@ -28,9 +28,9 @@ export const EN_METRICS: MetricsSectionCopy = {
           detail: "Suppliers actively evaluated and managed across operational categories",
         },
         {
-          label: "On-Time Fulfillment",
-          value: "98%",
-          detail: "Fulfillment rate achieved for critical educational supplies",
+          label: "Purchase Orders Processed",
+          value: "1,200+",
+          detail: "Requisitions fulfilled across institutional departments at ASPAEN",
         },
       ],
     },
@@ -46,14 +46,14 @@ export const EN_METRICS: MetricsSectionCopy = {
           detail: "Zero-variance tolerance maintained across multi-bank accounts",
         },
         {
-          label: "Monthly Closing Acceleration",
-          value: "3 Days",
-          detail: "Reduction in monthly financial close duration",
+          label: "Monthly Closing Cycle",
+          value: "4d → 4h",
+          detail: "Bank reconciliation time reduced via Python cascading matching rules",
         },
         {
-          label: "Electronic Invoices Audited",
-          value: "10,000+",
-          detail: "DIAN XML invoices verified and matched against ledger entries",
+          label: "Monthly Cash Movements",
+          value: "3,500+",
+          detail: "Tuition inflows reconciled across 4 corporate bank accounts (99.8% auto-match)",
         },
         {
           label: "Fiscal Compliance",
@@ -70,7 +70,7 @@ export const EN_METRICS: MetricsSectionCopy = {
       items: [
         {
           label: "Monthly Hours Saved",
-          value: "20+ hrs",
+          value: "30+ hrs",
           detail: "Automated extraction and consolidation replacing manual spreadsheets",
         },
         {

@@ -92,9 +92,9 @@ export const ES_HIGHLIGHTS: Record<RoleId, readonly HighlightCard[]> = {
   tech: [
     {
       id: "etl-reduction",
-      value: "85%+",
+      value: "-92%",
       label: "Reducción de Tiempo ETL",
-      hint: "Scripts Python que reemplazan consolidaciones manuales",
+      hint: "Scripts Python: de 12 h semanales a 45 min en NetSuite",
     },
     {
       id: "tech-stack",

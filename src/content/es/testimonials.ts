@@ -29,7 +29,7 @@ export const ES_TESTIMONIALS: TestimonialsSectionCopy = {
       relationship: "Supervisión directa en operaciones de compras",
       highlight: "Eficacia y trazabilidad en adquisiciones",
       quote:
-        "Mariangel transformó la gestión operativa de compras e inventarios en ASPAEN. Su dominio del ERP Oracle NetSuite, junto con un control milimétrico de la facturación electrónica y las requisiciones, eliminó los retrasos con proveedores y garantizó una trazabilidad intachable en cada orden procesada.",
+        "Mariangel transformó la gestión operativa de compras e inventarios en ASPAEN. Su dominio del ERP Oracle NetSuite, junto con un control estricto de la facturación electrónica y las requisiciones, eliminó los retrasos con proveedores y aseguró trazabilidad verificable en cada orden procesada.",
     },
     aspaenTreasury: {
       id: "aspaenTreasury",
