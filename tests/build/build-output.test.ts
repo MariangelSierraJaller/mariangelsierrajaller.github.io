@@ -50,12 +50,21 @@ describe("dist production build artifacts", () => {
     expect(sitemap).not.toContain("santino-essence.lovable.app");
   });
 
-  it("contains 6 resume PDFs, 12 OG JPG cards, and 5 responsive portrait variants", () => {
+  it("contains 6 resume PDFs, 6 CV WebP previews, 12 OG JPG cards, and 5 responsive portrait variants", () => {
     for (const lang of ["es", "en"]) {
       for (const variant of ["admin", "tech", "ats"]) {
         const pdf = path.resolve(distDir, "cv", `cv-mariangel-sierra-${lang}-${variant}.pdf`);
         expect(fs.existsSync(pdf)).toBe(true);
         expect(fs.statSync(pdf).size).toBeGreaterThan(1024);
+
+        const preview = path.resolve(
+          distDir,
+          "cv",
+          "previews",
+          `cv-mariangel-sierra-${lang}-${variant}.webp`,
+        );
+        expect(fs.existsSync(preview)).toBe(true);
+        expect(fs.statSync(preview).size).toBeGreaterThan(10240);
       }
     }
 
