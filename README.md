@@ -20,7 +20,7 @@ Portafolio bilingüe (`es` / `en`) y multi-rol (`general`, `admin`, `tech`) cons
   - Asistente local interactivo de preguntas y respuestas (`Ctrl+K` / botón flotante).
   - Mapas e indicadores interactivos en Trayectoria (filtros por línea metro, radar de enfoque con capas conmutables, mapa de calor), Terminal de Arquitectura 3-modos en Sobre Mí, filtros por área en Habilidades y Métricas.
 - **Generación local de activos y SEO postbuild**:
-  - `scripts/render-resumes.mjs`: 5 variantes de retrato (`AVIF` / `WebP` / `JPG`) y 6 PDFs locales de hoja de vida (`es`/`en` × `admin`/`tech`/`ats`) con **PDFKit** y **Sharp**.
+  - `scripts/render-resumes.mjs`: 5 variantes de retrato (`AVIF` / `WebP` / `JPG`), 6 PDFs locales ATS y 6 vistas previas `.webp` generados desde las fuentes Markdown en `resumes/` compatibles con OhMyCV (`es`/`en` × `admin`/`tech`/`ats`) usando **PDFKit** y **Sharp**.
   - `scripts/generate-og.mjs`: 12 tarjetas OpenGraph (`1200x630` JPG) para compartir en redes.
   - `scripts/postbuild.ts`: `sitemap.xml`, `robots.txt`, `llms.txt`, `page-dates.json`, redirección raíz `/index.html` y precompresión `.gz` / `.br`.
 

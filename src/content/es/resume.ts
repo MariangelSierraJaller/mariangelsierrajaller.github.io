@@ -4,7 +4,7 @@ export const ES_RESUME: ResumeSectionCopy = {
   eyebrow: "Currículum y Perfiles",
   title: "Hoja de Vida Profesional",
   subtitle:
-    "Descarga la versión adaptada a tus requerimientos: gestión operativa, analítica de datos o formato legible para ATS.",
+    "Descarga la versión adaptada a tus requerimientos: gestión operativa, analítica de datos o formato ATS generado desde Markdown en OhMyCV.",
   downloadLocalCta: "Descargar PDF directo",
   viewDriveCta: "Abrir en Google Drive",
   recommendedLabel: "Recomendado para esta vista",
@@ -12,47 +12,47 @@ export const ES_RESUME: ResumeSectionCopy = {
     admin: {
       id: "admin",
       label: "Administrativo y Financiero",
-      badge: "Operaciones & Finanzas",
+      badge: "Operaciones y Finanzas",
       description:
-        "Currículum estructurado para cargos de coordinación de compras, tesorería, control interno y administración operativa de ERP.",
+        "Hoja de vida de una página en formato ATS orientada a coordinación de compras, tesorería, control interno y operación de Oracle NetSuite.",
       highlights: [
-        "4+ años continuos en ASPAEN liderando compras, facturación electrónica y conciliaciones",
-        "Dominio avanzado de Oracle NetSuite para inventarios, cuentas por pagar y órdenes de compra",
-        "Control riguroso de fondos de caja menor y preparación de expedientes para auditoría",
-        "Doble titulación profesional: Ingeniera Industrial e Ingeniera de Sistemas (10 Sep 2026)",
+        "4+ años continuos en ASPAEN liderando compras (1.200+ OC, -65% tiempo de trámite) y 99.4% de exactitud en inventario",
+        "Cierre de conciliaciones bancarias reducido de 4 días a 4 horas sobre 4 cuentas y 3.500+ movimientos mensuales",
+        "Validación tributaria de facturación electrónica DIAN (CUFE/XML) y auditorías con 0 hallazgos negativos",
+        "Ingeniera Industrial e Ingeniera de Sistemas (10 Sep 2026) + Ingeniería Biomédica ITM en curso",
       ],
       previewAlt:
-        "Vista previa del currículum vitae administrativo y financiero de Mariangel Sierra Jaller",
+        "Vista previa de la hoja de vida administrativa y financiera en formato ATS de Mariangel Sierra Jaller",
     },
     tech: {
       id: "tech",
       label: "Tecnológico y Analítica de Datos",
-      badge: "Datos & Automatización",
+      badge: "Datos y Automatización",
       description:
-        "Currículum orientado a roles de analista de datos, especialista en automatización ETL, Power BI y soporte técnico en sistemas ERP.",
+        "Hoja de vida de una página en formato ATS orientada a analítica de datos, pipelines ETL en Python, Power BI (DAX) y soporte ERP.",
       highlights: [
-        "Diseño e implementación de pipelines ETL en Python (Pandas) para conciliación contable",
-        "Construcción de cuadros de mando interactivos en Power BI con medidas DAX avanzadas",
-        "Consultas relacionales en SQL y procesamiento de estructuras de datos XML/JSON",
-        "Ingeniera de Sistemas & Tecnóloga en Sistemas (San José) + Biomédica ITM en curso",
+        "Pipelines ETL en Python (Pandas) desde Oracle NetSuite (XML/JSON) que redujeron reportes de 12 h/sem a 45 min (-92%)",
+        "Modelado estrella en Power BI con medidas DAX (DATESYTD) y RLS para 12 sedes y centros de costo",
+        "Consultas SQL de auditoría (matching de 3 vías) e integraciones API/Zapier con 0 errores de digitación",
+        "Ingeniera de Sistemas y Tecnóloga en Sistemas (San José, 10 Sep 2026) + Ingeniería Biomédica ITM en curso",
       ],
       previewAlt:
-        "Vista previa del currículum vitae tecnológico y analítico de Mariangel Sierra Jaller",
+        "Vista previa de la hoja de vida tecnológica y de analítica en formato ATS de Mariangel Sierra Jaller",
     },
     ats: {
       id: "ats",
       label: "Formato ATS",
-      badge: "Lectura Automatizada",
+      badge: "OhMyCV · Una Columna",
       description:
-        "Versión en texto plano estructurado de alto rendimiento, optimizada para superar sistemas de seguimiento de candidatos (ATS) de empresas globales.",
+        "Currículum estándar de una página redactado en Markdown compatible con OhMyCV y renderizado en una sola columna para filtros ATS globales.",
       highlights: [
-        "Estructura tipográfica y jerarquía limpia libre de gráficos o columnas complejas",
-        "Palabras clave estratégicas en ERP, Python, Power BI, SQL y finanzas corporativas",
-        "Formato universalmente parseable por Workday, Greenhouse, Taleo y BambooHR",
-        "Certificaciones y datos de contacto directos sin caracteres especiales ambiguos",
+        "Jerarquía lineal de una sola columna sin tablas, barras de nivel, fotos ni íconos que rompan el parseo",
+        "Bullets redactados con fórmula Google XYZ y métricas verificables en ERP, Python, Power BI, SQL y finanzas",
+        "Parseable por Workday, Greenhouse, Taleo y BambooHR con enlaces clicables a LinkedIn, GitHub y portafolio",
+        "Incluye proyectos técnicos, 6 certificaciones, 7 credenciales académicas y 4 idiomas (ES/EN B2/FR/KO)",
       ],
       previewAlt:
-        "Vista previa del currículum vitae optimizado para ATS de Mariangel Sierra Jaller",
+        "Vista previa de la hoja de vida estándar en formato ATS de Mariangel Sierra Jaller",
     },
   },
 };
